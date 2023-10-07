@@ -1,0 +1,222 @@
+	page	0
+	cpu	Z180
+
+;	CP/M 2.2 boot-loader for Z80-Simulator
+;
+;	Copyright (C) 1988-2007 by Udo Munk
+;
+;Permission is hereby granted, free of charge, to any person
+;obtaining a copy of this software and associated documentation
+;files (the "Software"), to deal in the Software without
+;restriction, including without limitation the rights to use,
+;copy, modify, merge, publish, distribute, sublicense, and/or sell
+;copies of the Software, and to permit persons to whom the
+;Software is furnished to do so, subject to the following
+;conditions:
+;
+;The above copyright notice and this permission notice shall be
+;included in all copies or substantial portions of the Software.
+;
+;THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+;EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+;OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+;NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+;HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+;WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+;FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+;OTHER DEALINGS IN THE SOFTWARE.
+;
+	ORG	0		;mem base of boot
+
+;
+;	I/O ports
+;
+PIC_IOB	equ	40h
+
+CONDAT	EQU	PIC_IOB+1	;console data port
+DRIVE   EQU	PIC_IOB+10	;fdc-port: # of drive
+TRACK   EQU	PIC_IOB+11	;fdc-port: # of track
+SECTOR  EQU	PIC_IOB+12	;fdc-port: # of sector
+FDCOP   EQU	PIC_IOB+13	;fdc-port: command
+FDCST   EQU	PIC_IOB+14	;fdc-port: status
+DMAL    EQU	PIC_IOB+15	;dma-port: dma address low
+DMAH    EQU	PIC_IOB+16	;dma-port: dma address high
+
+D_DMA_READ	equ	0
+D_DMA_WRITE	equ	1
+D_READ		equ	2
+D_WRITE		equ	3
+D_SUCCESS	equ	0
+D_ERROR		equ	1
+
+
+IOBASE		EQU	00h
+OMCR_V		EQU	0E0H
+
+CLOCK_0		equ	0	; CPU clock = 0.5 x external clock
+CLOCK_1		equ	1	; CPU clock = 1.0 x external clock
+CLOCK_2		equ	0	; CPU clock = 2.0 x external clock
+;
+BOOT:
+	JP	COLD
+        DB	128 - 3 dup(0)
+;
+ERRMSG:	DB	"BOOT: error booting"
+	DB	13,10,0
+HLOMSG:	DB	"CP/M boot-loader for Z180-Simulator"
+CRLF:	DB	13,10,0
+
+CPUM:		db	"CPU : ",0
+CPUZ80:		db	"Z80",0
+CPU180R:	db	"HD64180R",0
+CPU180Z:	db	"HD64180Z",0
+CPUS180:	db	"Z8S180",0
+CLKM:		db	" CLK=NCO X ",0
+mag05:		db	"0.5",0
+mag2:		db	"2",0
+mag1:		db	"1",0
+
+;
+;	begin the load operation
+;
+COLD:
+	DI
+	LD	SP,st_p
+
+; check Z80 or Z80180
+
+	LD	BC,00FFH
+	DB	0EDH,4CH	; MLT BC (HD64180)
+	LD	A,B
+	OR	C
+	ld	bc,CPUZ80
+	ld	de,mag1
+	JR	NZ,ID_Z80
+
+; HD64180R/Z or Z8S180
+
+	LD	A,IOBASE
+	OUT0	(3Fh),A
+	LD	A,00H		; 0 Wait
+	OUT0	(IOBASE+32H),A	; DMA/WAIT Control Register (DCNTL)
+	LD	A,00H		; no refresh
+	OUT0	(IOBASE+36H),A	; Refresh Control Register (RCR)
+
+;check HD64180R or HD64180Z
+
+	ld	bc, CPU180R
+	ld	de, mag05
+
+	LD	A,7FH		; Try to change OMCR bit 7 to 0
+	OUT0	(IOBASE+3EH),A
+	IN0	A,(IOBASE+3EH)
+	AND	80H
+	JR	NZ, ID_180R	; HD64180R
+
+;check HD64180Z(Z80180) or Z8S180
+
+	ld	bc, CPU180Z
+	LD	A,OMCR_V
+	OUT0	(IOBASE+3EH),A	; Restore OMCR
+
+	XOR	A
+	OUT0	(IOBASE+12H),A
+	IN0	A,(IOBASE+12H)
+	AND	40H
+	JR	NZ,ID_180Z
+
+; Z8S180
+
+	ld	bc, CPUS180
+
+;; CPU clock = 0.5 x external clock
+	IF	CLOCK_0
+	LD	A,00H		; Clock Divide XTAL/1 Bit 7=1
+	OUT0	(IOBASE+1FH),A	; CPU Control Register (CCR)
+	LD	A,07FH		; X2 Clock Multiplier Mode : Enable Bit 7=1
+	OUT0	(IOBASE+1EH),A	; Clock Multiplier Register (CMR)
+	ENDIF
+
+;; CPU clock = 1.0 x external clock
+	IF	CLOCK_1
+	ld	de, mag1
+	LD	A,80H		; Clock Divide XTAL/1 Bit 7=1
+	OUT0	(IOBASE+1FH),A	; CPU Control Register (CCR)
+	LD	A,07FH		; X2 Clock Multiplier Mode : Enable Bit 7=1
+	OUT0	(IOBASE+1EH),A	; Clock Multiplier Register (CMR)
+	ENDIF
+
+;; CPU clock = 2.0 x external clock
+	IF	CLOCK_2
+	ld	de, mag2
+	LD	A,80H		; Clock Divide XTAL/1 Bit 7=1
+	OUT0	(IOBASE+1FH),A	; CPU Control Register (CCR)
+	LD	A,0FFH		; X2 Clock Multiplier Mode : Enable Bit 7=1
+	OUT0	(IOBASE+1EH),A	; Clock Multiplier Register (CMR)
+	ENDIF
+
+	;; Z80 or HD64180Z or HD64180R
+ID_180R:
+ID_180Z:
+ID_Z80:
+	LD	HL, HLOMSG
+	call	STROUT
+	ld	hl, CPUM
+	call	STROUT
+	ld	h, b
+	ld	l, c
+	call	STROUT
+	ld	hl, CLKM
+	call	STROUT
+	ld	h, d
+	ld	l, e
+	call	STROUT
+	ld	hl, CRLF
+	call	STROUT
+	IM	0		;select interrupt mode 0
+	EI			;eneble interrupt
+
+; load boot
+
+	LD	BC,1		;b=track 0, c=sector 1
+	LD	HL,BOOT		;base transfer address
+	XOR	A		;select drive A
+	OUT	(DRIVE),A
+	LD	A,B		;set track
+	OUT	(TRACK),A
+	LD	A,C		;set sector
+	OUT	(SECTOR),A
+
+	LD	A,L		;set dma address low
+	OUT	(DMAL),A
+	LD	A,H		;set dma address high
+	OUT	(DMAH),A
+	LD	A,D_DMA_READ	;read sector (DMA)
+	OUT	(FDCOP),A
+	IN	A,(FDCST)	;get status of fdc
+	OR	A		;read successful ?
+	JP	Z,BOOT	
+;
+ERR_STOP:
+	ADD	A,'0'		;print error status
+	OUT	(CONDAT),A	;conout
+	ld	hl, CRLF
+	call	STROUT
+	LD	HL,ERRMSG	;print error message
+	call	STROUT
+	DI
+	HALT			;and halt cpu
+;
+;;
+STROUT:
+	LD	A,(HL)
+	OR	A
+	RET	Z
+	OUT	(CONDAT),A
+	INC	HL
+	JR	STROUT
+
+	org	($+20H) & 0fff0h
+st_p:
+
+	END			;of boot loader
