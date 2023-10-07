@@ -72,5 +72,5 @@ https://github.com/satoshiokue/SuperMEZ80<br>
 MEZZ180RAMは、EMUZ80にZ180+SRAMのメザニンボードです。HD64180R/ZやZ8S180が動作します。<br>
 <br>
 MEZZ180RAM<br>
-https://github.com/satoshiokue/MEZZ180RAM
-https://github.com/satoshiokue/EMUZ80-Z180RAM
+https://github.com/satoshiokue/MEZZ180RAM<br>
+https://github.com/satoshiokue/EMUZ80-Z180RAM<br>
