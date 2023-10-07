@@ -17,26 +17,21 @@ EMUZ80+SuperMEZ80、または、EMUZ80+MEZZ180RAMの組み合わせで、CP/M-80
 ![MEZZ180 1](Photo/P1020394.JPG)
 ![MEZZ180 2](Photo/P1020397.JPG)
 <br>
-<br>
 @hanyazouさんのファームウェアを、EMUZ80PIC_SD用にカスタマイズしてあります。<br>
 <br>
 ＜＠hanyazouさんのソース＞<br>
 https://github.com/hanyazou/SuperMEZ80/tree/mez80ram-cpm<br>
 <br>
-<br>
 ソースのコンパイルは、マイクロチップ社の「MPLAB® X Integrated Development Environment (IDE)」<br>
 で行っております。（MPLAB X IDE v6.10）コンパイラは、XC8を使用しています。
 https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide<br>
 <br>
-<br>
 Z80のアセンブラは、Macro Assembler AS V1.42を使用しています。<br>
 http://john.ccac.rwth-aachen.de:8000/as/<br>
-<br>
 <br>
 FatFsはR0.15を使用しています。<br>
 ＜FatFs - Generic FAT Filesystem Module＞<br>
 http://elm-chan.org/fsw/ff/00index_e.html<br>
-<br>
 <br>
 SDカード上のCP/Mイメージファイルの作成は、CpmtoolsGUIを利用しています。<br>
 ＜CpmtoolsGUI - neko Java Home Page＞<br>
@@ -50,7 +45,6 @@ https://janus.blog.ss-blog.jp/2016-06-17<br>
 （オリジナルのリンクが切れているようです）<br>
 フリーソフト１００からもダウンロードできます。<br>
 https://freesoft-100.com/pasokon/editor_binary.html<br>
-<br>
 <br>
 ＜参考＞<br>
 ・EMUZ80<br>
