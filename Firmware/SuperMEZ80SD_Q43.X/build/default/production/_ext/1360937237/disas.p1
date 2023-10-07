@@ -1,0 +1,320 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"37 ../src/../src/disas.h
+[; ;../src/../src/disas.h: 37: typedef struct disas_inst_desc {
+[s S3 `uc 1 `uc 1 `*v 1 ]
+[n S3 disas_inst_desc attr op ptr ]
+"111 C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h: 111: int sprintf(char *restrict, const char *restrict, ...);
+[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+[v F395 `(v ~T0 @X0 0 tf1`*uc ]
+[v F403 `(v ~T0 @X0 0 tf1`*uc ]
+[v F408 `(v ~T0 @X0 0 tf1`*uc ]
+"107
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\stdio.h: 107: int printf(const char *restrict, ...);
+[v _printf `(i ~T0 @X0 0 ev`*Cuc ]
+"28 ../src/disas.c
+[; ;../src/disas.c: 28: unsigned int disas_op(const disas_inst_desc_t *ids, uint8_t *insts, unsigned int len, char *buf,
+[v _disas_op `(ui ~T0 @X0 1 ef5`*CS3`*uc`ui`*uc`ui ]
+"30
+[; ;../src/disas.c: 30: {
+{
+[e :U _disas_op ]
+"28
+[; ;../src/disas.c: 28: unsigned int disas_op(const disas_inst_desc_t *ids, uint8_t *insts, unsigned int len, char *buf,
+[v _ids `*CS3 ~T0 @X0 1 r1 ]
+[v _insts `*uc ~T0 @X0 1 r2 ]
+[v _len `ui ~T0 @X0 1 r3 ]
+[v _buf `*uc ~T0 @X0 1 r4 ]
+"29
+[; ;../src/disas.c: 29:              unsigned int buf_len)
+[v _buf_len `ui ~T0 @X0 1 r5 ]
+"30
+[; ;../src/disas.c: 30: {
+[f ]
+"31
+[; ;../src/disas.c: 31:     const disas_inst_desc_t *ent;
+[v _ent `*CS3 ~T0 @X0 1 a ]
+"32
+[; ;../src/disas.c: 32:     uint8_t *pc = insts;
+[v _pc `*uc ~T0 @X0 1 a ]
+[e = _pc _insts ]
+"33
+[; ;../src/disas.c: 33:     uint16_t operand;
+[v _operand `us ~T0 @X0 1 a ]
+"34
+[; ;../src/disas.c: 34:     unsigned int result;
+[v _result `ui ~T0 @X0 1 a ]
+"36
+[; ;../src/disas.c: 36:     if (len == 0)
+[e $ ! == _len -> -> 0 `i `ui 5  ]
+"37
+[; ;../src/disas.c: 37:         return 0;
+[e ) -> -> 0 `i `ui ]
+[e $UE 4  ]
+[e :U 5 ]
+"38
+[; ;../src/disas.c: 38:     for (ent = ids; ent->attr != 0xf0; ent++) {
+{
+[e = _ent _ids ]
+[e $U 9  ]
+[e :U 6 ]
+{
+"39
+[; ;../src/disas.c: 39:         if (ent->op == *pc) {
+[e $ ! == -> . *U _ent 1 `i -> *U _pc `i 10  ]
+{
+"40
+[; ;../src/disas.c: 40:             break;
+[e $U 7  ]
+"41
+[; ;../src/disas.c: 41:         }
+}
+[e :U 10 ]
+"42
+[; ;../src/disas.c: 42:     }
+}
+[e ++ _ent * -> -> 1 `i `x -> -> # *U _ent `i `x ]
+[e :U 9 ]
+[e $ != -> . *U _ent 0 `i -> 240 `i 6  ]
+[e :U 7 ]
+}
+"43
+[; ;../src/disas.c: 43:     if (ent->op != *pc) {
+[e $ ! != -> . *U _ent 1 `i -> *U _pc `i 11  ]
+{
+"44
+[; ;../src/disas.c: 44:         sprintf(buf, "???");
+[e ( _sprintf (1 , _buf :s 1C ]
+"45
+[; ;../src/disas.c: 45:         return 1;
+[e ) -> -> 1 `i `ui ]
+[e $UE 4  ]
+"46
+[; ;../src/disas.c: 46:     }
+}
+[e :U 11 ]
+"47
+[; ;../src/disas.c: 47:     switch (ent->attr) {
+[e $U 13  ]
+{
+"48
+[; ;../src/disas.c: 48:     case 0x00:
+[e :U 14 ]
+"49
+[; ;../src/disas.c: 49:         sprintf(buf, "%s", (char*)ent->ptr);
+[e ( _sprintf (1 , (. , _buf :s 2C -> . *U _ent 2 `*uc ]
+"50
+[; ;../src/disas.c: 50:         result = 1;
+[e = _result -> -> 1 `i `ui ]
+"51
+[; ;../src/disas.c: 51:         break;
+[e $U 12  ]
+"52
+[; ;../src/disas.c: 52:     case 0x01:
+[e :U 15 ]
+"53
+[; ;../src/disas.c: 53:         if (len < 2)
+[e $ ! < _len -> -> 2 `i `ui 16  ]
+"54
+[; ;../src/disas.c: 54:             return 0;
+[e ) -> -> 0 `i `ui ]
+[e $UE 4  ]
+[e :U 16 ]
+"55
+[; ;../src/disas.c: 55:         operand = *++pc;
+[e = _operand -> *U =+ _pc * -> -> 1 `i `x -> -> # *U _pc `i `x `us ]
+"56
+[; ;../src/disas.c: 56:         sprintf(buf, (char*)ent->ptr, operand);
+[e ( _sprintf (1 , (. , _buf -> -> . *U _ent 2 `*uc `*Cuc -> _operand `ui ]
+"57
+[; ;../src/disas.c: 57:         result = 2;
+[e = _result -> -> 2 `i `ui ]
+"58
+[; ;../src/disas.c: 58:         break;
+[e $U 12  ]
+"59
+[; ;../src/disas.c: 59:     case 0x02:
+[e :U 17 ]
+"60
+[; ;../src/disas.c: 60:         if (len < 3)
+[e $ ! < _len -> -> 3 `i `ui 18  ]
+"61
+[; ;../src/disas.c: 61:             return 0;
+[e ) -> -> 0 `i `ui ]
+[e $UE 4  ]
+[e :U 18 ]
+"62
+[; ;../src/disas.c: 62:         operand = ((uint16_t)pc[2] << 8) + pc[1];
+[e = _operand -> + << -> -> *U + _pc * -> -> 2 `i `x -> -> # *U _pc `i `x `us `ui -> 8 `i -> *U + _pc * -> -> 1 `i `x -> -> # *U _pc `i `x `ui `us ]
+"63
+[; ;../src/disas.c: 63:         sprintf(buf, (char*)ent->ptr, operand);
+[e ( _sprintf (1 , (. , _buf -> -> . *U _ent 2 `*uc `*Cuc -> _operand `ui ]
+"64
+[; ;../src/disas.c: 64:         result = 3;
+[e = _result -> -> 3 `i `ui ]
+"65
+[; ;../src/disas.c: 65:         break;
+[e $U 12  ]
+"66
+[; ;../src/disas.c: 66:     default:
+[e :U 19 ]
+"67
+[; ;../src/disas.c: 67:         sprintf(buf, "???");
+[e ( _sprintf (1 , _buf :s 3C ]
+"68
+[; ;../src/disas.c: 68:         break;
+[e $U 12  ]
+"69
+[; ;../src/disas.c: 69:     }
+}
+[e $U 12  ]
+[e :U 13 ]
+[e [\ -> . *U _ent 0 `i , $ -> 0 `i 14
+ , $ -> 1 `i 15
+ , $ -> 2 `i 17
+ 19 ]
+[e :U 12 ]
+"71
+[; ;../src/disas.c: 71:     return result;
+[e ) _result ]
+[e $UE 4  ]
+"72
+[; ;../src/disas.c: 72: }
+[e :UE 4 ]
+}
+"74
+[; ;../src/disas.c: 74: unsigned int disas_ops(const disas_inst_desc_t *ids, uint32_t addr, uint8_t *insts,
+[v _disas_ops `(ui ~T0 @X0 1 ef6`*CS3`ul`*uc`ui`ui`*F395 ]
+"76
+[; ;../src/disas.c: 76: {
+{
+[e :U _disas_ops ]
+"74
+[; ;../src/disas.c: 74: unsigned int disas_ops(const disas_inst_desc_t *ids, uint32_t addr, uint8_t *insts,
+[v _ids `*CS3 ~T0 @X0 1 r1 ]
+[v _addr `ul ~T0 @X0 1 r2 ]
+[v _insts `*uc ~T0 @X0 1 r3 ]
+"75
+[; ;../src/disas.c: 75:                        unsigned int len, unsigned int nops, void (*func)(char *line))
+[v _len `ui ~T0 @X0 1 r4 ]
+[v _nops `ui ~T0 @X0 1 r5 ]
+[v _func `*F403 ~T0 @X0 1 r6 ]
+"76
+[; ;../src/disas.c: 76: {
+[f ]
+"77
+[; ;../src/disas.c: 77:     unsigned int n;
+[v _n `ui ~T0 @X0 1 a ]
+"78
+[; ;../src/disas.c: 78:     unsigned int result = 0;
+[v _result `ui ~T0 @X0 1 a ]
+[e = _result -> -> 0 `i `ui ]
+"79
+[; ;../src/disas.c: 79:     char buf[100];
+[v _buf `uc ~T0 @X0 -> 100 `i a ]
+"81
+[; ;../src/disas.c: 81:     while (result < len && 0 < nops) {
+[e $U 21  ]
+[e :U 22 ]
+{
+"82
+[; ;../src/disas.c: 82:         n = disas_op(ids, insts, len - result, buf, sizeof(buf));
+[e = _n ( _disas_op (4 , , , , _ids _insts - _len _result &U _buf -> # _buf `ui ]
+"83
+[; ;../src/disas.c: 83:         if (n == 0) {
+[e $ ! == _n -> -> 0 `i `ui 24  ]
+{
+"84
+[; ;../src/disas.c: 84:             break;
+[e $U 23  ]
+"85
+[; ;../src/disas.c: 85:         }
+}
+[e :U 24 ]
+"86
+[; ;../src/disas.c: 86:         if (func) {
+[e $ ! != _func -> -> 0 `i `*F408 25  ]
+{
+"87
+[; ;../src/disas.c: 87:         } else {
+}
+[e $U 26  ]
+[e :U 25 ]
+{
+"88
+[; ;../src/disas.c: 88:             printf("%06lX ", addr);
+[e ( _printf , (. :s 4C _addr ]
+"89
+[; ;../src/disas.c: 89:             for (int i = 0; i < 4; i++) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 4 `i 27  ]
+[e $U 28  ]
+[e :U 27 ]
+{
+"90
+[; ;../src/disas.c: 90:                 if (i < n)
+[e $ ! < -> _i `ui _n 30  ]
+"91
+[; ;../src/disas.c: 91:                     printf("%02X ", insts[i]);
+[e ( _printf , (. :s 5C -> *U + _insts * -> _i `x -> -> # *U _insts `i `x `i ]
+[e $U 31  ]
+"92
+[; ;../src/disas.c: 92:                 else
+[e :U 30 ]
+"93
+[; ;../src/disas.c: 93:                     printf("   ");
+[e ( _printf :s 6C ]
+[e :U 31 ]
+"94
+[; ;../src/disas.c: 94:             }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 4 `i 27  ]
+[e :U 28 ]
+}
+"95
+[; ;../src/disas.c: 95:             printf("%s\n\r", buf);
+[e ( _printf , (. :s 7C &U _buf ]
+"96
+[; ;../src/disas.c: 96:         }
+}
+[e :U 26 ]
+"97
+[; ;../src/disas.c: 97:         result += n;
+[e =+ _result _n ]
+"98
+[; ;../src/disas.c: 98:         addr += (unsigned)n;
+[e =+ _addr -> _n `ul ]
+"99
+[; ;../src/disas.c: 99:         insts += n;
+[e =+ _insts * -> _n `ux -> -> # *U _insts `ui `ux ]
+"100
+[; ;../src/disas.c: 100:         nops--;
+[e -- _nops -> -> 1 `i `ui ]
+"101
+[; ;../src/disas.c: 101:     }
+}
+[e :U 21 ]
+"81
+[; ;../src/disas.c: 81:     while (result < len && 0 < nops) {
+[e $ && < _result _len < -> -> 0 `i `ui _nops 22  ]
+[e :U 23 ]
+"103
+[; ;../src/disas.c: 103:     return result;
+[e ) _result ]
+[e $UE 20  ]
+"104
+[; ;../src/disas.c: 104: }
+[e :UE 20 ]
+}
+[p f _printf 10780692 ]
+[p f _sprintf 1728022447 ]
+[a 2C 37 115 0 ]
+[a 1C 63 63 63 0 ]
+[a 3C 63 63 63 0 ]
+[a 4C 37 48 54 108 88 32 0 ]
+[a 5C 37 48 50 88 32 0 ]
+[a 6C 32 32 32 0 ]
+[a 7C 37 115 10 13 0 ]
