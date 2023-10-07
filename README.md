@@ -2,8 +2,8 @@
 
 EMUZ80PIC_SDは、EMUZ80にアドオンするμSDカードモジュールです。<br>
 EMUZ80+SuperMEZ80、または、EMUZ80+MEZZ180RAMの組み合わせで、CP/M-80 Ver2.2を走らせることが出来ます。<br>
-電脳伝説(@vintagechips)さんによって作成された2チップで動作するシンプルなSBCです。<br>
-SuperMEZ80、MEZZ180RAMは@S_Okueさんによって作成されたEMUZ80用のメザニンボードです。<br>
+EMUZ80は、電脳伝説(@vintagechips)さんによって作成された2チップで動作するシンプルなSBCです。<br>
+SuperMEZ80、MEZZ180RAMは、@S_Okueさんによって作成されたEMUZ80用のメザニンボードです。<br>
 <br>
 ![EMUZ80PIC_SD 1](Photo/P1020376.JPG)
 ![EMUZ80PIC_SD 2](Photo/P1020381.JPG)
