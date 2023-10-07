@@ -1,0 +1,3937 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F47Q84 ]
+[d frameptr 1249 ]
+"53 Z:\z80\EMUZ80\cpm/src/io.c
+[e E23139 . `uc
+IO_STAT_INVALID 0
+IO_STAT_NOT_STARTED 10
+IO_STAT_RUNNING 20
+IO_STAT_READ_WAITING 30
+IO_STAT_INTR_WAITING 35
+IO_STAT_WRITE_WAITING 40
+IO_STAT_STOPPED 50
+IO_STAT_RESUMING 60
+IO_STAT_INTERRUPTED 70
+IO_STAT_PREPINVOKE 80
+IO_STAT_MONITOR 90
+]
+"194
+[e E22972 . `uc
+FR_OK 0
+FR_DISK_ERR 1
+FR_INT_ERR 2
+FR_NOT_READY 3
+FR_NO_FILE 4
+FR_NO_PATH 5
+FR_INVALID_NAME 6
+FR_DENIED 7
+FR_EXIST 8
+FR_INVALID_OBJECT 9
+FR_WRITE_PROTECTED 10
+FR_INVALID_DRIVE 11
+FR_NOT_ENABLED 12
+FR_NO_FILESYSTEM 13
+FR_MKFS_ABORTED 14
+FR_TIMEOUT 15
+FR_LOCKED 16
+FR_NOT_ENOUGH_CORE 17
+FR_TOO_MANY_OPEN_FILES 18
+FR_INVALID_PARAMETER 19
+]
+"121 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[e E22972 . `uc
+FR_OK 0
+FR_DISK_ERR 1
+FR_INT_ERR 2
+FR_NOT_READY 3
+FR_NO_FILE 4
+FR_NO_PATH 5
+FR_INVALID_NAME 6
+FR_DENIED 7
+FR_EXIST 8
+FR_INVALID_OBJECT 9
+FR_WRITE_PROTECTED 10
+FR_INVALID_DRIVE 11
+FR_NOT_ENABLED 12
+FR_NO_FILESYSTEM 13
+FR_MKFS_ABORTED 14
+FR_TIMEOUT 15
+FR_LOCKED 16
+FR_NOT_ENOUGH_CORE 17
+FR_TOO_MANY_OPEN_FILES 18
+FR_INVALID_PARAMETER 19
+]
+"1056 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[e E596 . `uc
+FR_OK 0
+FR_DISK_ERR 1
+FR_INT_ERR 2
+FR_NOT_READY 3
+FR_NO_FILE 4
+FR_NO_PATH 5
+FR_INVALID_NAME 6
+FR_DENIED 7
+FR_EXIST 8
+FR_INVALID_OBJECT 9
+FR_WRITE_PROTECTED 10
+FR_INVALID_DRIVE 11
+FR_NOT_ENABLED 12
+FR_NO_FILESYSTEM 13
+FR_MKFS_ABORTED 14
+FR_TIMEOUT 15
+FR_LOCKED 16
+FR_NOT_ENOUGH_CORE 17
+FR_TOO_MANY_OPEN_FILES 18
+FR_INVALID_PARAMETER 19
+]
+"1064
+[e E736 . `uc
+RES_OK 0
+RES_ERROR 1
+RES_WRPRT 2
+RES_NOTRDY 3
+RES_PARERR 4
+]
+"111 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[e E23433 . `uc
+RES_OK 0
+RES_ERROR 1
+RES_WRPRT 2
+RES_NOTRDY 3
+RES_PARERR 4
+]
+"154 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[e E23712 . `uc
+SPI_CLOCK_100KHZ 0
+SPI_CLOCK_2MHZ 1
+SPI_CLOCK_4MHZ 2
+SPI_CLOCK_5MHZ 3
+SPI_CLOCK_6MHZ 4
+SPI_CLOCK_8MHZ 5
+SPI_CLOCK_10MHZ 6
+]
+"47 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _get_fattime get_fattime `(ul  1 e 4 0 ]
+"53
+[v _disk_initialize disk_initialize `(uc  1 e 1 0 ]
+"98
+[v _disk_status disk_status `(uc  1 e 1 0 ]
+"111
+[v _disk_read disk_read `(E736  1 e 1 0 ]
+"130
+[v _disk_write disk_write `(E736  1 e 1 0 ]
+"149
+[v _disk_ioctl disk_ioctl `(E736  1 e 1 0 ]
+"171
+[v _fatdisk_debug fatdisk_debug `(i  1 e 2 0 ]
+"29 Z:\z80\EMUZ80\cpm/drivers/utils.c
+[v _util_hexdump util_hexdump `(v  1 e 1 0 ]
+"50
+[v _util_addrdump util_addrdump `(v  1 e 1 0 ]
+"71
+[v _util_hexdump_sum util_hexdump_sum `(v  1 e 1 0 ]
+"82
+[v _util_stricmp util_stricmp `(i  1 e 2 0 ]
+"619 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _ld_word ld_word `(us  1 s 2 ld_word ]
+"628
+[v _ld_dword ld_dword `(ul  1 s 4 ld_dword ]
+"657
+[v _st_word st_word `(v  1 s 1 st_word ]
+"663
+[v _st_dword st_dword `(v  1 s 1 st_dword ]
+"693
+[v _dbc_1st dbc_1st `(i  1 s 2 dbc_1st ]
+"713
+[v _dbc_2nd dbc_2nd `(i  1 s 2 dbc_2nd ]
+"1056
+[v _sync_window sync_window `(E596  1 s 1 sync_window ]
+"1078
+[v _move_window move_window `(E596  1 s 1 move_window ]
+"1109
+[v _sync_fs sync_fs `(E596  1 s 1 sync_fs ]
+"1145
+[v _clst2sect clst2sect `(ul  1 s 4 clst2sect ]
+"1162
+[v _get_fat get_fat `(ul  1 s 4 get_fat ]
+"1240
+[v _put_fat put_fat `(E596  1 s 1 put_fat ]
+"1430
+[v _remove_chain remove_chain `(E596  1 s 1 remove_chain ]
+"1525
+[v _create_chain create_chain `(ul  1 s 4 create_chain ]
+"1659
+[v _dir_clear dir_clear `(E596  1 s 1 dir_clear ]
+"1698
+[v _dir_sdi dir_sdi `(E596  1 s 1 dir_sdi ]
+"1746
+[v _dir_next dir_next `(E596  1 s 1 dir_next ]
+"1807
+[v _dir_alloc dir_alloc `(E596  1 s 1 dir_alloc ]
+"1849
+[v _ld_clust ld_clust `(ul  1 s 4 ld_clust ]
+"1866
+[v _st_clust st_clust `(v  1 s 1 st_clust ]
+"2307
+[v _dir_read dir_read `(E596  1 s 1 dir_read ]
+"2385
+[v _dir_find dir_find `(E596  1 s 1 dir_find ]
+"2466
+[v _dir_register dir_register `(E596  1 s 1 dir_register ]
+"2572
+[v _dir_remove dir_remove `(E596  1 s 1 dir_remove ]
+"2618
+[v _get_fileinfo get_fileinfo `(v  1 s 1 get_fileinfo ]
+"2848
+[v _create_name create_name `(E596  1 s 1 create_name ]
+"3052
+[v _follow_path follow_path `(E596  1 s 1 follow_path ]
+"3139
+[v _get_ldnumber get_ldnumber `(i  1 s 2 get_ldnumber ]
+"3292
+[v _check_fs check_fs `(ui  1 s 2 check_fs ]
+"3332
+[v _find_volume find_volume `(ui  1 s 2 find_volume ]
+"3386
+[v _mount_volume mount_volume `(E596  1 s 1 mount_volume ]
+"3615
+[v _validate validate `(E596  1 s 1 validate ]
+"3659
+[v _f_mount f_mount `(E22972  1 e 1 0 ]
+"3719
+[v _f_open f_open `(E22972  1 e 1 0 ]
+"3916
+[v _f_read f_read `(E22972  1 e 1 0 ]
+"4016
+[v _f_write f_write `(E22972  1 e 1 0 ]
+"4137
+[v _f_sync f_sync `(E22972  1 e 1 0 ]
+"4435
+[v _f_lseek f_lseek `(E22972  1 e 1 0 ]
+"4599
+[v _f_opendir f_opendir `(E22972  1 e 1 0 ]
+"4665
+[v _f_closedir f_closedir `(E22972  1 e 1 0 ]
+"4695
+[v _f_readdir f_readdir `(E22972  1 e 1 0 ]
+"42 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
+[v _acquire_bus acquire_bus `(v  1 s 1 acquire_bus ]
+"58
+[v _release_bus release_bus `(v  1 s 1 release_bus ]
+"68
+[v _SPI_SD_begin SPI_SD_begin `(v  1 e 1 0 ]
+"88
+[v _SPI_SD_configure SPI_SD_configure `(v  1 e 1 0 ]
+"144
+[v _SPI_SD_begin_transaction SPI_SD_begin_transaction `(v  1 e 1 0 ]
+"150
+[v _SPI_SD_end_transaction SPI_SD_end_transaction `(v  1 e 1 0 ]
+"156
+[v _SPI_SD_transfer_byte SPI_SD_transfer_byte `(uc  1 e 1 0 ]
+"174
+[v _SPI_SD_send SPI_SD_send `(v  1 e 1 0 ]
+"195
+[v _SPI_SD_receive SPI_SD_receive `(v  1 e 1 0 ]
+"269
+[v _SPI_SD_dummy_clocks SPI_SD_dummy_clocks `(v  1 e 1 0 ]
+"279
+[v _SPI_SD_receive_byte SPI_SD_receive_byte `(uc  1 e 1 0 ]
+"286
+[v _SPI_SD_select SPI_SD_select `(v  1 e 1 0 ]
+"46 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _SDCard_end_transaction SDCard_end_transaction `(v  1 e 1 0 ]
+"53
+[v _SDCard_init SDCard_init `(i  1 e 2 0 ]
+"133
+[v ___SDCard_wait_response __SDCard_wait_response `(uc  1 s 1 __SDCard_wait_response ]
+"143
+[v ___SDCard_command_r1 __SDCard_command_r1 `(i  1 s 2 __SDCard_command_r1 ]
+"169
+[v _SDCard_read512 SDCard_read512 `(i  1 e 2 0 ]
+"237
+[v _SDCard_write512 SDCard_write512 `(i  1 e 2 0 ]
+"316
+[v _SDCard_command SDCard_command `(i  1 e 2 0 ]
+"334
+[v _SDCard_crc SDCard_crc `(uc  1 e 1 0 ]
+"352
+[v ___SDCard_crc16 __SDCard_crc16 `(us  1 e 2 0 ]
+"373
+[v _SDCard_debug SDCard_debug `(i  1 e 2 0 ]
+"31 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_sys_init emuz80_common_sys_init `(v  1 s 1 emuz80_common_sys_init ]
+"109
+[v _emuz80_common_start_z80 emuz80_common_start_z80 `(v  1 s 1 emuz80_common_start_z80 ]
+"175
+[v _emuz80_common_high_addr_mask emuz80_common_high_addr_mask `(ul  1 s 4 emuz80_common_high_addr_mask ]
+"180
+[v _emuz80_common_low_addr_mask emuz80_common_low_addr_mask `(us  1 s 2 emuz80_common_low_addr_mask ]
+"185
+[v _emuz80_common_write_to_sram emuz80_common_write_to_sram `(v  1 s 1 emuz80_common_write_to_sram ]
+"217
+[v _emuz80_common_read_from_sram emuz80_common_read_from_sram `(v  1 s 1 emuz80_common_read_from_sram ]
+"249
+[v _emuz80_common_clock_op_hook emuz80_common_clock_op_hook `(i  1 s 2 emuz80_common_clock_op_hook ]
+"299
+[v _emuz80_common_addr_l_pins emuz80_common_addr_l_pins `(uc  1 s 1 emuz80_common_addr_l_pins ]
+"300
+[v _emuz80_common_set_addr_l_pins emuz80_common_set_addr_l_pins `(v  1 s 1 emuz80_common_set_addr_l_pins ]
+"301
+[v _emuz80_common_data_pins emuz80_common_data_pins `(uc  1 s 1 emuz80_common_data_pins ]
+"302
+[v _emuz80_common_set_data_pins emuz80_common_set_data_pins `(v  1 s 1 emuz80_common_set_data_pins ]
+"303
+[v _emuz80_common_set_data_dir emuz80_common_set_data_dir `(v  1 s 1 emuz80_common_set_data_dir ]
+"304
+[v _emuz80_common_ioreq_pin emuz80_common_ioreq_pin `(b  1 s 0 emuz80_common_ioreq_pin ]
+"305
+[v _emuz80_common_memrq_pin emuz80_common_memrq_pin `(b  1 s 0 emuz80_common_memrq_pin ]
+"306
+[v _emuz80_common_rd_pin emuz80_common_rd_pin `(b  1 s 0 emuz80_common_rd_pin ]
+"310
+[v _emuz80_common_set_busrq_pin emuz80_common_set_busrq_pin `(v  1 s 1 emuz80_common_set_busrq_pin ]
+"311
+[v _emuz80_common_set_reset_pin emuz80_common_set_reset_pin `(v  1 s 1 emuz80_common_set_reset_pin ]
+"331
+[v _emuz80_common_set_wait_pin emuz80_common_set_wait_pin `(v  1 s 1 emuz80_common_set_wait_pin ]
+"337
+[v _emuz80_common_init emuz80_common_init `(v  1 s 1 emuz80_common_init ]
+"372
+[v _emuz80_common_wait_for_programmer emuz80_common_wait_for_programmer `(v  1 s 1 emuz80_common_wait_for_programmer ]
+"86 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_name emuz80_47q_name `(*.32uc  1 s 2 emuz80_47q_name ]
+"91
+[v _emuz80_47q_sys_init emuz80_47q_sys_init `(v  1 s 1 emuz80_47q_sys_init ]
+"161
+[v _emuz80_47q_bus_master emuz80_47q_bus_master `(v  1 s 1 emuz80_47q_bus_master ]
+"194
+[v _emuz80_47q_start_z80 emuz80_47q_start_z80 `(v  1 s 1 emuz80_47q_start_z80 ]
+"309
+[v _emuz80_47q_set_wait_pin emuz80_47q_set_wait_pin `(v  1 s 1 emuz80_47q_set_wait_pin ]
+"320
+[v _emuz80_47q_set_bank_pins emuz80_47q_set_bank_pins `(v  1 s 1 emuz80_47q_set_bank_pins ]
+"373
+[v _emuz80_47q_setup_addrbus emuz80_47q_setup_addrbus `(v  1 s 1 emuz80_47q_setup_addrbus ]
+"378
+[v _emuz80_47q_io_event emuz80_47q_io_event `(b  1 s 0 emuz80_47q_io_event ]
+"383
+[v _emuz80_47q_wait_io_event emuz80_47q_wait_io_event `(v  1 s 1 emuz80_47q_wait_io_event ]
+"388
+[v _emuz80_47q_clear_io_event emuz80_47q_clear_io_event `(v  1 s 1 emuz80_47q_clear_io_event ]
+"393
+[v _board_init board_init `(v  1 e 1 0 ]
+"28 Z:\z80\EMUZ80\cpm/src/disas.c
+[v _disas_op disas_op `(ui  1 e 2 0 ]
+"74
+[v _disas_ops disas_ops `(ui  1 e 2 0 ]
+"72 Z:\z80\EMUZ80\cpm/src/io.c
+[v _io_init io_init `(v  1 e 1 0 ]
+"76
+[v _io_stat io_stat `(i  1 e 2 0 ]
+"83
+[v _putch putch `(v  1 e 1 0 ]
+"96
+[v ___con_flush_buffer __con_flush_buffer `(v  1 s 1 __con_flush_buffer ]
+[v i2___con_flush_buffer __con_flush_buffer `(v  1 s 1 i2___con_flush_buffer ]
+"104
+[v _con_flush_buffer con_flush_buffer `(v  1 s 1 con_flush_buffer ]
+"109
+[v _putch_buffered putch_buffered `(v  1 e 1 0 ]
+"121
+[v _getch_buffered getch_buffered `(uc  1 e 1 0 ]
+"146
+[v _ungetch ungetch `(v  1 e 1 0 ]
+"159
+[v _hw_ctrl_read hw_ctrl_read `(uc  1 e 1 0 ]
+"164
+[v _hw_ctrl_write hw_ctrl_write `(v  1 e 1 0 ]
+"182
+[v _cpm_disk_read cpm_disk_read `(i  1 e 2 0 ]
+"211
+[v _cpm_trsect_to_lba cpm_trsect_to_lba `(i  1 e 2 0 ]
+"224
+[v _cpm_trsect_from_lba cpm_trsect_from_lba `(i  1 e 2 0 ]
+"243
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+"262
+[v _try_to_invoke_monitor try_to_invoke_monitor `(v  1 e 1 0 ]
+"300
+[v _io_handle io_handle `(v  1 e 1 0 ]
+"698
+[v _io_wait_write io_wait_write `(i  1 e 2 0 ]
+"781
+[v _io_invoke_target_cpu_prepare io_invoke_target_cpu_prepare `(v  1 e 1 0 ]
+"835
+[v _io_invoke_target_cpu io_invoke_target_cpu `(i  1 e 2 0 ]
+"861
+[v _io_invoke_target_cpu_teardown io_invoke_target_cpu_teardown `(v  1 e 1 0 ]
+"896
+[v _io_set_interrupt_data io_set_interrupt_data `(v  1 e 1 0 ]
+"23 Z:\z80\EMUZ80\cpm/src/memory.c
+[v _mem_init mem_init `(v  1 e 1 0 ]
+"125
+[v ___memcpy_on_target __memcpy_on_target `(v  1 s 1 __memcpy_on_target ]
+"161
+[v _write_to_sram_low_addr write_to_sram_low_addr `(v  1 s 1 write_to_sram_low_addr ]
+"189
+[v _dma_write_to_sram dma_write_to_sram `(v  1 e 1 0 ]
+"213
+[v _read_from_sram_low_addr read_from_sram_low_addr `(v  1 s 1 read_from_sram_low_addr ]
+"241
+[v _dma_read_from_sram dma_read_from_sram `(v  1 e 1 0 ]
+"265
+[v ___write_to_sram __write_to_sram `(v  1 e 1 0 ]
+"272
+[v ___write_sram_regions __write_sram_regions `(v  1 e 1 0 ]
+"288
+[v ___read_from_sram __read_from_sram `(v  1 e 1 0 ]
+"296
+[v ___read_sram_regions __read_sram_regions `(v  1 e 1 0 ]
+"312
+[v _mmu_bank_config mmu_bank_config `(v  1 e 1 0 ]
+"323
+[v _mmu_bank_select mmu_bank_select `(v  1 e 1 0 ]
+"117 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_show_registers mon_show_registers `(v  1 e 1 0 ]
+"140
+[v _uninstall_nmi_vector uninstall_nmi_vector `(v  1 s 1 uninstall_nmi_vector ]
+"149
+[v _install_nmi_vector install_nmi_vector `(v  1 s 1 install_nmi_vector ]
+"159
+[v _uninstall_trampoline uninstall_trampoline `(v  1 s 1 uninstall_trampoline ]
+"169
+[v _save_zero_page save_zero_page `(v  1 s 1 save_zero_page ]
+"179
+[v _install_trampoline install_trampoline `(v  1 s 1 install_trampoline ]
+"190
+[v _reinstall_trampoline reinstall_trampoline `(v  1 s 1 reinstall_trampoline ]
+"198
+[v _install_trampoline_nmi install_trampoline_nmi `(v  1 s 1 install_trampoline_nmi ]
+"210
+[v _install_trampoline_cleanup install_trampoline_cleanup `(v  1 s 1 install_trampoline_cleanup ]
+"229
+[v _mon_use_zeropage mon_use_zeropage `(v  1 e 1 0 ]
+"238
+[v _install_rst_vector install_rst_vector `(v  1 s 1 install_rst_vector ]
+"243
+[v _bank_select_callback bank_select_callback `(v  1 s 1 bank_select_callback ]
+"265
+[v _read_debug_settings read_debug_settings `(v  1 s 1 read_debug_settings ]
+"288
+[v _write_debug_settings write_debug_settings `(v  1 s 1 write_debug_settings ]
+"313
+[v _mon_init mon_init `(v  1 e 1 0 ]
+"318
+[v _mon_assert_interrupt mon_assert_interrupt `(v  1 e 1 0 ]
+"330
+[v _mon_setup mon_setup `(v  1 e 1 0 ]
+"348
+[v _mon_prepare mon_prepare `(v  1 e 1 0 ]
+"356
+[v _mon_prepare_nmi mon_prepare_nmi `(v  1 e 1 0 ]
+"364
+[v _mon_enter mon_enter `(v  1 e 1 0 ]
+"376
+[v _mon_enter_nmi mon_enter_nmi `(v  1 e 1 0 ]
+"390
+[v _mon_start mon_start `(v  1 e 1 0 ]
+"415
+[v _edit_line edit_line `(v  1 e 1 0 ]
+"569
+[v _mon_remove_space mon_remove_space `(v  1 e 1 0 ]
+"575
+[v _mon_remove_trailing_space mon_remove_trailing_space `(v  1 e 1 0 ]
+"581
+[v _mon_chartoval mon_chartoval `(i  1 e 2 0 ]
+"640
+[v _mon_get_str mon_get_str `(i  1 e 2 0 ]
+"667
+[v _mon_get_hexval mon_get_hexval `(i  1 e 2 0 ]
+"689
+[v _mon_strtoval mon_strtoval `(ul  1 e 4 0 ]
+"713
+[v _mon_parse mon_parse `(i  1 e 2 0 ]
+"801
+[v _mon_cmd_help mon_cmd_help `(i  1 e 2 0 ]
+"814
+[v _mon_cmd_dump mon_cmd_dump `(i  1 e 2 0 ]
+"843
+[v _mon_cmd_disassemble mon_cmd_disassemble `(i  1 e 2 0 ]
+"876
+[v _mon_cmd_diskread mon_cmd_diskread `(i  1 e 2 0 ]
+"935
+[v _mon_cmd_sdread mon_cmd_sdread `(i  1 e 2 0 ]
+"961
+[v _mon_cmd_step mon_cmd_step `(i  1 e 2 0 ]
+"971
+[v _mon_cmd_status mon_cmd_status `(i  1 e 2 0 ]
+"993
+[v _mon_cmd_breakpoint mon_cmd_breakpoint `(i  1 e 2 0 ]
+"1023
+[v _mon_cmd_clearbreakpoint mon_cmd_clearbreakpoint `(i  1 e 2 0 ]
+"1035
+[v _mon_cmd_continue mon_cmd_continue `(i  1 e 2 0 ]
+"1041
+[v _mon_cmd_reset mon_cmd_reset `(i  1 e 2 0 ]
+"1048
+[v _mon_cmd_set mon_cmd_set `(i  1 e 2 0 ]
+"1132
+[v _mon_cmd_write mon_cmd_write `(i  1 e 2 0 ]
+"1156
+[v _mon_cmd_jump mon_cmd_jump `(i  1 e 2 0 ]
+"1170
+[v _mon_prompt mon_prompt `(i  1 e 2 0 ]
+"1212
+[v _mon_leave mon_leave `(v  1 e 1 0 ]
+"1222
+[v _mon_cleanup mon_cleanup `(v  1 e 1 0 ]
+"67 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[v _main main `(v  1 e 1 0 ]
+"108
+[v _bus_master bus_master `(v  1 e 1 0 ]
+"113
+[v _sys_init sys_init `(v  1 e 1 0 ]
+"119
+[v _disk_init disk_init `(i  1 e 2 0 ]
+"129
+[v _menu_select menu_select `(i  1 e 2 0 ]
+"210
+[v _start_z80 start_z80 `(v  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__fpclassifyf.c
+[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__strtoxl.c
+[v ___strtoxl __strtoxl `(ul  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\_Exit.c
+[v __Exit _Exit `(v  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abort.c
+[v _abort abort `(v  1 e 1 0 ]
+"1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\assert.c
+[v ___assert_fail __assert_fail `(v  1 e 1 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\atexit.c
+[v ___funcs_on_exit __funcs_on_exit `(v  1 e 1 0 ]
+"152 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _pad pad `(i  1 s 2 pad ]
+"433
+[v _ctoa ctoa `(i  1 s 2 ctoa ]
+"470
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+"531
+[v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
+"816
+[v _otoa otoa `(i  1 s 2 otoa ]
+"862
+[v _stoa stoa `(i  1 s 2 stoa ]
+"917
+[v _utoa utoa `(i  1 s 2 utoa ]
+"952
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
+"1029
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+"1048
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+"1546
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\exit.c
+[v _exit exit `(v  1 e 1 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\floorf.c
+[v _floorf floorf `(f  1 e 4 0 ]
+"43 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isalnum.c
+[v _isalnum isalnum `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isdigit.c
+[v _isdigit isdigit `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isspace.c
+[v _isspace isspace `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+"1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\labs.c
+[v _labs labs `(l  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+[v i2___lwmod __lwmod `(ui  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\memcmp.c
+[v _memcmp memcmp `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+"9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strchr.c
+[v _strchr strchr `(*.32uc  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strcmp.c
+[v _strcmp strcmp `(i  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strtoul.c
+[v _strtoul strtoul `(ul  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+"34 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _debug_flags debug_flags `i  1 s 2 debug_flags ]
+"45
+[v _start_lba start_lba `ul  1 s 4 start_lba ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"465 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _FatFs FatFs `[1]*.39S509  1 s 2 FatFs ]
+"466
+[v _Fsid Fsid `us  1 s 2 Fsid ]
+"601
+[v _DbcTbl DbcTbl `C[10]uc  1 s 10 DbcTbl ]
+"26 Z:\z80\EMUZ80\cpm/src/board.c
+[v _board_name_hook board_name_hook `*.38(*.32uc  1 e 3 0 ]
+"27
+[v _board_sys_init_hook board_sys_init_hook `*.38(v  1 e 3 0 ]
+"28
+[v _board_bus_master_hook board_bus_master_hook `*.38(v  1 e 3 0 ]
+"29
+[v _board_start_z80_hook board_start_z80_hook `*.38(v  1 e 3 0 ]
+"30
+[v _board_set_bank_pins_hook board_set_bank_pins_hook `*.38(v  1 e 3 0 ]
+"31
+[v _board_setup_addrbus_hook board_setup_addrbus_hook `*.38(v  1 e 3 0 ]
+"32
+[v _board_high_addr_mask_hook board_high_addr_mask_hook `*.38(ul  1 e 3 0 ]
+"33
+[v _board_low_addr_mask_hook board_low_addr_mask_hook `*.38(us  1 e 3 0 ]
+"34
+[v _board_write_to_sram_hook board_write_to_sram_hook `*.38(v  1 e 3 0 ]
+"36
+[v _board_read_from_sram_hook board_read_from_sram_hook `*.38(v  1 e 3 0 ]
+"38
+[v _board_io_event_hook board_io_event_hook `*.38(b  1 e 3 0 ]
+"39
+[v _board_wait_io_event_hook board_wait_io_event_hook `*.38(v  1 e 3 0 ]
+"40
+[v _board_clear_io_event_hook board_clear_io_event_hook `*.38(v  1 e 3 0 ]
+"41
+[v _board_clock_op_hook board_clock_op_hook `*.38(i  1 e 3 0 ]
+"43
+[v _board_addr_l_pins_hook board_addr_l_pins_hook `*.38(uc  1 e 3 0 ]
+"44
+[v _board_set_addr_l_pins_hook board_set_addr_l_pins_hook `*.38(v  1 e 3 0 ]
+"45
+[v _board_data_pins_hook board_data_pins_hook `*.38(uc  1 e 3 0 ]
+"46
+[v _board_set_data_pins_hook board_set_data_pins_hook `*.38(v  1 e 3 0 ]
+"47
+[v _board_set_data_dir_hook board_set_data_dir_hook `*.38(v  1 e 3 0 ]
+"48
+[v _board_ioreq_pin_hook board_ioreq_pin_hook `*.38(b  1 e 3 0 ]
+"49
+[v _board_memrq_pin_hook board_memrq_pin_hook `*.38(b  1 e 3 0 ]
+"50
+[v _board_rd_pin_hook board_rd_pin_hook `*.38(b  1 e 3 0 ]
+"52
+[v _board_set_busrq_pin_hook board_set_busrq_pin_hook `*.38(v  1 e 3 0 ]
+"53
+[v _board_set_reset_pin_hook board_set_reset_pin_hook `*.38(v  1 e 3 0 ]
+"56
+[v _board_set_wait_pin_hook board_set_wait_pin_hook `*.38(v  1 e 3 0 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"37 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
+[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v _pic18f47q43_spi_ctx pic18f47q43_spi_ctx `S4395  1 s 4 pic18f47q43_spi_ctx ]
+"31 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _debug_flags@SDCard$F4749 debug_flags `i  1 s 2 debug_flags ]
+"44
+[s S4523 SDCard 5 `*.39S4393 1 spi 2 0 `us 1 timeout 2 2 `uc 1 calc_read_crc 1 4 :1:0 
+]
+[v _ctx_ ctx_ `S4523  1 s 5 ctx_ ]
+[s S195 disas_inst_desc 4 `uc 1 attr 1 0 `uc 1 op 1 1 `*.32v 1 ptr 2 2 ]
+"27 Z:\z80\EMUZ80\cpm/src/disas_z80.c
+[v _disas_z80 disas_z80 `C[257]S195  1 e 1028 0 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"34 Z:\z80\EMUZ80\cpm/src/io.c
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[s S546 . 4 `ui 1 sectors 2 0 `*.39S536 1 filep 2 2 ]
+[v _drives drives `[16]S546  1 e 64 0 ]
+"53
+[v _io_stat_ io_stat_ `i  1 s 2 io_stat_ ]
+"56
+[v _hw_ctrl_lock hw_ctrl_lock `uc  1 s 1 hw_ctrl_lock ]
+"59
+[v _key_input_buffer key_input_buffer `[80]uc  1 s 80 key_input_buffer ]
+"60
+[v _key_input key_input `ui  1 s 2 key_input ]
+"61
+[v _key_input_buffer_head key_input_buffer_head `ui  1 s 2 key_input_buffer_head ]
+"62
+[v _con_output_buffer con_output_buffer `[80]uc  1 s 80 con_output_buffer ]
+"63
+[v _con_output con_output `ui  1 s 2 con_output ]
+"64
+[v _con_output_buffer_head con_output_buffer_head `ui  1 s 2 con_output_buffer_head ]
+"66
+[v _disk_buf disk_buf `[128]uc  1 s 128 disk_buf ]
+"70
+[v _io_interrupt_data io_interrupt_data `i  1 s 2 io_interrupt_data ]
+"298
+[v _disk_stat disk_stat `uc  1 s 1 disk_stat ]
+"17 Z:\z80\EMUZ80\cpm/src/memory.c
+[v _mmu_bank mmu_bank `i  1 e 2 0 ]
+"18
+[v _mmu_num_banks mmu_num_banks `i  1 e 2 0 ]
+"19
+[v _mmu_mem_size mmu_mem_size `ul  1 e 4 0 ]
+"20
+[v _mmu_bank_select_callback mmu_bank_select_callback `*.38(v  1 e 3 0 ]
+"120
+[v _dma_helper_z80 dma_helper_z80 `C[28]uc  1 s 28 dma_helper_z80 ]
+"36 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _trampoline trampoline `C[183]uc  1 s 183 trampoline ]
+"41
+[v _trampoline_cleanup trampoline_cleanup `C[63]uc  1 s 63 trampoline_cleanup ]
+"46
+[v _trampoline_nmi trampoline_nmi `C[64]uc  1 s 64 trampoline_nmi ]
+"80
+[v _zero_page_saved zero_page_saved `[256]uc  1 s 256 zero_page_saved ]
+"81
+[v _zero_page_saved_size zero_page_saved_size `ui  1 s 2 zero_page_saved_size ]
+"82
+[v _trampoline_installed trampoline_installed `i  1 s 2 trampoline_installed ]
+"83
+[v _trampoline_destroyed trampoline_destroyed `i  1 s 2 trampoline_destroyed ]
+"84
+[v _nmi_vector_saved nmi_vector_saved `[3]uc  1 s 3 nmi_vector_saved ]
+"85
+[v _nmi_vector_installed nmi_vector_installed `i  1 s 2 nmi_vector_installed ]
+"93
+[v _invoke_monitor invoke_monitor `i  1 e 2 0 ]
+"94
+[v _mon_step_execution mon_step_execution `ui  1 e 2 0 ]
+[s S1312 trampoline_work_s 22 `us 1 iy 2 0 `us 1 ix 2 2 `us 1 hl 2 4 `us 1 de 2 6 `us 1 bc 2 8 `us 1 af 2 10 `us 1 fake_ret_addr 2 12 `us 1 pc 2 14 `us 1 sp 2 16 `us 1 cleanup_code_location 2 18 `uc 1 nmi 1 20 `uc 1 rfu 1 21 ]
+"95
+[s S1325 z80_context_s 24 `S1312 1 w 22 0 `[2]uc 1 saved_prog 2 22 ]
+[v _z80_context z80_context `S1325  1 s 24 z80_context ]
+"96
+[v _mon_cur_addr mon_cur_addr `ul  1 s 4 mon_cur_addr ]
+"97
+[v _mon_cur_drive mon_cur_drive `ui  1 s 2 mon_cur_drive ]
+"98
+[v _mon_cur_lba mon_cur_lba `ul  1 s 4 mon_cur_lba ]
+"99
+[v _mon_bp_addr mon_bp_addr `ul  1 s 4 mon_bp_addr ]
+"100
+[v _mon_bp_installed mon_bp_installed `uc  1 s 1 mon_bp_installed ]
+"101
+[v _mon_bp_saved_inst mon_bp_saved_inst `uc  1 s 1 mon_bp_saved_inst ]
+[s S1334 . 12 `uc 1 fatdisk 1 0 `uc 1 fatdisk_read 1 1 `uc 1 fatdisk_write 1 2 `uc 1 fatdisk_verbose 1 3 `uc 1 sdcard 1 4 `uc 1 sdcard_read 1 5 `uc 1 sdcard_write 1 6 `uc 1 sdcard_verbose 1 7 `ul 1 z80_clock_NCO1INC 4 8 ]
+"263
+[v _dbg_set dbg_set `S1334  1 s 12 dbg_set ]
+[s S1406 . 12 `*.32Cuc 1 name 2 0 `uc 1 nargs 1 2 `*.38(i 1 function 3 3 `ui 1 flags 2 6 `*.32Cuc 1 argument 2 8 `*.32Cuc 1 description 2 10 ]
+"520
+[v _mon_cmds mon_cmds `C[15]S1406  1 s 180 mon_cmds ]
+"34 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[v _fs fs `S509  1 s 560 fs ]
+"35
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v _fsdir fsdir `S2014  1 s 40 fsdir ]
+[s S2021 . 22 `ul 1 fsize 4 0 `us 1 fdate 2 4 `us 1 ftime 2 6 `uc 1 fattrib 1 8 `[13]uc 1 fname 13 9 ]
+"36
+[v _fileinfo fileinfo `S2021  1 s 22 fileinfo ]
+"37
+[v _files files `[6]S536  1 s 3276 files ]
+"38
+[v _num_files num_files `i  1 s 2 num_files ]
+"39
+[v _tmp_buf tmp_buf `[2][256]uc  1 e 512 0 ]
+[s S655 . 6 `uc 1 disk 1 0 `uc 1 disk_read 1 1 `uc 1 disk_write 1 2 `uc 1 disk_verbose 1 3 `us 1 disk_mask 2 4 ]
+"40
+[v _debug debug `S655  1 e 6 0 ]
+"49
+[v _turn_on_io_led turn_on_io_led `i  1 e 2 0 ]
+"51
+[v _rom rom `C[425]uc  1 e 425 0 ]
+"3492 C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h
+[v _SPI1RXB SPI1RXB `VEuc  1 e 1 @128 ]
+"3562
+[v _SPI1TXB SPI1TXB `VEuc  1 e 1 @129 ]
+"3622
+[v _LATB LATB `VEuc  1 e 1 @1215 ]
+"3639
+[v _SPI1TCNTL SPI1TCNTL `VEuc  1 e 1 @130 ]
+"3659
+[v _SPI1TCNTH SPI1TCNTH `VEuc  1 e 1 @131 ]
+"3679
+[v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @132 ]
+"3684
+[v _LATC LATC `VEuc  1 e 1 @1216 ]
+[s S4408 . 1 `uc 1 BMODE 1 0 :1:0 
+`uc 1 MST 1 0 :1:1 
+`uc 1 LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 EN 1 0 :1:7 
+]
+"3700
+[s S4414 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
+`uc 1 SPI1MST 1 0 :1:1 
+`uc 1 SPI1LSBF 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 SPI1SPIEN 1 0 :1:7 
+]
+[u S4420 . 1 `S4408 1 . 1 0 `S4414 1 . 1 0 ]
+[v _SPI1CON0bits SPI1CON0bits `VES4420  1 e 1 @132 ]
+"3745
+[v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @133 ]
+"3746
+[v _LATD LATD `VEuc  1 e 1 @1217 ]
+[s S4438 . 1 `uc 1 SDOP 1 0 :1:0 
+`uc 1 SDIP 1 0 :1:1 
+`uc 1 SSP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 FST 1 0 :1:4 
+`uc 1 CKP 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3772
+[s S4447 . 1 `uc 1 SPI1SDOP 1 0 :1:0 
+`uc 1 SPI1SDIP 1 0 :1:1 
+`uc 1 SPI1SSP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 SPI1FST 1 0 :1:4 
+`uc 1 SPI1CKP 1 0 :1:5 
+`uc 1 SPI1CKE 1 0 :1:6 
+`uc 1 SPI1SMP 1 0 :1:7 
+]
+[u S4456 . 1 `S4438 1 . 1 0 `S4447 1 . 1 0 ]
+[v _SPI1CON1bits SPI1CON1bits `VES4456  1 e 1 @133 ]
+[s S4478 . 1 `uc 1 RXR 1 0 :1:0 
+`uc 1 TXR 1 0 :1:1 
+`uc 1 SSET 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 SSFLT 1 0 :1:6 
+`uc 1 BUSY 1 0 :1:7 
+]
+"3870
+[s S4485 . 1 `uc 1 SPI1RXR 1 0 :1:0 
+`uc 1 SPI1TXR 1 0 :1:1 
+`uc 1 SPI1SSET 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 SPI1SSFLT 1 0 :1:6 
+`uc 1 SPI1BUSY 1 0 :1:7 
+]
+[u S4492 . 1 `S4478 1 . 1 0 `S4485 1 . 1 0 ]
+[v _SPI1CON2bits SPI1CON2bits `VES4492  1 e 1 @134 ]
+"3902
+[v _TRISB TRISB `VEuc  1 e 1 @1223 ]
+"3964
+[v _TRISC TRISC `VEuc  1 e 1 @1224 ]
+"4007
+[v _SPI1TWIDTH SPI1TWIDTH `VEuc  1 e 1 @136 ]
+"4026
+[v _TRISD TRISD `VEuc  1 e 1 @1225 ]
+"4047
+[v _SPI1BAUD SPI1BAUD `VEuc  1 e 1 @137 ]
+"4182
+[v _PORTB PORTB `VEuc  1 e 1 @1231 ]
+"4209
+[v _SPI1INTE SPI1INTE `VEuc  1 e 1 @139 ]
+"4244
+[v _PORTC PORTC `VEuc  1 e 1 @1232 ]
+"4301
+[v _SPI1CLK SPI1CLK `VEuc  1 e 1 @140 ]
+"5573
+[v _OSCFRQ OSCFRQ `VEuc  1 e 1 @177 ]
+"6600
+[v _CLCDATA CLCDATA `VEuc  1 e 1 @212 ]
+"6720
+[v _CLCSELECT CLCSELECT `VEuc  1 e 1 @213 ]
+"6760
+[v _CLCnCON CLCnCON `VEuc  1 e 1 @214 ]
+"6830
+[v _CLCnPOL CLCnPOL `VEuc  1 e 1 @215 ]
+"6875
+[v _CLCnSEL0 CLCnSEL0 `VEuc  1 e 1 @216 ]
+"6945
+[v _CLCnSEL1 CLCnSEL1 `VEuc  1 e 1 @217 ]
+"7015
+[v _CLCnSEL2 CLCnSEL2 `VEuc  1 e 1 @218 ]
+"7085
+[v _CLCnSEL3 CLCnSEL3 `VEuc  1 e 1 @219 ]
+"7155
+[v _CLCnGLS0 CLCnGLS0 `VEuc  1 e 1 @220 ]
+"7217
+[v _CLCnGLS1 CLCnGLS1 `VEuc  1 e 1 @221 ]
+"7279
+[v _CLCnGLS2 CLCnGLS2 `VEuc  1 e 1 @222 ]
+"7341
+[v _CLCnGLS3 CLCnGLS3 `VEuc  1 e 1 @223 ]
+"7619
+[v _ANSELE0 ANSELE0 `VEb  1 e 0 @8448 ]
+"7622
+[v _ANSELE1 ANSELE1 `VEb  1 e 0 @8449 ]
+"7625
+[v _ANSELE2 ANSELE2 `VEb  1 e 0 @8450 ]
+"8237
+[v _CLC3IE CLC3IE `VEb  1 e 0 @9517 ]
+"8240
+[v _CLC3IF CLC3IF `VEb  1 e 0 @9645 ]
+"10766
+[v _G3POL G3POL `VEb  1 e 0 @1722 ]
+"10799
+[v _GIE GIE `VEb  1 e 0 @9911 ]
+"11549
+[v _LATA1 LATA1 `VEb  1 e 0 @9713 ]
+"11555
+[v _LATA3 LATA3 `VEb  1 e 0 @9715 ]
+"11558
+[v _LATA4 LATA4 `VEb  1 e 0 @9716 ]
+"11564
+[v _LATA6 LATA6 `VEb  1 e 0 @9718 ]
+"11615
+[v _LATC7 LATC7 `VEb  1 e 0 @9735 ]
+"11639
+[v _LATD7 LATD7 `VEb  1 e 0 @9743 ]
+"11642
+[v _LATE0 LATE0 `VEb  1 e 0 @9744 ]
+"11645
+[v _LATE1 LATE1 `VEb  1 e 0 @9745 ]
+"11648
+[v _LATE2 LATE2 `VEb  1 e 0 @9746 ]
+"12020
+[v _NCO1EN NCO1EN `VEb  1 e 0 @8759 ]
+"12095
+[v _NCO1OUT NCO1OUT `VEb  1 e 0 @8757 ]
+"12098
+[v _NCO1PFM NCO1PFM `VEb  1 e 0 @8752 ]
+"12101
+[v _NCO1POL NCO1POL `VEb  1 e 0 @8756 ]
+"13391
+[v _RA0 RA0 `VEb  1 e 0 @9840 ]
+"13412
+[v _RA1 RA1 `VEb  1 e 0 @9841 ]
+"13496
+[v _RA5 RA5 `VEb  1 e 0 @9845 ]
+"15515
+[v _SPI1RXIF SPI1RXIF `VEb  1 e 0 @9608 ]
+"17792
+[v _TRISA0 TRISA0 `VEb  1 e 0 @9776 ]
+"17795
+[v _TRISA1 TRISA1 `VEb  1 e 0 @9777 ]
+"17798
+[v _TRISA2 TRISA2 `VEb  1 e 0 @9778 ]
+"17801
+[v _TRISA3 TRISA3 `VEb  1 e 0 @9779 ]
+"17804
+[v _TRISA4 TRISA4 `VEb  1 e 0 @9780 ]
+"17807
+[v _TRISA5 TRISA5 `VEb  1 e 0 @9781 ]
+"17810
+[v _TRISA6 TRISA6 `VEb  1 e 0 @9782 ]
+"17813
+[v _TRISA7 TRISA7 `VEb  1 e 0 @9783 ]
+"17840
+[v _TRISC0 TRISC0 `VEb  1 e 0 @9792 ]
+"17843
+[v _TRISC1 TRISC1 `VEb  1 e 0 @9793 ]
+"17846
+[v _TRISC2 TRISC2 `VEb  1 e 0 @9794 ]
+"17861
+[v _TRISC7 TRISC7 `VEb  1 e 0 @9799 ]
+"17882
+[v _TRISD6 TRISD6 `VEb  1 e 0 @9806 ]
+"17885
+[v _TRISD7 TRISD7 `VEb  1 e 0 @9807 ]
+"17888
+[v _TRISE0 TRISE0 `VEb  1 e 0 @9808 ]
+"17891
+[v _TRISE1 TRISE1 `VEb  1 e 0 @9809 ]
+"17894
+[v _TRISE2 TRISE2 `VEb  1 e 0 @9810 ]
+"19637
+[v _U3ON U3ON `VEb  1 e 0 @5783 ]
+"19667
+[v _U3RXEN U3RXEN `VEb  1 e 0 @5772 ]
+"19679
+[v _U3RXIE U3RXIE `VEb  1 e 0 @9528 ]
+"19682
+[v _U3RXIF U3RXIF `VEb  1 e 0 @9656 ]
+"19733
+[v _U3TXEN U3TXEN `VEb  1 e 0 @5773 ]
+"19736
+[v _U3TXIE U3TXIE `VEb  1 e 0 @9529 ]
+"19739
+[v _U3TXIF U3TXIF `VEb  1 e 0 @9657 ]
+"20387
+[v _WPUA0 WPUA0 `VEb  1 e 0 @8200 ]
+"20390
+[v _WPUA1 WPUA1 `VEb  1 e 0 @8201 ]
+"20402
+[v _WPUA5 WPUA5 `VEb  1 e 0 @8205 ]
+"20477
+[v _WPUD6 WPUD6 `VEb  1 e 0 @8398 ]
+"23815
+[v _RA1PPS RA1PPS `VEuc  1 e 1 @514 ]
+"23865
+[v _RA2PPS RA2PPS `VEuc  1 e 1 @515 ]
+"23915
+[v _RA3PPS RA3PPS `VEuc  1 e 1 @516 ]
+"23965
+[v _RA4PPS RA4PPS `VEuc  1 e 1 @517 ]
+"24065
+[v _RA6PPS RA6PPS `VEuc  1 e 1 @519 ]
+"24565
+[v _RC0PPS RC0PPS `VEuc  1 e 1 @529 ]
+"24615
+[v _RC1PPS RC1PPS `VEuc  1 e 1 @530 ]
+"25315
+[v _RD7PPS RD7PPS `VEuc  1 e 1 @544 ]
+"28336
+[v _CLCIN0PPS CLCIN0PPS `VEuc  1 e 1 @609 ]
+"28402
+[v _CLCIN1PPS CLCIN1PPS `VEuc  1 e 1 @610 ]
+"28468
+[v _CLCIN2PPS CLCIN2PPS `VEuc  1 e 1 @611 ]
+"28600
+[v _CLCIN4PPS CLCIN4PPS `VEuc  1 e 1 @613 ]
+"28732
+[v _CLCIN6PPS CLCIN6PPS `VEuc  1 e 1 @615 ]
+"28930
+[v _SPI1SCKPPS SPI1SCKPPS `VEuc  1 e 1 @618 ]
+"28996
+[v _SPI1SDIPPS SPI1SDIPPS `VEuc  1 e 1 @619 ]
+"29734
+[v _U3RXPPS U3RXPPS `VEuc  1 e 1 @630 ]
+"34020
+[v _U3RXB U3RXB `VEuc  1 e 1 @711 ]
+"34058
+[v _U3TXB U3TXB `VEuc  1 e 1 @713 ]
+"34505
+[v _U3BRG U3BRG `VEus  1 e 2 @724 ]
+"59759
+[v _ANSELA ANSELA `VEuc  1 e 1 @1024 ]
+"60255
+[v _ANSELB ANSELB `VEuc  1 e 1 @1032 ]
+"60317
+[v _WPUB WPUB `VEuc  1 e 1 @1033 ]
+"60751
+[v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
+"60813
+[v _WPUC WPUC `VEuc  1 e 1 @1041 ]
+[s S4308 . 1 `uc 1 SLRC0 1 0 :1:0 
+`uc 1 SLRC1 1 0 :1:1 
+`uc 1 SLRC2 1 0 :1:2 
+`uc 1 SLRC3 1 0 :1:3 
+`uc 1 SLRC4 1 0 :1:4 
+`uc 1 SLRC5 1 0 :1:5 
+`uc 1 SLRC6 1 0 :1:6 
+`uc 1 SLRC7 1 0 :1:7 
+]
+"60954
+[u S4317 . 1 `S4308 1 . 1 0 ]
+"60954
+"60954
+[v _SLRCONCbits SLRCONCbits `VES4317  1 e 1 @1043 ]
+"61247
+[v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
+"61309
+[v _WPUD WPUD `VEuc  1 e 1 @1049 ]
+"62138
+"62138
+[v _NCO1INC NCO1INC `VEum  1 e 3 @1091 ]
+"62550
+[v _NCO1CLK NCO1CLK `VEuc  1 e 1 @1095 ]
+"64512
+[v _IVTLOCK IVTLOCK `VEuc  1 e 1 @1113 ]
+[s S4193 . 1 `uc 1 IVTLOCKED 1 0 :1:0 
+]
+"64522
+[u S4195 . 1 `S4193 1 . 1 0 ]
+"64522
+"64522
+[v _IVTLOCKbits IVTLOCKbits `VES4195  1 e 1 @1113 ]
+"64710
+[v _IVTBASE IVTBASE `VEum  1 e 3 @1117 ]
+"6 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\atexit.c
+[v _funcs funcs `[32]*.38(v  1 s 96 funcs ]
+"7
+[v _count count `c  1 s 1 count ]
+"118 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _prec prec `i  1 s 2 prec ]
+[v _width width `i  1 s 2 width ]
+"119
+[v _flags flags `uc  1 s 1 flags ]
+"144
+[v _dbuf dbuf `[80]uc  1 s 80 dbuf ]
+"148
+[v _nout nout `i  1 s 2 nout ]
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\errno.c
+[v _errno errno `i  1 e 2 0 ]
+"67 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[v _main main `(v  1 e 1 0 ]
+{
+"106
+} 0
+"113
+[v _sys_init sys_init `(v  1 e 1 0 ]
+{
+"117
+} 0
+"31 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_sys_init emuz80_common_sys_init `(v  1 s 1 emuz80_common_sys_init ]
+{
+"107
+} 0
+"91 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_sys_init emuz80_47q_sys_init `(v  1 s 1 emuz80_47q_sys_init ]
+{
+"147
+[v emuz80_47q_sys_init@retry retry `i  1 s 2 retry ]
+"159
+} 0
+"372 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_wait_for_programmer emuz80_common_wait_for_programmer `(v  1 s 1 emuz80_common_wait_for_programmer ]
+{
+"384
+} 0
+"53 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _SDCard_init SDCard_init `(i  1 e 2 0 ]
+{
+"87
+[v SDCard_init@i i `i  1 a 2 124 ]
+"61
+[v SDCard_init@buf buf `[5]uc  1 a 5 128 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"58
+[v SDCard_init@spi spi `*.39S4393  1 a 2 126 ]
+"53
+[v SDCard_init@initial_clock_speed initial_clock_speed `i  1 p 2 118 ]
+[v SDCard_init@clock_speed clock_speed `i  1 p 2 120 ]
+[v SDCard_init@timeout timeout `us  1 p 2 122 ]
+"131
+} 0
+"88 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
+[v _SPI_SD_configure SPI_SD_configure `(v  1 e 1 0 ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_configure@ctx_ ctx_ `*.39S4393  1 p 2 110 ]
+[v SPI_SD_configure@clock_speed clock_speed `i  1 p 2 112 ]
+[v SPI_SD_configure@bit_order bit_order `uc  1 p 1 114 ]
+[v SPI_SD_configure@data_mode data_mode `uc  1 p 1 115 ]
+"142
+} 0
+"68
+[v _SPI_SD_begin SPI_SD_begin `(v  1 e 1 0 ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"70
+[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v SPI_SD_begin@ctx ctx `*.39S4395  1 a 2 9 ]
+"68
+[v SPI_SD_begin@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+"86
+} 0
+"316 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _SDCard_command SDCard_command `(i  1 e 2 0 ]
+{
+[v SDCard_command@command command `uc  1 a 1 wreg ]
+"320
+[v SDCard_command@responsep responsep `*.39uc  1 a 2 59 ]
+"319
+[v SDCard_command@result result `i  1 a 2 57 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"318
+[v SDCard_command@spi spi `*.39S4393  1 a 2 55 ]
+"316
+[v SDCard_command@command command `uc  1 a 1 wreg ]
+[v SDCard_command@argument argument `ul  1 p 4 46 ]
+[v SDCard_command@response_buffer response_buffer `*.39v  1 p 2 50 ]
+[v SDCard_command@length length `ui  1 p 2 52 ]
+"318
+[v SDCard_command@command command `uc  1 a 1 54 ]
+"332
+} 0
+"393 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _board_init board_init `(v  1 e 1 0 ]
+{
+"408
+} 0
+"337 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_init emuz80_common_init `(v  1 s 1 emuz80_common_init ]
+{
+"370
+} 0
+"210 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[v _start_z80 start_z80 `(v  1 e 1 0 ]
+{
+"213
+} 0
+"313 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_init mon_init `(v  1 e 1 0 ]
+{
+"316
+} 0
+"129 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[v _menu_select menu_select `(i  1 e 2 0 ]
+{
+"193
+[v menu_select@buf buf `C*.39uc  1 a 2 215 ]
+"192
+[v menu_select@drive_letter drive_letter `uc  1 a 1 217 ]
+"158
+[v menu_select@c c `uc  1 a 1 224 ]
+"131
+[v menu_select@i i `i  1 a 2 222 ]
+"143
+[v menu_select@selection selection `i  1 a 2 220 ]
+"132
+[v menu_select@drive drive `ui  1 a 2 218 ]
+"208
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strcmp.c
+[v _strcmp strcmp `(i  1 e 2 0 ]
+{
+[v strcmp@l l `*.39Cuc  1 p 2 7 ]
+[v strcmp@r r `*.32Cuc  1 p 2 9 ]
+"7
+} 0
+"4695 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _f_readdir f_readdir `(E22972  1 e 1 0 ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"4701
+[v f_readdir@fs fs `*.39S509  1 a 2 159 ]
+"4700
+[v f_readdir@res res `E596  1 a 1 161 ]
+"4696
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v f_readdir@dp dp `*.39S2014  1 p 2 155 ]
+[s S2021 . 22 `ul 1 fsize 4 0 `us 1 fdate 2 4 `us 1 ftime 2 6 `uc 1 fattrib 1 8 `[13]uc 1 fname 13 9 ]
+"4697
+[v f_readdir@fno fno `*.39S2021  1 p 2 157 ]
+"4722
+} 0
+"2618
+[v _get_fileinfo get_fileinfo `(v  1 s 1 get_fileinfo ]
+{
+"2623
+[v get_fileinfo@di di `ui  1 a 2 31 ]
+[v get_fileinfo@si si `ui  1 a 2 28 ]
+"2630
+[v get_fileinfo@c c `uc  1 a 1 30 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"2619
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v get_fileinfo@dp dp `*.39S2014  1 p 2 20 ]
+[s S2021 . 22 `ul 1 fsize 4 0 `us 1 fdate 2 4 `us 1 ftime 2 6 `uc 1 fattrib 1 8 `[13]uc 1 fname 13 9 ]
+"2620
+[v get_fileinfo@fno fno `*.39S2021  1 p 2 22 ]
+"2749
+} 0
+"2307
+[v _dir_read dir_read `(E596  1 s 1 dir_read ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"2313
+[v dir_read@fs fs `*.39S509  1 a 2 150 ]
+"2312
+[v dir_read@res res `E596  1 a 1 154 ]
+"2314
+[v dir_read@b b `uc  1 a 1 153 ]
+[v dir_read@attr attr `uc  1 a 1 152 ]
+"2308
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v dir_read@dp dp `*.39S2014  1 p 2 142 ]
+"2309
+[v dir_read@vol vol `i  1 p 2 144 ]
+"2375
+} 0
+"4599
+[v _f_opendir f_opendir `(E22972  1 e 1 0 ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"4605
+[v f_opendir@fs fs `*.39S509  1 a 2 198 ]
+"4604
+[v f_opendir@res res `E596  1 a 1 200 ]
+"4600
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v f_opendir@dp dp `*.39S2014  1 p 2 194 ]
+"4601
+[v f_opendir@path path `*.34Cuc  1 p 2 196 ]
+"4656
+} 0
+"3719
+[v _f_open f_open `(E22972  1 e 1 0 ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3726
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v f_open@dj dj `S2014  1 a 40 27 ]
+"3729
+[v f_open@clst clst `ul  1 a 4 20 ]
+"3731
+[v f_open@ofs ofs `ul  1 a 4 16 ]
+"3730
+[v f_open@sc sc `ul  1 a 4 12 ]
+"3729
+[v f_open@cl cl `ul  1 a 4 8 ]
+[v f_open@tm tm `ul  1 a 4 4 ]
+[v f_open@bcs bcs `ul  1 a 4 0 ]
+"3727
+[v f_open@fs fs `*.39S509  1 a 2 24 ]
+"3725
+[v f_open@res res `E596  1 a 1 26 ]
+"3720
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[v f_open@fp fp `*.39S536  1 p 2 194 ]
+"3721
+[v f_open@path path `*.34Cuc  1 p 2 196 ]
+"3722
+[v f_open@mode mode `uc  1 p 1 198 ]
+"3907
+} 0
+"1430
+[v _remove_chain remove_chain `(E596  1 s 1 remove_chain ]
+{
+"1437
+[v remove_chain@nxt nxt `ul  1 a 4 105 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1438
+[v remove_chain@fs fs `*.39S509  1 a 2 110 ]
+"1436
+[v remove_chain@res res `E596  1 a 1 109 ]
+"1431
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[v remove_chain@obj obj `*.39S529  1 p 2 87 ]
+"1432
+[v remove_chain@clst clst `ul  1 p 4 89 ]
+"1433
+[v remove_chain@pclst pclst `ul  1 p 4 93 ]
+"1516
+} 0
+"3052
+[v _follow_path follow_path `(E596  1 s 1 follow_path ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3059
+[v follow_path@fs fs `*.39S509  1 a 2 160 ]
+"3057
+[v follow_path@res res `E596  1 a 1 163 ]
+"3058
+[v follow_path@ns ns `uc  1 a 1 162 ]
+"3053
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v follow_path@dp dp `*.39S2014  1 p 2 150 ]
+"3054
+[v follow_path@path path `*.34Cuc  1 p 2 152 ]
+"3130
+} 0
+"1849
+[v _ld_clust ld_clust `(ul  1 s 4 ld_clust ]
+{
+"1854
+[v ld_clust@cl cl `ul  1 a 4 22 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1850
+[v ld_clust@fs fs `*.39S509  1 p 2 14 ]
+"1851
+[v ld_clust@dir dir `*.39Cuc  1 p 2 16 ]
+"1862
+} 0
+"2385
+[v _dir_find dir_find `(E596  1 s 1 dir_find ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"2390
+[v dir_find@fs fs `*.39S509  1 a 2 146 ]
+"2389
+[v dir_find@res res `E596  1 a 1 149 ]
+"2391
+[v dir_find@c c `uc  1 a 1 148 ]
+"2386
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v dir_find@dp dp `*.39S2014  1 p 2 142 ]
+"2456
+} 0
+"2848
+[v _create_name create_name `(E596  1 s 1 create_name ]
+{
+"2983
+[v create_name@i i `ui  1 a 2 37 ]
+"2982
+[v create_name@sfn sfn `*.39uc  1 a 2 35 ]
+"2983
+[v create_name@si si `ui  1 a 2 33 ]
+"2984
+[v create_name@p p `*.34Cuc  1 a 2 31 ]
+"2983
+[v create_name@ni ni `ui  1 a 2 29 ]
+"2981
+[v create_name@c c `uc  1 a 1 39 ]
+[v create_name@d d `uc  1 a 1 28 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"2849
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v create_name@dp dp `*.39S2014  1 p 2 19 ]
+"2850
+[v create_name@path path `*.39*.34Cuc  1 p 2 21 ]
+"3043
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strchr.c
+[v _strchr strchr `(*.32uc  1 e 2 0 ]
+{
+[v strchr@s s `*.32Cuc  1 p 2 7 ]
+[v strchr@c c `i  1 p 2 9 ]
+"11
+} 0
+"713 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _dbc_2nd dbc_2nd `(i  1 s 2 dbc_2nd ]
+{
+[v dbc_2nd@c c `uc  1 a 1 wreg ]
+[v dbc_2nd@c c `uc  1 a 1 wreg ]
+"722
+[v dbc_2nd@c c `uc  1 a 1 9 ]
+"731
+} 0
+"693
+[v _dbc_1st dbc_1st `(i  1 s 2 dbc_1st ]
+{
+[v dbc_1st@c c `uc  1 a 1 wreg ]
+[v dbc_1st@c c `uc  1 a 1 wreg ]
+"701
+[v dbc_1st@c c `uc  1 a 1 9 ]
+"709
+} 0
+"2466
+[v _dir_register dir_register `(E596  1 s 1 dir_register ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"2471
+[v dir_register@fs fs `*.39S509  1 a 2 156 ]
+"2470
+[v dir_register@res res `E596  1 a 1 158 ]
+"2467
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v dir_register@dp dp `*.39S2014  1 p 2 154 ]
+"2561
+} 0
+"1807
+[v _dir_alloc dir_alloc `(E596  1 s 1 dir_alloc ]
+{
+"1813
+[v dir_alloc@n n `ui  1 a 2 151 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1814
+[v dir_alloc@fs fs `*.39S509  1 a 2 149 ]
+"1812
+[v dir_alloc@res res `E596  1 a 1 153 ]
+"1808
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v dir_alloc@dp dp `*.39S2014  1 p 2 142 ]
+"1809
+[v dir_alloc@n_ent n_ent `ui  1 p 2 144 ]
+"1838
+} 0
+"1698
+[v _dir_sdi dir_sdi `(E596  1 s 1 dir_sdi ]
+{
+"1703
+[v dir_sdi@clst clst `ul  1 a 4 100 ]
+[v dir_sdi@csz csz `ul  1 a 4 96 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1704
+[v dir_sdi@fs fs `*.39S509  1 a 2 104 ]
+"1699
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v dir_sdi@dp dp `*.39S2014  1 p 2 80 ]
+"1700
+[v dir_sdi@ofs ofs `ul  1 p 4 82 ]
+"1737
+} 0
+"1746
+[v _dir_next dir_next `(E596  1 s 1 dir_next ]
+{
+"1751
+[v dir_next@clst clst `ul  1 a 4 138 ]
+[v dir_next@ofs ofs `ul  1 a 4 132 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1752
+[v dir_next@fs fs `*.39S509  1 a 2 136 ]
+"1747
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v dir_next@dp dp `*.39S2014  1 p 2 116 ]
+"1748
+[v dir_next@stretch stretch `i  1 p 2 118 ]
+"1797
+} 0
+"1659
+[v _dir_clear dir_clear `(E596  1 s 1 dir_clear ]
+{
+"1664
+[v dir_clear@sect sect `ul  1 a 4 53 ]
+"1665
+[v dir_clear@n n `ui  1 a 2 59 ]
+[v dir_clear@szb szb `ui  1 a 2 57 ]
+"1666
+[v dir_clear@ibuf ibuf `*.39uc  1 a 2 51 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1660
+[v dir_clear@fs fs `*.39S509  1 p 2 43 ]
+"1661
+[v dir_clear@clst clst `ul  1 p 4 45 ]
+"1688
+} 0
+"4665
+[v _f_closedir f_closedir `(E22972  1 e 1 0 ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"4670
+[v f_closedir@fs fs `*.39S509  1 a 2 123 ]
+"4669
+[v f_closedir@res res `E596  1 a 1 125 ]
+"4666
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S2014 . 40 `S529 1 obj 14 0 `ul 1 dptr 4 14 `ul 1 clust 4 18 `ul 1 sect 4 22 `*.39uc 1 dir 2 26 `[12]uc 1 fn 12 28 ]
+[v f_closedir@dp dp `*.39S2014  1 p 2 121 ]
+"4686
+} 0
+"23 Z:\z80\EMUZ80\cpm/src/memory.c
+[v _mem_init mem_init `(v  1 e 1 0 ]
+{
+"26
+[v mem_init@addr addr `ul  1 a 4 81 ]
+"25
+[v mem_init@i i `ui  1 a 2 79 ]
+"118
+} 0
+"72 Z:\z80\EMUZ80\cpm/src/io.c
+[v _io_init io_init `(v  1 e 1 0 ]
+{
+"74
+} 0
+"300
+[v _io_handle io_handle `(v  1 e 1 0 ]
+{
+"638
+[v io_handle@addr_1031 addr `ul  1 a 4 4 ]
+"609
+[v io_handle@addr addr `ul  1 a 4 0 ]
+"542
+[v io_handle@rd rd `i  1 a 2 17 ]
+"543
+[v io_handle@fetch_count fetch_count `i  1 a 2 13 ]
+"570
+[v io_handle@sector sector `ul  1 a 4 19 ]
+"578
+[v io_handle@n n `ui  1 a 2 28 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"577
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[v io_handle@filep filep `*.39S536  1 a 2 25 ]
+"317
+[v io_handle@do_bus_master do_bus_master `i  1 a 2 23 ]
+"319
+[v io_handle@io_data io_data `uc  1 a 1 31 ]
+"318
+[v io_handle@io_addr io_addr `uc  1 a 1 30 ]
+"579
+[v io_handle@fres fres `E22972  1 a 1 27 ]
+"310
+[v io_handle@c c `uc  1 a 1 8 ]
+"301
+[v io_handle@disk_drive disk_drive `uc  1 s 1 disk_drive ]
+"302
+[v io_handle@disk_track disk_track `uc  1 s 1 disk_track ]
+"303
+[v io_handle@disk_sector disk_sector `us  1 s 2 disk_sector ]
+"304
+[v io_handle@disk_op disk_op `uc  1 s 1 disk_op ]
+"305
+[v io_handle@disk_dmal disk_dmal `uc  1 s 1 disk_dmal ]
+"306
+[v io_handle@disk_dmah disk_dmah `uc  1 s 1 disk_dmah ]
+"307
+[v io_handle@disk_datap disk_datap `*.39uc  1 s 2 disk_datap ]
+"308
+[v io_handle@prev_output_chars prev_output_chars `ui  1 s 2 prev_output_chars ]
+"309
+[v io_handle@io_output_chars io_output_chars `ui  1 s 2 io_output_chars ]
+"696
+} 0
+"71 Z:\z80\EMUZ80\cpm/drivers/utils.c
+[v _util_hexdump_sum util_hexdump_sum `(v  1 e 1 0 ]
+{
+"77
+[v util_hexdump_sum@i i `i  1 a 2 147 ]
+"76
+[v util_hexdump_sum@p p `*.39Cuc  1 a 2 145 ]
+"75
+[v util_hexdump_sum@sum sum `uc  1 a 1 149 ]
+"71
+[v util_hexdump_sum@header header `*.32Cuc  1 p 2 139 ]
+[v util_hexdump_sum@addr addr `*.39Cv  1 p 2 141 ]
+[v util_hexdump_sum@size size `ui  1 p 2 143 ]
+"80
+} 0
+"262 Z:\z80\EMUZ80\cpm/src/io.c
+[v _try_to_invoke_monitor try_to_invoke_monitor `(v  1 e 1 0 ]
+{
+"296
+} 0
+"390 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_start mon_start `(v  1 e 1 0 ]
+{
+"413
+} 0
+"1170
+[v _mon_prompt mon_prompt `(i  1 e 2 0 ]
+{
+"1172
+[v mon_prompt@line line `[48]uc  1 a 48 0 ]
+"1174
+[v mon_prompt@args args `[4]*.39uc  1 a 8 61 ]
+"1175
+[v mon_prompt@prompt_len prompt_len `Cui  1 a 2 59 ]
+"1187
+[v mon_prompt@command command `ui  1 a 2 57 ]
+"1205
+[v mon_prompt@result result `i  1 a 2 55 ]
+"1173
+[v mon_prompt@argc argc `i  1 a 2 53 ]
+"1176
+[v mon_prompt@input input `*.39uc  1 a 2 51 ]
+"1210
+} 0
+"713
+[v _mon_parse mon_parse `(i  1 e 2 0 ]
+{
+"719
+[v mon_parse@i i `i  1 a 2 131 ]
+"718
+[v mon_parse@cmd_idx cmd_idx `ui  1 a 2 129 ]
+"716
+[v mon_parse@match_idx match_idx `ui  1 a 2 127 ]
+"715
+[v mon_parse@nmatches nmatches `i  1 a 2 125 ]
+"713
+[v mon_parse@line line `*.39uc  1 p 2 110 ]
+[v mon_parse@command command `*.39ui  1 p 2 112 ]
+[v mon_parse@args args `*.39*.39uc  1 p 2 114 ]
+"717
+[v mon_parse@last_command_idx last_command_idx `ui  1 s 2 last_command_idx ]
+"799
+} 0
+"640
+[v _mon_get_str mon_get_str `(i  1 e 2 0 ]
+{
+"656
+[v mon_get_str@c c `uc  1 a 1 26 ]
+"645
+[v mon_get_str@tmpp tmpp `*.39uc  1 a 2 22 ]
+"642
+[v mon_get_str@result result `i  1 a 2 24 ]
+"640
+[v mon_get_str@linep linep `*.39*.39uc  1 p 2 17 ]
+"665
+} 0
+"575
+[v _mon_remove_trailing_space mon_remove_trailing_space `(v  1 e 1 0 ]
+{
+[v mon_remove_trailing_space@linep linep `*.39*.39uc  1 p 2 7 ]
+"579
+} 0
+"667
+[v _mon_get_hexval mon_get_hexval `(i  1 e 2 0 ]
+{
+"674
+[v mon_get_hexval@c c `uc  1 a 1 19 ]
+"669
+[v mon_get_hexval@result result `i  1 a 2 17 ]
+"667
+[v mon_get_hexval@linep linep `*.39*.39uc  1 p 2 12 ]
+"687
+} 0
+"569
+[v _mon_remove_space mon_remove_space `(v  1 e 1 0 ]
+{
+[v mon_remove_space@linep linep `*.39*.39uc  1 p 2 7 ]
+"573
+} 0
+"801
+[v _mon_cmd_help mon_cmd_help `(i  1 e 2 0 ]
+{
+"803
+[v mon_cmd_help@cmd_idx cmd_idx `ui  1 a 2 184 ]
+"801
+[v mon_cmd_help@argc argc `i  1 p 2 178 ]
+[v mon_cmd_help@args args `*.39*.39uc  1 p 2 180 ]
+"812
+} 0
+"971
+[v _mon_cmd_status mon_cmd_status `(i  1 e 2 0 ]
+{
+"974
+[v mon_cmd_status@pc pc `us  1 a 2 190 ]
+"973
+[v mon_cmd_status@sp sp `us  1 a 2 188 ]
+"991
+} 0
+"961
+[v _mon_cmd_step mon_cmd_step `(i  1 e 2 0 ]
+{
+[v mon_cmd_step@args args `*.39*.39uc  1 p 2 180 ]
+"969
+} 0
+"1048
+[v _mon_cmd_set mon_cmd_set `(i  1 e 2 0 ]
+{
+"1050
+[v mon_cmd_set@i i `ui  1 a 2 190 ]
+"1051
+[v mon_cmd_set@ptr ptr `*.39v  1 a 2 188 ]
+"1048
+[v mon_cmd_set@args args `*.39*.39uc  1 p 2 180 ]
+[s S1578 . 5 `*.32Cuc 1 name 2 0 `*.39v 1 ptr 2 2 `uc 1 attr 1 4 ]
+"1059
+[v mon_cmd_set@variables variables `C[14]S1578  1 s 70 variables ]
+"1130
+} 0
+"935
+[v _mon_cmd_sdread mon_cmd_sdread `(i  1 e 2 0 ]
+{
+"939
+[v mon_cmd_sdread@count count `ui  1 a 2 186 ]
+"937
+[v mon_cmd_sdread@i i `ui  1 a 2 184 ]
+"935
+[v mon_cmd_sdread@argc argc `i  1 p 2 178 ]
+[v mon_cmd_sdread@args args `*.39*.39uc  1 p 2 180 ]
+"938
+[v mon_cmd_sdread@lba lba `ul  1 s 4 lba ]
+"959
+} 0
+"1041
+[v _mon_cmd_reset mon_cmd_reset `(i  1 e 2 0 ]
+{
+"1046
+} 0
+"1156
+[v _mon_cmd_jump mon_cmd_jump `(i  1 e 2 0 ]
+{
+"1158
+[v mon_cmd_jump@addr addr `ul  1 a 4 184 ]
+"1156
+[v mon_cmd_jump@args args `*.39*.39uc  1 p 2 180 ]
+"1168
+} 0
+"814
+[v _mon_cmd_dump mon_cmd_dump `(i  1 e 2 0 ]
+{
+"833
+[v mon_cmd_dump@n n `ui  1 a 2 186 ]
+"816
+[v mon_cmd_dump@addr addr `ul  1 a 4 188 ]
+"817
+[v mon_cmd_dump@len len `ui  1 a 2 192 ]
+"814
+[v mon_cmd_dump@args args `*.39*.39uc  1 p 2 180 ]
+"841
+} 0
+"876
+[v _mon_cmd_diskread mon_cmd_diskread `(i  1 e 2 0 ]
+{
+"884
+[v mon_cmd_diskread@lba lba `ul  1 a 4 189 ]
+"879
+[v mon_cmd_diskread@drive drive `ui  1 a 2 193 ]
+"882
+[v mon_cmd_diskread@len len `ui  1 a 2 186 ]
+"878
+[v mon_cmd_diskread@i i `i  1 a 2 184 ]
+"883
+[v mon_cmd_diskread@update_lba update_lba `uc  1 a 1 188 ]
+"876
+[v mon_cmd_diskread@argc argc `i  1 p 2 178 ]
+[v mon_cmd_diskread@args args `*.39*.39uc  1 p 2 180 ]
+"880
+[v mon_cmd_diskread@track track `ui  1 s 2 track ]
+"881
+[v mon_cmd_diskread@sector sector `ui  1 s 2 sector ]
+"933
+} 0
+"843
+[v _mon_cmd_disassemble mon_cmd_disassemble `(i  1 e 2 0 ]
+{
+"865
+[v mon_cmd_disassemble@i i `ui  1 a 2 188 ]
+"855
+[v mon_cmd_disassemble@n n `ui  1 a 2 196 ]
+"858
+[v mon_cmd_disassemble@done done `ui  1 a 2 186 ]
+"845
+[v mon_cmd_disassemble@addr addr `ul  1 a 4 190 ]
+"853
+[v mon_cmd_disassemble@leftovers leftovers `ui  1 a 2 198 ]
+"846
+[v mon_cmd_disassemble@len len `ui  1 a 2 194 ]
+"843
+[v mon_cmd_disassemble@args args `*.39*.39uc  1 p 2 180 ]
+"874
+} 0
+"1035
+[v _mon_cmd_continue mon_cmd_continue `(i  1 e 2 0 ]
+{
+"1039
+} 0
+"1023
+[v _mon_cmd_clearbreakpoint mon_cmd_clearbreakpoint `(i  1 e 2 0 ]
+{
+"1033
+} 0
+"993
+[v _mon_cmd_breakpoint mon_cmd_breakpoint `(i  1 e 2 0 ]
+{
+"995
+[v mon_cmd_breakpoint@rst08 rst08 `[1]uc  1 a 1 184 ]
+"993
+[v mon_cmd_breakpoint@args args `*.39*.39uc  1 p 2 180 ]
+"994
+[v mon_cmd_breakpoint@F24265 F24265 `[1]uc  1 s 1 F24265 ]
+"1021
+} 0
+"1132
+[v _mon_cmd_write mon_cmd_write `(i  1 e 2 0 ]
+{
+"1134
+[v mon_cmd_write@addr addr `ul  1 a 4 184 ]
+"1135
+[v mon_cmd_write@val val `uc  1 a 1 188 ]
+"1132
+[v mon_cmd_write@args args `*.39*.39uc  1 p 2 180 ]
+"1154
+} 0
+"117
+[v _mon_show_registers mon_show_registers `(v  1 e 1 0 ]
+{
+"138
+} 0
+"288
+[v _write_debug_settings write_debug_settings `(v  1 s 1 write_debug_settings ]
+{
+"290
+[v write_debug_settings@v v `i  1 a 2 11 ]
+"311
+} 0
+"82 Z:\z80\EMUZ80\cpm/drivers/utils.c
+[v _util_stricmp util_stricmp `(i  1 e 2 0 ]
+{
+"84
+[v util_stricmp@ua ua `i  1 a 2 22 ]
+[v util_stricmp@ub ub `i  1 a 2 20 ]
+"82
+[v util_stricmp@a a `*.32Cuc  1 p 2 15 ]
+[v util_stricmp@b b `*.39Cuc  1 p 2 17 ]
+"90
+} 0
+"265 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _read_debug_settings read_debug_settings `(v  1 s 1 read_debug_settings ]
+{
+"267
+[v read_debug_settings@v v `i  1 a 2 11 ]
+"286
+} 0
+"171 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _fatdisk_debug fatdisk_debug `(i  1 e 2 0 ]
+{
+"173
+[v fatdisk_debug@res res `i  1 a 2 9 ]
+"171
+[v fatdisk_debug@newval newval `i  1 p 2 7 ]
+"178
+} 0
+"373 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _SDCard_debug SDCard_debug `(i  1 e 2 0 ]
+{
+"375
+[v SDCard_debug@res res `i  1 a 2 9 ]
+"373
+[v SDCard_debug@newval newval `i  1 p 2 7 ]
+"380
+} 0
+"323 Z:\z80\EMUZ80\cpm/src/memory.c
+[v _mmu_bank_select mmu_bank_select `(v  1 e 1 0 ]
+{
+[v mmu_bank_select@bank bank `i  1 p 2 110 ]
+"331
+[v mmu_bank_select@first_time first_time `uc  1 s 1 first_time ]
+"345
+} 0
+"243 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _bank_select_callback bank_select_callback `(v  1 s 1 bank_select_callback ]
+{
+[v bank_select_callback@from from `i  1 p 2 39 ]
+[v bank_select_callback@to to `i  1 p 2 41 ]
+"245
+[v bank_select_callback@installed installed `us  1 s 2 installed ]
+"251
+} 0
+"211 Z:\z80\EMUZ80\cpm/src/io.c
+[v _cpm_trsect_to_lba cpm_trsect_to_lba `(i  1 e 2 0 ]
+{
+[v cpm_trsect_to_lba@drive drive `ui  1 p 2 110 ]
+[v cpm_trsect_to_lba@track track `ui  1 p 2 112 ]
+[v cpm_trsect_to_lba@sector sector `ui  1 p 2 114 ]
+[v cpm_trsect_to_lba@lba lba `*.39ul  1 p 2 116 ]
+"222
+} 0
+"224
+[v _cpm_trsect_from_lba cpm_trsect_from_lba `(i  1 e 2 0 ]
+{
+[v cpm_trsect_from_lba@drive drive `ui  1 p 2 110 ]
+[v cpm_trsect_from_lba@track track `*.39ui  1 p 2 112 ]
+[v cpm_trsect_from_lba@sector sector `*.39ui  1 p 2 114 ]
+"225
+[v cpm_trsect_from_lba@lba lba `ul  1 p 4 116 ]
+"240
+} 0
+"182
+[v _cpm_disk_read cpm_disk_read `(i  1 e 2 0 ]
+{
+"184
+[v cpm_disk_read@n n `ui  1 a 2 176 ]
+"185
+[v cpm_disk_read@result result `i  1 a 2 174 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"193
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[v cpm_disk_read@filep filep `*.39S536  1 a 2 171 ]
+"194
+[v cpm_disk_read@fres fres `E22972  1 a 1 173 ]
+"182
+[v cpm_disk_read@drive drive `ui  1 p 2 157 ]
+[v cpm_disk_read@lba lba `ul  1 p 4 159 ]
+[v cpm_disk_read@buf buf `*.39v  1 p 2 163 ]
+[v cpm_disk_read@sectors sectors `ui  1 p 2 165 ]
+"209
+} 0
+"3916 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _f_read f_read `(E22972  1 e 1 0 ]
+{
+"3926
+[v f_read@sect sect `ul  1 a 4 117 ]
+"3925
+[v f_read@clst clst `ul  1 a 4 105 ]
+"3927
+[v f_read@remain remain `ul  1 a 4 100 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3924
+[v f_read@fs fs `*.39S509  1 a 2 121 ]
+"3928
+[v f_read@rcnt rcnt `ui  1 a 2 115 ]
+[v f_read@cc cc `ui  1 a 2 113 ]
+[v f_read@csect csect `ui  1 a 2 111 ]
+"3929
+[v f_read@rbuff rbuff `*.39uc  1 a 2 109 ]
+"3923
+[v f_read@res res `E596  1 a 1 104 ]
+"3917
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[v f_read@fp fp `*.39S536  1 p 2 80 ]
+"3918
+[v f_read@buff buff `*.39v  1 p 2 82 ]
+"3919
+[v f_read@btr btr `ui  1 p 2 84 ]
+"3920
+[v f_read@br br `*.39ui  1 p 2 86 ]
+"4006
+} 0
+"4435
+[v _f_lseek f_lseek `(E22972  1 e 1 0 ]
+{
+"4442
+[v f_lseek@clst clst `ul  1 a 4 153 ]
+[v f_lseek@bcs bcs `ul  1 a 4 147 ]
+"4443
+[v f_lseek@nsect nsect `ul  1 a 4 142 ]
+"4444
+[v f_lseek@ifptr ifptr `ul  1 a 4 138 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"4441
+[v f_lseek@fs fs `*.39S509  1 a 2 151 ]
+"4440
+[v f_lseek@res res `E596  1 a 1 146 ]
+"4436
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[v f_lseek@fp fp `*.39S536  1 p 2 116 ]
+"4437
+[v f_lseek@ofs ofs `ul  1 p 4 118 ]
+"4590
+} 0
+"74 Z:\z80\EMUZ80\cpm/src/disas.c
+[v _disas_ops disas_ops `(ui  1 e 2 0 ]
+{
+"89
+[v disas_ops@i i `i  1 a 2 102 ]
+"79
+[v disas_ops@buf buf `[100]uc  1 a 100 0 ]
+"77
+[v disas_ops@n n `ui  1 a 2 104 ]
+"78
+[v disas_ops@result result `ui  1 a 2 100 ]
+[s S195 disas_inst_desc 4 `uc 1 attr 1 0 `uc 1 op 1 1 `*.32v 1 ptr 2 2 ]
+"74
+[v disas_ops@ids ids `*.32CS195  1 p 2 127 ]
+[v disas_ops@addr addr `ul  1 p 4 129 ]
+[v disas_ops@insts insts `*.39uc  1 p 2 133 ]
+"75
+[v disas_ops@len len `ui  1 p 2 135 ]
+[v disas_ops@nops nops `ui  1 p 2 137 ]
+[v disas_ops@func func `*.38(v  1 p 3 139 ]
+"104
+} 0
+"28
+[v _disas_op disas_op `(ui  1 e 2 0 ]
+{
+[s S195 disas_inst_desc 4 `uc 1 attr 1 0 `uc 1 op 1 1 `*.32v 1 ptr 2 2 ]
+"31
+[v disas_op@ent ent `*.32CS195  1 a 2 125 ]
+"32
+[v disas_op@pc pc `*.39uc  1 a 2 123 ]
+"33
+[v disas_op@operand operand `us  1 a 2 121 ]
+"34
+[v disas_op@result result `ui  1 a 2 119 ]
+"28
+[v disas_op@ids ids `*.32CS195  1 p 2 106 ]
+[v disas_op@insts insts `*.39uc  1 p 2 108 ]
+[v disas_op@len len `ui  1 p 2 110 ]
+[v disas_op@buf buf `*.39uc  1 p 2 112 ]
+"29
+[v disas_op@buf_len buf_len `ui  1 p 2 114 ]
+"72
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
+[v _sprintf sprintf `(i  1 e 2 0 ]
+{
+[u S5365 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+"13
+[s S5368 _IO_FILE 12 `S5365 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S5368  1 a 12 92 ]
+"12
+[v sprintf@ap ap `[1]*.39v  1 a 2 104 ]
+"9
+[v sprintf@s s `*.39uc  1 p 2 84 ]
+[v sprintf@fmt fmt `*.32Cuc  1 p 2 86 ]
+"23
+} 0
+"689 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_strtoval mon_strtoval `(ul  1 e 4 0 ]
+{
+"702
+[v mon_strtoval@tmpp tmpp `*.39uc  1 a 2 62 ]
+"701
+[v mon_strtoval@res res `uc  1 a 1 64 ]
+"689
+[v mon_strtoval@str str `*.39uc  1 p 2 55 ]
+"691
+[v mon_strtoval@null_str null_str `*.39uc  1 s 2 null_str ]
+"711
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strtoul.c
+[v _strtoul strtoul `(ul  1 e 4 0 ]
+{
+[v strtoul@s s `*.39Cuc  1 p 2 49 ]
+[v strtoul@endptr endptr `*.2*.2uc  1 p 2 51 ]
+[v strtoul@base base `i  1 p 2 53 ]
+"7
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__strtoxl.c
+[v ___strtoxl __strtoxl `(ul  1 e 4 0 ]
+{
+"9
+[v ___strtoxl@a a `ul  1 a 4 42 ]
+[v ___strtoxl@limit limit `ul  1 a 4 36 ]
+[v ___strtoxl@prev_a prev_a `ul  1 a 4 31 ]
+"11
+[v ___strtoxl@cp cp `*.39Cuc  1 a 2 46 ]
+"10
+[v ___strtoxl@c c `uc  1 a 1 48 ]
+[v ___strtoxl@skip skip `uc  1 a 1 41 ]
+[v ___strtoxl@sign sign `uc  1 a 1 40 ]
+[v ___strtoxl@conv_done conv_done `uc  1 a 1 35 ]
+"7
+[v ___strtoxl@s s `*.39Cuc  1 p 2 20 ]
+[v ___strtoxl@endptr endptr `*.2*.39uc  1 p 2 22 ]
+[v ___strtoxl@base base `i  1 p 2 24 ]
+[v ___strtoxl@is_signed is_signed `uc  1 p 1 26 ]
+"97
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isspace.c
+[v _isspace isspace `(i  1 e 2 0 ]
+{
+[v isspace@c c `i  1 p 2 7 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isdigit.c
+[v _isdigit isdigit `(i  1 e 2 0 ]
+{
+[v isdigit@c c `i  1 p 2 7 ]
+"8
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isalnum.c
+[v _isalnum isalnum `(i  1 e 2 0 ]
+{
+[v isalnum@c c `i  1 p 2 13 ]
+"7
+} 0
+"581 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_chartoval mon_chartoval `(i  1 e 2 0 ]
+{
+"585
+[v mon_chartoval@str str `*.39uc  1 a 2 15 ]
+"584
+[v mon_chartoval@val val `uc  1 a 1 14 ]
+"583
+[v mon_chartoval@res res `uc  1 a 1 13 ]
+"581
+[v mon_chartoval@strp strp `*.39*.39uc  1 p 2 7 ]
+[v mon_chartoval@valp valp `*.39uc  1 p 2 9 ]
+"586
+[v mon_chartoval@curptr curptr `*.39uc  1 s 2 curptr ]
+"638
+} 0
+"189 Z:\z80\EMUZ80\cpm/src/memory.c
+[v _dma_write_to_sram dma_write_to_sram `(v  1 e 1 0 ]
+{
+"191
+[v dma_write_to_sram@high_addr_mask high_addr_mask `ul  1 a 4 67 ]
+"193
+[v dma_write_to_sram@second_half second_half `us  1 a 2 73 ]
+"192
+[v dma_write_to_sram@addr addr `us  1 a 2 71 ]
+"189
+[v dma_write_to_sram@dest dest `ul  1 p 4 51 ]
+[v dma_write_to_sram@buf buf `*.34Cv  1 p 2 55 ]
+[v dma_write_to_sram@len len `ui  1 p 2 57 ]
+"211
+} 0
+"161
+[v _write_to_sram_low_addr write_to_sram_low_addr `(v  1 s 1 write_to_sram_low_addr ]
+{
+"165
+[v write_to_sram_low_addr@n n `ui  1 a 2 49 ]
+"164
+[v write_to_sram_low_addr@addr addr `us  1 a 2 47 ]
+"166
+[v write_to_sram_low_addr@saved_io_status saved_io_status `i  1 a 2 45 ]
+"163
+[v write_to_sram_low_addr@addr_gap_mask addr_gap_mask `us  1 a 2 43 ]
+"167
+[v write_to_sram_low_addr@bank bank `i  1 a 2 41 ]
+"161
+[v write_to_sram_low_addr@dest dest `ul  1 p 4 33 ]
+[v write_to_sram_low_addr@buf buf `*.34Cv  1 p 2 37 ]
+[v write_to_sram_low_addr@len len `ui  1 p 2 39 ]
+"187
+} 0
+"241
+[v _dma_read_from_sram dma_read_from_sram `(v  1 e 1 0 ]
+{
+"243
+[v dma_read_from_sram@high_addr_mask high_addr_mask `ul  1 a 4 67 ]
+"245
+[v dma_read_from_sram@second_half second_half `us  1 a 2 73 ]
+"244
+[v dma_read_from_sram@addr addr `us  1 a 2 71 ]
+"241
+[v dma_read_from_sram@src src `ul  1 p 4 51 ]
+[v dma_read_from_sram@buf buf `*.39v  1 p 2 55 ]
+[v dma_read_from_sram@len len `ui  1 p 2 57 ]
+"263
+} 0
+"213
+[v _read_from_sram_low_addr read_from_sram_low_addr `(v  1 s 1 read_from_sram_low_addr ]
+{
+"217
+[v read_from_sram_low_addr@n n `ui  1 a 2 49 ]
+"216
+[v read_from_sram_low_addr@addr addr `us  1 a 2 47 ]
+"218
+[v read_from_sram_low_addr@saved_io_status saved_io_status `i  1 a 2 45 ]
+"215
+[v read_from_sram_low_addr@addr_gap_mask addr_gap_mask `us  1 a 2 43 ]
+"219
+[v read_from_sram_low_addr@bank bank `i  1 a 2 41 ]
+"213
+[v read_from_sram_low_addr@src src `ul  1 p 4 33 ]
+[v read_from_sram_low_addr@buf buf `*.39v  1 p 2 37 ]
+[v read_from_sram_low_addr@len len `ui  1 p 2 39 ]
+"239
+} 0
+"861 Z:\z80\EMUZ80\cpm/src/io.c
+[v _io_invoke_target_cpu_teardown io_invoke_target_cpu_teardown `(v  1 e 1 0 ]
+{
+[v io_invoke_target_cpu_teardown@saved_status saved_status `*.39i  1 p 2 131 ]
+"894
+} 0
+"1212 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_leave mon_leave `(v  1 e 1 0 ]
+{
+"1220
+} 0
+"210
+[v _install_trampoline_cleanup install_trampoline_cleanup `(v  1 s 1 install_trampoline_cleanup ]
+{
+"227
+} 0
+"1222
+[v _mon_cleanup mon_cleanup `(v  1 e 1 0 ]
+{
+"1232
+[v mon_cleanup@reti reti `C[3]uc  1 s 3 reti ]
+"1236
+[v mon_cleanup@retn retn `C[3]uc  1 s 3 retn ]
+"1252
+} 0
+"311 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_set_reset_pin emuz80_common_set_reset_pin `(v  1 s 1 emuz80_common_set_reset_pin ]
+{
+[v emuz80_common_set_reset_pin@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_reset_pin@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_reset_pin@v v `uc  1 a 1 7 ]
+} 0
+"781 Z:\z80\EMUZ80\cpm/src/io.c
+[v _io_invoke_target_cpu_prepare io_invoke_target_cpu_prepare `(v  1 e 1 0 ]
+{
+[v io_invoke_target_cpu_prepare@saved_status saved_status `*.39i  1 p 2 131 ]
+"783
+[v io_invoke_target_cpu_prepare@dummy_rom dummy_rom `C[10]uc  1 s 10 dummy_rom ]
+"833
+} 0
+"330 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_setup mon_setup `(v  1 e 1 0 ]
+{
+"346
+} 0
+"318
+[v _mon_assert_interrupt mon_assert_interrupt `(v  1 e 1 0 ]
+{
+"328
+} 0
+"896 Z:\z80\EMUZ80\cpm/src/io.c
+[v _io_set_interrupt_data io_set_interrupt_data `(v  1 e 1 0 ]
+{
+[v io_set_interrupt_data@data data `uc  1 a 1 wreg ]
+[v io_set_interrupt_data@data data `uc  1 a 1 wreg ]
+"898
+[v io_set_interrupt_data@data data `uc  1 a 1 7 ]
+"899
+} 0
+"238 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _install_rst_vector install_rst_vector `(v  1 s 1 install_rst_vector ]
+{
+[v install_rst_vector@bank bank `i  1 p 2 33 ]
+"241
+} 0
+"149
+[v _install_nmi_vector install_nmi_vector `(v  1 s 1 install_nmi_vector ]
+{
+[v install_nmi_vector@bank bank `i  1 p 2 37 ]
+"157
+} 0
+"140
+[v _uninstall_nmi_vector uninstall_nmi_vector `(v  1 s 1 uninstall_nmi_vector ]
+{
+"147
+} 0
+"356
+[v _mon_prepare_nmi mon_prepare_nmi `(v  1 e 1 0 ]
+{
+"362
+} 0
+"198
+[v _install_trampoline_nmi install_trampoline_nmi `(v  1 s 1 install_trampoline_nmi ]
+{
+[v install_trampoline_nmi@bank bank `i  1 p 2 45 ]
+"208
+} 0
+"348
+[v _mon_prepare mon_prepare `(v  1 e 1 0 ]
+{
+"354
+} 0
+"179
+[v _install_trampoline install_trampoline `(v  1 s 1 install_trampoline ]
+{
+[v install_trampoline@bank bank `i  1 p 2 45 ]
+"188
+} 0
+"376
+[v _mon_enter_nmi mon_enter_nmi `(v  1 e 1 0 ]
+{
+"388
+} 0
+"190
+[v _reinstall_trampoline reinstall_trampoline `(v  1 s 1 reinstall_trampoline ]
+{
+"196
+} 0
+"364
+[v _mon_enter mon_enter `(v  1 e 1 0 ]
+{
+"374
+} 0
+"109 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_start_z80 emuz80_common_start_z80 `(v  1 s 1 emuz80_common_start_z80 ]
+{
+"173
+} 0
+"194 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_start_z80 emuz80_47q_start_z80 `(v  1 s 1 emuz80_47q_start_z80 ]
+{
+"307
+} 0
+"180 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_low_addr_mask emuz80_common_low_addr_mask `(us  1 s 2 emuz80_common_low_addr_mask ]
+{
+"183
+} 0
+"125 Z:\z80\EMUZ80\cpm/src/memory.c
+[v ___memcpy_on_target __memcpy_on_target `(v  1 s 1 __memcpy_on_target ]
+{
+[s S42 . 6 `*.34uc 1 addr 2 0 `us 1 offs 2 2 `ui 1 len 2 4 ]
+"133
+[v ___memcpy_on_target@param_blocks param_blocks `[3]S42  1 a 18 15 ]
+[s S1117 dma_helper_param 5 `us 1 src_addr 2 0 `us 1 dest_addr 2 2 `uc 1 length 1 4 ]
+"132
+[v ___memcpy_on_target@params params `S1117  1 a 5 10 ]
+"125
+[v ___memcpy_on_target@dest dest `us  1 p 2 0 ]
+[v ___memcpy_on_target@src src `us  1 p 2 2 ]
+[v ___memcpy_on_target@buf buf `*.34uc  1 p 2 4 ]
+[v ___memcpy_on_target@len len `ui  1 p 2 6 ]
+"126
+[v ___memcpy_on_target@bank bank `i  1 p 2 8 ]
+"159
+} 0
+"835 Z:\z80\EMUZ80\cpm/src/io.c
+[v _io_invoke_target_cpu io_invoke_target_cpu `(i  1 e 2 0 ]
+{
+"838
+[v io_invoke_target_cpu@i i `i  1 a 2 154 ]
+"840
+[v io_invoke_target_cpu@size size `ui  1 a 2 152 ]
+"839
+[v io_invoke_target_cpu@result_data result_data `uc  1 a 1 151 ]
+[s S42 . 6 `*.34uc 1 addr 2 0 `us 1 offs 2 2 `ui 1 len 2 4 ]
+"835
+[v io_invoke_target_cpu@inparams inparams `*.39CS42  1 p 2 131 ]
+[v io_invoke_target_cpu@ninparams ninparams `ui  1 p 2 133 ]
+"836
+[v io_invoke_target_cpu@outparams outparams `*.39CS42  1 p 2 135 ]
+[v io_invoke_target_cpu@noutparams noutparams `ui  1 p 2 137 ]
+[v io_invoke_target_cpu@bank bank `i  1 p 2 139 ]
+"859
+} 0
+"229 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _mon_use_zeropage mon_use_zeropage `(v  1 e 1 0 ]
+{
+[v mon_use_zeropage@bank bank `i  1 p 2 41 ]
+[v mon_use_zeropage@size size `ui  1 p 2 43 ]
+"236
+} 0
+"159
+[v _uninstall_trampoline uninstall_trampoline `(v  1 s 1 uninstall_trampoline ]
+{
+"167
+} 0
+"265 Z:\z80\EMUZ80\cpm/src/memory.c
+[v ___write_to_sram __write_to_sram `(v  1 e 1 0 ]
+{
+[v ___write_to_sram@dest dest `ul  1 p 4 25 ]
+[v ___write_to_sram@buf buf `*.34Cv  1 p 2 29 ]
+[v ___write_to_sram@len len `ui  1 p 2 31 ]
+"270
+} 0
+"169 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _save_zero_page save_zero_page `(v  1 s 1 save_zero_page ]
+{
+[v save_zero_page@bank bank `i  1 p 2 33 ]
+[v save_zero_page@size size `ui  1 p 2 35 ]
+"177
+} 0
+"288 Z:\z80\EMUZ80\cpm/src/memory.c
+[v ___read_from_sram __read_from_sram `(v  1 e 1 0 ]
+{
+[v ___read_from_sram@src src `ul  1 p 4 25 ]
+[v ___read_from_sram@buf buf `*.39Cv  1 p 2 29 ]
+[v ___read_from_sram@len len `ui  1 p 2 31 ]
+"293
+} 0
+"698 Z:\z80\EMUZ80\cpm/src/io.c
+[v _io_wait_write io_wait_write `(i  1 e 2 0 ]
+{
+[v io_wait_write@wait_io_addr wait_io_addr `uc  1 a 1 wreg ]
+"702
+[v io_wait_write@io_addr io_addr `uc  1 a 1 130 ]
+"703
+[v io_wait_write@io_data io_data `uc  1 a 1 129 ]
+"698
+[v io_wait_write@wait_io_addr wait_io_addr `uc  1 a 1 wreg ]
+[v io_wait_write@result_io_data result_io_data `*.39uc  1 p 2 118 ]
+[v io_wait_write@wait_io_addr wait_io_addr `uc  1 a 1 128 ]
+"779
+} 0
+"109
+[v _putch_buffered putch_buffered `(v  1 e 1 0 ]
+{
+[v putch_buffered@c c `uc  1 a 1 wreg ]
+[v putch_buffered@c c `uc  1 a 1 wreg ]
+[v putch_buffered@c c `uc  1 a 1 12 ]
+"119
+} 0
+"96
+[v ___con_flush_buffer __con_flush_buffer `(v  1 s 1 __con_flush_buffer ]
+{
+"102
+} 0
+"76
+[v _io_stat io_stat `(i  1 e 2 0 ]
+{
+"78
+} 0
+"309 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_set_wait_pin emuz80_47q_set_wait_pin `(v  1 s 1 emuz80_47q_set_wait_pin ]
+{
+[v emuz80_47q_set_wait_pin@v v `uc  1 a 1 wreg ]
+[v emuz80_47q_set_wait_pin@v v `uc  1 a 1 wreg ]
+"311
+[v emuz80_47q_set_wait_pin@v v `uc  1 a 1 7 ]
+"318
+} 0
+"331 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_set_wait_pin emuz80_common_set_wait_pin `(v  1 s 1 emuz80_common_set_wait_pin ]
+{
+[v emuz80_common_set_wait_pin@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_wait_pin@v v `uc  1 a 1 wreg ]
+"333
+[v emuz80_common_set_wait_pin@v v `uc  1 a 1 7 ]
+"335
+} 0
+"302
+[v _emuz80_common_set_data_pins emuz80_common_set_data_pins `(v  1 s 1 emuz80_common_set_data_pins ]
+{
+[v emuz80_common_set_data_pins@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_data_pins@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_data_pins@v v `uc  1 a 1 7 ]
+} 0
+"310
+[v _emuz80_common_set_busrq_pin emuz80_common_set_busrq_pin `(v  1 s 1 emuz80_common_set_busrq_pin ]
+{
+[v emuz80_common_set_busrq_pin@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_busrq_pin@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_busrq_pin@v v `uc  1 a 1 7 ]
+} 0
+"306
+[v _emuz80_common_rd_pin emuz80_common_rd_pin `(b  1 s 0 emuz80_common_rd_pin ]
+{
+} 0
+"304
+[v _emuz80_common_ioreq_pin emuz80_common_ioreq_pin `(b  1 s 0 emuz80_common_ioreq_pin ]
+{
+} 0
+"301
+[v _emuz80_common_data_pins emuz80_common_data_pins `(uc  1 s 1 emuz80_common_data_pins ]
+{
+} 0
+"299
+[v _emuz80_common_addr_l_pins emuz80_common_addr_l_pins `(uc  1 s 1 emuz80_common_addr_l_pins ]
+{
+} 0
+"383 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_wait_io_event emuz80_47q_wait_io_event `(v  1 s 1 emuz80_47q_wait_io_event ]
+{
+"386
+} 0
+"378
+[v _emuz80_47q_io_event emuz80_47q_io_event `(b  1 s 0 emuz80_47q_io_event ]
+{
+"381
+} 0
+"388
+[v _emuz80_47q_clear_io_event emuz80_47q_clear_io_event `(v  1 s 1 emuz80_47q_clear_io_event ]
+{
+"391
+} 0
+"108 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[v _bus_master bus_master `(v  1 e 1 0 ]
+{
+[v bus_master@enable enable `i  1 p 2 9 ]
+"111
+} 0
+"161 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_bus_master emuz80_47q_bus_master `(v  1 s 1 emuz80_47q_bus_master ]
+{
+[v emuz80_47q_bus_master@enable enable `i  1 p 2 7 ]
+"192
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\assert.c
+[v ___assert_fail __assert_fail `(v  1 e 1 0 ]
+{
+[v ___assert_fail@expr expr `*.32Cuc  1 p 2 110 ]
+[v ___assert_fail@file file `*.32Cuc  1 p 2 112 ]
+[v ___assert_fail@line line `i  1 p 2 114 ]
+[v ___assert_fail@func func `*.32Cuc  1 p 2 116 ]
+"12
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abort.c
+[v _abort abort `(v  1 e 1 0 ]
+{
+"6
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\exit.c
+[v _exit exit `(v  1 e 1 0 ]
+{
+[v exit@code code `i  1 p 2 9 ]
+"13
+} 0
+"9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\atexit.c
+[v ___funcs_on_exit __funcs_on_exit `(v  1 e 1 0 ]
+{
+"16
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\_Exit.c
+[v __Exit _Exit `(v  1 e 1 0 ]
+{
+[v __Exit@ec ec `i  1 p 2 7 ]
+"6
+} 0
+"272 Z:\z80\EMUZ80\cpm/src/memory.c
+[v ___write_sram_regions __write_sram_regions `(v  1 e 1 0 ]
+{
+"274
+[v ___write_sram_regions@i i `i  1 a 2 39 ]
+[s S42 . 6 `*.34uc 1 addr 2 0 `us 1 offs 2 2 `ui 1 len 2 4 ]
+"272
+[v ___write_sram_regions@regions regions `*.39CS42  1 p 2 25 ]
+[v ___write_sram_regions@n n `ui  1 p 2 27 ]
+[v ___write_sram_regions@bank bank `i  1 p 2 29 ]
+"286
+} 0
+"185 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_write_to_sram emuz80_common_write_to_sram `(v  1 s 1 emuz80_common_write_to_sram ]
+{
+[s S4201 . 2 `uc 1 l 1 0 `uc 1 h 1 1 ]
+"187
+[u S4204 address_bus_u 2 `ui 1 w 2 0 `S4201 1 . 2 0 ]
+[v emuz80_common_write_to_sram@ab ab `S4204  1 a 2 23 ]
+"188
+[v emuz80_common_write_to_sram@i i `ui  1 a 2 21 ]
+"185
+[v emuz80_common_write_to_sram@addr addr `us  1 p 2 13 ]
+[v emuz80_common_write_to_sram@buf buf `*.34uc  1 p 2 15 ]
+[v emuz80_common_write_to_sram@len len `ui  1 p 2 17 ]
+"215
+} 0
+"296 Z:\z80\EMUZ80\cpm/src/memory.c
+[v ___read_sram_regions __read_sram_regions `(v  1 e 1 0 ]
+{
+"298
+[v ___read_sram_regions@i i `i  1 a 2 39 ]
+[s S42 . 6 `*.34uc 1 addr 2 0 `us 1 offs 2 2 `ui 1 len 2 4 ]
+"296
+[v ___read_sram_regions@regions regions `*.39CS42  1 p 2 25 ]
+[v ___read_sram_regions@n n `ui  1 p 2 27 ]
+[v ___read_sram_regions@bank bank `i  1 p 2 29 ]
+"310
+} 0
+"303 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_set_data_dir emuz80_common_set_data_dir `(v  1 s 1 emuz80_common_set_data_dir ]
+{
+[v emuz80_common_set_data_dir@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_data_dir@v v `uc  1 a 1 wreg ]
+[v emuz80_common_set_data_dir@v v `uc  1 a 1 7 ]
+} 0
+"217
+[v _emuz80_common_read_from_sram emuz80_common_read_from_sram `(v  1 s 1 emuz80_common_read_from_sram ]
+{
+[s S4201 . 2 `uc 1 l 1 0 `uc 1 h 1 1 ]
+"219
+[u S4204 address_bus_u 2 `ui 1 w 2 0 `S4201 1 . 2 0 ]
+[v emuz80_common_read_from_sram@ab ab `S4204  1 a 2 23 ]
+"220
+[v emuz80_common_read_from_sram@i i `ui  1 a 2 21 ]
+"217
+[v emuz80_common_read_from_sram@addr addr `us  1 p 2 13 ]
+[v emuz80_common_read_from_sram@buf buf `*.34uc  1 p 2 15 ]
+[v emuz80_common_read_from_sram@len len `ui  1 p 2 17 ]
+"247
+} 0
+"373 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_setup_addrbus emuz80_47q_setup_addrbus `(v  1 s 1 emuz80_47q_setup_addrbus ]
+{
+[v emuz80_47q_setup_addrbus@addr addr `ul  1 p 4 15 ]
+"376
+} 0
+"320
+[v _emuz80_47q_set_bank_pins emuz80_47q_set_bank_pins `(v  1 s 1 emuz80_47q_set_bank_pins ]
+{
+"322
+[v emuz80_47q_set_bank_pins@t_adr t_adr `ul  1 a 4 11 ]
+"320
+[v emuz80_47q_set_bank_pins@addr addr `ul  1 p 4 7 ]
+"371
+} 0
+"175 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_high_addr_mask emuz80_common_high_addr_mask `(ul  1 s 4 emuz80_common_high_addr_mask ]
+{
+"178
+} 0
+"415 Z:\z80\EMUZ80\cpm/src/monitor.c
+[v _edit_line edit_line `(v  1 e 1 0 ]
+{
+"485
+[v edit_line@i_1746 i `ui  1 a 2 129 ]
+"475
+[v edit_line@i_1744 i `ui  1 a 2 121 ]
+"464
+[v edit_line@i_1742 i `ui  1 a 2 127 ]
+"437
+[v edit_line@i i `i  1 a 2 123 ]
+"443
+[v edit_line@c c `i  1 a 2 131 ]
+"417
+[v edit_line@refresh refresh `i  1 a 2 125 ]
+"415
+[v edit_line@line line `*.39uc  1 p 2 110 ]
+[v edit_line@maxlen maxlen `ui  1 p 2 112 ]
+[v edit_line@start start `ui  1 p 2 114 ]
+[v edit_line@pos pos `ui  1 p 2 116 ]
+"494
+} 0
+"121 Z:\z80\EMUZ80\cpm/src/io.c
+[v _getch_buffered getch_buffered `(uc  1 e 1 0 ]
+{
+"122
+[v getch_buffered@res res `uc  1 a 1 13 ]
+"144
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 11 ]
+"7
+[v ___lwmod@dividend dividend `ui  1 p 2 7 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 9 ]
+"25
+} 0
+"312 Z:\z80\EMUZ80\cpm/src/memory.c
+[v _mmu_bank_config mmu_bank_config `(v  1 e 1 0 ]
+{
+[v mmu_bank_config@nbanks nbanks `i  1 p 2 110 ]
+"321
+} 0
+"164 Z:\z80\EMUZ80\cpm/src/io.c
+[v _hw_ctrl_write hw_ctrl_write `(v  1 e 1 0 ]
+{
+[v hw_ctrl_write@val val `uc  1 a 1 wreg ]
+[v hw_ctrl_write@val val `uc  1 a 1 wreg ]
+"166
+[v hw_ctrl_write@val val `uc  1 a 1 80 ]
+"180
+} 0
+"159
+[v _hw_ctrl_read hw_ctrl_read `(uc  1 e 1 0 ]
+{
+"162
+} 0
+"4016 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _f_write f_write `(E22972  1 e 1 0 ]
+{
+"4026
+[v f_write@sect sect `ul  1 a 4 153 ]
+"4025
+[v f_write@clst clst `ul  1 a 4 147 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"4024
+[v f_write@fs fs `*.39S509  1 a 2 157 ]
+"4027
+[v f_write@wcnt wcnt `ui  1 a 2 151 ]
+[v f_write@cc cc `ui  1 a 2 145 ]
+[v f_write@csect csect `ui  1 a 2 143 ]
+"4028
+[v f_write@wbuff wbuff `*.39Cuc  1 a 2 141 ]
+"4023
+[v f_write@res res `E596  1 a 1 140 ]
+"4017
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[v f_write@fp fp `*.39S536  1 p 2 116 ]
+"4018
+[v f_write@buff buff `*.39Cv  1 p 2 118 ]
+"4019
+[v f_write@btw btw `ui  1 p 2 120 ]
+"4020
+[v f_write@bw bw `*.39ui  1 p 2 122 ]
+"4128
+} 0
+"1525
+[v _create_chain create_chain `(ul  1 s 4 create_chain ]
+{
+"1530
+[v create_chain@cs cs `ul  1 a 4 112 ]
+[v create_chain@ncl ncl `ul  1 a 4 106 ]
+[v create_chain@scl scl `ul  1 a 4 102 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1532
+[v create_chain@fs fs `*.39S509  1 a 2 110 ]
+"1531
+[v create_chain@res res `E596  1 a 1 101 ]
+"1526
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[v create_chain@obj obj `*.39S529  1 p 2 87 ]
+"1527
+[v create_chain@clst clst `ul  1 p 4 89 ]
+"1616
+} 0
+"1240
+[v _put_fat put_fat `(E596  1 s 1 put_fat ]
+{
+"1246
+[v put_fat@bc bc `ui  1 a 2 84 ]
+"1247
+[v put_fat@p p `*.39uc  1 a 2 82 ]
+"1248
+[v put_fat@res res `E596  1 a 1 86 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1241
+[v put_fat@fs fs `*.39S509  1 p 2 54 ]
+"1242
+[v put_fat@clst clst `ul  1 p 4 56 ]
+"1243
+[v put_fat@val val `ul  1 p 4 60 ]
+"1289
+} 0
+"1162
+[v _get_fat get_fat `(ul  1 s 4 get_fat ]
+{
+"1168
+[v get_fat@val val `ul  1 a 4 72 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1169
+[v get_fat@fs fs `*.39S509  1 a 2 78 ]
+"1167
+[v get_fat@bc bc `ui  1 a 2 76 ]
+[v get_fat@wc wc `ui  1 a 2 70 ]
+"1163
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[v get_fat@obj obj `*.39S529  1 p 2 54 ]
+"1164
+[v get_fat@clst clst `ul  1 p 4 56 ]
+"1230
+} 0
+"1145
+[v _clst2sect clst2sect `(ul  1 s 4 clst2sect ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1146
+[v clst2sect@fs fs `*.39S509  1 p 2 19 ]
+"1147
+[v clst2sect@clst clst `ul  1 p 4 21 ]
+"1153
+} 0
+"4137
+[v _f_sync f_sync `(E22972  1 e 1 0 ]
+{
+"4143
+[v f_sync@tm tm `ul  1 a 4 56 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"4142
+[v f_sync@fs fs `*.39S509  1 a 2 63 ]
+"4144
+[v f_sync@dir dir `*.39uc  1 a 2 61 ]
+"4141
+[v f_sync@res res `E596  1 a 1 60 ]
+"4138
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[s S536 . 546 `S529 1 obj 14 0 `uc 1 flag 1 14 `uc 1 err 1 15 `ul 1 fptr 4 16 `ul 1 clust 4 20 `ul 1 sect 4 24 `ul 1 dir_sect 4 28 `*.39uc 1 dir_ptr 2 32 `[512]uc 1 buf 512 34 ]
+[v f_sync@fp fp `*.39S536  1 p 2 54 ]
+"4207
+} 0
+"3615
+[v _validate validate `(E596  1 s 1 validate ]
+{
+"3620
+[v validate@res res `E596  1 a 1 120 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3616
+[s S529 . 14 `*.39S509 1 fs 2 0 `us 1 id 2 2 `uc 1 attr 1 4 `uc 1 stat 1 5 `ul 1 sclust 4 6 `ul 1 objsize 4 10 ]
+[v validate@obj obj `*.39S529  1 p 2 110 ]
+"3617
+[v validate@rfs rfs `*.39*.39S509  1 p 2 112 ]
+"3642
+} 0
+"1109
+[v _sync_fs sync_fs `(E596  1 s 1 sync_fs ]
+{
+"1113
+[v sync_fs@res res `E596  1 a 1 53 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1110
+[v sync_fs@fs fs `*.39S509  1 p 2 43 ]
+"1135
+} 0
+"663
+[v _st_dword st_dword `(v  1 s 1 st_dword ]
+{
+[v st_dword@ptr ptr `*.39uc  1 p 2 7 ]
+[v st_dword@val val `ul  1 p 4 9 ]
+"669
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"6
+[v memset@s s `*.39uc  1 a 2 17 ]
+"7
+[v memset@k k `ui  1 a 2 15 ]
+"4
+[v memset@dest dest `*.39v  1 p 2 7 ]
+[v memset@c c `i  1 p 2 9 ]
+[v memset@n n `ui  1 p 2 11 ]
+"90
+} 0
+"149 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _disk_ioctl disk_ioctl `(E736  1 e 1 0 ]
+{
+[v disk_ioctl@pdrv pdrv `uc  1 a 1 wreg ]
+"151
+[v disk_ioctl@res res `E23433  1 a 1 116 ]
+"149
+[v disk_ioctl@pdrv pdrv `uc  1 a 1 wreg ]
+[v disk_ioctl@cmd cmd `uc  1 p 1 110 ]
+[v disk_ioctl@buff buff `*.2v  1 p 2 111 ]
+"151
+[v disk_ioctl@pdrv pdrv `uc  1 a 1 115 ]
+"169
+} 0
+"1866 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _st_clust st_clust `(v  1 s 1 st_clust ]
+{
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1867
+[v st_clust@fs fs `*.39S509  1 p 2 11 ]
+"1868
+[v st_clust@dir dir `*.39uc  1 p 2 13 ]
+"1869
+[v st_clust@cl cl `ul  1 p 4 15 ]
+"1876
+} 0
+"657
+[v _st_word st_word `(v  1 s 1 st_word ]
+{
+[v st_word@ptr ptr `*.39uc  1 p 2 7 ]
+[v st_word@val val `us  1 p 2 9 ]
+"661
+} 0
+"47 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _get_fattime get_fattime `(ul  1 e 4 0 ]
+{
+"51
+} 0
+"249 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+[v _emuz80_common_clock_op_hook emuz80_common_clock_op_hook `(i  1 s 2 emuz80_common_clock_op_hook ]
+{
+[v emuz80_common_clock_op_hook@clocks clocks `i  1 p 2 7 ]
+"251
+[v emuz80_common_clock_op_hook@nco1inc nco1inc `um  1 s 3 nco1inc ]
+"252
+[v emuz80_common_clock_op_hook@running running `i  1 s 2 running ]
+"297
+} 0
+"86 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_name emuz80_47q_name `(*.32uc  1 s 2 emuz80_47q_name ]
+{
+"89
+} 0
+"119 Z:\z80\EMUZ80\cpm/src/supermez80.c
+[v _disk_init disk_init `(i  1 e 2 0 ]
+{
+"127
+} 0
+"3659 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _f_mount f_mount `(E22972  1 e 1 0 ]
+{
+"3666
+[v f_mount@vol vol `i  1 a 2 204 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3665
+[v f_mount@cfs cfs `*.39S509  1 a 2 202 ]
+"3668
+[v f_mount@rp rp `*.34Cuc  1 a 2 200 ]
+"3667
+[v f_mount@res res `E596  1 a 1 199 ]
+"3660
+[v f_mount@fs fs `*.39S509  1 p 2 194 ]
+"3661
+[v f_mount@path path `*.34Cuc  1 p 2 196 ]
+"3662
+[v f_mount@opt opt `uc  1 p 1 198 ]
+"3710
+} 0
+"3386
+[v _mount_volume mount_volume `(E596  1 s 1 mount_volume ]
+{
+"3396
+[v mount_volume@fasize fasize `ul  1 a 4 186 ]
+[v mount_volume@nclst nclst `ul  1 a 4 182 ]
+"3395
+[v mount_volume@bsect bsect `ul  1 a 4 177 ]
+"3396
+[v mount_volume@tsect tsect `ul  1 a 4 173 ]
+[v mount_volume@sysect sysect `ul  1 a 4 167 ]
+[v mount_volume@szbfat szbfat `ul  1 a 4 161 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3393
+[v mount_volume@fs fs `*.39S509  1 a 2 192 ]
+"3398
+[v mount_volume@fmt fmt `ui  1 a 2 190 ]
+"3397
+[v mount_volume@nrsv nrsv `us  1 a 2 171 ]
+"3392
+[v mount_volume@vol vol `i  1 a 2 165 ]
+"3394
+[v mount_volume@stat stat `uc  1 a 1 181 ]
+"3387
+[v mount_volume@path path `*.39*.34Cuc  1 p 2 148 ]
+"3388
+[v mount_volume@rfs rfs `*.39*.39S509  1 p 2 150 ]
+"3389
+[v mount_volume@mode mode `uc  1 p 1 152 ]
+"3606
+} 0
+"3139
+[v _get_ldnumber get_ldnumber `(i  1 s 2 get_ldnumber ]
+{
+"3143
+[v get_ldnumber@tp tp `*.34Cuc  1 a 2 18 ]
+"3147
+[v get_ldnumber@vol vol `i  1 a 2 16 ]
+"3144
+[v get_ldnumber@tt tt `*.34Cuc  1 a 2 13 ]
+"3146
+[v get_ldnumber@i i `i  1 a 2 11 ]
+"3145
+[v get_ldnumber@tc tc `uc  1 a 1 15 ]
+"3140
+[v get_ldnumber@path path `*.39*.34Cuc  1 p 2 7 ]
+"3209
+} 0
+"3332
+[v _find_volume find_volume `(ui  1 s 2 find_volume ]
+{
+"3338
+[v find_volume@mbr_pt mbr_pt `[4]ul  1 a 16 78 ]
+"3337
+[v find_volume@i i `ui  1 a 2 96 ]
+[v find_volume@fmt fmt `ui  1 a 2 94 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3333
+[v find_volume@fs fs `*.39S509  1 p 2 68 ]
+"3334
+[v find_volume@part part `ui  1 p 2 70 ]
+"3377
+} 0
+"3292
+[v _check_fs check_fs `(ui  1 s 2 check_fs ]
+{
+"3297
+[v check_fs@w w `us  1 a 2 65 ]
+[v check_fs@sign sign `us  1 a 2 63 ]
+"3298
+[v check_fs@b b `uc  1 a 1 67 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"3293
+[v check_fs@fs fs `*.39S509  1 p 2 54 ]
+"3294
+[v check_fs@sect sect `ul  1 p 4 56 ]
+"3326
+} 0
+"1078
+[v _move_window move_window `(E596  1 s 1 move_window ]
+{
+"1083
+[v move_window@res res `E596  1 a 1 53 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1079
+[v move_window@fs fs `*.39S509  1 p 2 43 ]
+"1080
+[v move_window@sect sect `ul  1 p 4 45 ]
+"1099
+} 0
+"1056
+[v _sync_window sync_window `(E596  1 s 1 sync_window ]
+{
+"1060
+[v sync_window@res res `E596  1 a 1 80 ]
+[s S509 . 560 `uc 1 fs_type 1 0 `uc 1 pdrv 1 1 `uc 1 ldrv 1 2 `uc 1 n_fats 1 3 `uc 1 wflag 1 4 `uc 1 fsi_flag 1 5 `us 1 id 2 6 `us 1 n_rootdir 2 8 `us 1 csize 2 10 `ul 1 last_clst 4 12 `ul 1 free_clst 4 16 `ul 1 n_fatent 4 20 `ul 1 fsize 4 24 `ul 1 volbase 4 28 `ul 1 fatbase 4 32 `ul 1 dirbase 4 36 `ul 1 database 4 40 `ul 1 winsect 4 44 `[512]uc 1 win 512 48 ]
+"1057
+[v sync_window@fs fs `*.39S509  1 p 2 25 ]
+"1074
+} 0
+"130 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _disk_write disk_write `(E736  1 e 1 0 ]
+{
+[v disk_write@pdrv pdrv `uc  1 a 1 wreg ]
+"134
+[v disk_write@i i `i  1 a 2 158 ]
+"130
+[v disk_write@pdrv pdrv `uc  1 a 1 wreg ]
+[v disk_write@buff buff `*.39Cuc  1 p 2 13 ]
+[v disk_write@sector sector `ul  1 p 4 15 ]
+[v disk_write@count count `ui  1 p 2 19 ]
+"132
+[v disk_write@pdrv pdrv `uc  1 a 1 157 ]
+"147
+} 0
+"237 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _SDCard_write512 SDCard_write512 `(i  1 e 2 0 ]
+{
+"256
+[v SDCard_write512@i_4835 i `ui  1 a 2 2 ]
+"252
+[v SDCard_write512@i i `i  1 a 2 0 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"239
+[v SDCard_write512@spi spi `*.39S4393  1 a 2 10 ]
+"242
+[v SDCard_write512@crc crc `us  1 a 2 8 ]
+"240
+[v SDCard_write512@result result `i  1 a 2 6 ]
+"243
+[v SDCard_write512@retry retry `i  1 a 2 4 ]
+"241
+[v SDCard_write512@response response `uc  1 a 1 12 ]
+"237
+[v SDCard_write512@addr addr `ul  1 p 4 143 ]
+[v SDCard_write512@offs offs `ui  1 p 2 147 ]
+[v SDCard_write512@buf buf `*.39Cv  1 p 2 149 ]
+[v SDCard_write512@count count `ui  1 p 2 151 ]
+"314
+} 0
+"111 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _disk_read disk_read `(E736  1 e 1 0 ]
+{
+[v disk_read@pdrv pdrv `uc  1 a 1 wreg ]
+"115
+[v disk_read@i i `i  1 a 2 158 ]
+"111
+[v disk_read@pdrv pdrv `uc  1 a 1 wreg ]
+[v disk_read@buff buff `*.39uc  1 p 2 15 ]
+[v disk_read@sector sector `ul  1 p 4 17 ]
+[v disk_read@count count `ui  1 p 2 21 ]
+"113
+[v disk_read@pdrv pdrv `uc  1 a 1 157 ]
+"128
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\memcmp.c
+[v _memcmp memcmp `(i  1 e 2 0 ]
+{
+"5
+[v memcmp@r r `*.34Cuc  1 a 2 17 ]
+[v memcmp@l l `*.39Cuc  1 a 2 15 ]
+"3
+[v memcmp@vl vl `*.39Cv  1 p 2 7 ]
+[v memcmp@vr vr `*.34Cv  1 p 2 9 ]
+[v memcmp@n n `ui  1 p 2 11 ]
+"8
+} 0
+"619 Z:\z80\EMUZ80\cpm/fatfs/ff.c
+[v _ld_word ld_word `(us  1 s 2 ld_word ]
+{
+"621
+[v ld_word@rv rv `us  1 a 2 12 ]
+"619
+[v ld_word@ptr ptr `*.39Cuc  1 p 2 7 ]
+"626
+} 0
+"628
+[v _ld_dword ld_dword `(ul  1 s 4 ld_dword ]
+{
+"630
+[v ld_dword@rv rv `ul  1 a 4 16 ]
+"628
+[v ld_dword@ptr ptr `*.39Cuc  1 p 2 7 ]
+"637
+} 0
+"98 Z:\z80\EMUZ80\cpm/drivers/diskio.c
+[v _disk_status disk_status `(uc  1 e 1 0 ]
+{
+[v disk_status@pdrv pdrv `uc  1 a 1 wreg ]
+[v disk_status@pdrv pdrv `uc  1 a 1 wreg ]
+"100
+[v disk_status@pdrv pdrv `uc  1 a 1 80 ]
+"109
+} 0
+"53
+[v _disk_initialize disk_initialize `(uc  1 e 1 0 ]
+{
+[v disk_initialize@pdrv pdrv `uc  1 a 1 wreg ]
+"55
+[v disk_initialize@buf buf `[128]uc  1 a 128 19 ]
+"53
+[v disk_initialize@pdrv pdrv `uc  1 a 1 wreg ]
+[v disk_initialize@pdrv pdrv `uc  1 a 1 147 ]
+"96
+} 0
+"29 Z:\z80\EMUZ80\cpm/drivers/utils.c
+[v _util_hexdump util_hexdump `(v  1 e 1 0 ]
+{
+"34
+[v util_hexdump@i i `i  1 a 2 137 ]
+"31
+[v util_hexdump@chars chars `[17]uc  1 a 17 118 ]
+"32
+[v util_hexdump@buf buf `*.39Cuc  1 a 2 135 ]
+"29
+[v util_hexdump@header header `*.32Cuc  1 p 2 110 ]
+[v util_hexdump@addr addr `*.39Cv  1 p 2 112 ]
+[v util_hexdump@size size `ui  1 p 2 114 ]
+"48
+} 0
+"169 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _SDCard_read512 SDCard_read512 `(i  1 e 2 0 ]
+{
+"208
+[v SDCard_read512@i_4818 i `ui  1 a 2 2 ]
+"200
+[v SDCard_read512@i i `i  1 a 2 0 ]
+"174
+[v SDCard_read512@crc crc `us  1 a 2 12 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"171
+[v SDCard_read512@spi spi `*.39S4393  1 a 2 10 ]
+"172
+[v SDCard_read512@result result `i  1 a 2 8 ]
+"174
+[v SDCard_read512@resp_crc resp_crc `us  1 a 2 6 ]
+"175
+[v SDCard_read512@retry retry `i  1 a 2 4 ]
+"173
+[v SDCard_read512@response response `uc  1 a 1 14 ]
+"169
+[v SDCard_read512@addr addr `ul  1 p 4 143 ]
+[v SDCard_read512@offs offs `ui  1 p 2 147 ]
+[v SDCard_read512@buf buf `*.39v  1 p 2 149 ]
+[v SDCard_read512@count count `ui  1 p 2 151 ]
+"235
+} 0
+"50 Z:\z80\EMUZ80\cpm/drivers/utils.c
+[v _util_addrdump util_addrdump `(v  1 e 1 0 ]
+{
+"55
+[v util_addrdump@i i `ui  1 a 2 141 ]
+"52
+[v util_addrdump@chars chars `[17]uc  1 a 17 122 ]
+"53
+[v util_addrdump@buf buf `*.39Cuc  1 a 2 139 ]
+"50
+[v util_addrdump@header header `*.32Cuc  1 p 2 110 ]
+[v util_addrdump@addr_offs addr_offs `ul  1 p 4 112 ]
+[v util_addrdump@addr addr `*.39Cv  1 p 2 116 ]
+[v util_addrdump@size size `ui  1 p 2 118 ]
+"69
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\printf.c
+[v _printf printf `(i  1 e 2 0 ]
+{
+"8
+[v printf@ap ap `[1]*.39v  1 a 2 108 ]
+"5
+[v printf@fmt fmt `*.32Cuc  1 p 2 84 ]
+"13
+} 0
+"1546 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _vfprintf vfprintf `(i  1 e 2 0 ]
+{
+"1549
+[v vfprintf@cfmt cfmt `*.32uc  1 a 2 82 ]
+[s S5400 _IO_FILE 0 ]
+"1546
+[v vfprintf@fp fp `*.39S5400  1 p 2 76 ]
+[v vfprintf@fmt fmt `*.32Cuc  1 p 2 78 ]
+[v vfprintf@ap ap `*.39*.39v  1 p 2 80 ]
+"1569
+} 0
+"1048
+[v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
+{
+[u S5456 . 4 `l 1 sint 4 0 `ul 1 uint 4 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+"1059
+[v vfpfcnvrt@convarg convarg `S5456  1 a 4 69 ]
+"1050
+[v vfpfcnvrt@cp cp `*.32uc  1 a 2 74 ]
+"1051
+[v vfpfcnvrt@done done `i  1 a 2 65 ]
+"1050
+[v vfpfcnvrt@c c `uc  1 a 1 73 ]
+[s S5400 _IO_FILE 0 ]
+"1048
+[v vfpfcnvrt@fp fp `*.39S5400  1 p 2 51 ]
+[v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 53 ]
+[v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 55 ]
+"1543
+} 0
+"952
+[v _xtoa xtoa `(i  1 s 2 xtoa ]
+{
+"960
+[v xtoa@i i `i  1 a 2 55 ]
+[v xtoa@w w `i  1 a 2 53 ]
+[v xtoa@p p `i  1 a 2 50 ]
+"959
+[v xtoa@c c `uc  1 a 1 57 ]
+"962
+[v xtoa@d_nonzero d_nonzero `a  1 a 1 52 ]
+[s S5400 _IO_FILE 0 ]
+"952
+[v xtoa@fp fp `*.39S5400  1 p 2 37 ]
+[v xtoa@d d `ul  1 p 4 39 ]
+[v xtoa@x x `uc  1 p 1 43 ]
+"1024
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\toupper.c
+[v _toupper toupper `(i  1 e 2 0 ]
+{
+[v toupper@c c `i  1 p 2 11 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\islower.c
+[v _islower islower `(i  1 e 2 0 ]
+{
+[v islower@c c `i  1 p 2 7 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isupper.c
+[v _isupper isupper `(i  1 e 2 0 ]
+{
+[v isupper@c c `i  1 p 2 7 ]
+"8
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\isalpha.c
+[v _isalpha isalpha `(i  1 e 2 0 ]
+{
+[v isalpha@c c `i  1 p 2 7 ]
+"8
+} 0
+"917 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _utoa utoa `(i  1 s 2 utoa ]
+{
+"919
+[v utoa@i i `i  1 a 2 47 ]
+[v utoa@w w `i  1 a 2 45 ]
+[v utoa@p p `i  1 a 2 43 ]
+[s S5400 _IO_FILE 0 ]
+"917
+[v utoa@fp fp `*.39S5400  1 p 2 37 ]
+[v utoa@d d `ul  1 p 4 39 ]
+"947
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 15 ]
+"7
+[v ___llmod@dividend dividend `ul  1 p 4 7 ]
+[v ___llmod@divisor divisor `ul  1 p 4 11 ]
+"25
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 15 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 19 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 7 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 11 ]
+"30
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strncmp.c
+[v _strncmp strncmp `(i  1 e 2 0 ]
+{
+"5
+[v strncmp@r r `*.32Cuc  1 a 2 16 ]
+[v strncmp@l l `*.34Cuc  1 a 2 14 ]
+"3
+[v strncmp@_l _l `*.34Cuc  1 p 2 7 ]
+[v strncmp@_r _r `*.32Cuc  1 p 2 9 ]
+[v strncmp@n n `ui  1 p 2 11 ]
+"9
+} 0
+"862 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _stoa stoa `(i  1 s 2 stoa ]
+{
+"864
+[v stoa@nuls nuls `[7]uc  1 a 7 24 ]
+"865
+[v stoa@l l `i  1 a 2 39 ]
+[v stoa@p p `i  1 a 2 37 ]
+"864
+[v stoa@cp cp `*.34uc  1 a 2 35 ]
+"865
+[v stoa@w w `i  1 a 2 33 ]
+[v stoa@i i `i  1 a 2 31 ]
+[s S5400 _IO_FILE 0 ]
+"862
+[v stoa@fp fp `*.39S5400  1 p 2 19 ]
+[v stoa@s s `*.34uc  1 p 2 21 ]
+"864
+[v stoa@F1192 F1192 `[7]uc  1 s 7 F1192 ]
+"913
+} 0
+"1029
+[v _read_prec_or_width read_prec_or_width `(i  1 s 2 read_prec_or_width ]
+{
+"1035
+[v read_prec_or_width@c c `uc  1 a 1 19 ]
+"1030
+[v read_prec_or_width@n n `i  1 a 2 20 ]
+"1029
+[v read_prec_or_width@fmt fmt `*.39*.32Cuc  1 p 2 13 ]
+[v read_prec_or_width@ap ap `*.39[1]*.39v  1 p 2 15 ]
+"1042
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 11 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 7 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 9 ]
+"53
+} 0
+"816 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _otoa otoa `(i  1 s 2 otoa ]
+{
+"819
+[v otoa@i i `i  1 a 2 52 ]
+[v otoa@w w `i  1 a 2 50 ]
+[v otoa@p p `i  1 a 2 47 ]
+"818
+[v otoa@t t `uc  1 a 1 49 ]
+[s S5400 _IO_FILE 0 ]
+"816
+[v otoa@fp fp `*.39S5400  1 p 2 37 ]
+[v otoa@d d `ul  1 p 4 39 ]
+"858
+} 0
+"531
+[v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
+{
+[u S5419 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
+"536
+[v efgtoa@u u `S5419  1 a 4 47 ]
+[v efgtoa@g g `S5419  1 a 4 41 ]
+"535
+[v efgtoa@l l `d  1 a 4 34 ]
+[v efgtoa@h h `d  1 a 4 30 ]
+"536
+[v efgtoa@ou ou `S5419  1 a 4 24 ]
+"534
+[v efgtoa@n n `i  1 a 2 45 ]
+[v efgtoa@i i `i  1 a 2 38 ]
+[v efgtoa@w w `i  1 a 2 28 ]
+[v efgtoa@e e `i  1 a 2 22 ]
+[v efgtoa@m m `i  1 a 2 20 ]
+[v efgtoa@d d `i  1 a 2 18 ]
+[v efgtoa@t t `i  1 a 2 11 ]
+[v efgtoa@p p `i  1 a 2 9 ]
+[v efgtoa@ne ne `i  1 a 2 7 ]
+"533
+[v efgtoa@sign sign `uc  1 a 1 40 ]
+[v efgtoa@pp pp `uc  1 a 1 17 ]
+[v efgtoa@nmode nmode `uc  1 a 1 16 ]
+[v efgtoa@mode mode `uc  1 a 1 15 ]
+[s S5400 _IO_FILE 0 ]
+"531
+[v efgtoa@fp fp `*.39S5400  1 p 2 0 ]
+[v efgtoa@f f `d  1 p 4 2 ]
+[v efgtoa@c c `uc  1 p 1 6 ]
+"812
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strcpy.c
+[v _strcpy strcpy `(*.39uc  1 e 2 0 ]
+{
+"6
+[v strcpy@d d `*.39uc  1 a 2 13 ]
+"5
+[v strcpy@s s `*.32Cuc  1 a 2 11 ]
+"3
+[v strcpy@dest dest `*.39uc  1 p 2 7 ]
+[v strcpy@src src `*.32Cuc  1 p 2 9 ]
+"9
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+{
+"8
+[v memcpy@s s `*.39Cuc  1 a 2 16 ]
+"7
+[v memcpy@d d `*.39uc  1 a 2 14 ]
+"9
+[v memcpy@tmp tmp `uc  1 a 1 13 ]
+"4
+[v memcpy@d1 d1 `*.39v  1 p 2 7 ]
+[v memcpy@s1 s1 `*.39Cv  1 p 2 9 ]
+[v memcpy@n n `ui  1 p 2 11 ]
+"18
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\labs.c
+[v _labs labs `(l  1 e 4 0 ]
+{
+[v labs@a a `l  1 p 4 7 ]
+"4
+} 0
+"3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\floorf.c
+[v _floorf floorf `(f  1 e 4 0 ]
+{
+[u S5597 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"5
+[v floorf@u u `S5597  1 a 4 74 ]
+"7
+[v floorf@m m `ul  1 a 4 68 ]
+"6
+[v floorf@e e `i  1 a 2 72 ]
+"3
+[v floorf@x x `f  1 p 4 58 ]
+"4
+[v floorf@F526 F526 `S5597  1 s 4 F526 ]
+"27
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__fpclassifyf.c
+[v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
+{
+[u S5597 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+"6
+[v ___fpclassifyf@u u `S5597  1 a 4 17 ]
+"7
+[v ___fpclassifyf@e e `i  1 a 2 15 ]
+"4
+[v ___fpclassifyf@x x `f  1 p 4 7 ]
+"5
+[v ___fpclassifyf@F465 F465 `S5597  1 s 4 F465 ]
+"11
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 16 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 15 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 7 ]
+"70
+} 0
+"245 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcadd.c
+[v ___flsub __flsub `(d  1 e 4 0 ]
+{
+[v ___flsub@b b `d  1 p 4 32 ]
+[v ___flsub@a a `d  1 p 4 36 ]
+"250
+} 0
+"10
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 22 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 21 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 20 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 19 ]
+"10
+[v ___fladd@b b `d  1 p 4 7 ]
+[v ___fladd@a a `d  1 p 4 11 ]
+"237
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\flneg.c
+[v ___flneg __flneg `(d  1 e 4 0 ]
+{
+[v ___flneg@f1 f1 `d  1 p 4 7 ]
+"20
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S5170 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S5175 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S5178 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5170 1 fAsBytes 4 0 `S5175 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S5178  1 a 4 26 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 21 ]
+[s S5246 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S5249 . 2 `s 1 i 2 0 `us 1 n 2 0 `S5246 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S5249  1 a 2 30 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 25 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 20 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 19 ]
+"8
+[v ___flmul@b b `d  1 p 4 7 ]
+[v ___flmul@a a `d  1 p 4 11 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\flge.c
+[v ___flge __flge `(b  1 e 0 0 ]
+{
+[v ___flge@ff1 ff1 `d  1 p 4 32 ]
+[v ___flge@ff2 ff2 `d  1 p 4 36 ]
+"19
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+{
+[v ___fleq@ff1 ff1 `d  1 p 4 7 ]
+[v ___fleq@ff2 ff2 `d  1 p 4 11 ]
+"12
+} 0
+"11 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 52 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 45 ]
+"20
+[v ___fldiv@new_exp new_exp `s  1 a 2 50 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 57 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 56 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 49 ]
+"11
+[v ___fldiv@b b `d  1 p 4 33 ]
+[v ___fldiv@a a `d  1 p 4 37 ]
+"185
+} 0
+"470 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _dtoa dtoa `(i  1 s 2 dtoa ]
+{
+"473
+[v dtoa@i i `i  1 a 2 49 ]
+[v dtoa@w w `i  1 a 2 47 ]
+[v dtoa@p p `i  1 a 2 45 ]
+"472
+[v dtoa@s s `uc  1 a 1 51 ]
+[s S5400 _IO_FILE 0 ]
+"470
+[v dtoa@fp fp `*.39S5400  1 p 2 37 ]
+[v dtoa@d d `l  1 p 4 39 ]
+"527
+} 0
+"152
+[v _pad pad `(i  1 s 2 pad ]
+{
+"154
+[v pad@w w `i  1 a 2 35 ]
+[v pad@i i `i  1 a 2 33 ]
+[s S5400 _IO_FILE 0 ]
+"152
+[v pad@fp fp `*.39S5400  1 p 2 26 ]
+[v pad@buf buf `*.39uc  1 p 2 28 ]
+[v pad@p p `i  1 p 2 30 ]
+"183
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\strlen.c
+[v _strlen strlen `(ui  1 e 2 0 ]
+{
+"7
+[v strlen@a a `*.34Cuc  1 a 2 9 ]
+"5
+[v strlen@s s `*.34Cuc  1 p 2 7 ]
+"12
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputs.c
+[v _fputs fputs `(i  1 e 2 0 ]
+{
+"11
+[v fputs@i i `i  1 a 2 24 ]
+"10
+[v fputs@c c `uc  1 a 1 23 ]
+"8
+[v fputs@s s `*.39Cuc  1 p 2 19 ]
+[u S5365 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S5368 _IO_FILE 12 `S5365 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputs@fp fp `*.39S5368  1 p 2 21 ]
+"19
+} 0
+"1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abs.c
+[v _abs abs `(i  1 e 2 0 ]
+{
+[v abs@a a `i  1 p 2 17 ]
+"4
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+{
+"10
+[v ___almod@sign sign `uc  1 a 1 16 ]
+[v ___almod@counter counter `uc  1 a 1 15 ]
+"7
+[v ___almod@dividend dividend `l  1 p 4 7 ]
+[v ___almod@divisor divisor `l  1 p 4 11 ]
+"34
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 17 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 16 ]
+[v ___aldiv@counter counter `uc  1 a 1 15 ]
+"7
+[v ___aldiv@dividend dividend `l  1 p 4 7 ]
+[v ___aldiv@divisor divisor `l  1 p 4 11 ]
+"41
+} 0
+"433 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\doprnt.c
+[v _ctoa ctoa `(i  1 s 2 ctoa ]
+{
+"435
+[v ctoa@w w `i  1 a 2 25 ]
+[v ctoa@l l `i  1 a 2 23 ]
+[s S5400 _IO_FILE 0 ]
+"433
+[v ctoa@fp fp `*.39S5400  1 p 2 19 ]
+[v ctoa@c c `uc  1 p 1 21 ]
+"466
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_fputc.c
+[v _fputc fputc `(i  1 e 2 0 ]
+{
+[v fputc@c c `i  1 p 2 10 ]
+[u S5365 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S5368 _IO_FILE 12 `S5365 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.39S5368  1 p 2 12 ]
+"24
+} 0
+"83 Z:\z80\EMUZ80\cpm/src/io.c
+[v _putch putch `(v  1 e 1 0 ]
+{
+[v putch@c c `uc  1 a 1 wreg ]
+[v putch@c c `uc  1 a 1 wreg ]
+[v putch@c c `uc  1 a 1 9 ]
+"87
+} 0
+"104
+[v _con_flush_buffer con_flush_buffer `(v  1 s 1 con_flush_buffer ]
+{
+"107
+} 0
+"352 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v ___SDCard_crc16 __SDCard_crc16 `(us  1 e 2 0 ]
+{
+"354
+[v ___SDCard_crc16@p p `*.39uc  1 a 2 18 ]
+"355
+[v ___SDCard_crc16@endp endp `*.39uc  1 a 2 16 ]
+"352
+[v ___SDCard_crc16@crc crc `us  1 p 2 7 ]
+[v ___SDCard_crc16@buf buf `*.39Cv  1 p 2 9 ]
+[v ___SDCard_crc16@count count `ui  1 p 2 11 ]
+"366
+} 0
+"143
+[v ___SDCard_command_r1 __SDCard_command_r1 `(i  1 s 2 __SDCard_command_r1 ]
+{
+[v ___SDCard_command_r1@command command `uc  1 a 1 wreg ]
+"146
+[v ___SDCard_command_r1@buf buf `[6]uc  1 a 6 37 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"145
+[v ___SDCard_command_r1@spi spi `*.39S4393  1 a 2 44 ]
+"147
+[v ___SDCard_command_r1@response response `uc  1 a 1 43 ]
+"143
+[v ___SDCard_command_r1@command command `uc  1 a 1 wreg ]
+[v ___SDCard_command_r1@argument argument `ul  1 p 4 30 ]
+[v ___SDCard_command_r1@r1 r1 `*.39uc  1 p 2 34 ]
+"145
+[v ___SDCard_command_r1@command command `uc  1 a 1 36 ]
+"167
+} 0
+"133
+[v ___SDCard_wait_response __SDCard_wait_response `(uc  1 s 1 __SDCard_wait_response ]
+{
+[v ___SDCard_wait_response@no_response no_response `uc  1 a 1 wreg ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"135
+[v ___SDCard_wait_response@spi spi `*.39S4393  1 a 2 27 ]
+"136
+[v ___SDCard_wait_response@response response `uc  1 a 1 29 ]
+"133
+[v ___SDCard_wait_response@no_response no_response `uc  1 a 1 wreg ]
+[v ___SDCard_wait_response@attempts attempts `ui  1 p 2 24 ]
+"135
+[v ___SDCard_wait_response@no_response no_response `uc  1 a 1 26 ]
+"141
+} 0
+"279 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
+[v _SPI_SD_receive_byte SPI_SD_receive_byte `(uc  1 e 1 0 ]
+{
+"281
+[v SPI_SD_receive_byte@dummy dummy `uc  1 a 1 23 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"279
+[v SPI_SD_receive_byte@ctx_ ctx_ `*.39S4393  1 p 2 21 ]
+"284
+} 0
+"195
+[v _SPI_SD_receive SPI_SD_receive `(v  1 e 1 0 ]
+{
+"238
+[v SPI_SD_receive@i_4735 i `uc  1 a 1 18 ]
+"207
+[v SPI_SD_receive@i i `i  1 a 2 16 ]
+"237
+[v SPI_SD_receive@repeat repeat `uc  1 a 1 15 ]
+"197
+[v SPI_SD_receive@p p `*.39uc  1 a 2 19 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"195
+[v SPI_SD_receive@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v SPI_SD_receive@buf buf `*.39v  1 p 2 9 ]
+[v SPI_SD_receive@count count `ui  1 p 2 11 ]
+"267
+} 0
+"144
+[v _SPI_SD_begin_transaction SPI_SD_begin_transaction `(v  1 e 1 0 ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_begin_transaction@ctx_ ctx_ `*.39S4393  1 p 2 11 ]
+"148
+} 0
+"334 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
+[v _SDCard_crc SDCard_crc `(uc  1 e 1 0 ]
+{
+"342
+[v SDCard_crc@i i `i  1 a 2 13 ]
+"337
+[v SDCard_crc@p p `*.39uc  1 a 2 16 ]
+"338
+[v SDCard_crc@endp endp `*.39uc  1 a 2 11 ]
+"336
+[v SDCard_crc@crc crc `uc  1 a 1 15 ]
+"334
+[v SDCard_crc@buf buf `*.39Cv  1 p 2 7 ]
+[v SDCard_crc@count count `ui  1 p 2 9 ]
+"350
+} 0
+"46
+[v _SDCard_end_transaction SDCard_end_transaction `(v  1 e 1 0 ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"48
+[v SDCard_end_transaction@spi spi `*.39S4393  1 a 2 24 ]
+"51
+} 0
+"150 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
+[v _SPI_SD_end_transaction SPI_SD_end_transaction `(v  1 e 1 0 ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_end_transaction@ctx_ ctx_ `*.39S4393  1 p 2 11 ]
+"154
+} 0
+"286
+[v _SPI_SD_select SPI_SD_select `(v  1 e 1 0 ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_select@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v SPI_SD_select@select select `i  1 p 2 9 ]
+"294
+} 0
+"269
+[v _SPI_SD_dummy_clocks SPI_SD_dummy_clocks `(v  1 e 1 0 ]
+{
+"273
+[v SPI_SD_dummy_clocks@i i `i  1 a 2 21 ]
+"271
+[v SPI_SD_dummy_clocks@dummy dummy `uc  1 a 1 23 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"269
+[v SPI_SD_dummy_clocks@ctx_ ctx_ `*.39S4393  1 p 2 17 ]
+[v SPI_SD_dummy_clocks@clocks clocks `ui  1 p 2 19 ]
+"277
+} 0
+"58
+[v _release_bus release_bus `(v  1 s 1 release_bus ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"60
+[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v release_bus@ctx ctx `*.39S4395  1 a 2 9 ]
+"58
+[v release_bus@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+"66
+} 0
+"42
+[v _acquire_bus acquire_bus `(v  1 s 1 acquire_bus ]
+{
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"44
+[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v acquire_bus@ctx ctx `*.39S4395  1 a 2 9 ]
+"42
+[v acquire_bus@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+"56
+} 0
+"174
+[v _SPI_SD_send SPI_SD_send `(v  1 e 1 0 ]
+{
+"186
+[v SPI_SD_send@i i `i  1 a 2 13 ]
+"176
+[v SPI_SD_send@p p `*.39uc  1 a 2 15 ]
+[s S4393 SPI 2 `i 1 dummy 2 0 ]
+"174
+[v SPI_SD_send@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v SPI_SD_send@buf buf `*.39Cv  1 p 2 9 ]
+[v SPI_SD_send@count count `ui  1 p 2 11 ]
+"193
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 15 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 7 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 11 ]
+"129
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 29 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 28 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 19 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 27 ]
+"44
+} 0
+"243 Z:\z80\EMUZ80\cpm/src/io.c
+[v _Default_ISR Default_ISR `IIH(v  1 e 1 0 ]
+{
+"246
+[v Default_ISR@c c `uc  1 a 1 6 ]
+"260
+} 0
+"96
+[v i2___con_flush_buffer __con_flush_buffer `(v  1 s 1 i2___con_flush_buffer ]
+{
+"102
+} 0
+"146
+[v _ungetch ungetch `(v  1 e 1 0 ]
+{
+[v ungetch@c c `uc  1 a 1 wreg ]
+[v ungetch@c c `uc  1 a 1 wreg ]
+[v ungetch@c c `uc  1 a 1 5 ]
+"157
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\lwmod.c
+[v i2___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v i2___lwmod@counter counter `uc  1 a 1 4 ]
+"7
+[v i2___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v i2___lwmod@divisor divisor `ui  1 p 2 2 ]
+"25
+} 0
