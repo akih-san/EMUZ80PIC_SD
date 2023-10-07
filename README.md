@@ -1,19 +1,19 @@
 # EMUZ80PIC_SD
 ![EMUZ80PIC_SD 1](Photo/P1020376.JPG)
-![EMUZ80PIC_SD 2](photo/P1020381.JPG)
-![EMUZ80PIC_SD 3](photo/233.png)
+![EMUZ80PIC_SD 2](Photo/P1020381.JPG)
+![EMUZ80PIC_SD 3](Photo/233.png)
 <br>
 EMUZ80PIC_SDは、EMUZ80にアドオンするμSDカードモジュールです。<br>
 EMUZ80+SuperMEZ80、または、EMUZ80+MEZZ180RAMの組み合わせで<br>
 CP/M-80 Ver2.2を走らせることが出来ます。<br>
 <br>
 # SuperMEZ80 + EMUZ80PIC_SD
-![SuperMEZ80 1](photo/P1020386.JPG)
-![SuperMEZ80 2](photo/P1020392.JPG)
+![SuperMEZ80 1](Photo/P1020386.JPG)
+![SuperMEZ80 2](Photo/P1020392.JPG)
 <br>
 # MEZZ180RAM + EMUZ80PIC_SD
-![MEZZ180 1](photo/P1020394.JPG)
-![MEZZ180 2](photo/P1020397.JPG)
+![MEZZ180 1](Photo/P1020394.JPG)
+![MEZZ180 2](Photo/P1020397.JPG)
 <br>
 @hanyazouさんのファームウェアを、EMUZ80PIC_SD用にカスタマイズしてあります。<br>
 <br>
