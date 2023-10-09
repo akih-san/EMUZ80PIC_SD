@@ -192,9 +192,14 @@ static void emuz80_common_write_to_sram(uint16_t addr, uint8_t *buf, unsigned in
     #endif
 
     ab.w = addr;
-    #ifdef Z80_ADDR_H
-    LAT(Z80_ADDR_H) = ab.h;
-    #endif
+
+    LAT(Z80_ADDR_H) = ab.h & 0x3f;
+	if (ab.h & 0x40) LAT(Z80_A14) = 1;
+	else LAT(Z80_A14) = 0;
+	#ifdef PIC_64K
+	if (ab.h & 0x80) LAT(Z80_A15) = 1;
+	else LAT(Z80_A15) = 0;
+	#endif
     LAT(Z80_ADDR_L) = ab.l;
     for(i = 0; i < len; i++) {
         LAT(SRAM_WE) = 0;      // activate /WE
@@ -203,9 +208,13 @@ static void emuz80_common_write_to_sram(uint16_t addr, uint8_t *buf, unsigned in
         LAT(Z80_ADDR_L) = ++ab.l;
         if (ab.l == 0) {
             ab.h++;
-            #ifdef Z80_ADDR_H
-            LAT(Z80_ADDR_H) = ab.h;
-            #endif
+		    LAT(Z80_ADDR_H) = ab.h & 0x3f;
+			if (ab.h & 0x40) LAT(Z80_A14) = 1;
+			else LAT(Z80_A14) = 0;
+			#ifdef PIC_64K
+			if (ab.h & 0x80) LAT(Z80_A15) = 1;
+			else LAT(Z80_A15) = 0;
+			#endif
         }
     }
 
@@ -224,9 +233,13 @@ static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned i
     #endif
 
     ab.w = addr;
-    #ifdef Z80_ADDR_H
-    LAT(Z80_ADDR_H) = ab.h;
-    #endif
+    LAT(Z80_ADDR_H) = ab.h & 0x3f;
+	if (ab.h & 0x40) LAT(Z80_A14) = 1;
+	else LAT(Z80_A14) = 0;
+	#ifdef PIC_64K
+	if (ab.h & 0x80) LAT(Z80_A15) = 1;
+	else LAT(Z80_A15) = 0;
+	#endif
     LAT(Z80_ADDR_L) = ab.l;
     for(i = 0; i < len; i++) {
         LAT(SRAM_OE) = 0;      // activate /OE
@@ -235,9 +248,13 @@ static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned i
         LAT(Z80_ADDR_L) = ++ab.l;
         if (ab.l == 0) {
             ab.h++;
-            #ifdef Z80_ADDR_H
-            LAT(Z80_ADDR_H) = ab.h;
-            #endif
+		    LAT(Z80_ADDR_H) = ab.h & 0x3f;
+			if (ab.h & 0x40) LAT(Z80_A14) = 1;
+			else LAT(Z80_A14) = 0;
+			#ifdef PIC_64K
+			if (ab.h & 0x80) LAT(Z80_A15) = 1;
+			else LAT(Z80_A15) = 0;
+			#endif
         }
     }
 

@@ -33,8 +33,10 @@
 #define SPI_HW_INST     SPI1
 #include "../../drivers/SPI.h"
 
-//#define NO_RFSH
+////////////////////////////////
+// for remodeling MEZZ180RAM 
 //#define PIC_64K
+////////////////////////////////
 
 #define Z80_DATA        C
 #define Z80_ADDR_H      D
@@ -50,8 +52,10 @@
 // RA7 is used as UART RXD
 
 // RD0~5 are used as address high A8~13
-
-#ifndef NO_RFSH
+// A14=RE2, A15=RD6(if define PIC_64K)
+#ifdef PIC_64K
+#define Z80_A15         D6
+#else
 #define Z80_RFSH        D6
 #endif
 
@@ -60,7 +64,6 @@
 #define Z80_BUSRQ       E0
 #define Z80_RESET       E1
 
-// new try
 ////////////////////////////
 #define Z80_A14         E2
 #define SPI_SS          Z80_MEMRQ
@@ -71,14 +74,14 @@
 #define SPI_SD_POCI     C2
 #define SPI_SD_SS       SPI_SS
 
-#ifndef PIC_64K
-//A14=RE2, then PIC can 0-7FFFH
-#define HIGH_ADDR_MASK  0xffff8000
-#define LOW_ADDR_MASK   0x00007fff
-#else
+#ifdef PIC_64K
 //A14=RE2, A15=RD6 then PIC can 0-FFFFH
 #define HIGH_ADDR_MASK  0xffff0000
 #define LOW_ADDR_MASK   0x0000ffff
+#else
+//A14=RE2, then PIC can 0-7FFFH
+#define HIGH_ADDR_MASK  0xffff8000
+#define LOW_ADDR_MASK   0x00007fff
 #endif
 
 #include "emuz80_common.c"
@@ -92,24 +95,19 @@ static void emuz80_47q_sys_init()
 {
     emuz80_common_sys_init();
 
+#ifdef PIC_64K
     // Address bus
     LAT(Z80_ADDR_H) = 0x00;
+    TRIS(Z80_ADDR_H) = 0x00;    // Set as output
+#else
+    LAT(Z80_ADDR_H) = 0x00;
     TRIS(Z80_ADDR_H) = 0x40;    // Set as output except 6:/RFSH
+#endif
 
     LAT(Z80_A14) = 0;     // init A14=0
     TRIS(Z80_A14) = 0;    // Set as output
 
-#ifdef PIC_64K
-	// RD6 = A15
-	LAT(D6) = 0;          // init A15=0
-    TRIS(D6) = 0;         // Set as output
-#endif
-
-    // RAM-CS2
-    LAT(C7) = 1;                // Set as output
-    TRIS(C7) = 0;               // Always active
-
-   // SPI /CS init
+// SPI /CS init
 // SPI /CS = /BUSREQ and /MEMRQ
 // /BUSREQ is already set "L" at emuz80_common_sys_init()
 
@@ -168,8 +166,13 @@ static void emuz80_47q_bus_master(int enable)
 
         // Set address bus as output
         TRIS(Z80_ADDR_L) = 0x00;    // A7-A0
+#ifdef PIC_64K
+        TRIS(Z80_ADDR_H) = 0x00;    // RD7-RD0 output
+#else
         TRIS(Z80_ADDR_H) = 0x40;    // A13-A8 except /RFSH(RD6)
+#endif
         TRIS(Z80_A14) = 0;          // A14(RE2)
+        TRIS(Z80_DATA) = 0;      // D7-D0 pin
 
     	TRIS(Z80_RD) = 0;           // output
 
@@ -193,14 +196,14 @@ static void emuz80_47q_bus_master(int enable)
 
 static void emuz80_47q_start_z80(void)
 {
+    // 2,3,6,7 = Port B, D
+    CLCIN0PPS = 0x01;           // RA1 <- /MREQ
     emuz80_common_start_z80();
 
     //========== CLC pin assign ===========
     // 0,1,4,5 = Port A, C
-    // 2,3,6,7 = Port B, D
-    CLCIN0PPS = 0x01;           // RA1 <- /MREQ
     CLCIN1PPS = 0x00;           // RA0 <- /IORQ
-#ifndef NO_RFSH
+#ifndef PIC_64K
     CLCIN2PPS = 0x1e;           // RD6 <- /RFSH
 #endif
     #ifdef Z80_USE_M1_FOR_SRAM_OE
@@ -233,7 +236,7 @@ static void emuz80_47q_start_z80(void)
     CLCnCON = 0x80;      // AND-OR
     #else
     CLCnSEL0 = 0;        // CLCIN0PPS <- /MREQ
-#ifndef NO_RFSH
+#ifndef PIC_64K
     CLCnSEL1 = 2;        // CLCIN2PPS <- /RFSH
 #else
 	CLCnSEL1 = 127;      // NC
@@ -243,7 +246,7 @@ static void emuz80_47q_start_z80(void)
     CLCnSEL3 = 127;      // NC
 
     CLCnGLS0 = 0x01;     // /MREQ inverted
-#ifndef NO_RFSH
+#ifndef PIC_64K
     CLCnGLS1 = 0x08;     // /RFSH noninverted
 #else
 	CLCnGLS1 = 0x04;     // 1(0 inverted) for AND gate
@@ -259,7 +262,7 @@ static void emuz80_47q_start_z80(void)
     CLCSELECT = 1;       // CLC2 select
 
     CLCnSEL0 = 0;        // CLCIN0PPS <- /MREQ
-#ifndef NO_RFSH
+#ifndef PIC_64K
     CLCnSEL1 = 2;        // CLCIN2PPS <- /RFSH
 #else
     CLCnSEL1 = 127;      // NC
@@ -268,7 +271,7 @@ static void emuz80_47q_start_z80(void)
     CLCnSEL3 = 127;      // NC
 
     CLCnGLS0 = 0x01;     // /MREQ inverted
-#ifndef NO_RFSH
+#ifndef PIC_64K
     CLCnGLS1 = 0x08;     // /RFSH noninverted
 #else
 	CLCnGLS1 = 0x04;     // 1(0 inverted) for AND gate
@@ -301,6 +304,16 @@ static void emuz80_47q_start_z80(void)
     CLC3IF = 0;          // Clear the CLC interrupt flag
     CLC3IE = 0;          // NOTE: CLC3 interrupt is not enabled. This will be handled by polling.
 
+	// A14 (RE2) input pin
+    WPU(Z80_A14) = 1;            // Week pull up
+    TRIS(Z80_A14) = 1;           // Set as input
+
+#ifdef PIC_64K
+	// A15 (D6) input pin
+    WPU(Z80_A15) = 1;            // Week pull up
+    TRIS(Z80_A15) = 1;           // Set as input
+#endif
+
     // Z80 start
     LAT(Z80_BUSRQ) = 1;  // /BUSREQ=1
     LAT(Z80_RESET) = 1;  // Release reset
@@ -319,55 +332,6 @@ static void emuz80_47q_set_wait_pin(uint8_t v)
 
 static void emuz80_47q_set_bank_pins(uint32_t addr)
 {
-uint32_t t_adr;
-
-	t_adr = (uint32_t)LOW_ADDR_MASK & addr;
-	
-//debug111
-//		printf("\n\rt_adr=%04x, ", t_adr);
-//
-
-#ifdef PIC_64K
-	if (t_adr >=0x0000 && t_adr < 0x4000 ) {
-		LAT(Z80_A14) = 0;
-		LAT(D6) = 0;
-//debug111
-//		printf("A15=0, A14=0");
-//
-	else if (t_adr >=0x4000 && t_adr < 0x8000 ) {
-		LAT(Z80_A14) = 1;
-		LAT(D6) = 0;
-//debug111
-//		printf("A15=0, A14=1");
-//
-	else if (t_adr >=0x8000 && t_adr < 0xC000 ) {
-		LAT(Z80_A14) = 0;
-		LAT(D6) = 1;
-//debug111
-//		printf("A15=1, A14=0");
-//
-	}
-	else {
-		LAT(D6) = 1;
-		LAT(Z80_A14) = 1;
-//debug111
-//		printf("A15=1, A14=1");
-//
-	}
-#else
-	if(t_adr >=0x4000) {
-		LAT(Z80_A14) = 1;
-//debug111
-//		printf("\n\rA14 = 1");
-//
-	}
-	else {
-		LAT(Z80_A14) = 0;
-//debug111
-//		printf("\n\rA14 = 0");
-//
-	}
-#endif
 }
 
 static void emuz80_47q_setup_addrbus(uint32_t addr)

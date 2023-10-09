@@ -10,7 +10,7 @@
  * the following conditions:
  *
  * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
+ * included in all copies or substantial portions of the Software. 
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
@@ -53,7 +53,6 @@
 #define Z80_BUSRQ       E0
 #define Z80_RESET       E1
 
-// new try
 ////////////////////////////
 #define Z80_A14         E2
 #define SPI_SS          Z80_MEMRQ
@@ -87,14 +86,11 @@ static void emuz80_47q_sys_init()
     LAT(Z80_A14) = 0;     // init A14=0
     TRIS(Z80_A14) = 0;    // Set as output
 
-    // RAM-CS2
-    LAT(C7) = 1;                // Set as output
-    TRIS(C7) = 0;               // Always active
-
-   // SPI /CS init
+// SPI /CS init
 // SPI /CS = /BUSREQ and /MEMRQ
 // /BUSREQ is already set "L" at emuz80_common_sys_init()
 
+	// /MEMRQ output pin
     LAT(Z80_MEMRQ) = 1;
     TRIS(Z80_MEMRQ) = 0;          // Set as output
     PPS(Z80_MEMRQ) = 0x00;        //reset:output PPS is LATCH
@@ -260,6 +256,10 @@ static void emuz80_47q_start_z80(void)
     CLC3IF = 0;          // Clear the CLC interrupt flag
     CLC3IE = 0;          // NOTE: CLC3 interrupt is not enabled. This will be handled by polling.
 
+	// A14 (RE2) input pin
+    WPU(Z80_A14) = 1;            // Week pull up
+    TRIS(Z80_A14) = 1;           // Set as input
+
     // Z80 start
     LAT(Z80_BUSRQ) = 1;  // /BUSREQ=1
     LAT(Z80_RESET) = 1;  // Release reset
@@ -278,18 +278,6 @@ static void emuz80_47q_set_wait_pin(uint8_t v)
 
 static void emuz80_47q_set_bank_pins(uint32_t addr)
 {
-	if(((uint32_t)LOW_ADDR_MASK & addr) >=0x4000) {
-		LAT(Z80_A14) = 1;
-//debug111
-//		printf("\n\rLAT(Z80_A14) = 1");
-//
-	}
-	else {
-		LAT(Z80_A14) = 0;
-//debug111
-//		printf("\n\rLAT(Z80_A14) = 0");
-//
-	}
 }
 
 static void emuz80_47q_setup_addrbus(uint32_t addr)
