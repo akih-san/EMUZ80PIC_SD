@@ -29195,7 +29195,7 @@ uint8_t SPI_SD_receive_byte(struct SPI *ctx_);
 void SPI_SD_select(struct SPI *ctx_, int select);
 extern struct SPI *SPI_SD_ctx;
 # 34 "../src/boards/supermez80_sd.c" 2
-# 72 "../src/boards/supermez80_sd.c"
+# 71 "../src/boards/supermez80_sd.c"
 # 1 "../src/boards/emuz80_common.c" 1
 # 31 "../src/boards/emuz80_common.c"
 static void emuz80_common_sys_init()
@@ -29338,7 +29338,12 @@ static void emuz80_common_write_to_sram(uint16_t addr, uint8_t *buf, unsigned in
 
     ab.w = addr;
 
-    LATD = ab.h;
+    LATD = ab.h & 0x3f;
+ if (ab.h & 0x40) LATE2 = 1;
+ else LATE2 = 0;
+
+
+
 
     LATB = ab.l;
     for(i = 0; i < len; i++) {
@@ -29348,8 +29353,12 @@ static void emuz80_common_write_to_sram(uint16_t addr, uint8_t *buf, unsigned in
         LATB = ++ab.l;
         if (ab.l == 0) {
             ab.h++;
+      LATD = ab.h & 0x3f;
+   if (ab.h & 0x40) LATE2 = 1;
+   else LATE2 = 0;
 
-            LATD = ab.h;
+
+
 
         }
     }
@@ -29369,8 +29378,12 @@ static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned i
 
 
     ab.w = addr;
+    LATD = ab.h & 0x3f;
+ if (ab.h & 0x40) LATE2 = 1;
+ else LATE2 = 0;
 
-    LATD = ab.h;
+
+
 
     LATB = ab.l;
     for(i = 0; i < len; i++) {
@@ -29380,8 +29393,12 @@ static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned i
         LATB = ++ab.l;
         if (ab.l == 0) {
             ab.h++;
+      LATD = ab.h & 0x3f;
+   if (ab.h & 0x40) LATE2 = 1;
+   else LATE2 = 0;
 
-            LATD = ab.h;
+
+
 
         }
     }
@@ -29527,7 +29544,7 @@ static void emuz80_common_wait_for_programmer()
 
     printf("\n\r");
 }
-# 72 "../src/boards/supermez80_sd.c" 2
+# 71 "../src/boards/supermez80_sd.c" 2
 
 
 static char *emuz80_47q_name()
@@ -29546,9 +29563,6 @@ static void emuz80_47q_sys_init()
     LATE2 = 0;
     TRISE2 = 0;
 
-
-    LATC7 = 1;
-    TRISC7 = 0;
 
 
 
@@ -29654,7 +29668,7 @@ static void emuz80_47q_start_z80(void)
 
 
     CLCSELECT = 0;
-# 213 "../src/boards/supermez80_sd.c"
+# 209 "../src/boards/supermez80_sd.c"
     CLCnSEL0 = 0;
     CLCnSEL1 = 2;
     CLCnSEL2 = 4;
@@ -29706,6 +29720,10 @@ static void emuz80_47q_start_z80(void)
     CLC3IE = 0;
 
 
+    WPUE2 = 1;
+    TRISE2 = 1;
+
+
     LATE0 = 1;
     LATE1 = 1;
 }
@@ -29723,18 +29741,6 @@ static void emuz80_47q_set_wait_pin(uint8_t v)
 
 static void emuz80_47q_set_bank_pins(uint32_t addr)
 {
- if(((uint32_t)0x00007fff & addr) >=0x4000) {
-  LATE2 = 1;
-
-
-
- }
- else {
-  LATE2 = 0;
-
-
-
- }
 }
 
 static void emuz80_47q_setup_addrbus(uint32_t addr)
@@ -30040,7 +30046,7 @@ void SPI_SD_select(struct SPI *ctx_, int select)
 
     LATA1 = select ? 0 : 1;
 }
-# 332 "../src/boards/supermez80_sd.c" 2
+# 320 "../src/boards/supermez80_sd.c" 2
 
 # 1 "../src/boards/../../drivers/SDCard.c" 1
 # 27 "../src/boards/../../drivers/SDCard.c"
@@ -30397,5 +30403,5 @@ int SDCard_debug(int newval)
 
     return res;
 }
-# 333 "../src/boards/supermez80_sd.c" 2
+# 321 "../src/boards/supermez80_sd.c" 2
 
