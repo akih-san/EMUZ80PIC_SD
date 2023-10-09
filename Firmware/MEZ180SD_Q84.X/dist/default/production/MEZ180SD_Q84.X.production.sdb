@@ -102,7 +102,7 @@ RES_WRPRT 2
 RES_NOTRDY 3
 RES_PARERR 4
 ]
-"154 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"152 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [e E23712 . `uc
 SPI_CLOCK_100KHZ 0
 SPI_CLOCK_2MHZ 1
@@ -270,57 +270,57 @@ SPI_CLOCK_10MHZ 6
 [v _emuz80_common_low_addr_mask emuz80_common_low_addr_mask `(us  1 s 2 emuz80_common_low_addr_mask ]
 "185
 [v _emuz80_common_write_to_sram emuz80_common_write_to_sram `(v  1 s 1 emuz80_common_write_to_sram ]
-"217
+"226
 [v _emuz80_common_read_from_sram emuz80_common_read_from_sram `(v  1 s 1 emuz80_common_read_from_sram ]
-"249
+"266
 [v _emuz80_common_clock_op_hook emuz80_common_clock_op_hook `(i  1 s 2 emuz80_common_clock_op_hook ]
-"299
+"316
 [v _emuz80_common_addr_l_pins emuz80_common_addr_l_pins `(uc  1 s 1 emuz80_common_addr_l_pins ]
-"300
+"317
 [v _emuz80_common_set_addr_l_pins emuz80_common_set_addr_l_pins `(v  1 s 1 emuz80_common_set_addr_l_pins ]
-"301
+"318
 [v _emuz80_common_data_pins emuz80_common_data_pins `(uc  1 s 1 emuz80_common_data_pins ]
-"302
+"319
 [v _emuz80_common_set_data_pins emuz80_common_set_data_pins `(v  1 s 1 emuz80_common_set_data_pins ]
-"303
-[v _emuz80_common_set_data_dir emuz80_common_set_data_dir `(v  1 s 1 emuz80_common_set_data_dir ]
-"304
-[v _emuz80_common_ioreq_pin emuz80_common_ioreq_pin `(b  1 s 0 emuz80_common_ioreq_pin ]
-"305
-[v _emuz80_common_memrq_pin emuz80_common_memrq_pin `(b  1 s 0 emuz80_common_memrq_pin ]
-"306
-[v _emuz80_common_rd_pin emuz80_common_rd_pin `(b  1 s 0 emuz80_common_rd_pin ]
-"310
-[v _emuz80_common_set_busrq_pin emuz80_common_set_busrq_pin `(v  1 s 1 emuz80_common_set_busrq_pin ]
-"311
-[v _emuz80_common_set_reset_pin emuz80_common_set_reset_pin `(v  1 s 1 emuz80_common_set_reset_pin ]
-"331
-[v _emuz80_common_set_wait_pin emuz80_common_set_wait_pin `(v  1 s 1 emuz80_common_set_wait_pin ]
-"337
-[v _emuz80_common_init emuz80_common_init `(v  1 s 1 emuz80_common_init ]
-"372
-[v _emuz80_common_wait_for_programmer emuz80_common_wait_for_programmer `(v  1 s 1 emuz80_common_wait_for_programmer ]
-"86 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
-[v _emuz80_47q_name emuz80_47q_name `(*.32uc  1 s 2 emuz80_47q_name ]
-"91
-[v _emuz80_47q_sys_init emuz80_47q_sys_init `(v  1 s 1 emuz80_47q_sys_init ]
-"161
-[v _emuz80_47q_bus_master emuz80_47q_bus_master `(v  1 s 1 emuz80_47q_bus_master ]
-"194
-[v _emuz80_47q_start_z80 emuz80_47q_start_z80 `(v  1 s 1 emuz80_47q_start_z80 ]
-"309
-[v _emuz80_47q_set_wait_pin emuz80_47q_set_wait_pin `(v  1 s 1 emuz80_47q_set_wait_pin ]
 "320
+[v _emuz80_common_set_data_dir emuz80_common_set_data_dir `(v  1 s 1 emuz80_common_set_data_dir ]
+"321
+[v _emuz80_common_ioreq_pin emuz80_common_ioreq_pin `(b  1 s 0 emuz80_common_ioreq_pin ]
+"322
+[v _emuz80_common_memrq_pin emuz80_common_memrq_pin `(b  1 s 0 emuz80_common_memrq_pin ]
+"323
+[v _emuz80_common_rd_pin emuz80_common_rd_pin `(b  1 s 0 emuz80_common_rd_pin ]
+"327
+[v _emuz80_common_set_busrq_pin emuz80_common_set_busrq_pin `(v  1 s 1 emuz80_common_set_busrq_pin ]
+"328
+[v _emuz80_common_set_reset_pin emuz80_common_set_reset_pin `(v  1 s 1 emuz80_common_set_reset_pin ]
+"348
+[v _emuz80_common_set_wait_pin emuz80_common_set_wait_pin `(v  1 s 1 emuz80_common_set_wait_pin ]
+"354
+[v _emuz80_common_init emuz80_common_init `(v  1 s 1 emuz80_common_init ]
+"389
+[v _emuz80_common_wait_for_programmer emuz80_common_wait_for_programmer `(v  1 s 1 emuz80_common_wait_for_programmer ]
+"89 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+[v _emuz80_47q_name emuz80_47q_name `(*.32uc  1 s 2 emuz80_47q_name ]
+"94
+[v _emuz80_47q_sys_init emuz80_47q_sys_init `(v  1 s 1 emuz80_47q_sys_init ]
+"159
+[v _emuz80_47q_bus_master emuz80_47q_bus_master `(v  1 s 1 emuz80_47q_bus_master ]
+"197
+[v _emuz80_47q_start_z80 emuz80_47q_start_z80 `(v  1 s 1 emuz80_47q_start_z80 ]
+"322
+[v _emuz80_47q_set_wait_pin emuz80_47q_set_wait_pin `(v  1 s 1 emuz80_47q_set_wait_pin ]
+"333
 [v _emuz80_47q_set_bank_pins emuz80_47q_set_bank_pins `(v  1 s 1 emuz80_47q_set_bank_pins ]
-"373
+"337
 [v _emuz80_47q_setup_addrbus emuz80_47q_setup_addrbus `(v  1 s 1 emuz80_47q_setup_addrbus ]
-"378
+"342
 [v _emuz80_47q_io_event emuz80_47q_io_event `(b  1 s 0 emuz80_47q_io_event ]
-"383
+"347
 [v _emuz80_47q_wait_io_event emuz80_47q_wait_io_event `(v  1 s 1 emuz80_47q_wait_io_event ]
-"388
+"352
 [v _emuz80_47q_clear_io_event emuz80_47q_clear_io_event `(v  1 s 1 emuz80_47q_clear_io_event ]
-"393
+"357
 [v _board_init board_init `(v  1 e 1 0 ]
 "28 Z:\z80\EMUZ80\cpm/src/disas.c
 [v _disas_op disas_op `(ui  1 e 2 0 ]
@@ -687,16 +687,16 @@ SPI_CLOCK_10MHZ 6
 [v _board_set_reset_pin_hook board_set_reset_pin_hook `*.38(v  1 e 3 0 ]
 "56
 [v _board_set_wait_pin_hook board_set_wait_pin_hook `*.38(v  1 e 3 0 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "37 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
-[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
-[v _pic18f47q43_spi_ctx pic18f47q43_spi_ctx `S4395  1 s 4 pic18f47q43_spi_ctx ]
+[s S4394 SPI_HW 4 `S4392 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v _pic18f47q43_spi_ctx pic18f47q43_spi_ctx `S4394  1 s 4 pic18f47q43_spi_ctx ]
 "31 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
-[v _debug_flags@SDCard$F4749 debug_flags `i  1 s 2 debug_flags ]
+[v _debug_flags@SDCard$F4747 debug_flags `i  1 s 2 debug_flags ]
 "44
-[s S4523 SDCard 5 `*.39S4393 1 spi 2 0 `us 1 timeout 2 2 `uc 1 calc_read_crc 1 4 :1:0 
+[s S4522 SDCard 5 `*.39S4392 1 spi 2 0 `us 1 timeout 2 2 `uc 1 calc_read_crc 1 4 :1:0 
 ]
-[v _ctx_ ctx_ `S4523  1 s 5 ctx_ ]
+[v _ctx_ ctx_ `S4522  1 s 5 ctx_ ]
 [s S195 disas_inst_desc 4 `uc 1 attr 1 0 `uc 1 op 1 1 `*.32v 1 ptr 2 2 ]
 "27 Z:\z80\EMUZ80\cpm/src/disas_z80.c
 [v _disas_z80 disas_z80 `C[257]S195  1 e 1028 0 ]
@@ -817,26 +817,26 @@ SPI_CLOCK_10MHZ 6
 [v _SPI1CON0 SPI1CON0 `VEuc  1 e 1 @132 ]
 "3684
 [v _LATC LATC `VEuc  1 e 1 @1216 ]
-[s S4408 . 1 `uc 1 BMODE 1 0 :1:0 
+[s S4407 . 1 `uc 1 BMODE 1 0 :1:0 
 `uc 1 MST 1 0 :1:1 
 `uc 1 LSBF 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 EN 1 0 :1:7 
 ]
 "3700
-[s S4414 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
+[s S4413 . 1 `uc 1 SPI1BMODE 1 0 :1:0 
 `uc 1 SPI1MST 1 0 :1:1 
 `uc 1 SPI1LSBF 1 0 :1:2 
 `uc 1 . 1 0 :4:3 
 `uc 1 SPI1SPIEN 1 0 :1:7 
 ]
-[u S4420 . 1 `S4408 1 . 1 0 `S4414 1 . 1 0 ]
-[v _SPI1CON0bits SPI1CON0bits `VES4420  1 e 1 @132 ]
+[u S4419 . 1 `S4407 1 . 1 0 `S4413 1 . 1 0 ]
+[v _SPI1CON0bits SPI1CON0bits `VES4419  1 e 1 @132 ]
 "3745
 [v _SPI1CON1 SPI1CON1 `VEuc  1 e 1 @133 ]
 "3746
 [v _LATD LATD `VEuc  1 e 1 @1217 ]
-[s S4438 . 1 `uc 1 SDOP 1 0 :1:0 
+[s S4437 . 1 `uc 1 SDOP 1 0 :1:0 
 `uc 1 SDIP 1 0 :1:1 
 `uc 1 SSP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -846,7 +846,7 @@ SPI_CLOCK_10MHZ 6
 `uc 1 SMP 1 0 :1:7 
 ]
 "3772
-[s S4447 . 1 `uc 1 SPI1SDOP 1 0 :1:0 
+[s S4446 . 1 `uc 1 SPI1SDOP 1 0 :1:0 
 `uc 1 SPI1SDIP 1 0 :1:1 
 `uc 1 SPI1SSP 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -855,9 +855,9 @@ SPI_CLOCK_10MHZ 6
 `uc 1 SPI1CKE 1 0 :1:6 
 `uc 1 SPI1SMP 1 0 :1:7 
 ]
-[u S4456 . 1 `S4438 1 . 1 0 `S4447 1 . 1 0 ]
-[v _SPI1CON1bits SPI1CON1bits `VES4456  1 e 1 @133 ]
-[s S4478 . 1 `uc 1 RXR 1 0 :1:0 
+[u S4455 . 1 `S4437 1 . 1 0 `S4446 1 . 1 0 ]
+[v _SPI1CON1bits SPI1CON1bits `VES4455  1 e 1 @133 ]
+[s S4477 . 1 `uc 1 RXR 1 0 :1:0 
 `uc 1 TXR 1 0 :1:1 
 `uc 1 SSET 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -865,15 +865,15 @@ SPI_CLOCK_10MHZ 6
 `uc 1 BUSY 1 0 :1:7 
 ]
 "3870
-[s S4485 . 1 `uc 1 SPI1RXR 1 0 :1:0 
+[s S4484 . 1 `uc 1 SPI1RXR 1 0 :1:0 
 `uc 1 SPI1TXR 1 0 :1:1 
 `uc 1 SPI1SSET 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 SPI1SSFLT 1 0 :1:6 
 `uc 1 SPI1BUSY 1 0 :1:7 
 ]
-[u S4492 . 1 `S4478 1 . 1 0 `S4485 1 . 1 0 ]
-[v _SPI1CON2bits SPI1CON2bits `VES4492  1 e 1 @134 ]
+[u S4491 . 1 `S4477 1 . 1 0 `S4484 1 . 1 0 ]
+[v _SPI1CON2bits SPI1CON2bits `VES4491  1 e 1 @134 ]
 "3902
 [v _TRISB TRISB `VEuc  1 e 1 @1223 ]
 "3964
@@ -940,8 +940,6 @@ SPI_CLOCK_10MHZ 6
 [v _LATA4 LATA4 `VEb  1 e 0 @9716 ]
 "11564
 [v _LATA6 LATA6 `VEb  1 e 0 @9718 ]
-"11615
-[v _LATC7 LATC7 `VEb  1 e 0 @9735 ]
 "11639
 [v _LATD7 LATD7 `VEb  1 e 0 @9743 ]
 "11642
@@ -988,8 +986,6 @@ SPI_CLOCK_10MHZ 6
 [v _TRISC1 TRISC1 `VEb  1 e 0 @9793 ]
 "17846
 [v _TRISC2 TRISC2 `VEb  1 e 0 @9794 ]
-"17861
-[v _TRISC7 TRISC7 `VEb  1 e 0 @9799 ]
 "17882
 [v _TRISD6 TRISD6 `VEb  1 e 0 @9806 ]
 "17885
@@ -1022,6 +1018,8 @@ SPI_CLOCK_10MHZ 6
 [v _WPUA5 WPUA5 `VEb  1 e 0 @8205 ]
 "20477
 [v _WPUD6 WPUD6 `VEb  1 e 0 @8398 ]
+"20489
+[v _WPUE2 WPUE2 `VEb  1 e 0 @8458 ]
 "23815
 [v _RA1PPS RA1PPS `VEuc  1 e 1 @514 ]
 "23865
@@ -1070,7 +1068,7 @@ SPI_CLOCK_10MHZ 6
 [v _ANSELC ANSELC `VEuc  1 e 1 @1040 ]
 "60813
 [v _WPUC WPUC `VEuc  1 e 1 @1041 ]
-[s S4308 . 1 `uc 1 SLRC0 1 0 :1:0 
+[s S4306 . 1 `uc 1 SLRC0 1 0 :1:0 
 `uc 1 SLRC1 1 0 :1:1 
 `uc 1 SLRC2 1 0 :1:2 
 `uc 1 SLRC3 1 0 :1:3 
@@ -1080,10 +1078,10 @@ SPI_CLOCK_10MHZ 6
 `uc 1 SLRC7 1 0 :1:7 
 ]
 "60954
-[u S4317 . 1 `S4308 1 . 1 0 ]
+[u S4315 . 1 `S4306 1 . 1 0 ]
 "60954
 "60954
-[v _SLRCONCbits SLRCONCbits `VES4317  1 e 1 @1043 ]
+[v _SLRCONCbits SLRCONCbits `VES4315  1 e 1 @1043 ]
 "61247
 [v _ANSELD ANSELD `VEuc  1 e 1 @1048 ]
 "61309
@@ -1134,17 +1132,17 @@ SPI_CLOCK_10MHZ 6
 {
 "107
 } 0
-"91 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"94 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _emuz80_47q_sys_init emuz80_47q_sys_init `(v  1 s 1 emuz80_47q_sys_init ]
 {
-"147
+"145
 [v emuz80_47q_sys_init@retry retry `i  1 s 2 retry ]
-"159
+"157
 } 0
-"372 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+"389 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_wait_for_programmer emuz80_common_wait_for_programmer `(v  1 s 1 emuz80_common_wait_for_programmer ]
 {
-"384
+"401
 } 0
 "53 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
 [v _SDCard_init SDCard_init `(i  1 e 2 0 ]
@@ -1153,9 +1151,9 @@ SPI_CLOCK_10MHZ 6
 [v SDCard_init@i i `i  1 a 2 124 ]
 "61
 [v SDCard_init@buf buf `[5]uc  1 a 5 128 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "58
-[v SDCard_init@spi spi `*.39S4393  1 a 2 126 ]
+[v SDCard_init@spi spi `*.39S4392  1 a 2 126 ]
 "53
 [v SDCard_init@initial_clock_speed initial_clock_speed `i  1 p 2 118 ]
 [v SDCard_init@clock_speed clock_speed `i  1 p 2 120 ]
@@ -1165,8 +1163,8 @@ SPI_CLOCK_10MHZ 6
 "88 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
 [v _SPI_SD_configure SPI_SD_configure `(v  1 e 1 0 ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
-[v SPI_SD_configure@ctx_ ctx_ `*.39S4393  1 p 2 110 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_configure@ctx_ ctx_ `*.39S4392  1 p 2 110 ]
 [v SPI_SD_configure@clock_speed clock_speed `i  1 p 2 112 ]
 [v SPI_SD_configure@bit_order bit_order `uc  1 p 1 114 ]
 [v SPI_SD_configure@data_mode data_mode `uc  1 p 1 115 ]
@@ -1175,12 +1173,12 @@ SPI_CLOCK_10MHZ 6
 "68
 [v _SPI_SD_begin SPI_SD_begin `(v  1 e 1 0 ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "70
-[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
-[v SPI_SD_begin@ctx ctx `*.39S4395  1 a 2 9 ]
+[s S4394 SPI_HW 4 `S4392 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v SPI_SD_begin@ctx ctx `*.39S4394  1 a 2 9 ]
 "68
-[v SPI_SD_begin@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v SPI_SD_begin@ctx_ ctx_ `*.39S4392  1 p 2 7 ]
 "86
 } 0
 "316 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
@@ -1191,9 +1189,9 @@ SPI_CLOCK_10MHZ 6
 [v SDCard_command@responsep responsep `*.39uc  1 a 2 59 ]
 "319
 [v SDCard_command@result result `i  1 a 2 57 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "318
-[v SDCard_command@spi spi `*.39S4393  1 a 2 55 ]
+[v SDCard_command@spi spi `*.39S4392  1 a 2 55 ]
 "316
 [v SDCard_command@command command `uc  1 a 1 wreg ]
 [v SDCard_command@argument argument `ul  1 p 4 46 ]
@@ -1203,15 +1201,15 @@ SPI_CLOCK_10MHZ 6
 [v SDCard_command@command command `uc  1 a 1 54 ]
 "332
 } 0
-"393 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"357 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _board_init board_init `(v  1 e 1 0 ]
 {
-"408
+"372
 } 0
-"337 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+"354 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_init emuz80_common_init `(v  1 s 1 emuz80_common_init ]
 {
-"370
+"387
 } 0
 "210 Z:\z80\EMUZ80\cpm/src/supermez80.c
 [v _start_z80 start_z80 `(v  1 e 1 0 ]
@@ -2082,10 +2080,10 @@ SPI_CLOCK_10MHZ 6
 "9 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\nf_sprintf.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[u S5365 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[u S5363 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
 "13
-[s S5368 _IO_FILE 12 `S5365 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v sprintf@f f `S5368  1 a 12 92 ]
+[s S5366 _IO_FILE 12 `S5363 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v sprintf@f f `S5366  1 a 12 92 ]
 "12
 [v sprintf@ap ap `[1]*.39v  1 a 2 104 ]
 "9
@@ -2262,7 +2260,7 @@ SPI_CLOCK_10MHZ 6
 [v mon_cleanup@retn retn `C[3]uc  1 s 3 retn ]
 "1252
 } 0
-"311 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+"328 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_set_reset_pin emuz80_common_set_reset_pin `(v  1 s 1 emuz80_common_set_reset_pin ]
 {
 [v emuz80_common_set_reset_pin@v v `uc  1 a 1 wreg ]
@@ -2355,10 +2353,10 @@ SPI_CLOCK_10MHZ 6
 {
 "173
 } 0
-"194 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"197 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _emuz80_47q_start_z80 emuz80_47q_start_z80 `(v  1 s 1 emuz80_47q_start_z80 ]
 {
-"307
+"320
 } 0
 "180 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_low_addr_mask emuz80_common_low_addr_mask `(us  1 s 2 emuz80_common_low_addr_mask ]
@@ -2469,68 +2467,68 @@ SPI_CLOCK_10MHZ 6
 {
 "78
 } 0
-"309 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"322 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _emuz80_47q_set_wait_pin emuz80_47q_set_wait_pin `(v  1 s 1 emuz80_47q_set_wait_pin ]
 {
 [v emuz80_47q_set_wait_pin@v v `uc  1 a 1 wreg ]
 [v emuz80_47q_set_wait_pin@v v `uc  1 a 1 wreg ]
-"311
+"324
 [v emuz80_47q_set_wait_pin@v v `uc  1 a 1 7 ]
-"318
+"331
 } 0
-"331 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+"348 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_set_wait_pin emuz80_common_set_wait_pin `(v  1 s 1 emuz80_common_set_wait_pin ]
 {
 [v emuz80_common_set_wait_pin@v v `uc  1 a 1 wreg ]
 [v emuz80_common_set_wait_pin@v v `uc  1 a 1 wreg ]
-"333
+"350
 [v emuz80_common_set_wait_pin@v v `uc  1 a 1 7 ]
-"335
+"352
 } 0
-"302
+"319
 [v _emuz80_common_set_data_pins emuz80_common_set_data_pins `(v  1 s 1 emuz80_common_set_data_pins ]
 {
 [v emuz80_common_set_data_pins@v v `uc  1 a 1 wreg ]
 [v emuz80_common_set_data_pins@v v `uc  1 a 1 wreg ]
 [v emuz80_common_set_data_pins@v v `uc  1 a 1 7 ]
 } 0
-"310
+"327
 [v _emuz80_common_set_busrq_pin emuz80_common_set_busrq_pin `(v  1 s 1 emuz80_common_set_busrq_pin ]
 {
 [v emuz80_common_set_busrq_pin@v v `uc  1 a 1 wreg ]
 [v emuz80_common_set_busrq_pin@v v `uc  1 a 1 wreg ]
 [v emuz80_common_set_busrq_pin@v v `uc  1 a 1 7 ]
 } 0
-"306
+"323
 [v _emuz80_common_rd_pin emuz80_common_rd_pin `(b  1 s 0 emuz80_common_rd_pin ]
 {
 } 0
-"304
+"321
 [v _emuz80_common_ioreq_pin emuz80_common_ioreq_pin `(b  1 s 0 emuz80_common_ioreq_pin ]
 {
 } 0
-"301
+"318
 [v _emuz80_common_data_pins emuz80_common_data_pins `(uc  1 s 1 emuz80_common_data_pins ]
 {
 } 0
-"299
+"316
 [v _emuz80_common_addr_l_pins emuz80_common_addr_l_pins `(uc  1 s 1 emuz80_common_addr_l_pins ]
 {
 } 0
-"383 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"347 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _emuz80_47q_wait_io_event emuz80_47q_wait_io_event `(v  1 s 1 emuz80_47q_wait_io_event ]
 {
-"386
+"350
 } 0
-"378
+"342
 [v _emuz80_47q_io_event emuz80_47q_io_event `(b  1 s 0 emuz80_47q_io_event ]
 {
-"381
+"345
 } 0
-"388
+"352
 [v _emuz80_47q_clear_io_event emuz80_47q_clear_io_event `(v  1 s 1 emuz80_47q_clear_io_event ]
 {
-"391
+"355
 } 0
 "108 Z:\z80\EMUZ80\cpm/src/supermez80.c
 [v _bus_master bus_master `(v  1 e 1 0 ]
@@ -2538,11 +2536,11 @@ SPI_CLOCK_10MHZ 6
 [v bus_master@enable enable `i  1 p 2 9 ]
 "111
 } 0
-"161 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"159 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _emuz80_47q_bus_master emuz80_47q_bus_master `(v  1 s 1 emuz80_47q_bus_master ]
 {
 [v emuz80_47q_bus_master@enable enable `i  1 p 2 7 ]
-"192
+"195
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\assert.c
 [v ___assert_fail __assert_fail `(v  1 e 1 0 ]
@@ -2600,7 +2598,7 @@ SPI_CLOCK_10MHZ 6
 [v emuz80_common_write_to_sram@addr addr `us  1 p 2 13 ]
 [v emuz80_common_write_to_sram@buf buf `*.34uc  1 p 2 15 ]
 [v emuz80_common_write_to_sram@len len `ui  1 p 2 17 ]
-"215
+"224
 } 0
 "296 Z:\z80\EMUZ80\cpm/src/memory.c
 [v ___read_sram_regions __read_sram_regions `(v  1 e 1 0 ]
@@ -2614,42 +2612,39 @@ SPI_CLOCK_10MHZ 6
 [v ___read_sram_regions@bank bank `i  1 p 2 29 ]
 "310
 } 0
-"303 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+"320 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_set_data_dir emuz80_common_set_data_dir `(v  1 s 1 emuz80_common_set_data_dir ]
 {
 [v emuz80_common_set_data_dir@v v `uc  1 a 1 wreg ]
 [v emuz80_common_set_data_dir@v v `uc  1 a 1 wreg ]
 [v emuz80_common_set_data_dir@v v `uc  1 a 1 7 ]
 } 0
-"217
+"226
 [v _emuz80_common_read_from_sram emuz80_common_read_from_sram `(v  1 s 1 emuz80_common_read_from_sram ]
 {
 [s S4201 . 2 `uc 1 l 1 0 `uc 1 h 1 1 ]
-"219
+"228
 [u S4204 address_bus_u 2 `ui 1 w 2 0 `S4201 1 . 2 0 ]
 [v emuz80_common_read_from_sram@ab ab `S4204  1 a 2 23 ]
-"220
+"229
 [v emuz80_common_read_from_sram@i i `ui  1 a 2 21 ]
-"217
+"226
 [v emuz80_common_read_from_sram@addr addr `us  1 p 2 13 ]
 [v emuz80_common_read_from_sram@buf buf `*.34uc  1 p 2 15 ]
 [v emuz80_common_read_from_sram@len len `ui  1 p 2 17 ]
-"247
+"264
 } 0
-"373 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"337 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _emuz80_47q_setup_addrbus emuz80_47q_setup_addrbus `(v  1 s 1 emuz80_47q_setup_addrbus ]
 {
-[v emuz80_47q_setup_addrbus@addr addr `ul  1 p 4 15 ]
-"376
+[v emuz80_47q_setup_addrbus@addr addr `ul  1 p 4 13 ]
+"340
 } 0
-"320
+"333
 [v _emuz80_47q_set_bank_pins emuz80_47q_set_bank_pins `(v  1 s 1 emuz80_47q_set_bank_pins ]
 {
-"322
-[v emuz80_47q_set_bank_pins@t_adr t_adr `ul  1 a 4 11 ]
-"320
 [v emuz80_47q_set_bank_pins@addr addr `ul  1 p 4 7 ]
-"371
+"335
 } 0
 "175 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_high_addr_mask emuz80_common_high_addr_mask `(ul  1 s 4 emuz80_common_high_addr_mask ]
@@ -2909,20 +2904,20 @@ SPI_CLOCK_10MHZ 6
 {
 "51
 } 0
-"249 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
+"266 Z:\z80\EMUZ80\cpm/src/boards/emuz80_common.c
 [v _emuz80_common_clock_op_hook emuz80_common_clock_op_hook `(i  1 s 2 emuz80_common_clock_op_hook ]
 {
 [v emuz80_common_clock_op_hook@clocks clocks `i  1 p 2 7 ]
-"251
+"268
 [v emuz80_common_clock_op_hook@nco1inc nco1inc `um  1 s 3 nco1inc ]
-"252
+"269
 [v emuz80_common_clock_op_hook@running running `i  1 s 2 running ]
-"297
+"314
 } 0
-"86 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
+"89 Z:\z80\EMUZ80\cpm/src/boards/MEZ180_sd.c
 [v _emuz80_47q_name emuz80_47q_name `(*.32uc  1 s 2 emuz80_47q_name ]
 {
-"89
+"92
 } 0
 "119 Z:\z80\EMUZ80\cpm/src/supermez80.c
 [v _disk_init disk_init `(i  1 e 2 0 ]
@@ -3068,12 +3063,12 @@ SPI_CLOCK_10MHZ 6
 [v _SDCard_write512 SDCard_write512 `(i  1 e 2 0 ]
 {
 "256
-[v SDCard_write512@i_4835 i `ui  1 a 2 2 ]
+[v SDCard_write512@i_4833 i `ui  1 a 2 2 ]
 "252
 [v SDCard_write512@i i `i  1 a 2 0 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "239
-[v SDCard_write512@spi spi `*.39S4393  1 a 2 10 ]
+[v SDCard_write512@spi spi `*.39S4392  1 a 2 10 ]
 "242
 [v SDCard_write512@crc crc `us  1 a 2 8 ]
 "240
@@ -3173,14 +3168,14 @@ SPI_CLOCK_10MHZ 6
 [v _SDCard_read512 SDCard_read512 `(i  1 e 2 0 ]
 {
 "208
-[v SDCard_read512@i_4818 i `ui  1 a 2 2 ]
+[v SDCard_read512@i_4816 i `ui  1 a 2 2 ]
 "200
 [v SDCard_read512@i i `i  1 a 2 0 ]
 "174
 [v SDCard_read512@crc crc `us  1 a 2 12 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "171
-[v SDCard_read512@spi spi `*.39S4393  1 a 2 10 ]
+[v SDCard_read512@spi spi `*.39S4392  1 a 2 10 ]
 "172
 [v SDCard_read512@result result `i  1 a 2 8 ]
 "174
@@ -3226,9 +3221,9 @@ SPI_CLOCK_10MHZ 6
 {
 "1549
 [v vfprintf@cfmt cfmt `*.32uc  1 a 2 82 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "1546
-[v vfprintf@fp fp `*.39S5400  1 p 2 76 ]
+[v vfprintf@fp fp `*.39S5398  1 p 2 76 ]
 [v vfprintf@fmt fmt `*.32Cuc  1 p 2 78 ]
 [v vfprintf@ap ap `*.39*.39v  1 p 2 80 ]
 "1569
@@ -3236,18 +3231,18 @@ SPI_CLOCK_10MHZ 6
 "1048
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[u S5456 . 4 `l 1 sint 4 0 `ul 1 uint 4 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
+[u S5454 . 4 `l 1 sint 4 0 `ul 1 uint 4 0 `*.2v 1 vp 3 0 `d 1 f 4 0 ]
 "1059
-[v vfpfcnvrt@convarg convarg `S5456  1 a 4 69 ]
+[v vfpfcnvrt@convarg convarg `S5454  1 a 4 69 ]
 "1050
 [v vfpfcnvrt@cp cp `*.32uc  1 a 2 74 ]
 "1051
 [v vfpfcnvrt@done done `i  1 a 2 65 ]
 "1050
 [v vfpfcnvrt@c c `uc  1 a 1 73 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "1048
-[v vfpfcnvrt@fp fp `*.39S5400  1 p 2 51 ]
+[v vfpfcnvrt@fp fp `*.39S5398  1 p 2 51 ]
 [v vfpfcnvrt@fmt fmt `*.39*.32uc  1 p 2 53 ]
 [v vfpfcnvrt@ap ap `*.39*.39v  1 p 2 55 ]
 "1543
@@ -3263,9 +3258,9 @@ SPI_CLOCK_10MHZ 6
 [v xtoa@c c `uc  1 a 1 57 ]
 "962
 [v xtoa@d_nonzero d_nonzero `a  1 a 1 52 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "952
-[v xtoa@fp fp `*.39S5400  1 p 2 37 ]
+[v xtoa@fp fp `*.39S5398  1 p 2 37 ]
 [v xtoa@d d `ul  1 p 4 39 ]
 [v xtoa@x x `uc  1 p 1 43 ]
 "1024
@@ -3301,9 +3296,9 @@ SPI_CLOCK_10MHZ 6
 [v utoa@i i `i  1 a 2 47 ]
 [v utoa@w w `i  1 a 2 45 ]
 [v utoa@p p `i  1 a 2 43 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "917
-[v utoa@fp fp `*.39S5400  1 p 2 37 ]
+[v utoa@fp fp `*.39S5398  1 p 2 37 ]
 [v utoa@d d `ul  1 p 4 39 ]
 "947
 } 0
@@ -3354,9 +3349,9 @@ SPI_CLOCK_10MHZ 6
 "865
 [v stoa@w w `i  1 a 2 33 ]
 [v stoa@i i `i  1 a 2 31 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "862
-[v stoa@fp fp `*.39S5400  1 p 2 19 ]
+[v stoa@fp fp `*.39S5398  1 p 2 19 ]
 [v stoa@s s `*.34uc  1 p 2 21 ]
 "864
 [v stoa@F1192 F1192 `[7]uc  1 s 7 F1192 ]
@@ -3393,24 +3388,24 @@ SPI_CLOCK_10MHZ 6
 [v otoa@p p `i  1 a 2 47 ]
 "818
 [v otoa@t t `uc  1 a 1 49 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "816
-[v otoa@fp fp `*.39S5400  1 p 2 37 ]
+[v otoa@fp fp `*.39S5398  1 p 2 37 ]
 [v otoa@d d `ul  1 p 4 39 ]
 "858
 } 0
 "531
 [v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
 {
-[u S5419 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
+[u S5417 flui 4 `d 1 f 4 0 `l 1 u 4 0 ]
 "536
-[v efgtoa@u u `S5419  1 a 4 47 ]
-[v efgtoa@g g `S5419  1 a 4 41 ]
+[v efgtoa@u u `S5417  1 a 4 47 ]
+[v efgtoa@g g `S5417  1 a 4 41 ]
 "535
 [v efgtoa@l l `d  1 a 4 34 ]
 [v efgtoa@h h `d  1 a 4 30 ]
 "536
-[v efgtoa@ou ou `S5419  1 a 4 24 ]
+[v efgtoa@ou ou `S5417  1 a 4 24 ]
 "534
 [v efgtoa@n n `i  1 a 2 45 ]
 [v efgtoa@i i `i  1 a 2 38 ]
@@ -3426,9 +3421,9 @@ SPI_CLOCK_10MHZ 6
 [v efgtoa@pp pp `uc  1 a 1 17 ]
 [v efgtoa@nmode nmode `uc  1 a 1 16 ]
 [v efgtoa@mode mode `uc  1 a 1 15 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "531
-[v efgtoa@fp fp `*.39S5400  1 p 2 0 ]
+[v efgtoa@fp fp `*.39S5398  1 p 2 0 ]
 [v efgtoa@f f `d  1 p 4 2 ]
 [v efgtoa@c c `uc  1 p 1 6 ]
 "812
@@ -3469,9 +3464,9 @@ SPI_CLOCK_10MHZ 6
 "3 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S5597 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S5595 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S5597  1 a 4 74 ]
+[v floorf@u u `S5595  1 a 4 74 ]
 "7
 [v floorf@m m `ul  1 a 4 68 ]
 "6
@@ -3479,21 +3474,21 @@ SPI_CLOCK_10MHZ 6
 "3
 [v floorf@x x `f  1 p 4 58 ]
 "4
-[v floorf@F526 F526 `S5597  1 s 4 F526 ]
+[v floorf@F526 F526 `S5595  1 s 4 F526 ]
 "27
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S5597 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S5595 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S5597  1 a 4 17 ]
+[v ___fpclassifyf@u u `S5595  1 a 4 17 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 15 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 7 ]
 "5
-[v ___fpclassifyf@F465 F465 `S5597  1 s 4 F465 ]
+[v ___fpclassifyf@F465 F465 `S5595  1 s 4 F465 ]
 "11
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fltol.c
@@ -3538,17 +3533,17 @@ SPI_CLOCK_10MHZ 6
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S5170 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S5168 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S5175 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
-[u S5178 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5170 1 fAsBytes 4 0 `S5175 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S5178  1 a 4 26 ]
+[s S5173 . 4 `s 1 wordA 2 0 `s 1 wordB 2 2 ]
+[u S5176 . 4 `l 1 i 4 0 `d 1 f 4 0 `S5168 1 fAsBytes 4 0 `S5173 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S5176  1 a 4 26 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 21 ]
-[s S5246 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S5244 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S5249 . 2 `s 1 i 2 0 `us 1 n 2 0 `S5246 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S5249  1 a 2 30 ]
+[u S5247 . 2 `s 1 i 2 0 `us 1 n 2 0 `S5244 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S5247  1 a 2 30 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 25 ]
 "11
@@ -3603,9 +3598,9 @@ SPI_CLOCK_10MHZ 6
 [v dtoa@p p `i  1 a 2 45 ]
 "472
 [v dtoa@s s `uc  1 a 1 51 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "470
-[v dtoa@fp fp `*.39S5400  1 p 2 37 ]
+[v dtoa@fp fp `*.39S5398  1 p 2 37 ]
 [v dtoa@d d `l  1 p 4 39 ]
 "527
 } 0
@@ -3615,9 +3610,9 @@ SPI_CLOCK_10MHZ 6
 "154
 [v pad@w w `i  1 a 2 35 ]
 [v pad@i i `i  1 a 2 33 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "152
-[v pad@fp fp `*.39S5400  1 p 2 26 ]
+[v pad@fp fp `*.39S5398  1 p 2 26 ]
 [v pad@buf buf `*.39uc  1 p 2 28 ]
 [v pad@p p `i  1 p 2 30 ]
 "183
@@ -3640,9 +3635,9 @@ SPI_CLOCK_10MHZ 6
 [v fputs@c c `uc  1 a 1 23 ]
 "8
 [v fputs@s s `*.39Cuc  1 p 2 19 ]
-[u S5365 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S5368 _IO_FILE 12 `S5365 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputs@fp fp `*.39S5368  1 p 2 21 ]
+[u S5363 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S5366 _IO_FILE 12 `S5363 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputs@fp fp `*.39S5366  1 p 2 21 ]
 "19
 } 0
 "1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abs.c
@@ -3681,9 +3676,9 @@ SPI_CLOCK_10MHZ 6
 "435
 [v ctoa@w w `i  1 a 2 25 ]
 [v ctoa@l l `i  1 a 2 23 ]
-[s S5400 _IO_FILE 0 ]
+[s S5398 _IO_FILE 0 ]
 "433
-[v ctoa@fp fp `*.39S5400  1 p 2 19 ]
+[v ctoa@fp fp `*.39S5398  1 p 2 19 ]
 [v ctoa@c c `uc  1 p 1 21 ]
 "466
 } 0
@@ -3691,9 +3686,9 @@ SPI_CLOCK_10MHZ 6
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 10 ]
-[u S5365 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
-[s S5368 _IO_FILE 12 `S5365 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
-[v fputc@fp fp `*.39S5368  1 p 2 12 ]
+[u S5363 . 3 `*.2uc 1 buffer 3 0 `*.2Cuc 1 source 3 0 ]
+[s S5366 _IO_FILE 12 `S5363 1 . 3 0 `i 1 count 2 3 `[3]uc 1 ungetbuf 3 5 `i 1 ungetcnt 2 8 `i 1 limit 2 10 ]
+[v fputc@fp fp `*.39S5366  1 p 2 12 ]
 "24
 } 0
 "83 Z:\z80\EMUZ80\cpm/src/io.c
@@ -3728,9 +3723,9 @@ SPI_CLOCK_10MHZ 6
 [v ___SDCard_command_r1@command command `uc  1 a 1 wreg ]
 "146
 [v ___SDCard_command_r1@buf buf `[6]uc  1 a 6 37 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "145
-[v ___SDCard_command_r1@spi spi `*.39S4393  1 a 2 44 ]
+[v ___SDCard_command_r1@spi spi `*.39S4392  1 a 2 44 ]
 "147
 [v ___SDCard_command_r1@response response `uc  1 a 1 43 ]
 "143
@@ -3745,9 +3740,9 @@ SPI_CLOCK_10MHZ 6
 [v ___SDCard_wait_response __SDCard_wait_response `(uc  1 s 1 __SDCard_wait_response ]
 {
 [v ___SDCard_wait_response@no_response no_response `uc  1 a 1 wreg ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "135
-[v ___SDCard_wait_response@spi spi `*.39S4393  1 a 2 27 ]
+[v ___SDCard_wait_response@spi spi `*.39S4392  1 a 2 27 ]
 "136
 [v ___SDCard_wait_response@response response `uc  1 a 1 29 ]
 "133
@@ -3762,25 +3757,25 @@ SPI_CLOCK_10MHZ 6
 {
 "281
 [v SPI_SD_receive_byte@dummy dummy `uc  1 a 1 23 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "279
-[v SPI_SD_receive_byte@ctx_ ctx_ `*.39S4393  1 p 2 21 ]
+[v SPI_SD_receive_byte@ctx_ ctx_ `*.39S4392  1 p 2 21 ]
 "284
 } 0
 "195
 [v _SPI_SD_receive SPI_SD_receive `(v  1 e 1 0 ]
 {
 "238
-[v SPI_SD_receive@i_4735 i `uc  1 a 1 18 ]
+[v SPI_SD_receive@i_4733 i `uc  1 a 1 18 ]
 "207
 [v SPI_SD_receive@i i `i  1 a 2 16 ]
 "237
 [v SPI_SD_receive@repeat repeat `uc  1 a 1 15 ]
 "197
 [v SPI_SD_receive@p p `*.39uc  1 a 2 19 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "195
-[v SPI_SD_receive@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v SPI_SD_receive@ctx_ ctx_ `*.39S4392  1 p 2 7 ]
 [v SPI_SD_receive@buf buf `*.39v  1 p 2 9 ]
 [v SPI_SD_receive@count count `ui  1 p 2 11 ]
 "267
@@ -3788,8 +3783,8 @@ SPI_CLOCK_10MHZ 6
 "144
 [v _SPI_SD_begin_transaction SPI_SD_begin_transaction `(v  1 e 1 0 ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
-[v SPI_SD_begin_transaction@ctx_ ctx_ `*.39S4393  1 p 2 11 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_begin_transaction@ctx_ ctx_ `*.39S4392  1 p 2 11 ]
 "148
 } 0
 "334 Z:\z80\EMUZ80\cpm/drivers/SDCard.c
@@ -3811,23 +3806,23 @@ SPI_CLOCK_10MHZ 6
 "46
 [v _SDCard_end_transaction SDCard_end_transaction `(v  1 e 1 0 ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "48
-[v SDCard_end_transaction@spi spi `*.39S4393  1 a 2 24 ]
+[v SDCard_end_transaction@spi spi `*.39S4392  1 a 2 24 ]
 "51
 } 0
 "150 Z:\z80\EMUZ80\cpm/drivers/pic18f47q43_spi.c
 [v _SPI_SD_end_transaction SPI_SD_end_transaction `(v  1 e 1 0 ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
-[v SPI_SD_end_transaction@ctx_ ctx_ `*.39S4393  1 p 2 11 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_end_transaction@ctx_ ctx_ `*.39S4392  1 p 2 11 ]
 "154
 } 0
 "286
 [v _SPI_SD_select SPI_SD_select `(v  1 e 1 0 ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
-[v SPI_SD_select@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
+[v SPI_SD_select@ctx_ ctx_ `*.39S4392  1 p 2 7 ]
 [v SPI_SD_select@select select `i  1 p 2 9 ]
 "294
 } 0
@@ -3838,32 +3833,32 @@ SPI_CLOCK_10MHZ 6
 [v SPI_SD_dummy_clocks@i i `i  1 a 2 21 ]
 "271
 [v SPI_SD_dummy_clocks@dummy dummy `uc  1 a 1 23 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "269
-[v SPI_SD_dummy_clocks@ctx_ ctx_ `*.39S4393  1 p 2 17 ]
+[v SPI_SD_dummy_clocks@ctx_ ctx_ `*.39S4392  1 p 2 17 ]
 [v SPI_SD_dummy_clocks@clocks clocks `ui  1 p 2 19 ]
 "277
 } 0
 "58
 [v _release_bus release_bus `(v  1 s 1 release_bus ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "60
-[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
-[v release_bus@ctx ctx `*.39S4395  1 a 2 9 ]
+[s S4394 SPI_HW 4 `S4392 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v release_bus@ctx ctx `*.39S4394  1 a 2 9 ]
 "58
-[v release_bus@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v release_bus@ctx_ ctx_ `*.39S4392  1 p 2 7 ]
 "66
 } 0
 "42
 [v _acquire_bus acquire_bus `(v  1 s 1 acquire_bus ]
 {
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "44
-[s S4395 SPI_HW 4 `S4393 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
-[v acquire_bus@ctx ctx `*.39S4395  1 a 2 9 ]
+[s S4394 SPI_HW 4 `S4392 1 spi 2 0 `uc 1 bus_acquired 1 2 `uc 1 tris 1 3 ]
+[v acquire_bus@ctx ctx `*.39S4394  1 a 2 9 ]
 "42
-[v acquire_bus@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v acquire_bus@ctx_ ctx_ `*.39S4392  1 p 2 7 ]
 "56
 } 0
 "174
@@ -3873,9 +3868,9 @@ SPI_CLOCK_10MHZ 6
 [v SPI_SD_send@i i `i  1 a 2 13 ]
 "176
 [v SPI_SD_send@p p `*.39uc  1 a 2 15 ]
-[s S4393 SPI 2 `i 1 dummy 2 0 ]
+[s S4392 SPI 2 `i 1 dummy 2 0 ]
 "174
-[v SPI_SD_send@ctx_ ctx_ `*.39S4393  1 p 2 7 ]
+[v SPI_SD_send@ctx_ ctx_ `*.39S4392  1 p 2 7 ]
 [v SPI_SD_send@buf buf `*.39Cv  1 p 2 9 ]
 [v SPI_SD_send@count count `ui  1 p 2 11 ]
 "193

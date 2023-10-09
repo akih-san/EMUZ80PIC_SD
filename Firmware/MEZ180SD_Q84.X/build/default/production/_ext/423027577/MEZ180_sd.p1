@@ -144,6 +144,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3746 C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h
 [; ;C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h: 3746: 
 [v _LATD `Vuc ~T0 @X0 0 e@1217 ]
+"11648
+[v _LATE2 `Vb ~T0 @X0 0 e@9746 ]
 "11555
 [v _LATA3 `Vb ~T0 @X0 0 e@9715 ]
 "11558
@@ -227,15 +229,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "12 C:\Program Files\Microchip\xc8\v2.41\pic\include\builtins.h
 [v __delay `JF192 ~T0 @X0 0 e ]
 [p i __delay ]
-"11648 C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h
-[v _LATE2 `Vb ~T0 @X0 0 e@9746 ]
-"17894
+"17894 C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h
 [v _TRISE2 `Vb ~T0 @X0 0 e@9810 ]
-"11615
-[; ;C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h: 11615: } C1TXATIFUbits_t;
-[v _LATC7 `Vb ~T0 @X0 0 e@9735 ]
-"17861
-[v _TRISC7 `Vb ~T0 @X0 0 e@9799 ]
 "11549
 [v _LATA1 `Vb ~T0 @X0 0 e@9713 ]
 "23815
@@ -272,8 +267,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _board_set_bank_pins_hook `*F23256 ~T0 @X0 0 e ]
 "46 ../src/boards/../../drivers/../drivers/SDCard.h
 [v _SDCard_init `(i ~T0 @X0 0 ef3`i`i`us ]
-"154 ../src/boards/MEZ180_sd.c
-[; ;../src/boards/MEZ180_sd.c: 154:         if (SDCard_init(SPI_CLOCK_100KHZ, SPI_CLOCK_2MHZ, 100) == 0)
+"152 ../src/boards/MEZ180_sd.c
+[; ;../src/boards/MEZ180_sd.c: 152:         if (SDCard_init(SPI_CLOCK_100KHZ, SPI_CLOCK_2MHZ, 100) == 0)
 [c E23712 0 1 2 3 4 5 6 .. ]
 [n E23712 . SPI_CLOCK_100KHZ SPI_CLOCK_2MHZ SPI_CLOCK_4MHZ SPI_CLOCK_5MHZ SPI_CLOCK_6MHZ SPI_CLOCK_8MHZ SPI_CLOCK_10MHZ  ]
 "28336 C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h
@@ -331,6 +326,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _CLC3IF `Vb ~T0 @X0 0 e@9645 ]
 "8237
 [v _CLC3IE `Vb ~T0 @X0 0 e@9517 ]
+"20489
+[v _WPUE2 `Vb ~T0 @X0 0 e@8458 ]
 "10766
 [v _G3POL `Vb ~T0 @X0 0 e@1722 ]
 "173 ../src/boards/../supermez80.h
@@ -338,8 +335,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F23247 `(*uc ~T0 @X0 0 tf ]
 "212
 [v _board_name_hook `*F23247 ~T0 @X0 0 e ]
-[v F23882 `(*uc ~T0 @X0 0 tf ]
-[v F23885 `(v ~T0 @X0 0 tf ]
+[v F23881 `(*uc ~T0 @X0 0 tf ]
+[v F23884 `(v ~T0 @X0 0 tf ]
 [v F23251 `(v ~T0 @X0 0 tf1`i ]
 "216
 [v _board_bus_master_hook `*F23251 ~T0 @X0 0 e ]
@@ -360,8 +357,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [n S3289 SPI dummy ]
 "32 ../src/boards/../../drivers/pic18f47q43_spi.c
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 32: struct SPI_HW {
-[s S3370 `S3289 1 `uc 1 `uc 1 ]
-[n S3370 SPI_HW spi bus_acquired tris ]
+[s S3376 `S3289 1 `uc 1 `uc 1 ]
+[n S3376 SPI_HW spi bus_acquired tris ]
 "24615 C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h
 [; ;C:/Users/akihito/.mchp_packs/Microchip/PIC18F-Q_DFP/1.21.411/xc8\pic\include\proc\pic18f47q84.h: 24615: extern volatile unsigned char RC1PPS __attribute__((address(0x212)));
 [v _RC1PPS `Vuc ~T0 @X0 0 e@530 ]
@@ -462,8 +459,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _SPI1RXB `Vuc ~T0 @X0 0 e@128 ]
 "40 ../src/boards/../../drivers/SDCard.c
 [; ;../src/boards/../../drivers/SDCard.c: 40: static struct SDCard {
-[s S3490 `*S3289 1 `us 1 :1 `uc 1 ]
-[n S3490 SDCard spi timeout calc_read_crc ]
+[s S3496 `*S3289 1 `us 1 :1 `uc 1 ]
+[n S3496 SDCard spi timeout calc_read_crc ]
 "47 ../src/boards/../../drivers/../drivers/SDCard.h
 [v _SDCard_command `(i ~T0 @X0 0 ef4`uc`ul`*v`ui ]
 "50
@@ -4322,1132 +4319,1147 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/emuz80_common.c: 194:     ab.w = addr;
 [e = . _ab 0 -> _addr `ui ]
 "196
-[; ;../src/boards/emuz80_common.c: 196:     LATD = ab.h;
-[e = _LATD . . _ab 1 1 ]
+[; ;../src/boards/emuz80_common.c: 196:     LATD = ab.h & 0x3f;
+[e = _LATD -> & -> . . _ab 1 1 `i -> 63 `i `uc ]
+"197
+[; ;../src/boards/emuz80_common.c: 197:  if (ab.h & 0x40) LATE2 = 1;
+[e $ ! != & -> . . _ab 1 1 `i -> 64 `i -> 0 `i 3295  ]
+[e = _LATE2 -> -> 1 `i `b ]
+[e $U 3296  ]
 "198
-[; ;../src/boards/emuz80_common.c: 198:     LATB = ab.l;
+[; ;../src/boards/emuz80_common.c: 198:  else LATE2 = 0;
+[e :U 3295 ]
+[e = _LATE2 -> -> 0 `i `b ]
+[e :U 3296 ]
+"203
+[; ;../src/boards/emuz80_common.c: 203:     LATB = ab.l;
 [e = _LATB . . _ab 1 0 ]
-"199
-[; ;../src/boards/emuz80_common.c: 199:     for(i = 0; i < len; i++) {
+"204
+[; ;../src/boards/emuz80_common.c: 204:     for(i = 0; i < len; i++) {
 {
 [e = _i -> -> 0 `i `ui ]
-[e $U 3298  ]
-[e :U 3295 ]
-{
-"200
-[; ;../src/boards/emuz80_common.c: 200:         LATA3 = 0;
-[e = _LATA3 -> -> 0 `i `b ]
-"201
-[; ;../src/boards/emuz80_common.c: 201:         LATC = ((uint8_t*)buf)[i];
-[e = _LATC *U + _buf * -> _i `ux -> -> # *U _buf `ui `ux ]
-"202
-[; ;../src/boards/emuz80_common.c: 202:         LATA3 = 1;
-[e = _LATA3 -> -> 1 `i `b ]
-"203
-[; ;../src/boards/emuz80_common.c: 203:         LATB = ++ab.l;
-[e = _LATB =+ . . _ab 1 0 -> -> 1 `i `uc ]
-"204
-[; ;../src/boards/emuz80_common.c: 204:         if (ab.l == 0) {
-[e $ ! == -> . . _ab 1 0 `i -> 0 `i 3299  ]
+[e $U 3300  ]
+[e :U 3297 ]
 {
 "205
-[; ;../src/boards/emuz80_common.c: 205:             ab.h++;
-[e ++ . . _ab 1 1 -> -> 1 `i `uc ]
+[; ;../src/boards/emuz80_common.c: 205:         LATA3 = 0;
+[e = _LATA3 -> -> 0 `i `b ]
+"206
+[; ;../src/boards/emuz80_common.c: 206:         LATC = ((uint8_t*)buf)[i];
+[e = _LATC *U + _buf * -> _i `ux -> -> # *U _buf `ui `ux ]
 "207
-[; ;../src/boards/emuz80_common.c: 207:             LATD = ab.h;
-[e = _LATD . . _ab 1 1 ]
+[; ;../src/boards/emuz80_common.c: 207:         LATA3 = 1;
+[e = _LATA3 -> -> 1 `i `b ]
+"208
+[; ;../src/boards/emuz80_common.c: 208:         LATB = ++ab.l;
+[e = _LATB =+ . . _ab 1 0 -> -> 1 `i `uc ]
 "209
-[; ;../src/boards/emuz80_common.c: 209:         }
-}
-[e :U 3299 ]
+[; ;../src/boards/emuz80_common.c: 209:         if (ab.l == 0) {
+[e $ ! == -> . . _ab 1 0 `i -> 0 `i 3301  ]
+{
 "210
-[; ;../src/boards/emuz80_common.c: 210:     }
+[; ;../src/boards/emuz80_common.c: 210:             ab.h++;
+[e ++ . . _ab 1 1 -> -> 1 `i `uc ]
+"211
+[; ;../src/boards/emuz80_common.c: 211:       LATD = ab.h & 0x3f;
+[e = _LATD -> & -> . . _ab 1 1 `i -> 63 `i `uc ]
+"212
+[; ;../src/boards/emuz80_common.c: 212:    if (ab.h & 0x40) LATE2 = 1;
+[e $ ! != & -> . . _ab 1 1 `i -> 64 `i -> 0 `i 3302  ]
+[e = _LATE2 -> -> 1 `i `b ]
+[e $U 3303  ]
+"213
+[; ;../src/boards/emuz80_common.c: 213:    else LATE2 = 0;
+[e :U 3302 ]
+[e = _LATE2 -> -> 0 `i `b ]
+[e :U 3303 ]
+"218
+[; ;../src/boards/emuz80_common.c: 218:         }
+}
+[e :U 3301 ]
+"219
+[; ;../src/boards/emuz80_common.c: 219:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
+[e :U 3300 ]
+[e $ < _i _len 3297  ]
 [e :U 3298 ]
-[e $ < _i _len 3295  ]
-[e :U 3296 ]
 }
-"215
-[; ;../src/boards/emuz80_common.c: 215: }
+"224
+[; ;../src/boards/emuz80_common.c: 224: }
 [e :UE 3294 ]
 }
-"217
-[; ;../src/boards/emuz80_common.c: 217: static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned int len)
+"226
+[; ;../src/boards/emuz80_common.c: 226: static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned int len)
 [v _emuz80_common_read_from_sram `(v ~T0 @X0 1 sf3`us`*uc`ui ]
-"218
-[; ;../src/boards/emuz80_common.c: 218: {
+"227
+[; ;../src/boards/emuz80_common.c: 227: {
 {
 [e :U _emuz80_common_read_from_sram ]
-"217
-[; ;../src/boards/emuz80_common.c: 217: static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned int len)
+"226
+[; ;../src/boards/emuz80_common.c: 226: static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned int len)
 [v _addr `us ~T0 @X0 1 r1 ]
 [v _buf `*uc ~T0 @X0 1 r2 ]
 [v _len `ui ~T0 @X0 1 r3 ]
-"218
-[; ;../src/boards/emuz80_common.c: 218: {
+"227
+[; ;../src/boards/emuz80_common.c: 227: {
 [f ]
-"219
-[; ;../src/boards/emuz80_common.c: 219:     union address_bus_u ab;
-[v _ab `S3281 ~T0 @X0 1 a ]
-"220
-[; ;../src/boards/emuz80_common.c: 220:     unsigned int i;
-[v _i `ui ~T0 @X0 1 a ]
-"226
-[; ;../src/boards/emuz80_common.c: 226:     ab.w = addr;
-[e = . _ab 0 -> _addr `ui ]
 "228
-[; ;../src/boards/emuz80_common.c: 228:     LATD = ab.h;
-[e = _LATD . . _ab 1 1 ]
-"230
-[; ;../src/boards/emuz80_common.c: 230:     LATB = ab.l;
+[; ;../src/boards/emuz80_common.c: 228:     union address_bus_u ab;
+[v _ab `S3281 ~T0 @X0 1 a ]
+"229
+[; ;../src/boards/emuz80_common.c: 229:     unsigned int i;
+[v _i `ui ~T0 @X0 1 a ]
+"235
+[; ;../src/boards/emuz80_common.c: 235:     ab.w = addr;
+[e = . _ab 0 -> _addr `ui ]
+"236
+[; ;../src/boards/emuz80_common.c: 236:     LATD = ab.h & 0x3f;
+[e = _LATD -> & -> . . _ab 1 1 `i -> 63 `i `uc ]
+"237
+[; ;../src/boards/emuz80_common.c: 237:  if (ab.h & 0x40) LATE2 = 1;
+[e $ ! != & -> . . _ab 1 1 `i -> 64 `i -> 0 `i 3305  ]
+[e = _LATE2 -> -> 1 `i `b ]
+[e $U 3306  ]
+"238
+[; ;../src/boards/emuz80_common.c: 238:  else LATE2 = 0;
+[e :U 3305 ]
+[e = _LATE2 -> -> 0 `i `b ]
+[e :U 3306 ]
+"243
+[; ;../src/boards/emuz80_common.c: 243:     LATB = ab.l;
 [e = _LATB . . _ab 1 0 ]
-"231
-[; ;../src/boards/emuz80_common.c: 231:     for(i = 0; i < len; i++) {
+"244
+[; ;../src/boards/emuz80_common.c: 244:     for(i = 0; i < len; i++) {
 {
 [e = _i -> -> 0 `i `ui ]
-[e $U 3304  ]
-[e :U 3301 ]
+[e $U 3310  ]
+[e :U 3307 ]
 {
-"232
-[; ;../src/boards/emuz80_common.c: 232:         LATA4 = 0;
+"245
+[; ;../src/boards/emuz80_common.c: 245:         LATA4 = 0;
 [e = _LATA4 -> -> 0 `i `b ]
-"233
-[; ;../src/boards/emuz80_common.c: 233:         ((uint8_t*)buf)[i] = PORTC;
+"246
+[; ;../src/boards/emuz80_common.c: 246:         ((uint8_t*)buf)[i] = PORTC;
 [e = *U + _buf * -> _i `ux -> -> # *U _buf `ui `ux _PORTC ]
-"234
-[; ;../src/boards/emuz80_common.c: 234:         LATA4 = 1;
+"247
+[; ;../src/boards/emuz80_common.c: 247:         LATA4 = 1;
 [e = _LATA4 -> -> 1 `i `b ]
-"235
-[; ;../src/boards/emuz80_common.c: 235:         LATB = ++ab.l;
+"248
+[; ;../src/boards/emuz80_common.c: 248:         LATB = ++ab.l;
 [e = _LATB =+ . . _ab 1 0 -> -> 1 `i `uc ]
-"236
-[; ;../src/boards/emuz80_common.c: 236:         if (ab.l == 0) {
-[e $ ! == -> . . _ab 1 0 `i -> 0 `i 3305  ]
+"249
+[; ;../src/boards/emuz80_common.c: 249:         if (ab.l == 0) {
+[e $ ! == -> . . _ab 1 0 `i -> 0 `i 3311  ]
 {
-"237
-[; ;../src/boards/emuz80_common.c: 237:             ab.h++;
+"250
+[; ;../src/boards/emuz80_common.c: 250:             ab.h++;
 [e ++ . . _ab 1 1 -> -> 1 `i `uc ]
-"239
-[; ;../src/boards/emuz80_common.c: 239:             LATD = ab.h;
-[e = _LATD . . _ab 1 1 ]
-"241
-[; ;../src/boards/emuz80_common.c: 241:         }
+"251
+[; ;../src/boards/emuz80_common.c: 251:       LATD = ab.h & 0x3f;
+[e = _LATD -> & -> . . _ab 1 1 `i -> 63 `i `uc ]
+"252
+[; ;../src/boards/emuz80_common.c: 252:    if (ab.h & 0x40) LATE2 = 1;
+[e $ ! != & -> . . _ab 1 1 `i -> 64 `i -> 0 `i 3312  ]
+[e = _LATE2 -> -> 1 `i `b ]
+[e $U 3313  ]
+"253
+[; ;../src/boards/emuz80_common.c: 253:    else LATE2 = 0;
+[e :U 3312 ]
+[e = _LATE2 -> -> 0 `i `b ]
+[e :U 3313 ]
+"258
+[; ;../src/boards/emuz80_common.c: 258:         }
 }
-[e :U 3305 ]
-"242
-[; ;../src/boards/emuz80_common.c: 242:     }
+[e :U 3311 ]
+"259
+[; ;../src/boards/emuz80_common.c: 259:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
-[e :U 3304 ]
-[e $ < _i _len 3301  ]
-[e :U 3302 ]
+[e :U 3310 ]
+[e $ < _i _len 3307  ]
+[e :U 3308 ]
 }
-"247
-[; ;../src/boards/emuz80_common.c: 247: }
-[e :UE 3300 ]
+"264
+[; ;../src/boards/emuz80_common.c: 264: }
+[e :UE 3304 ]
 }
-"249
-[; ;../src/boards/emuz80_common.c: 249: static int emuz80_common_clock_op_hook(int clocks)
+"266
+[; ;../src/boards/emuz80_common.c: 266: static int emuz80_common_clock_op_hook(int clocks)
 [v _emuz80_common_clock_op_hook `(i ~T0 @X0 1 sf1`i ]
-"250
-[; ;../src/boards/emuz80_common.c: 250: {
+"267
+[; ;../src/boards/emuz80_common.c: 267: {
 {
 [e :U _emuz80_common_clock_op_hook ]
-"249
-[; ;../src/boards/emuz80_common.c: 249: static int emuz80_common_clock_op_hook(int clocks)
+"266
+[; ;../src/boards/emuz80_common.c: 266: static int emuz80_common_clock_op_hook(int clocks)
 [v _clocks `i ~T0 @X0 1 r1 ]
-"250
-[; ;../src/boards/emuz80_common.c: 250: {
+"267
+[; ;../src/boards/emuz80_common.c: 267: {
 [f ]
-"251
-[; ;../src/boards/emuz80_common.c: 251:     static __uint24 nco1inc;
+"268
+[; ;../src/boards/emuz80_common.c: 268:     static __uint24 nco1inc;
 [v F23775 `um ~T0 @X0 1 s nco1inc ]
-"252
-[; ;../src/boards/emuz80_common.c: 252:     static int running = 1;
+"269
+[; ;../src/boards/emuz80_common.c: 269:     static int running = 1;
 [v F23776 `i ~T0 @X0 1 s running ]
 [i F23776
 -> 1 `i
 ]
-"254
-[; ;../src/boards/emuz80_common.c: 254:     switch (clocks) {
-[e $U 3308  ]
-{
-"255
-[; ;../src/boards/emuz80_common.c: 255:     case 0:
-[e :U 3309 ]
-"256
-[; ;../src/boards/emuz80_common.c: 256:         if (!running)
-[e $ ! ! != F23776 -> 0 `i 3310  ]
-"257
-[; ;../src/boards/emuz80_common.c: 257:             return 0;
-[e ) -> 0 `i ]
-[e $UE 3306  ]
-[e :U 3310 ]
-"258
-[; ;../src/boards/emuz80_common.c: 258:         nco1inc = NCO1INC;
-[e = F23775 _NCO1INC ]
-"259
-[; ;../src/boards/emuz80_common.c: 259:         NCO1INC = 0;
-[e = _NCO1INC -> -> -> 0 `i `m `um ]
-"260
-[; ;../src/boards/emuz80_common.c: 260:         NCO1INC = 0;
-[e = _NCO1INC -> -> -> 0 `i `m `um ]
-"261
-[; ;../src/boards/emuz80_common.c: 261:         running = 0;
-[e = F23776 -> 0 `i ]
-"262
-[; ;../src/boards/emuz80_common.c: 262:         if (NCO1OUT)
-[e $ ! _NCO1OUT 3311  ]
-"263
-[; ;../src/boards/emuz80_common.c: 263:             NCO1POL = !NCO1POL;
-[e = _NCO1POL ! _NCO1POL ]
-[e :U 3311 ]
-"264
-[; ;../src/boards/emuz80_common.c: 264:         break;
-[e $U 3307  ]
-"265
-[; ;../src/boards/emuz80_common.c: 265:     case -1:
-[e :U 3312 ]
-"266
-[; ;../src/boards/emuz80_common.c: 266:         if (running)
-[e $ ! != F23776 -> 0 `i 3313  ]
-"267
-[; ;../src/boards/emuz80_common.c: 267:             return 0;
-[e ) -> 0 `i ]
-[e $UE 3306  ]
-[e :U 3313 ]
-"268
-[; ;../src/boards/emuz80_common.c: 268:         NCO1INC = nco1inc;
-[e = _NCO1INC F23775 ]
-"269
-[; ;../src/boards/emuz80_common.c: 269:         NCO1INC = nco1inc;
-[e = _NCO1INC F23775 ]
-"270
-[; ;../src/boards/emuz80_common.c: 270:         running = 1;
-[e = F23776 -> 1 `i ]
 "271
-[; ;../src/boards/emuz80_common.c: 271:         break;
-[e $U 3307  ]
-"272
-[; ;../src/boards/emuz80_common.c: 272:     case -2:
-[e :U 3314 ]
-"273
-[; ;../src/boards/emuz80_common.c: 273:         return NCO1OUT;
-[e ) -> _NCO1OUT `i ]
-[e $UE 3306  ]
-"274
-[; ;../src/boards/emuz80_common.c: 274:         break;
-[e $U 3307  ]
-"275
-[; ;../src/boards/emuz80_common.c: 275:     case -3:
-[e :U 3315 ]
-"276
-[; ;../src/boards/emuz80_common.c: 276:         if (!NCO1OUT)
-[e $ ! ! _NCO1OUT 3316  ]
-"277
-[; ;../src/boards/emuz80_common.c: 277:             NCO1POL = !NCO1POL;
-[e = _NCO1POL ! _NCO1POL ]
-[e :U 3316 ]
-"278
-[; ;../src/boards/emuz80_common.c: 278:         break;
-[e $U 3307  ]
-"279
-[; ;../src/boards/emuz80_common.c: 279:     case -4:
-[e :U 3317 ]
-"280
-[; ;../src/boards/emuz80_common.c: 280:         if (NCO1OUT)
-[e $ ! _NCO1OUT 3318  ]
-"281
-[; ;../src/boards/emuz80_common.c: 281:             NCO1POL = !NCO1POL;
-[e = _NCO1POL ! _NCO1POL ]
-[e :U 3318 ]
-"282
-[; ;../src/boards/emuz80_common.c: 282:         break;
-[e $U 3307  ]
-"283
-[; ;../src/boards/emuz80_common.c: 283:     case -5:
-[e :U 3319 ]
-"284
-[; ;../src/boards/emuz80_common.c: 284:             NCO1POL = !NCO1POL;
-[e = _NCO1POL ! _NCO1POL ]
-"285
-[; ;../src/boards/emuz80_common.c: 285:         break;
-[e $U 3307  ]
-"286
-[; ;../src/boards/emuz80_common.c: 286:     default:
-[e :U 3320 ]
-"287
-[; ;../src/boards/emuz80_common.c: 287:         if (clocks <= 0)
-[e $ ! <= _clocks -> 0 `i 3321  ]
-"288
-[; ;../src/boards/emuz80_common.c: 288:             return 0;
-[e ) -> 0 `i ]
-[e $UE 3306  ]
-[e :U 3321 ]
-"289
-[; ;../src/boards/emuz80_common.c: 289:         while (0 < clocks--) {
-[e $U 3322  ]
-[e :U 3323 ]
+[; ;../src/boards/emuz80_common.c: 271:     switch (clocks) {
+[e $U 3316  ]
 {
-"290
-[; ;../src/boards/emuz80_common.c: 290:             NCO1POL = !NCO1POL;
-[e = _NCO1POL ! _NCO1POL ]
-"291
-[; ;../src/boards/emuz80_common.c: 291:             NCO1POL = !NCO1POL;
-[e = _NCO1POL ! _NCO1POL ]
-"292
-[; ;../src/boards/emuz80_common.c: 292:         }
-}
-[e :U 3322 ]
-"289
-[; ;../src/boards/emuz80_common.c: 289:         while (0 < clocks--) {
-[e $ < -> 0 `i -- _clocks -> 1 `i 3323  ]
-[e :U 3324 ]
-"293
-[; ;../src/boards/emuz80_common.c: 293:         break;
-[e $U 3307  ]
-"294
-[; ;../src/boards/emuz80_common.c: 294:     }
-}
-[e $U 3307  ]
-[e :U 3308 ]
-[e [\ _clocks , $ -> 0 `i 3309
- , $ -U -> 1 `i 3312
- , $ -U -> 2 `i 3314
- , $ -U -> 3 `i 3315
- , $ -U -> 4 `i 3317
- , $ -U -> 5 `i 3319
- 3320 ]
-[e :U 3307 ]
-"296
-[; ;../src/boards/emuz80_common.c: 296:     return 0;
+"272
+[; ;../src/boards/emuz80_common.c: 272:     case 0:
+[e :U 3317 ]
+"273
+[; ;../src/boards/emuz80_common.c: 273:         if (!running)
+[e $ ! ! != F23776 -> 0 `i 3318  ]
+"274
+[; ;../src/boards/emuz80_common.c: 274:             return 0;
 [e ) -> 0 `i ]
-[e $UE 3306  ]
+[e $UE 3314  ]
+[e :U 3318 ]
+"275
+[; ;../src/boards/emuz80_common.c: 275:         nco1inc = NCO1INC;
+[e = F23775 _NCO1INC ]
+"276
+[; ;../src/boards/emuz80_common.c: 276:         NCO1INC = 0;
+[e = _NCO1INC -> -> -> 0 `i `m `um ]
+"277
+[; ;../src/boards/emuz80_common.c: 277:         NCO1INC = 0;
+[e = _NCO1INC -> -> -> 0 `i `m `um ]
+"278
+[; ;../src/boards/emuz80_common.c: 278:         running = 0;
+[e = F23776 -> 0 `i ]
+"279
+[; ;../src/boards/emuz80_common.c: 279:         if (NCO1OUT)
+[e $ ! _NCO1OUT 3319  ]
+"280
+[; ;../src/boards/emuz80_common.c: 280:             NCO1POL = !NCO1POL;
+[e = _NCO1POL ! _NCO1POL ]
+[e :U 3319 ]
+"281
+[; ;../src/boards/emuz80_common.c: 281:         break;
+[e $U 3315  ]
+"282
+[; ;../src/boards/emuz80_common.c: 282:     case -1:
+[e :U 3320 ]
+"283
+[; ;../src/boards/emuz80_common.c: 283:         if (running)
+[e $ ! != F23776 -> 0 `i 3321  ]
+"284
+[; ;../src/boards/emuz80_common.c: 284:             return 0;
+[e ) -> 0 `i ]
+[e $UE 3314  ]
+[e :U 3321 ]
+"285
+[; ;../src/boards/emuz80_common.c: 285:         NCO1INC = nco1inc;
+[e = _NCO1INC F23775 ]
+"286
+[; ;../src/boards/emuz80_common.c: 286:         NCO1INC = nco1inc;
+[e = _NCO1INC F23775 ]
+"287
+[; ;../src/boards/emuz80_common.c: 287:         running = 1;
+[e = F23776 -> 1 `i ]
+"288
+[; ;../src/boards/emuz80_common.c: 288:         break;
+[e $U 3315  ]
+"289
+[; ;../src/boards/emuz80_common.c: 289:     case -2:
+[e :U 3322 ]
+"290
+[; ;../src/boards/emuz80_common.c: 290:         return NCO1OUT;
+[e ) -> _NCO1OUT `i ]
+[e $UE 3314  ]
+"291
+[; ;../src/boards/emuz80_common.c: 291:         break;
+[e $U 3315  ]
+"292
+[; ;../src/boards/emuz80_common.c: 292:     case -3:
+[e :U 3323 ]
+"293
+[; ;../src/boards/emuz80_common.c: 293:         if (!NCO1OUT)
+[e $ ! ! _NCO1OUT 3324  ]
+"294
+[; ;../src/boards/emuz80_common.c: 294:             NCO1POL = !NCO1POL;
+[e = _NCO1POL ! _NCO1POL ]
+[e :U 3324 ]
+"295
+[; ;../src/boards/emuz80_common.c: 295:         break;
+[e $U 3315  ]
+"296
+[; ;../src/boards/emuz80_common.c: 296:     case -4:
+[e :U 3325 ]
 "297
-[; ;../src/boards/emuz80_common.c: 297: }
-[e :UE 3306 ]
-}
+[; ;../src/boards/emuz80_common.c: 297:         if (NCO1OUT)
+[e $ ! _NCO1OUT 3326  ]
+"298
+[; ;../src/boards/emuz80_common.c: 298:             NCO1POL = !NCO1POL;
+[e = _NCO1POL ! _NCO1POL ]
+[e :U 3326 ]
 "299
-[; ;../src/boards/emuz80_common.c: 299: static uint8_t emuz80_common_addr_l_pins(void) { return PORTB; }
+[; ;../src/boards/emuz80_common.c: 299:         break;
+[e $U 3315  ]
+"300
+[; ;../src/boards/emuz80_common.c: 300:     case -5:
+[e :U 3327 ]
+"301
+[; ;../src/boards/emuz80_common.c: 301:             NCO1POL = !NCO1POL;
+[e = _NCO1POL ! _NCO1POL ]
+"302
+[; ;../src/boards/emuz80_common.c: 302:         break;
+[e $U 3315  ]
+"303
+[; ;../src/boards/emuz80_common.c: 303:     default:
+[e :U 3328 ]
+"304
+[; ;../src/boards/emuz80_common.c: 304:         if (clocks <= 0)
+[e $ ! <= _clocks -> 0 `i 3329  ]
+"305
+[; ;../src/boards/emuz80_common.c: 305:             return 0;
+[e ) -> 0 `i ]
+[e $UE 3314  ]
+[e :U 3329 ]
+"306
+[; ;../src/boards/emuz80_common.c: 306:         while (0 < clocks--) {
+[e $U 3330  ]
+[e :U 3331 ]
+{
+"307
+[; ;../src/boards/emuz80_common.c: 307:             NCO1POL = !NCO1POL;
+[e = _NCO1POL ! _NCO1POL ]
+"308
+[; ;../src/boards/emuz80_common.c: 308:             NCO1POL = !NCO1POL;
+[e = _NCO1POL ! _NCO1POL ]
+"309
+[; ;../src/boards/emuz80_common.c: 309:         }
+}
+[e :U 3330 ]
+"306
+[; ;../src/boards/emuz80_common.c: 306:         while (0 < clocks--) {
+[e $ < -> 0 `i -- _clocks -> 1 `i 3331  ]
+[e :U 3332 ]
+"310
+[; ;../src/boards/emuz80_common.c: 310:         break;
+[e $U 3315  ]
+"311
+[; ;../src/boards/emuz80_common.c: 311:     }
+}
+[e $U 3315  ]
+[e :U 3316 ]
+[e [\ _clocks , $ -> 0 `i 3317
+ , $ -U -> 1 `i 3320
+ , $ -U -> 2 `i 3322
+ , $ -U -> 3 `i 3323
+ , $ -U -> 4 `i 3325
+ , $ -U -> 5 `i 3327
+ 3328 ]
+[e :U 3315 ]
+"313
+[; ;../src/boards/emuz80_common.c: 313:     return 0;
+[e ) -> 0 `i ]
+[e $UE 3314  ]
+"314
+[; ;../src/boards/emuz80_common.c: 314: }
+[e :UE 3314 ]
+}
+"316
+[; ;../src/boards/emuz80_common.c: 316: static uint8_t emuz80_common_addr_l_pins(void) { return PORTB; }
 [v _emuz80_common_addr_l_pins `(uc ~T0 @X0 1 sf ]
 {
 [e :U _emuz80_common_addr_l_pins ]
 [f ]
 [e ) _PORTB ]
-[e $UE 3325  ]
-[e :UE 3325 ]
+[e $UE 3333  ]
+[e :UE 3333 ]
 }
-"300
-[; ;../src/boards/emuz80_common.c: 300: static void emuz80_common_set_addr_l_pins(uint8_t v) { LATB = v; }
+"317
+[; ;../src/boards/emuz80_common.c: 317: static void emuz80_common_set_addr_l_pins(uint8_t v) { LATB = v; }
 [v _emuz80_common_set_addr_l_pins `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_addr_l_pins ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
 [e = _LATB _v ]
-[e :UE 3326 ]
+[e :UE 3334 ]
 }
-"301
-[; ;../src/boards/emuz80_common.c: 301: static uint8_t emuz80_common_data_pins(void) { return PORTC; }
+"318
+[; ;../src/boards/emuz80_common.c: 318: static uint8_t emuz80_common_data_pins(void) { return PORTC; }
 [v _emuz80_common_data_pins `(uc ~T0 @X0 1 sf ]
 {
 [e :U _emuz80_common_data_pins ]
 [f ]
 [e ) _PORTC ]
-[e $UE 3327  ]
-[e :UE 3327 ]
+[e $UE 3335  ]
+[e :UE 3335 ]
 }
-"302
-[; ;../src/boards/emuz80_common.c: 302: static void emuz80_common_set_data_pins(uint8_t v) { LATC = v; }
+"319
+[; ;../src/boards/emuz80_common.c: 319: static void emuz80_common_set_data_pins(uint8_t v) { LATC = v; }
 [v _emuz80_common_set_data_pins `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_data_pins ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
 [e = _LATC _v ]
-[e :UE 3328 ]
+[e :UE 3336 ]
 }
-"303
-[; ;../src/boards/emuz80_common.c: 303: static void emuz80_common_set_data_dir(uint8_t v) { TRISC = v; }
+"320
+[; ;../src/boards/emuz80_common.c: 320: static void emuz80_common_set_data_dir(uint8_t v) { TRISC = v; }
 [v _emuz80_common_set_data_dir `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_data_dir ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
 [e = _TRISC _v ]
-[e :UE 3329 ]
+[e :UE 3337 ]
 }
-"304
-[; ;../src/boards/emuz80_common.c: 304: static __bit emuz80_common_ioreq_pin(void) { return RA0; }
+"321
+[; ;../src/boards/emuz80_common.c: 321: static __bit emuz80_common_ioreq_pin(void) { return RA0; }
 [v _emuz80_common_ioreq_pin `(b ~T0 @X0 1 sf ]
 {
 [e :U _emuz80_common_ioreq_pin ]
 [f ]
 [e ) _RA0 ]
-[e $UE 3330  ]
-[e :UE 3330 ]
+[e $UE 3338  ]
+[e :UE 3338 ]
 }
-"305
-[; ;../src/boards/emuz80_common.c: 305: static __bit emuz80_common_memrq_pin(void) { return RA1; }
+"322
+[; ;../src/boards/emuz80_common.c: 322: static __bit emuz80_common_memrq_pin(void) { return RA1; }
 [v _emuz80_common_memrq_pin `(b ~T0 @X0 1 sf ]
 {
 [e :U _emuz80_common_memrq_pin ]
 [f ]
 [e ) _RA1 ]
-[e $UE 3331  ]
-[e :UE 3331 ]
+[e $UE 3339  ]
+[e :UE 3339 ]
 }
-"306
-[; ;../src/boards/emuz80_common.c: 306: static __bit emuz80_common_rd_pin(void) { return RA5; }
+"323
+[; ;../src/boards/emuz80_common.c: 323: static __bit emuz80_common_rd_pin(void) { return RA5; }
 [v _emuz80_common_rd_pin `(b ~T0 @X0 1 sf ]
 {
 [e :U _emuz80_common_rd_pin ]
 [f ]
 [e ) _RA5 ]
-[e $UE 3332  ]
-[e :UE 3332 ]
+[e $UE 3340  ]
+[e :UE 3340 ]
 }
-"310
-[; ;../src/boards/emuz80_common.c: 310: static void emuz80_common_set_busrq_pin(uint8_t v) { LATE0 = (__bit)(v & 0x01); }
+"327
+[; ;../src/boards/emuz80_common.c: 327: static void emuz80_common_set_busrq_pin(uint8_t v) { LATE0 = (__bit)(v & 0x01); }
 [v _emuz80_common_set_busrq_pin `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_busrq_pin ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
 [e = _LATE0 -> -> & -> _v `i -> 1 `i `b `b ]
-[e :UE 3333 ]
+[e :UE 3341 ]
 }
-"311
-[; ;../src/boards/emuz80_common.c: 311: static void emuz80_common_set_reset_pin(uint8_t v) { LATE1 = (__bit)(v & 0x01); }
+"328
+[; ;../src/boards/emuz80_common.c: 328: static void emuz80_common_set_reset_pin(uint8_t v) { LATE1 = (__bit)(v & 0x01); }
 [v _emuz80_common_set_reset_pin `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_reset_pin ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
 [e = _LATE1 -> -> & -> _v `i -> 1 `i `b `b ]
-[e :UE 3334 ]
+[e :UE 3342 ]
 }
-"313
-[; ;../src/boards/emuz80_common.c: 313: static void emuz80_common_set_nmi_pin(uint8_t v) {
+"330
+[; ;../src/boards/emuz80_common.c: 330: static void emuz80_common_set_nmi_pin(uint8_t v) {
 [v _emuz80_common_set_nmi_pin `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_nmi_pin ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
-"317
-[; ;../src/boards/emuz80_common.c: 317: }
-[e :UE 3335 ]
+"334
+[; ;../src/boards/emuz80_common.c: 334: }
+[e :UE 3343 ]
 }
-"319
-[; ;../src/boards/emuz80_common.c: 319: static void emuz80_common_set_int_pin(uint8_t v) {
+"336
+[; ;../src/boards/emuz80_common.c: 336: static void emuz80_common_set_int_pin(uint8_t v) {
 [v _emuz80_common_set_int_pin `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_int_pin ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
-"323
-[; ;../src/boards/emuz80_common.c: 323: }
-[e :UE 3336 ]
+"340
+[; ;../src/boards/emuz80_common.c: 340: }
+[e :UE 3344 ]
 }
-"325
-[; ;../src/boards/emuz80_common.c: 325: static void emuz80_common_set_mq_pin(uint8_t v) {
+"342
+[; ;../src/boards/emuz80_common.c: 342: static void emuz80_common_set_mq_pin(uint8_t v) {
 [v _emuz80_common_set_mq_pin `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_mq_pin ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
-"329
-[; ;../src/boards/emuz80_common.c: 329: }
-[e :UE 3337 ]
+"346
+[; ;../src/boards/emuz80_common.c: 346: }
+[e :UE 3345 ]
 }
-"331
-[; ;../src/boards/emuz80_common.c: 331: static void emuz80_common_set_wait_pin(uint8_t v) {
+"348
+[; ;../src/boards/emuz80_common.c: 348: static void emuz80_common_set_wait_pin(uint8_t v) {
 [v _emuz80_common_set_wait_pin `(v ~T0 @X0 1 sf1`uc ]
 {
 [e :U _emuz80_common_set_wait_pin ]
 [v _v `uc ~T0 @X0 1 r1 ]
 [f ]
-"333
-[; ;../src/boards/emuz80_common.c: 333:     LATD7 = (__bit)(v & 0x01);
+"350
+[; ;../src/boards/emuz80_common.c: 350:     LATD7 = (__bit)(v & 0x01);
 [e = _LATD7 -> -> & -> _v `i -> 1 `i `b `b ]
-"335
-[; ;../src/boards/emuz80_common.c: 335: }
-[e :UE 3338 ]
+"352
+[; ;../src/boards/emuz80_common.c: 352: }
+[e :UE 3346 ]
 }
-"337
-[; ;../src/boards/emuz80_common.c: 337: static void emuz80_common_init()
+"354
+[; ;../src/boards/emuz80_common.c: 354: static void emuz80_common_init()
 [v _emuz80_common_init `(v ~T0 @X0 1 sf ]
-"338
-[; ;../src/boards/emuz80_common.c: 338: {
+"355
+[; ;../src/boards/emuz80_common.c: 355: {
 {
 [e :U _emuz80_common_init ]
 [f ]
-"339
-[; ;../src/boards/emuz80_common.c: 339:     board_sys_init_hook = emuz80_common_sys_init;
-[e = _board_sys_init_hook -> &U _emuz80_common_sys_init `*F23801 ]
-"340
-[; ;../src/boards/emuz80_common.c: 340:     board_start_z80_hook = emuz80_common_start_z80;
-[e = _board_start_z80_hook &U _emuz80_common_start_z80 ]
-"341
-[; ;../src/boards/emuz80_common.c: 341:     board_high_addr_mask_hook = emuz80_common_high_addr_mask;
-[e = _board_high_addr_mask_hook &U _emuz80_common_high_addr_mask ]
-"342
-[; ;../src/boards/emuz80_common.c: 342:     board_low_addr_mask_hook = emuz80_common_low_addr_mask;
-[e = _board_low_addr_mask_hook &U _emuz80_common_low_addr_mask ]
-"343
-[; ;../src/boards/emuz80_common.c: 343:     board_write_to_sram_hook = emuz80_common_write_to_sram;
-[e = _board_write_to_sram_hook &U _emuz80_common_write_to_sram ]
-"344
-[; ;../src/boards/emuz80_common.c: 344:     board_read_from_sram_hook = emuz80_common_read_from_sram;
-[e = _board_read_from_sram_hook &U _emuz80_common_read_from_sram ]
-"346
-[; ;../src/boards/emuz80_common.c: 346:     board_clock_op_hook = emuz80_common_clock_op_hook;
-[e = _board_clock_op_hook &U _emuz80_common_clock_op_hook ]
-"349
-[; ;../src/boards/emuz80_common.c: 349:     board_addr_l_pins_hook = emuz80_common_addr_l_pins;
-[e = _board_addr_l_pins_hook &U _emuz80_common_addr_l_pins ]
-"350
-[; ;../src/boards/emuz80_common.c: 350:     board_set_addr_l_pins_hook = emuz80_common_set_addr_l_pins;
-[e = _board_set_addr_l_pins_hook &U _emuz80_common_set_addr_l_pins ]
-"351
-[; ;../src/boards/emuz80_common.c: 351:     board_data_pins_hook = emuz80_common_data_pins;
-[e = _board_data_pins_hook &U _emuz80_common_data_pins ]
-"352
-[; ;../src/boards/emuz80_common.c: 352:     board_set_data_pins_hook = emuz80_common_set_data_pins;
-[e = _board_set_data_pins_hook &U _emuz80_common_set_data_pins ]
-"353
-[; ;../src/boards/emuz80_common.c: 353:     board_set_data_dir_hook = emuz80_common_set_data_dir;
-[e = _board_set_data_dir_hook &U _emuz80_common_set_data_dir ]
-"354
-[; ;../src/boards/emuz80_common.c: 354:     board_ioreq_pin_hook = emuz80_common_ioreq_pin;
-[e = _board_ioreq_pin_hook &U _emuz80_common_ioreq_pin ]
-"355
-[; ;../src/boards/emuz80_common.c: 355:     board_memrq_pin_hook = emuz80_common_memrq_pin;
-[e = _board_memrq_pin_hook &U _emuz80_common_memrq_pin ]
 "356
-[; ;../src/boards/emuz80_common.c: 356:     board_rd_pin_hook = emuz80_common_rd_pin;
-[e = _board_rd_pin_hook &U _emuz80_common_rd_pin ]
+[; ;../src/boards/emuz80_common.c: 356:     board_sys_init_hook = emuz80_common_sys_init;
+[e = _board_sys_init_hook -> &U _emuz80_common_sys_init `*F23801 ]
+"357
+[; ;../src/boards/emuz80_common.c: 357:     board_start_z80_hook = emuz80_common_start_z80;
+[e = _board_start_z80_hook &U _emuz80_common_start_z80 ]
+"358
+[; ;../src/boards/emuz80_common.c: 358:     board_high_addr_mask_hook = emuz80_common_high_addr_mask;
+[e = _board_high_addr_mask_hook &U _emuz80_common_high_addr_mask ]
+"359
+[; ;../src/boards/emuz80_common.c: 359:     board_low_addr_mask_hook = emuz80_common_low_addr_mask;
+[e = _board_low_addr_mask_hook &U _emuz80_common_low_addr_mask ]
+"360
+[; ;../src/boards/emuz80_common.c: 360:     board_write_to_sram_hook = emuz80_common_write_to_sram;
+[e = _board_write_to_sram_hook &U _emuz80_common_write_to_sram ]
 "361
-[; ;../src/boards/emuz80_common.c: 361:     board_set_busrq_pin_hook = emuz80_common_set_busrq_pin;
-[e = _board_set_busrq_pin_hook &U _emuz80_common_set_busrq_pin ]
-"362
-[; ;../src/boards/emuz80_common.c: 362:     board_set_reset_pin_hook = emuz80_common_set_reset_pin;
-[e = _board_set_reset_pin_hook &U _emuz80_common_set_reset_pin ]
+[; ;../src/boards/emuz80_common.c: 361:     board_read_from_sram_hook = emuz80_common_read_from_sram;
+[e = _board_read_from_sram_hook &U _emuz80_common_read_from_sram ]
+"363
+[; ;../src/boards/emuz80_common.c: 363:     board_clock_op_hook = emuz80_common_clock_op_hook;
+[e = _board_clock_op_hook &U _emuz80_common_clock_op_hook ]
+"366
+[; ;../src/boards/emuz80_common.c: 366:     board_addr_l_pins_hook = emuz80_common_addr_l_pins;
+[e = _board_addr_l_pins_hook &U _emuz80_common_addr_l_pins ]
+"367
+[; ;../src/boards/emuz80_common.c: 367:     board_set_addr_l_pins_hook = emuz80_common_set_addr_l_pins;
+[e = _board_set_addr_l_pins_hook &U _emuz80_common_set_addr_l_pins ]
+"368
+[; ;../src/boards/emuz80_common.c: 368:     board_data_pins_hook = emuz80_common_data_pins;
+[e = _board_data_pins_hook &U _emuz80_common_data_pins ]
 "369
-[; ;../src/boards/emuz80_common.c: 369:     board_set_wait_pin_hook = emuz80_common_set_wait_pin;
-[e = _board_set_wait_pin_hook &U _emuz80_common_set_wait_pin ]
+[; ;../src/boards/emuz80_common.c: 369:     board_set_data_pins_hook = emuz80_common_set_data_pins;
+[e = _board_set_data_pins_hook &U _emuz80_common_set_data_pins ]
 "370
-[; ;../src/boards/emuz80_common.c: 370: }
-[e :UE 3339 ]
-}
+[; ;../src/boards/emuz80_common.c: 370:     board_set_data_dir_hook = emuz80_common_set_data_dir;
+[e = _board_set_data_dir_hook &U _emuz80_common_set_data_dir ]
+"371
+[; ;../src/boards/emuz80_common.c: 371:     board_ioreq_pin_hook = emuz80_common_ioreq_pin;
+[e = _board_ioreq_pin_hook &U _emuz80_common_ioreq_pin ]
 "372
-[; ;../src/boards/emuz80_common.c: 372: static void emuz80_common_wait_for_programmer()
-[v _emuz80_common_wait_for_programmer `(v ~T0 @X0 1 sf ]
+[; ;../src/boards/emuz80_common.c: 372:     board_memrq_pin_hook = emuz80_common_memrq_pin;
+[e = _board_memrq_pin_hook &U _emuz80_common_memrq_pin ]
 "373
-[; ;../src/boards/emuz80_common.c: 373: {
+[; ;../src/boards/emuz80_common.c: 373:     board_rd_pin_hook = emuz80_common_rd_pin;
+[e = _board_rd_pin_hook &U _emuz80_common_rd_pin ]
+"378
+[; ;../src/boards/emuz80_common.c: 378:     board_set_busrq_pin_hook = emuz80_common_set_busrq_pin;
+[e = _board_set_busrq_pin_hook &U _emuz80_common_set_busrq_pin ]
+"379
+[; ;../src/boards/emuz80_common.c: 379:     board_set_reset_pin_hook = emuz80_common_set_reset_pin;
+[e = _board_set_reset_pin_hook &U _emuz80_common_set_reset_pin ]
+"386
+[; ;../src/boards/emuz80_common.c: 386:     board_set_wait_pin_hook = emuz80_common_set_wait_pin;
+[e = _board_set_wait_pin_hook &U _emuz80_common_set_wait_pin ]
+"387
+[; ;../src/boards/emuz80_common.c: 387: }
+[e :UE 3347 ]
+}
+"389
+[; ;../src/boards/emuz80_common.c: 389: static void emuz80_common_wait_for_programmer()
+[v _emuz80_common_wait_for_programmer `(v ~T0 @X0 1 sf ]
+"390
+[; ;../src/boards/emuz80_common.c: 390: {
 {
 [e :U _emuz80_common_wait_for_programmer ]
 [f ]
-"378
-[; ;../src/boards/emuz80_common.c: 378:     printf("\n\r");
+"395
+[; ;../src/boards/emuz80_common.c: 395:     printf("\n\r");
 [e ( _printf :s 1C ]
-"379
-[; ;../src/boards/emuz80_common.c: 379:     printf("wait for programmer ...\r");
+"396
+[; ;../src/boards/emuz80_common.c: 396:     printf("wait for programmer ...\r");
 [e ( _printf :s 2C ]
-"380
-[; ;../src/boards/emuz80_common.c: 380:     _delay((unsigned long)((200)*(64000000UL/4000.0)));
+"397
+[; ;../src/boards/emuz80_common.c: 397:     _delay((unsigned long)((200)*(64000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 64000000 `ul `d .4000.0 `ul ]
-"381
-[; ;../src/boards/emuz80_common.c: 381:     printf("                       \r");
+"398
+[; ;../src/boards/emuz80_common.c: 398:     printf("                       \r");
 [e ( _printf :s 3C ]
-"383
-[; ;../src/boards/emuz80_common.c: 383:     printf("\n\r");
+"400
+[; ;../src/boards/emuz80_common.c: 400:     printf("\n\r");
 [e ( _printf :s 4C ]
-"384
-[; ;../src/boards/emuz80_common.c: 384: }
-[e :UE 3340 ]
+"401
+[; ;../src/boards/emuz80_common.c: 401: }
+[e :UE 3348 ]
 }
-"86 ../src/boards/MEZ180_sd.c
-[; ;../src/boards/MEZ180_sd.c: 86: static char *emuz80_47q_name()
+"89 ../src/boards/MEZ180_sd.c
+[; ;../src/boards/MEZ180_sd.c: 89: static char *emuz80_47q_name()
 [v _emuz80_47q_name `(*uc ~T0 @X0 1 sf ]
-"87
-[; ;../src/boards/MEZ180_sd.c: 87: {
+"90
+[; ;../src/boards/MEZ180_sd.c: 90: {
 {
 [e :U _emuz80_47q_name ]
 [f ]
-"88
-[; ;../src/boards/MEZ180_sd.c: 88:     return "EMUZ80PIC_SD for Z180RAM";
-[e ) :s 5C ]
-[e $UE 3341  ]
-"89
-[; ;../src/boards/MEZ180_sd.c: 89: }
-[e :UE 3341 ]
-}
 "91
-[; ;../src/boards/MEZ180_sd.c: 91: static void emuz80_47q_sys_init()
-[v _emuz80_47q_sys_init `(v ~T0 @X0 1 sf ]
+[; ;../src/boards/MEZ180_sd.c: 91:     return "EMUZ80PIC_SD for Z180RAM";
+[e ) :s 5C ]
+[e $UE 3349  ]
 "92
-[; ;../src/boards/MEZ180_sd.c: 92: {
+[; ;../src/boards/MEZ180_sd.c: 92: }
+[e :UE 3349 ]
+}
+"94
+[; ;../src/boards/MEZ180_sd.c: 94: static void emuz80_47q_sys_init()
+[v _emuz80_47q_sys_init `(v ~T0 @X0 1 sf ]
+"95
+[; ;../src/boards/MEZ180_sd.c: 95: {
 {
 [e :U _emuz80_47q_sys_init ]
 [f ]
-"93
-[; ;../src/boards/MEZ180_sd.c: 93:     emuz80_common_sys_init();
-[e ( _emuz80_common_sys_init ..  ]
 "96
-[; ;../src/boards/MEZ180_sd.c: 96:     LATD = 0x00;
+[; ;../src/boards/MEZ180_sd.c: 96:     emuz80_common_sys_init();
+[e ( _emuz80_common_sys_init ..  ]
+"103
+[; ;../src/boards/MEZ180_sd.c: 103:     LATD = 0x00;
 [e = _LATD -> -> 0 `i `uc ]
-"97
-[; ;../src/boards/MEZ180_sd.c: 97:     TRISD = 0x40;
+"104
+[; ;../src/boards/MEZ180_sd.c: 104:     TRISD = 0x40;
 [e = _TRISD -> -> 64 `i `uc ]
-"99
-[; ;../src/boards/MEZ180_sd.c: 99:     LATE2 = 0;
+"107
+[; ;../src/boards/MEZ180_sd.c: 107:     LATE2 = 0;
 [e = _LATE2 -> -> 0 `i `b ]
-"100
-[; ;../src/boards/MEZ180_sd.c: 100:     TRISE2 = 0;
+"108
+[; ;../src/boards/MEZ180_sd.c: 108:     TRISE2 = 0;
 [e = _TRISE2 -> -> 0 `i `b ]
-"109
-[; ;../src/boards/MEZ180_sd.c: 109:     LATC7 = 1;
-[e = _LATC7 -> -> 1 `i `b ]
-"110
-[; ;../src/boards/MEZ180_sd.c: 110:     TRISC7 = 0;
-[e = _TRISC7 -> -> 0 `i `b ]
-"117
-[; ;../src/boards/MEZ180_sd.c: 117:     LATA1 = 1;
+"115
+[; ;../src/boards/MEZ180_sd.c: 115:     LATA1 = 1;
 [e = _LATA1 -> -> 1 `i `b ]
-"118
-[; ;../src/boards/MEZ180_sd.c: 118:     TRISA1 = 0;
+"116
+[; ;../src/boards/MEZ180_sd.c: 116:     TRISA1 = 0;
 [e = _TRISA1 -> -> 0 `i `b ]
-"119
-[; ;../src/boards/MEZ180_sd.c: 119:     RA1PPS = 0x00;
+"117
+[; ;../src/boards/MEZ180_sd.c: 117:     RA1PPS = 0x00;
 [e = _RA1PPS -> -> 0 `i `uc ]
-"122
-[; ;../src/boards/MEZ180_sd.c: 122:     LATA3 = 1;
+"120
+[; ;../src/boards/MEZ180_sd.c: 120:     LATA3 = 1;
 [e = _LATA3 -> -> 1 `i `b ]
-"123
-[; ;../src/boards/MEZ180_sd.c: 123:     TRISA3 = 0;
+"121
+[; ;../src/boards/MEZ180_sd.c: 121:     TRISA3 = 0;
 [e = _TRISA3 -> -> 0 `i `b ]
-"124
-[; ;../src/boards/MEZ180_sd.c: 124:     RA3PPS = 0x00;
+"122
+[; ;../src/boards/MEZ180_sd.c: 122:     RA3PPS = 0x00;
 [e = _RA3PPS -> -> 0 `i `uc ]
-"127
-[; ;../src/boards/MEZ180_sd.c: 127:     LATA4 = 1;
+"125
+[; ;../src/boards/MEZ180_sd.c: 125:     LATA4 = 1;
 [e = _LATA4 -> -> 1 `i `b ]
-"128
-[; ;../src/boards/MEZ180_sd.c: 128:     TRISA4 = 0;
+"126
+[; ;../src/boards/MEZ180_sd.c: 126:     TRISA4 = 0;
 [e = _TRISA4 -> -> 0 `i `b ]
-"129
-[; ;../src/boards/MEZ180_sd.c: 129:     RA4PPS = 0x00;
+"127
+[; ;../src/boards/MEZ180_sd.c: 127:     RA4PPS = 0x00;
 [e = _RA4PPS -> -> 0 `i `uc ]
-"131
-[; ;../src/boards/MEZ180_sd.c: 131:     LATD7 = 1;
+"129
+[; ;../src/boards/MEZ180_sd.c: 129:     LATD7 = 1;
 [e = _LATD7 -> -> 1 `i `b ]
-"132
-[; ;../src/boards/MEZ180_sd.c: 132:     RD7PPS = 0x00;
+"130
+[; ;../src/boards/MEZ180_sd.c: 130:     RD7PPS = 0x00;
 [e = _RD7PPS -> -> 0 `i `uc ]
-"135
-[; ;../src/boards/MEZ180_sd.c: 135:    SLRCONCbits.SLRC0 = 0;
+"133
+[; ;../src/boards/MEZ180_sd.c: 133:    SLRCONCbits.SLRC0 = 0;
 [e = . . _SLRCONCbits 0 0 -> -> 0 `i `uc ]
-"136
-[; ;../src/boards/MEZ180_sd.c: 136:    SLRCONCbits.SLRC1 = 0;
+"134
+[; ;../src/boards/MEZ180_sd.c: 134:    SLRCONCbits.SLRC1 = 0;
 [e = . . _SLRCONCbits 0 1 -> -> 0 `i `uc ]
-"137
-[; ;../src/boards/MEZ180_sd.c: 137:    SLRCONCbits.SLRC2 = 0;
+"135
+[; ;../src/boards/MEZ180_sd.c: 135:    SLRCONCbits.SLRC2 = 0;
 [e = . . _SLRCONCbits 0 2 -> -> 0 `i `uc ]
-"139
-[; ;../src/boards/MEZ180_sd.c: 139:     emuz80_common_wait_for_programmer();
+"137
+[; ;../src/boards/MEZ180_sd.c: 137:     emuz80_common_wait_for_programmer();
 [e ( _emuz80_common_wait_for_programmer ..  ]
-"142
-[; ;../src/boards/MEZ180_sd.c: 142:     (*board_set_bank_pins_hook)(0x00000);
+"140
+[; ;../src/boards/MEZ180_sd.c: 140:     (*board_set_bank_pins_hook)(0x00000);
 [e ( *U _board_set_bank_pins_hook (1 -> -> -> 0 `i `l `ul ]
-"147
-[; ;../src/boards/MEZ180_sd.c: 147:     static int retry;
+"145
+[; ;../src/boards/MEZ180_sd.c: 145:     static int retry;
 [v F23867 `i ~T0 @X0 1 s retry ]
-"148
-[; ;../src/boards/MEZ180_sd.c: 148:     for (retry = 0; 1; retry++) {
+"146
+[; ;../src/boards/MEZ180_sd.c: 146:     for (retry = 0; 1; retry++) {
 {
 [e = F23867 -> 0 `i ]
-[e $U 3346  ]
-[e :U 3343 ]
-{
-"149
-[; ;../src/boards/MEZ180_sd.c: 149:         if (20 <= retry) {
-[e $ ! <= -> 20 `i F23867 3347  ]
-{
-"150
-[; ;../src/boards/MEZ180_sd.c: 150:             printf("No SD Card?\n\r");
-[e ( _printf :s 6C ]
-"151
-[; ;../src/boards/MEZ180_sd.c: 151:             while(1);
-[e :U 3349 ]
-[e :U 3348 ]
-[e $U 3349  ]
-[e :U 3350 ]
-"152
-[; ;../src/boards/MEZ180_sd.c: 152:         }
-}
-[e :U 3347 ]
-"154
-[; ;../src/boards/MEZ180_sd.c: 154:         if (SDCard_init(SPI_CLOCK_100KHZ, SPI_CLOCK_2MHZ, 100) == 0)
-[e $ ! == ( _SDCard_init (3 , , . `E23712 0 . `E23712 1 -> -> 100 `i `us -> 0 `i 3351  ]
-"156
-[; ;../src/boards/MEZ180_sd.c: 156:             break;
-[e $U 3344  ]
+[e $U 3354  ]
 [e :U 3351 ]
-"157
-[; ;../src/boards/MEZ180_sd.c: 157:         _delay((unsigned long)((200)*(64000000UL/4000.0)));
+{
+"147
+[; ;../src/boards/MEZ180_sd.c: 147:         if (20 <= retry) {
+[e $ ! <= -> 20 `i F23867 3355  ]
+{
+"148
+[; ;../src/boards/MEZ180_sd.c: 148:             printf("No SD Card?\n\r");
+[e ( _printf :s 6C ]
+"149
+[; ;../src/boards/MEZ180_sd.c: 149:             while(1);
+[e :U 3357 ]
+[e :U 3356 ]
+[e $U 3357  ]
+[e :U 3358 ]
+"150
+[; ;../src/boards/MEZ180_sd.c: 150:         }
+}
+[e :U 3355 ]
+"152
+[; ;../src/boards/MEZ180_sd.c: 152:         if (SDCard_init(SPI_CLOCK_100KHZ, SPI_CLOCK_2MHZ, 100) == 0)
+[e $ ! == ( _SDCard_init (3 , , . `E23712 0 . `E23712 1 -> -> 100 `i `us -> 0 `i 3359  ]
+"154
+[; ;../src/boards/MEZ180_sd.c: 154:             break;
+[e $U 3352  ]
+[e :U 3359 ]
+"155
+[; ;../src/boards/MEZ180_sd.c: 155:         _delay((unsigned long)((200)*(64000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 64000000 `ul `d .4000.0 `ul ]
-"158
-[; ;../src/boards/MEZ180_sd.c: 158:     }
+"156
+[; ;../src/boards/MEZ180_sd.c: 156:     }
 }
 [e ++ F23867 -> 1 `i ]
-[e :U 3346 ]
-[e $ != -> 1 `i -> 0 `i 3343  ]
-[e :U 3344 ]
+[e :U 3354 ]
+[e $ != -> 1 `i -> 0 `i 3351  ]
+[e :U 3352 ]
+}
+"157
+[; ;../src/boards/MEZ180_sd.c: 157: }
+[e :UE 3350 ]
 }
 "159
-[; ;../src/boards/MEZ180_sd.c: 159: }
-[e :UE 3342 ]
-}
-"161
-[; ;../src/boards/MEZ180_sd.c: 161: static void emuz80_47q_bus_master(int enable)
+[; ;../src/boards/MEZ180_sd.c: 159: static void emuz80_47q_bus_master(int enable)
 [v _emuz80_47q_bus_master `(v ~T0 @X0 1 sf1`i ]
-"162
-[; ;../src/boards/MEZ180_sd.c: 162: {
+"160
+[; ;../src/boards/MEZ180_sd.c: 160: {
 {
 [e :U _emuz80_47q_bus_master ]
-"161
-[; ;../src/boards/MEZ180_sd.c: 161: static void emuz80_47q_bus_master(int enable)
+"159
+[; ;../src/boards/MEZ180_sd.c: 159: static void emuz80_47q_bus_master(int enable)
 [v _enable `i ~T0 @X0 1 r1 ]
-"162
-[; ;../src/boards/MEZ180_sd.c: 162: {
+"160
+[; ;../src/boards/MEZ180_sd.c: 160: {
 [f ]
-"163
-[; ;../src/boards/MEZ180_sd.c: 163:     if (enable) {
-[e $ ! != _enable -> 0 `i 3353  ]
+"161
+[; ;../src/boards/MEZ180_sd.c: 161:     if (enable) {
+[e $ ! != _enable -> 0 `i 3361  ]
 {
-"164
-[; ;../src/boards/MEZ180_sd.c: 164:         RA4PPS = 0x00;
+"162
+[; ;../src/boards/MEZ180_sd.c: 162:         RA4PPS = 0x00;
 [e = _RA4PPS -> -> 0 `i `uc ]
-"165
-[; ;../src/boards/MEZ180_sd.c: 165:         RA3PPS = 0x00;
+"163
+[; ;../src/boards/MEZ180_sd.c: 163:         RA3PPS = 0x00;
 [e = _RA3PPS -> -> 0 `i `uc ]
-"166
-[; ;../src/boards/MEZ180_sd.c: 166:         LATA4 = 1;
+"164
+[; ;../src/boards/MEZ180_sd.c: 164:         LATA4 = 1;
 [e = _LATA4 -> -> 1 `i `b ]
-"167
-[; ;../src/boards/MEZ180_sd.c: 167:         LATA3 = 1;
+"165
+[; ;../src/boards/MEZ180_sd.c: 165:         LATA3 = 1;
 [e = _LATA3 -> -> 1 `i `b ]
-"170
-[; ;../src/boards/MEZ180_sd.c: 170:         TRISB = 0x00;
+"168
+[; ;../src/boards/MEZ180_sd.c: 168:         TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"171
-[; ;../src/boards/MEZ180_sd.c: 171:         TRISD = 0x40;
-[e = _TRISD -> -> 64 `i `uc ]
 "172
-[; ;../src/boards/MEZ180_sd.c: 172:         TRISE2 = 0;
-[e = _TRISE2 -> -> 0 `i `b ]
+[; ;../src/boards/MEZ180_sd.c: 172:         TRISD = 0x40;
+[e = _TRISD -> -> 64 `i `uc ]
 "174
-[; ;../src/boards/MEZ180_sd.c: 174:      TRISA5 = 0;
-[e = _TRISA5 -> -> 0 `i `b ]
-"176
-[; ;../src/boards/MEZ180_sd.c: 176:         LATA1 = 1;
-[e = _LATA1 -> -> 1 `i `b ]
+[; ;../src/boards/MEZ180_sd.c: 174:         TRISE2 = 0;
+[e = _TRISE2 -> -> 0 `i `b ]
+"175
+[; ;../src/boards/MEZ180_sd.c: 175:         TRISC = 0;
+[e = _TRISC -> -> 0 `i `uc ]
 "177
-[; ;../src/boards/MEZ180_sd.c: 177:      TRISA1 = 0;
-[e = _TRISA1 -> -> 0 `i `b ]
-"178
-[; ;../src/boards/MEZ180_sd.c: 178:     } else {
-}
-[e $U 3354  ]
-[e :U 3353 ]
-{
+[; ;../src/boards/MEZ180_sd.c: 177:      TRISA5 = 0;
+[e = _TRISA5 -> -> 0 `i `b ]
+"179
+[; ;../src/boards/MEZ180_sd.c: 179:         LATA1 = 1;
+[e = _LATA1 -> -> 1 `i `b ]
 "180
-[; ;../src/boards/MEZ180_sd.c: 180:         TRISB = 0xff;
-[e = _TRISB -> -> 255 `i `uc ]
+[; ;../src/boards/MEZ180_sd.c: 180:      TRISA1 = 0;
+[e = _TRISA1 -> -> 0 `i `b ]
 "181
-[; ;../src/boards/MEZ180_sd.c: 181:         TRISD = 0x7f;
-[e = _TRISD -> -> 127 `i `uc ]
-"182
-[; ;../src/boards/MEZ180_sd.c: 182:         TRISE2 = 1;
-[e = _TRISE2 -> -> 1 `i `b ]
+[; ;../src/boards/MEZ180_sd.c: 181:     } else {
+}
+[e $U 3362  ]
+[e :U 3361 ]
+{
 "183
-[; ;../src/boards/MEZ180_sd.c: 183:         TRISC = 0xff;
-[e = _TRISC -> -> 255 `i `uc ]
+[; ;../src/boards/MEZ180_sd.c: 183:         TRISB = 0xff;
+[e = _TRISB -> -> 255 `i `uc ]
+"184
+[; ;../src/boards/MEZ180_sd.c: 184:         TRISD = 0x7f;
+[e = _TRISD -> -> 127 `i `uc ]
+"185
+[; ;../src/boards/MEZ180_sd.c: 185:         TRISE2 = 1;
+[e = _TRISE2 -> -> 1 `i `b ]
 "186
-[; ;../src/boards/MEZ180_sd.c: 186:         TRISA5 = 1;
-[e = _TRISA5 -> -> 1 `i `b ]
-"187
-[; ;../src/boards/MEZ180_sd.c: 187:      TRISA1 = 1;
-[e = _TRISA1 -> -> 1 `i `b ]
+[; ;../src/boards/MEZ180_sd.c: 186:         TRISC = 0xff;
+[e = _TRISC -> -> 255 `i `uc ]
 "189
-[; ;../src/boards/MEZ180_sd.c: 189:      RA4PPS = 0x01;
-[e = _RA4PPS -> -> 1 `i `uc ]
+[; ;../src/boards/MEZ180_sd.c: 189:         TRISA5 = 1;
+[e = _TRISA5 -> -> 1 `i `b ]
 "190
-[; ;../src/boards/MEZ180_sd.c: 190:         RA3PPS = 0x02;
-[e = _RA3PPS -> -> 2 `i `uc ]
-"191
-[; ;../src/boards/MEZ180_sd.c: 191:     }
-}
-[e :U 3354 ]
+[; ;../src/boards/MEZ180_sd.c: 190:      TRISA1 = 1;
+[e = _TRISA1 -> -> 1 `i `b ]
 "192
-[; ;../src/boards/MEZ180_sd.c: 192: }
-[e :UE 3352 ]
-}
+[; ;../src/boards/MEZ180_sd.c: 192:      RA4PPS = 0x01;
+[e = _RA4PPS -> -> 1 `i `uc ]
+"193
+[; ;../src/boards/MEZ180_sd.c: 193:         RA3PPS = 0x02;
+[e = _RA3PPS -> -> 2 `i `uc ]
 "194
-[; ;../src/boards/MEZ180_sd.c: 194: static void emuz80_47q_start_z80(void)
-[v _emuz80_47q_start_z80 `(v ~T0 @X0 1 sf ]
+[; ;../src/boards/MEZ180_sd.c: 194:     }
+}
+[e :U 3362 ]
 "195
-[; ;../src/boards/MEZ180_sd.c: 195: {
+[; ;../src/boards/MEZ180_sd.c: 195: }
+[e :UE 3360 ]
+}
+"197
+[; ;../src/boards/MEZ180_sd.c: 197: static void emuz80_47q_start_z80(void)
+[v _emuz80_47q_start_z80 `(v ~T0 @X0 1 sf ]
+"198
+[; ;../src/boards/MEZ180_sd.c: 198: {
 {
 [e :U _emuz80_47q_start_z80 ]
 [f ]
-"196
-[; ;../src/boards/MEZ180_sd.c: 196:     emuz80_common_start_z80();
-[e ( _emuz80_common_start_z80 ..  ]
-"201
-[; ;../src/boards/MEZ180_sd.c: 201:     CLCIN0PPS = 0x01;
+"200
+[; ;../src/boards/MEZ180_sd.c: 200:     CLCIN0PPS = 0x01;
 [e = _CLCIN0PPS -> -> 1 `i `uc ]
-"202
-[; ;../src/boards/MEZ180_sd.c: 202:     CLCIN1PPS = 0x00;
+"201
+[; ;../src/boards/MEZ180_sd.c: 201:     emuz80_common_start_z80();
+[e ( _emuz80_common_start_z80 ..  ]
+"205
+[; ;../src/boards/MEZ180_sd.c: 205:     CLCIN1PPS = 0x00;
 [e = _CLCIN1PPS -> -> 0 `i `uc ]
-"204
-[; ;../src/boards/MEZ180_sd.c: 204:     CLCIN2PPS = 0x1e;
+"207
+[; ;../src/boards/MEZ180_sd.c: 207:     CLCIN2PPS = 0x1e;
 [e = _CLCIN2PPS -> -> 30 `i `uc ]
-"209
-[; ;../src/boards/MEZ180_sd.c: 209:     CLCIN4PPS = 0x05;
+"212
+[; ;../src/boards/MEZ180_sd.c: 212:     CLCIN4PPS = 0x05;
 [e = _CLCIN4PPS -> -> 5 `i `uc ]
-"210
-[; ;../src/boards/MEZ180_sd.c: 210:     CLCIN6PPS = 0x0e;
+"213
+[; ;../src/boards/MEZ180_sd.c: 213:     CLCIN6PPS = 0x0e;
 [e = _CLCIN6PPS -> -> 14 `i `uc ]
-"214
-[; ;../src/boards/MEZ180_sd.c: 214:     RA4PPS = 0x01;
+"217
+[; ;../src/boards/MEZ180_sd.c: 217:     RA4PPS = 0x01;
 [e = _RA4PPS -> -> 1 `i `uc ]
-"215
-[; ;../src/boards/MEZ180_sd.c: 215:     RA3PPS = 0x02;
+"218
+[; ;../src/boards/MEZ180_sd.c: 218:     RA3PPS = 0x02;
 [e = _RA3PPS -> -> 2 `i `uc ]
-"216
-[; ;../src/boards/MEZ180_sd.c: 216:     RD7PPS = 0x03;
-[e = _RD7PPS -> -> 3 `i `uc ]
 "219
-[; ;../src/boards/MEZ180_sd.c: 219:     CLCSELECT = 0;
+[; ;../src/boards/MEZ180_sd.c: 219:     RD7PPS = 0x03;
+[e = _RD7PPS -> -> 3 `i `uc ]
+"222
+[; ;../src/boards/MEZ180_sd.c: 222:     CLCSELECT = 0;
 [e = _CLCSELECT -> -> 0 `i `uc ]
-"235
-[; ;../src/boards/MEZ180_sd.c: 235:     CLCnSEL0 = 0;
+"238
+[; ;../src/boards/MEZ180_sd.c: 238:     CLCnSEL0 = 0;
 [e = _CLCnSEL0 -> -> 0 `i `uc ]
-"237
-[; ;../src/boards/MEZ180_sd.c: 237:     CLCnSEL1 = 2;
+"240
+[; ;../src/boards/MEZ180_sd.c: 240:     CLCnSEL1 = 2;
 [e = _CLCnSEL1 -> -> 2 `i `uc ]
-"242
-[; ;../src/boards/MEZ180_sd.c: 242:     CLCnSEL2 = 4;
-[e = _CLCnSEL2 -> -> 4 `i `uc ]
-"243
-[; ;../src/boards/MEZ180_sd.c: 243:     CLCnSEL3 = 127;
-[e = _CLCnSEL3 -> -> 127 `i `uc ]
 "245
-[; ;../src/boards/MEZ180_sd.c: 245:     CLCnGLS0 = 0x01;
-[e = _CLCnGLS0 -> -> 1 `i `uc ]
-"247
-[; ;../src/boards/MEZ180_sd.c: 247:     CLCnGLS1 = 0x08;
-[e = _CLCnGLS1 -> -> 8 `i `uc ]
-"251
-[; ;../src/boards/MEZ180_sd.c: 251:     CLCnGLS2 = 0x10;
-[e = _CLCnGLS2 -> -> 16 `i `uc ]
-"252
-[; ;../src/boards/MEZ180_sd.c: 252:     CLCnGLS3 = 0x40;
-[e = _CLCnGLS3 -> -> 64 `i `uc ]
-"254
-[; ;../src/boards/MEZ180_sd.c: 254:     CLCnPOL = 0x80;
-[e = _CLCnPOL -> -> 128 `i `uc ]
-"255
-[; ;../src/boards/MEZ180_sd.c: 255:     CLCnCON = 0x82;
-[e = _CLCnCON -> -> 130 `i `uc ]
-"259
-[; ;../src/boards/MEZ180_sd.c: 259:     CLCSELECT = 1;
-[e = _CLCSELECT -> -> 1 `i `uc ]
-"261
-[; ;../src/boards/MEZ180_sd.c: 261:     CLCnSEL0 = 0;
-[e = _CLCnSEL0 -> -> 0 `i `uc ]
-"263
-[; ;../src/boards/MEZ180_sd.c: 263:     CLCnSEL1 = 2;
-[e = _CLCnSEL1 -> -> 2 `i `uc ]
-"267
-[; ;../src/boards/MEZ180_sd.c: 267:     CLCnSEL2 = 4;
+[; ;../src/boards/MEZ180_sd.c: 245:     CLCnSEL2 = 4;
 [e = _CLCnSEL2 -> -> 4 `i `uc ]
-"268
-[; ;../src/boards/MEZ180_sd.c: 268:     CLCnSEL3 = 127;
+"246
+[; ;../src/boards/MEZ180_sd.c: 246:     CLCnSEL3 = 127;
 [e = _CLCnSEL3 -> -> 127 `i `uc ]
-"270
-[; ;../src/boards/MEZ180_sd.c: 270:     CLCnGLS0 = 0x01;
+"248
+[; ;../src/boards/MEZ180_sd.c: 248:     CLCnGLS0 = 0x01;
 [e = _CLCnGLS0 -> -> 1 `i `uc ]
-"272
-[; ;../src/boards/MEZ180_sd.c: 272:     CLCnGLS1 = 0x08;
+"250
+[; ;../src/boards/MEZ180_sd.c: 250:     CLCnGLS1 = 0x08;
 [e = _CLCnGLS1 -> -> 8 `i `uc ]
-"276
-[; ;../src/boards/MEZ180_sd.c: 276:     CLCnGLS2 = 0x20;
-[e = _CLCnGLS2 -> -> 32 `i `uc ]
-"277
-[; ;../src/boards/MEZ180_sd.c: 277:     CLCnGLS3 = 0x40;
+"254
+[; ;../src/boards/MEZ180_sd.c: 254:     CLCnGLS2 = 0x10;
+[e = _CLCnGLS2 -> -> 16 `i `uc ]
+"255
+[; ;../src/boards/MEZ180_sd.c: 255:     CLCnGLS3 = 0x40;
 [e = _CLCnGLS3 -> -> 64 `i `uc ]
-"279
-[; ;../src/boards/MEZ180_sd.c: 279:     CLCnPOL = 0x80;
+"257
+[; ;../src/boards/MEZ180_sd.c: 257:     CLCnPOL = 0x80;
 [e = _CLCnPOL -> -> 128 `i `uc ]
-"280
-[; ;../src/boards/MEZ180_sd.c: 280:     CLCnCON = 0x82;
+"258
+[; ;../src/boards/MEZ180_sd.c: 258:     CLCnCON = 0x82;
 [e = _CLCnCON -> -> 130 `i `uc ]
-"283
-[; ;../src/boards/MEZ180_sd.c: 283:     CLCSELECT = 2;
-[e = _CLCSELECT -> -> 2 `i `uc ]
-"285
-[; ;../src/boards/MEZ180_sd.c: 285:     CLCnSEL0 = 1;
-[e = _CLCnSEL0 -> -> 1 `i `uc ]
-"286
-[; ;../src/boards/MEZ180_sd.c: 286:     CLCnSEL1 = 6;
-[e = _CLCnSEL1 -> -> 6 `i `uc ]
-"287
-[; ;../src/boards/MEZ180_sd.c: 287:     CLCnSEL2 = 127;
-[e = _CLCnSEL2 -> -> 127 `i `uc ]
-"288
-[; ;../src/boards/MEZ180_sd.c: 288:     CLCnSEL3 = 127;
+"262
+[; ;../src/boards/MEZ180_sd.c: 262:     CLCSELECT = 1;
+[e = _CLCSELECT -> -> 1 `i `uc ]
+"264
+[; ;../src/boards/MEZ180_sd.c: 264:     CLCnSEL0 = 0;
+[e = _CLCnSEL0 -> -> 0 `i `uc ]
+"266
+[; ;../src/boards/MEZ180_sd.c: 266:     CLCnSEL1 = 2;
+[e = _CLCnSEL1 -> -> 2 `i `uc ]
+"270
+[; ;../src/boards/MEZ180_sd.c: 270:     CLCnSEL2 = 4;
+[e = _CLCnSEL2 -> -> 4 `i `uc ]
+"271
+[; ;../src/boards/MEZ180_sd.c: 271:     CLCnSEL3 = 127;
 [e = _CLCnSEL3 -> -> 127 `i `uc ]
-"290
-[; ;../src/boards/MEZ180_sd.c: 290:     CLCnGLS0 = 0x1;
+"273
+[; ;../src/boards/MEZ180_sd.c: 273:     CLCnGLS0 = 0x01;
 [e = _CLCnGLS0 -> -> 1 `i `uc ]
-"291
-[; ;../src/boards/MEZ180_sd.c: 291:     CLCnGLS1 = 0x8;
+"275
+[; ;../src/boards/MEZ180_sd.c: 275:     CLCnGLS1 = 0x08;
 [e = _CLCnGLS1 -> -> 8 `i `uc ]
-"292
-[; ;../src/boards/MEZ180_sd.c: 292:     CLCnGLS2 = 0x0;
-[e = _CLCnGLS2 -> -> 0 `i `uc ]
-"293
-[; ;../src/boards/MEZ180_sd.c: 293:     CLCnGLS3 = 0x0;
-[e = _CLCnGLS3 -> -> 0 `i `uc ]
-"295
-[; ;../src/boards/MEZ180_sd.c: 295:     CLCnPOL = 0x80;
+"279
+[; ;../src/boards/MEZ180_sd.c: 279:     CLCnGLS2 = 0x20;
+[e = _CLCnGLS2 -> -> 32 `i `uc ]
+"280
+[; ;../src/boards/MEZ180_sd.c: 280:     CLCnGLS3 = 0x40;
+[e = _CLCnGLS3 -> -> 64 `i `uc ]
+"282
+[; ;../src/boards/MEZ180_sd.c: 282:     CLCnPOL = 0x80;
 [e = _CLCnPOL -> -> 128 `i `uc ]
+"283
+[; ;../src/boards/MEZ180_sd.c: 283:     CLCnCON = 0x82;
+[e = _CLCnCON -> -> 130 `i `uc ]
+"286
+[; ;../src/boards/MEZ180_sd.c: 286:     CLCSELECT = 2;
+[e = _CLCSELECT -> -> 2 `i `uc ]
+"288
+[; ;../src/boards/MEZ180_sd.c: 288:     CLCnSEL0 = 1;
+[e = _CLCnSEL0 -> -> 1 `i `uc ]
+"289
+[; ;../src/boards/MEZ180_sd.c: 289:     CLCnSEL1 = 6;
+[e = _CLCnSEL1 -> -> 6 `i `uc ]
+"290
+[; ;../src/boards/MEZ180_sd.c: 290:     CLCnSEL2 = 127;
+[e = _CLCnSEL2 -> -> 127 `i `uc ]
+"291
+[; ;../src/boards/MEZ180_sd.c: 291:     CLCnSEL3 = 127;
+[e = _CLCnSEL3 -> -> 127 `i `uc ]
+"293
+[; ;../src/boards/MEZ180_sd.c: 293:     CLCnGLS0 = 0x1;
+[e = _CLCnGLS0 -> -> 1 `i `uc ]
+"294
+[; ;../src/boards/MEZ180_sd.c: 294:     CLCnGLS1 = 0x8;
+[e = _CLCnGLS1 -> -> 8 `i `uc ]
+"295
+[; ;../src/boards/MEZ180_sd.c: 295:     CLCnGLS2 = 0x0;
+[e = _CLCnGLS2 -> -> 0 `i `uc ]
+"296
+[; ;../src/boards/MEZ180_sd.c: 296:     CLCnGLS3 = 0x0;
+[e = _CLCnGLS3 -> -> 0 `i `uc ]
 "298
-[; ;../src/boards/MEZ180_sd.c: 298:     CLCnCON = 0x8c;
-[e = _CLCnCON -> -> 140 `i `uc ]
-"300
-[; ;../src/boards/MEZ180_sd.c: 300:     CLCDATA = 0x0;
-[e = _CLCDATA -> -> 0 `i `uc ]
+[; ;../src/boards/MEZ180_sd.c: 298:     CLCnPOL = 0x80;
+[e = _CLCnPOL -> -> 128 `i `uc ]
 "301
-[; ;../src/boards/MEZ180_sd.c: 301:     CLC3IF = 0;
+[; ;../src/boards/MEZ180_sd.c: 301:     CLCnCON = 0x8c;
+[e = _CLCnCON -> -> 140 `i `uc ]
+"303
+[; ;../src/boards/MEZ180_sd.c: 303:     CLCDATA = 0x0;
+[e = _CLCDATA -> -> 0 `i `uc ]
+"304
+[; ;../src/boards/MEZ180_sd.c: 304:     CLC3IF = 0;
 [e = _CLC3IF -> -> 0 `i `b ]
-"302
-[; ;../src/boards/MEZ180_sd.c: 302:     CLC3IE = 0;
-[e = _CLC3IE -> -> 0 `i `b ]
 "305
-[; ;../src/boards/MEZ180_sd.c: 305:     LATE0 = 1;
-[e = _LATE0 -> -> 1 `i `b ]
-"306
-[; ;../src/boards/MEZ180_sd.c: 306:     LATE1 = 1;
-[e = _LATE1 -> -> 1 `i `b ]
-"307
-[; ;../src/boards/MEZ180_sd.c: 307: }
-[e :UE 3355 ]
-}
+[; ;../src/boards/MEZ180_sd.c: 305:     CLC3IE = 0;
+[e = _CLC3IE -> -> 0 `i `b ]
+"308
+[; ;../src/boards/MEZ180_sd.c: 308:     WPUE2 = 1;
+[e = _WPUE2 -> -> 1 `i `b ]
 "309
-[; ;../src/boards/MEZ180_sd.c: 309: static void emuz80_47q_set_wait_pin(uint8_t v)
+[; ;../src/boards/MEZ180_sd.c: 309:     TRISE2 = 1;
+[e = _TRISE2 -> -> 1 `i `b ]
+"318
+[; ;../src/boards/MEZ180_sd.c: 318:     LATE0 = 1;
+[e = _LATE0 -> -> 1 `i `b ]
+"319
+[; ;../src/boards/MEZ180_sd.c: 319:     LATE1 = 1;
+[e = _LATE1 -> -> 1 `i `b ]
+"320
+[; ;../src/boards/MEZ180_sd.c: 320: }
+[e :UE 3363 ]
+}
+"322
+[; ;../src/boards/MEZ180_sd.c: 322: static void emuz80_47q_set_wait_pin(uint8_t v)
 [v _emuz80_47q_set_wait_pin `(v ~T0 @X0 1 sf1`uc ]
-"310
-[; ;../src/boards/MEZ180_sd.c: 310: {
+"323
+[; ;../src/boards/MEZ180_sd.c: 323: {
 {
 [e :U _emuz80_47q_set_wait_pin ]
-"309
-[; ;../src/boards/MEZ180_sd.c: 309: static void emuz80_47q_set_wait_pin(uint8_t v)
+"322
+[; ;../src/boards/MEZ180_sd.c: 322: static void emuz80_47q_set_wait_pin(uint8_t v)
 [v _v `uc ~T0 @X0 1 r1 ]
-"310
-[; ;../src/boards/MEZ180_sd.c: 310: {
+"323
+[; ;../src/boards/MEZ180_sd.c: 323: {
 [f ]
-"311
-[; ;../src/boards/MEZ180_sd.c: 311:     if (v == 1) {
-[e $ ! == -> _v `i -> 1 `i 3357  ]
+"324
+[; ;../src/boards/MEZ180_sd.c: 324:     if (v == 1) {
+[e $ ! == -> _v `i -> 1 `i 3365  ]
 {
-"313
-[; ;../src/boards/MEZ180_sd.c: 313:         G3POL = 1;
+"326
+[; ;../src/boards/MEZ180_sd.c: 326:         G3POL = 1;
 [e = _G3POL -> -> 1 `i `b ]
-"314
-[; ;../src/boards/MEZ180_sd.c: 314:         G3POL = 0;
+"327
+[; ;../src/boards/MEZ180_sd.c: 327:         G3POL = 0;
 [e = _G3POL -> -> 0 `i `b ]
-"315
-[; ;../src/boards/MEZ180_sd.c: 315:     } else {
+"328
+[; ;../src/boards/MEZ180_sd.c: 328:     } else {
 }
-[e $U 3358  ]
-[e :U 3357 ]
+[e $U 3366  ]
+[e :U 3365 ]
 {
-"317
-[; ;../src/boards/MEZ180_sd.c: 317:     }
+"330
+[; ;../src/boards/MEZ180_sd.c: 330:     }
 }
-[e :U 3358 ]
-"318
-[; ;../src/boards/MEZ180_sd.c: 318: }
-[e :UE 3356 ]
+[e :U 3366 ]
+"331
+[; ;../src/boards/MEZ180_sd.c: 331: }
+[e :UE 3364 ]
 }
-"320
-[; ;../src/boards/MEZ180_sd.c: 320: static void emuz80_47q_set_bank_pins(uint32_t addr)
+"333
+[; ;../src/boards/MEZ180_sd.c: 333: static void emuz80_47q_set_bank_pins(uint32_t addr)
 [v _emuz80_47q_set_bank_pins `(v ~T0 @X0 1 sf1`ul ]
-"321
-[; ;../src/boards/MEZ180_sd.c: 321: {
+"334
+[; ;../src/boards/MEZ180_sd.c: 334: {
 {
 [e :U _emuz80_47q_set_bank_pins ]
-"320
-[; ;../src/boards/MEZ180_sd.c: 320: static void emuz80_47q_set_bank_pins(uint32_t addr)
+"333
+[; ;../src/boards/MEZ180_sd.c: 333: static void emuz80_47q_set_bank_pins(uint32_t addr)
 [v _addr `ul ~T0 @X0 1 r1 ]
-"321
-[; ;../src/boards/MEZ180_sd.c: 321: {
+"334
+[; ;../src/boards/MEZ180_sd.c: 334: {
 [f ]
-"322
-[; ;../src/boards/MEZ180_sd.c: 322: uint32_t t_adr;
-[v _t_adr `ul ~T0 @X0 1 a ]
-"324
-[; ;../src/boards/MEZ180_sd.c: 324:  t_adr = (uint32_t)0x00007fff & addr;
-[e = _t_adr & -> -> 32767 `i `ul _addr ]
-"358
-[; ;../src/boards/MEZ180_sd.c: 358:  if(t_adr >=0x4000) {
-[e $ ! >= _t_adr -> -> -> 16384 `i `l `ul 3360  ]
-{
-"359
-[; ;../src/boards/MEZ180_sd.c: 359:   LATE2 = 1;
-[e = _LATE2 -> -> 1 `i `b ]
-"363
-[; ;../src/boards/MEZ180_sd.c: 363:  }
+"335
+[; ;../src/boards/MEZ180_sd.c: 335: }
+[e :UE 3367 ]
 }
-[e $U 3361  ]
-"364
-[; ;../src/boards/MEZ180_sd.c: 364:  else {
-[e :U 3360 ]
-{
-"365
-[; ;../src/boards/MEZ180_sd.c: 365:   LATE2 = 0;
-[e = _LATE2 -> -> 0 `i `b ]
-"369
-[; ;../src/boards/MEZ180_sd.c: 369:  }
-}
-[e :U 3361 ]
-"371
-[; ;../src/boards/MEZ180_sd.c: 371: }
-[e :UE 3359 ]
-}
-"373
-[; ;../src/boards/MEZ180_sd.c: 373: static void emuz80_47q_setup_addrbus(uint32_t addr)
+"337
+[; ;../src/boards/MEZ180_sd.c: 337: static void emuz80_47q_setup_addrbus(uint32_t addr)
 [v _emuz80_47q_setup_addrbus `(v ~T0 @X0 1 sf1`ul ]
-"374
-[; ;../src/boards/MEZ180_sd.c: 374: {
+"338
+[; ;../src/boards/MEZ180_sd.c: 338: {
 {
 [e :U _emuz80_47q_setup_addrbus ]
-"373
-[; ;../src/boards/MEZ180_sd.c: 373: static void emuz80_47q_setup_addrbus(uint32_t addr)
+"337
+[; ;../src/boards/MEZ180_sd.c: 337: static void emuz80_47q_setup_addrbus(uint32_t addr)
 [v _addr `ul ~T0 @X0 1 r1 ]
-"374
-[; ;../src/boards/MEZ180_sd.c: 374: {
+"338
+[; ;../src/boards/MEZ180_sd.c: 338: {
 [f ]
-"375
-[; ;../src/boards/MEZ180_sd.c: 375:     (*board_set_bank_pins_hook)(addr);
+"339
+[; ;../src/boards/MEZ180_sd.c: 339:     (*board_set_bank_pins_hook)(addr);
 [e ( *U _board_set_bank_pins_hook (1 _addr ]
-"376
-[; ;../src/boards/MEZ180_sd.c: 376: }
-[e :UE 3362 ]
+"340
+[; ;../src/boards/MEZ180_sd.c: 340: }
+[e :UE 3368 ]
 }
-"378
-[; ;../src/boards/MEZ180_sd.c: 378: static __bit emuz80_47q_io_event(void)
+"342
+[; ;../src/boards/MEZ180_sd.c: 342: static __bit emuz80_47q_io_event(void)
 [v _emuz80_47q_io_event `(b ~T0 @X0 1 sf ]
-"379
-[; ;../src/boards/MEZ180_sd.c: 379: {
+"343
+[; ;../src/boards/MEZ180_sd.c: 343: {
 {
 [e :U _emuz80_47q_io_event ]
 [f ]
-"380
-[; ;../src/boards/MEZ180_sd.c: 380:     return CLC3IF;
+"344
+[; ;../src/boards/MEZ180_sd.c: 344:     return CLC3IF;
 [e ) _CLC3IF ]
-[e $UE 3363  ]
-"381
-[; ;../src/boards/MEZ180_sd.c: 381: }
-[e :UE 3363 ]
+[e $UE 3369  ]
+"345
+[; ;../src/boards/MEZ180_sd.c: 345: }
+[e :UE 3369 ]
 }
-"383
-[; ;../src/boards/MEZ180_sd.c: 383: static void emuz80_47q_wait_io_event(void)
+"347
+[; ;../src/boards/MEZ180_sd.c: 347: static void emuz80_47q_wait_io_event(void)
 [v _emuz80_47q_wait_io_event `(v ~T0 @X0 1 sf ]
-"384
-[; ;../src/boards/MEZ180_sd.c: 384: {
+"348
+[; ;../src/boards/MEZ180_sd.c: 348: {
 {
 [e :U _emuz80_47q_wait_io_event ]
 [f ]
-"385
-[; ;../src/boards/MEZ180_sd.c: 385:     while (!CLC3IF && !invoke_monitor);
-[e $U 3365  ]
-[e :U 3366 ]
-[e :U 3365 ]
-[e $ && ! _CLC3IF ! != _invoke_monitor -> 0 `i 3366  ]
-[e :U 3367 ]
-"386
-[; ;../src/boards/MEZ180_sd.c: 386: }
-[e :UE 3364 ]
+"349
+[; ;../src/boards/MEZ180_sd.c: 349:     while (!CLC3IF && !invoke_monitor);
+[e $U 3371  ]
+[e :U 3372 ]
+[e :U 3371 ]
+[e $ && ! _CLC3IF ! != _invoke_monitor -> 0 `i 3372  ]
+[e :U 3373 ]
+"350
+[; ;../src/boards/MEZ180_sd.c: 350: }
+[e :UE 3370 ]
 }
-"388
-[; ;../src/boards/MEZ180_sd.c: 388: static void emuz80_47q_clear_io_event(void)
+"352
+[; ;../src/boards/MEZ180_sd.c: 352: static void emuz80_47q_clear_io_event(void)
 [v _emuz80_47q_clear_io_event `(v ~T0 @X0 1 sf ]
-"389
-[; ;../src/boards/MEZ180_sd.c: 389: {
+"353
+[; ;../src/boards/MEZ180_sd.c: 353: {
 {
 [e :U _emuz80_47q_clear_io_event ]
 [f ]
-"390
-[; ;../src/boards/MEZ180_sd.c: 390:     CLC3IF = 0;
+"354
+[; ;../src/boards/MEZ180_sd.c: 354:     CLC3IF = 0;
 [e = _CLC3IF -> -> 0 `i `b ]
-"391
-[; ;../src/boards/MEZ180_sd.c: 391: }
-[e :UE 3368 ]
+"355
+[; ;../src/boards/MEZ180_sd.c: 355: }
+[e :UE 3374 ]
 }
-"393
-[; ;../src/boards/MEZ180_sd.c: 393: void board_init()
+"357
+[; ;../src/boards/MEZ180_sd.c: 357: void board_init()
 [v _board_init `(v ~T0 @X0 1 ef ]
-"394
-[; ;../src/boards/MEZ180_sd.c: 394: {
+"358
+[; ;../src/boards/MEZ180_sd.c: 358: {
 {
 [e :U _board_init ]
 [f ]
-"395
-[; ;../src/boards/MEZ180_sd.c: 395:     emuz80_common_init();
+"359
+[; ;../src/boards/MEZ180_sd.c: 359:     emuz80_common_init();
 [e ( _emuz80_common_init ..  ]
-"397
-[; ;../src/boards/MEZ180_sd.c: 397:     board_name_hook = emuz80_47q_name;
-[e = _board_name_hook -> &U _emuz80_47q_name `*F23882 ]
-"398
-[; ;../src/boards/MEZ180_sd.c: 398:     board_sys_init_hook = emuz80_47q_sys_init;
-[e = _board_sys_init_hook -> &U _emuz80_47q_sys_init `*F23885 ]
-"399
-[; ;../src/boards/MEZ180_sd.c: 399:     board_bus_master_hook = emuz80_47q_bus_master;
+"361
+[; ;../src/boards/MEZ180_sd.c: 361:     board_name_hook = emuz80_47q_name;
+[e = _board_name_hook -> &U _emuz80_47q_name `*F23881 ]
+"362
+[; ;../src/boards/MEZ180_sd.c: 362:     board_sys_init_hook = emuz80_47q_sys_init;
+[e = _board_sys_init_hook -> &U _emuz80_47q_sys_init `*F23884 ]
+"363
+[; ;../src/boards/MEZ180_sd.c: 363:     board_bus_master_hook = emuz80_47q_bus_master;
 [e = _board_bus_master_hook &U _emuz80_47q_bus_master ]
-"400
-[; ;../src/boards/MEZ180_sd.c: 400:     board_start_z80_hook = emuz80_47q_start_z80;
+"364
+[; ;../src/boards/MEZ180_sd.c: 364:     board_start_z80_hook = emuz80_47q_start_z80;
 [e = _board_start_z80_hook &U _emuz80_47q_start_z80 ]
-"401
-[; ;../src/boards/MEZ180_sd.c: 401:     board_set_bank_pins_hook = emuz80_47q_set_bank_pins;
+"365
+[; ;../src/boards/MEZ180_sd.c: 365:     board_set_bank_pins_hook = emuz80_47q_set_bank_pins;
 [e = _board_set_bank_pins_hook &U _emuz80_47q_set_bank_pins ]
-"402
-[; ;../src/boards/MEZ180_sd.c: 402:     board_setup_addrbus_hook = emuz80_47q_setup_addrbus;
+"366
+[; ;../src/boards/MEZ180_sd.c: 366:     board_setup_addrbus_hook = emuz80_47q_setup_addrbus;
 [e = _board_setup_addrbus_hook &U _emuz80_47q_setup_addrbus ]
-"403
-[; ;../src/boards/MEZ180_sd.c: 403:     board_io_event_hook = emuz80_47q_io_event;
+"367
+[; ;../src/boards/MEZ180_sd.c: 367:     board_io_event_hook = emuz80_47q_io_event;
 [e = _board_io_event_hook &U _emuz80_47q_io_event ]
-"404
-[; ;../src/boards/MEZ180_sd.c: 404:     board_wait_io_event_hook = emuz80_47q_wait_io_event;
+"368
+[; ;../src/boards/MEZ180_sd.c: 368:     board_wait_io_event_hook = emuz80_47q_wait_io_event;
 [e = _board_wait_io_event_hook &U _emuz80_47q_wait_io_event ]
-"405
-[; ;../src/boards/MEZ180_sd.c: 405:     board_clear_io_event_hook = emuz80_47q_clear_io_event;
+"369
+[; ;../src/boards/MEZ180_sd.c: 369:     board_clear_io_event_hook = emuz80_47q_clear_io_event;
 [e = _board_clear_io_event_hook &U _emuz80_47q_clear_io_event ]
-"407
-[; ;../src/boards/MEZ180_sd.c: 407:     board_set_wait_pin_hook = emuz80_47q_set_wait_pin;
+"371
+[; ;../src/boards/MEZ180_sd.c: 371:     board_set_wait_pin_hook = emuz80_47q_set_wait_pin;
 [e = _board_set_wait_pin_hook &U _emuz80_47q_set_wait_pin ]
-"408
-[; ;../src/boards/MEZ180_sd.c: 408: }
-[e :UE 3369 ]
+"372
+[; ;../src/boards/MEZ180_sd.c: 372: }
+[e :UE 3375 ]
 }
 "37 ../src/boards/../../drivers/pic18f47q43_spi.c
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 37: static struct SPI_HW pic18f47q43_spi_ctx = { 0 };
-[v _pic18f47q43_spi_ctx `S3370 ~T0 @X0 1 s ]
+[v _pic18f47q43_spi_ctx `S3376 ~T0 @X0 1 s ]
 [i _pic18f47q43_spi_ctx
 :U ..
 :U ..
@@ -5480,11 +5492,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "44
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 44:     struct SPI_HW *ctx = (struct SPI_HW *)ctx_;
-[v _ctx `*S3370 ~T0 @X0 1 a ]
-[e = _ctx -> _ctx_ `*S3370 ]
+[v _ctx `*S3376 ~T0 @X0 1 a ]
+[e = _ctx -> _ctx_ `*S3376 ]
 "45
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 45:     if (ctx->bus_acquired == 0) {
-[e $ ! == -> . *U _ctx 1 `i -> 0 `i 3372  ]
+[e $ ! == -> . *U _ctx 1 `i -> 0 `i 3378  ]
 {
 "46
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 46:         RC1PPS = 0x31;
@@ -5507,13 +5519,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "54
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 54:     }
 }
-[e :U 3372 ]
+[e :U 3378 ]
 "55
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 55:     ctx->bus_acquired++;
 [e ++ . *U _ctx 1 -> -> 1 `i `uc ]
 "56
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 56: }
-[e :UE 3371 ]
+[e :UE 3377 ]
 }
 "58
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 58: static void release_bus(struct SPI *ctx_)
@@ -5530,11 +5542,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "60
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 60:     struct SPI_HW *ctx = (struct SPI_HW *)ctx_;
-[v _ctx `*S3370 ~T0 @X0 1 a ]
-[e = _ctx -> _ctx_ `*S3370 ]
+[v _ctx `*S3376 ~T0 @X0 1 a ]
+[e = _ctx -> _ctx_ `*S3376 ]
 "61
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 61:     if (--ctx->bus_acquired <= 0) {
-[e $ ! <= -> =- . *U _ctx 1 -> -> 1 `i `uc `i -> 0 `i 3374  ]
+[e $ ! <= -> =- . *U _ctx 1 -> -> 1 `i `uc `i -> 0 `i 3380  ]
 {
 "62
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 62:         RC1PPS = 0x00;
@@ -5548,10 +5560,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "65
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 65:     }
 }
-[e :U 3374 ]
+[e :U 3380 ]
 "66
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 66: }
-[e :UE 3373 ]
+[e :UE 3379 ]
 }
 "68
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 68: void SPI_SD_begin(struct SPI *ctx_)
@@ -5568,8 +5580,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "70
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 70:     struct SPI_HW *ctx = (struct SPI_HW *)ctx_;
-[v _ctx `*S3370 ~T0 @X0 1 a ]
-[e = _ctx -> _ctx_ `*S3370 ]
+[v _ctx `*S3376 ~T0 @X0 1 a ]
+[e = _ctx -> _ctx_ `*S3376 ]
 "71
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 71:     ctx->bus_acquired = 0;
 [e = . *U _ctx 1 -> -> 0 `i `uc ]
@@ -5599,7 +5611,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SPI1CON0bits 0 4 -> -> 1 `i `uc ]
 "86
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 86: }
-[e :UE 3375 ]
+[e :UE 3381 ]
 }
 "88
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 88: void SPI_SD_configure(struct SPI *ctx_, int clock_speed, uint8_t bit_order, uint8_t data_mode)
@@ -5619,8 +5631,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "90
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 90:     struct SPI_HW *ctx = (struct SPI_HW *)ctx_;
-[v _ctx `*S3370 ~T0 @X0 1 a ]
-[e = _ctx -> _ctx_ `*S3370 ]
+[v _ctx `*S3376 ~T0 @X0 1 a ]
+[e = _ctx -> _ctx_ `*S3376 ]
 "92
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 92:     SPI1CON0bits.MST = 1;
 [e = . . _SPI1CON0bits 0 1 -> -> 1 `i `uc ]
@@ -5644,21 +5656,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _SPI1CON2bits 0 0 -> -> 1 `i `uc ]
 "100
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 100:     if (bit_order == 1)
-[e $ ! == -> _bit_order `i -> 1 `i 3377  ]
+[e $ ! == -> _bit_order `i -> 1 `i 3383  ]
 "101
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 101:         SPI1CON0bits.LSBF = 0;
 [e = . . _SPI1CON0bits 0 2 -> -> 0 `i `uc ]
-[e $U 3378  ]
+[e $U 3384  ]
 "102
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 102:     else
-[e :U 3377 ]
+[e :U 3383 ]
 "103
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 103:         SPI1CON0bits.LSBF = 1;
 [e = . . _SPI1CON0bits 0 2 -> -> 1 `i `uc ]
-[e :U 3378 ]
+[e :U 3384 ]
 "105
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 105:     if (data_mode == 0) {
-[e $ ! == -> _data_mode `i -> 0 `i 3379  ]
+[e $ ! == -> _data_mode `i -> 0 `i 3385  ]
 {
 "106
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 106:         SPI1CON1bits.SMP = 0;
@@ -5672,32 +5684,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "109
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 109:     } else {
 }
-[e $U 3380  ]
-[e :U 3379 ]
+[e $U 3386  ]
+[e :U 3385 ]
 {
 "110
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 110:         printf("%s: ERROR: mode %d is not supported\n\r", __func__, data_mode);
 [e ( _printf , , (. :s 7C :s 8C -> _data_mode `i ]
 "111
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 111:         while (1);
-[e :U 3382 ]
-[e :U 3381 ]
-[e $U 3382  ]
-[e :U 3383 ]
+[e :U 3388 ]
+[e :U 3387 ]
+[e $U 3388  ]
+[e :U 3389 ]
 "112
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 112:     }
 }
-[e :U 3380 ]
+[e :U 3386 ]
 "114
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 114:     SPI1CLK = 0;
 [e = _SPI1CLK -> -> 0 `i `uc ]
 "115
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 115:     switch (clock_speed) {
-[e $U 3385  ]
+[e $U 3391  ]
 {
 "116
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 116:     case SPI_CLOCK_100KHZ:
-[e :U 3386 ]
+[e :U 3392 ]
 "117
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 117:         SPI1CLK = 2;
 [e = _SPI1CLK -> -> 2 `i `uc ]
@@ -5706,87 +5718,87 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1BAUD -> -> 2 `i `uc ]
 "119
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 119:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "120
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 120:     case SPI_CLOCK_2MHZ:
-[e :U 3387 ]
+[e :U 3393 ]
 "121
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 121:         SPI1BAUD = 15;
 [e = _SPI1BAUD -> -> 15 `i `uc ]
 "122
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 122:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "123
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 123:     case SPI_CLOCK_4MHZ:
-[e :U 3388 ]
+[e :U 3394 ]
 "124
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 124:         SPI1BAUD = 7;
 [e = _SPI1BAUD -> -> 7 `i `uc ]
 "125
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 125:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "126
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 126:     case SPI_CLOCK_5MHZ:
-[e :U 3389 ]
+[e :U 3395 ]
 "127
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 127:         SPI1BAUD = 5;
 [e = _SPI1BAUD -> -> 5 `i `uc ]
 "128
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 128:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "129
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 129:     case SPI_CLOCK_6MHZ:
-[e :U 3390 ]
+[e :U 3396 ]
 "130
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 130:         SPI1BAUD = 4;
 [e = _SPI1BAUD -> -> 4 `i `uc ]
 "131
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 131:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "132
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 132:     case SPI_CLOCK_8MHZ:
-[e :U 3391 ]
+[e :U 3397 ]
 "133
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 133:         SPI1BAUD = 3;
 [e = _SPI1BAUD -> -> 3 `i `uc ]
 "134
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 134:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "135
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 135:     case SPI_CLOCK_10MHZ:
-[e :U 3392 ]
+[e :U 3398 ]
 "136
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 136:         SPI1BAUD = 2;
 [e = _SPI1BAUD -> -> 2 `i `uc ]
 "137
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 137:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "138
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 138:     default:
-[e :U 3393 ]
+[e :U 3399 ]
 "139
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 139:         printf("%s: ERROR: clock speed %d is not supported\n\r", __func__, clock_speed);
 [e ( _printf , , (. :s 9C :s 10C _clock_speed ]
 "140
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 140:         break;
-[e $U 3384  ]
+[e $U 3390  ]
 "141
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 141:     }
 }
-[e $U 3384  ]
-[e :U 3385 ]
-[e [\ _clock_speed , $ . `E23712 0 3386
- , $ . `E23712 1 3387
- , $ . `E23712 2 3388
- , $ . `E23712 3 3389
- , $ . `E23712 4 3390
- , $ . `E23712 5 3391
- , $ . `E23712 6 3392
- 3393 ]
-[e :U 3384 ]
+[e $U 3390  ]
+[e :U 3391 ]
+[e [\ _clock_speed , $ . `E23712 0 3392
+ , $ . `E23712 1 3393
+ , $ . `E23712 2 3394
+ , $ . `E23712 3 3395
+ , $ . `E23712 4 3396
+ , $ . `E23712 5 3397
+ , $ . `E23712 6 3398
+ 3399 ]
+[e :U 3390 ]
 "142
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 142: }
-[e :UE 3376 ]
+[e :UE 3382 ]
 }
 "144
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 144: void SPI_SD_begin_transaction(struct SPI *ctx_)
@@ -5809,7 +5821,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SPI_SD_select (2 , _ctx_ -> 1 `i ]
 "148
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 148: }
-[e :UE 3394 ]
+[e :UE 3400 ]
 }
 "150
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 150: void SPI_SD_end_transaction(struct SPI *ctx_)
@@ -5832,7 +5844,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _release_bus (1 _ctx_ ]
 "154
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 154: }
-[e :UE 3395 ]
+[e :UE 3401 ]
 }
 "156
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 156: uint8_t SPI_SD_transfer_byte(struct SPI *ctx_, uint8_t output)
@@ -5859,18 +5871,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB _output ]
 "161
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 161:     while(!SPI1RXIF);
-[e $U 3397  ]
-[e :U 3398 ]
-[e :U 3397 ]
-[e $ ! _SPI1RXIF 3398  ]
-[e :U 3399 ]
+[e $U 3403  ]
+[e :U 3404 ]
+[e :U 3403 ]
+[e $ ! _SPI1RXIF 3404  ]
+[e :U 3405 ]
 "162
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 162:     return SPI1RXB;
 [e ) _SPI1RXB ]
-[e $UE 3396  ]
+[e $UE 3402  ]
 "163
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 163: }
-[e :UE 3396 ]
+[e :UE 3402 ]
 }
 "165
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 165: void SPI_SD_transfer(struct SPI *ctx_, void *buf, unsigned int count)
@@ -5896,8 +5908,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 3404  ]
-[e :U 3401 ]
+[e $U 3410  ]
+[e :U 3407 ]
 {
 "169
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 169:         *p = SPI_SD_transfer_byte(ctx_, *p);
@@ -5909,13 +5921,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 171:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 3404 ]
-[e $ < -> _i `ui _count 3401  ]
-[e :U 3402 ]
+[e :U 3410 ]
+[e $ < -> _i `ui _count 3407  ]
+[e :U 3408 ]
 }
 "172
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 172: }
-[e :UE 3400 ]
+[e :UE 3406 ]
 }
 "174
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 174: void SPI_SD_send(struct SPI *ctx_, const void *buf, unsigned int count)
@@ -5941,11 +5953,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _dummy `uc ~T0 @X0 1 a ]
 "179
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 179:     if (count == 0)
-[e $ ! == _count -> -> 0 `i `ui 3406  ]
+[e $ ! == _count -> -> 0 `i `ui 3412  ]
 "180
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 180:         return;
-[e $UE 3405  ]
-[e :U 3406 ]
+[e $UE 3411  ]
+[e :U 3412 ]
 "182
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 182:     SPI1TCNTH = (count >> 8);
 [e = _SPI1TCNTH -> >> _count -> 8 `i `uc ]
@@ -5960,19 +5972,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 1 `i ]
-[e $U 3410  ]
-[e :U 3407 ]
+[e $U 3416  ]
+[e :U 3413 ]
 {
 "187
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 187:         SPI1TXB = *p++;
 [e = _SPI1TXB *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x ]
 "188
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 188:         while(!SPI1RXIF);
-[e $U 3411  ]
-[e :U 3412 ]
-[e :U 3411 ]
-[e $ ! _SPI1RXIF 3412  ]
-[e :U 3413 ]
+[e $U 3417  ]
+[e :U 3418 ]
+[e :U 3417 ]
+[e $ ! _SPI1RXIF 3418  ]
+[e :U 3419 ]
 "189
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 189:         dummy = SPI1RXB;
 [e = _dummy _SPI1RXB ]
@@ -5980,23 +5992,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 190:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 3410 ]
-[e $ < -> _i `ui _count 3407  ]
-[e :U 3408 ]
+[e :U 3416 ]
+[e $ < -> _i `ui _count 3413  ]
+[e :U 3414 ]
 }
 "191
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 191:     while(!SPI1RXIF);
-[e $U 3414  ]
-[e :U 3415 ]
-[e :U 3414 ]
-[e $ ! _SPI1RXIF 3415  ]
-[e :U 3416 ]
+[e $U 3420  ]
+[e :U 3421 ]
+[e :U 3420 ]
+[e $ ! _SPI1RXIF 3421  ]
+[e :U 3422 ]
 "192
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 192:     dummy = SPI1RXB;
 [e = _dummy _SPI1RXB ]
 "193
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 193: }
-[e :UE 3405 ]
+[e :UE 3411 ]
 }
 "195
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 195: void SPI_SD_receive(struct SPI *ctx_, void *buf, unsigned int count)
@@ -6019,11 +6031,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _p -> _buf `*uc ]
 "199
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 199:     if (count == 0)
-[e $ ! == _count -> -> 0 `i `ui 3418  ]
+[e $ ! == _count -> -> 0 `i `ui 3424  ]
 "200
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 200:         return;
-[e $UE 3417  ]
-[e :U 3418 ]
+[e $UE 3423  ]
+[e :U 3424 ]
 "202
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 202:     SPI1TCNTH = (count >> 8);
 [e = _SPI1TCNTH -> >> _count -> 8 `i `uc ]
@@ -6032,7 +6044,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TCNTL -> & _count -> -> 255 `i `ui `uc ]
 "205
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 205:     if ((count & 0x07) || 255 < count / 8) {
-[e $ ! || != & _count -> -> 7 `i `ui -> -> 0 `i `ui < -> -> 255 `i `ui / _count -> -> 8 `i `ui 3419  ]
+[e $ ! || != & _count -> -> 7 `i `ui -> -> 0 `i `ui < -> -> 255 `i `ui / _count -> -> 8 `i `ui 3425  ]
 {
 "206
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 206:         SPI1TXB = 0xff;
@@ -6042,19 +6054,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 1 `i ]
-[e $U 3423  ]
-[e :U 3420 ]
+[e $U 3429  ]
+[e :U 3426 ]
 {
 "208
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 208:             SPI1TXB = 0xff;
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "209
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 209:             while(!SPI1RXIF);
-[e $U 3424  ]
-[e :U 3425 ]
-[e :U 3424 ]
-[e $ ! _SPI1RXIF 3425  ]
-[e :U 3426 ]
+[e $U 3430  ]
+[e :U 3431 ]
+[e :U 3430 ]
+[e $ ! _SPI1RXIF 3431  ]
+[e :U 3432 ]
 "210
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 210:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6062,25 +6074,25 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 211:         }
 }
 [e ++ _i -> 1 `i ]
-[e :U 3423 ]
-[e $ < -> _i `ui _count 3420  ]
-[e :U 3421 ]
+[e :U 3429 ]
+[e $ < -> _i `ui _count 3426  ]
+[e :U 3427 ]
 }
 "212
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 212:         while(!SPI1RXIF);
-[e $U 3427  ]
-[e :U 3428 ]
-[e :U 3427 ]
-[e $ ! _SPI1RXIF 3428  ]
-[e :U 3429 ]
+[e $U 3433  ]
+[e :U 3434 ]
+[e :U 3433 ]
+[e $ ! _SPI1RXIF 3434  ]
+[e :U 3435 ]
 "213
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 213:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
 "214
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 214:     } else {
 }
-[e $U 3430  ]
-[e :U 3419 ]
+[e $U 3436  ]
+[e :U 3425 ]
 {
 "215
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 215:         SPI1TXB = 0xff;
@@ -6090,11 +6102,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "217
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 217:         while(!SPI1RXIF);
-[e $U 3431  ]
-[e :U 3432 ]
-[e :U 3431 ]
-[e $ ! _SPI1RXIF 3432  ]
-[e :U 3433 ]
+[e $U 3437  ]
+[e :U 3438 ]
+[e :U 3437 ]
+[e $ ! _SPI1RXIF 3438  ]
+[e :U 3439 ]
 "218
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 218:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6103,11 +6115,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "220
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 220:         while(!SPI1RXIF);
-[e $U 3434  ]
-[e :U 3435 ]
-[e :U 3434 ]
-[e $ ! _SPI1RXIF 3435  ]
-[e :U 3436 ]
+[e $U 3440  ]
+[e :U 3441 ]
+[e :U 3440 ]
+[e $ ! _SPI1RXIF 3441  ]
+[e :U 3442 ]
 "221
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 221:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6116,11 +6128,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "223
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 223:         while(!SPI1RXIF);
-[e $U 3437  ]
-[e :U 3438 ]
-[e :U 3437 ]
-[e $ ! _SPI1RXIF 3438  ]
-[e :U 3439 ]
+[e $U 3443  ]
+[e :U 3444 ]
+[e :U 3443 ]
+[e $ ! _SPI1RXIF 3444  ]
+[e :U 3445 ]
 "224
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 224:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6129,11 +6141,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "226
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 226:         while(!SPI1RXIF);
-[e $U 3440  ]
-[e :U 3441 ]
-[e :U 3440 ]
-[e $ ! _SPI1RXIF 3441  ]
-[e :U 3442 ]
+[e $U 3446  ]
+[e :U 3447 ]
+[e :U 3446 ]
+[e $ ! _SPI1RXIF 3447  ]
+[e :U 3448 ]
 "227
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 227:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6142,11 +6154,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "229
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 229:         while(!SPI1RXIF);
-[e $U 3443  ]
-[e :U 3444 ]
-[e :U 3443 ]
-[e $ ! _SPI1RXIF 3444  ]
-[e :U 3445 ]
+[e $U 3449  ]
+[e :U 3450 ]
+[e :U 3449 ]
+[e $ ! _SPI1RXIF 3450  ]
+[e :U 3451 ]
 "230
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 230:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6155,11 +6167,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "232
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 232:         while(!SPI1RXIF);
-[e $U 3446  ]
-[e :U 3447 ]
-[e :U 3446 ]
-[e $ ! _SPI1RXIF 3447  ]
-[e :U 3448 ]
+[e $U 3452  ]
+[e :U 3453 ]
+[e :U 3452 ]
+[e $ ! _SPI1RXIF 3453  ]
+[e :U 3454 ]
 "233
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 233:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6168,11 +6180,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "235
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 235:         while(!SPI1RXIF);
-[e $U 3449  ]
-[e :U 3450 ]
-[e :U 3449 ]
-[e $ ! _SPI1RXIF 3450  ]
-[e :U 3451 ]
+[e $U 3455  ]
+[e :U 3456 ]
+[e :U 3455 ]
+[e $ ! _SPI1RXIF 3456  ]
+[e :U 3457 ]
 "236
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 236:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6185,19 +6197,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 1 `i `uc ]
-[e $U 3455  ]
-[e :U 3452 ]
+[e $U 3461  ]
+[e :U 3458 ]
 {
 "239
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 239:             SPI1TXB = 0xff;
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "240
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 240:             while(!SPI1RXIF);
-[e $U 3456  ]
-[e :U 3457 ]
-[e :U 3456 ]
-[e $ ! _SPI1RXIF 3457  ]
-[e :U 3458 ]
+[e $U 3462  ]
+[e :U 3463 ]
+[e :U 3462 ]
+[e $ ! _SPI1RXIF 3463  ]
+[e :U 3464 ]
 "241
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 241:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6206,11 +6218,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "243
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 243:             while(!SPI1RXIF);
-[e $U 3459  ]
-[e :U 3460 ]
-[e :U 3459 ]
-[e $ ! _SPI1RXIF 3460  ]
-[e :U 3461 ]
+[e $U 3465  ]
+[e :U 3466 ]
+[e :U 3465 ]
+[e $ ! _SPI1RXIF 3466  ]
+[e :U 3467 ]
 "244
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 244:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6219,11 +6231,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "246
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 246:             while(!SPI1RXIF);
-[e $U 3462  ]
-[e :U 3463 ]
-[e :U 3462 ]
-[e $ ! _SPI1RXIF 3463  ]
-[e :U 3464 ]
+[e $U 3468  ]
+[e :U 3469 ]
+[e :U 3468 ]
+[e $ ! _SPI1RXIF 3469  ]
+[e :U 3470 ]
 "247
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 247:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6232,11 +6244,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "249
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 249:             while(!SPI1RXIF);
-[e $U 3465  ]
-[e :U 3466 ]
-[e :U 3465 ]
-[e $ ! _SPI1RXIF 3466  ]
-[e :U 3467 ]
+[e $U 3471  ]
+[e :U 3472 ]
+[e :U 3471 ]
+[e $ ! _SPI1RXIF 3472  ]
+[e :U 3473 ]
 "250
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 250:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6245,11 +6257,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "252
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 252:             while(!SPI1RXIF);
-[e $U 3468  ]
-[e :U 3469 ]
-[e :U 3468 ]
-[e $ ! _SPI1RXIF 3469  ]
-[e :U 3470 ]
+[e $U 3474  ]
+[e :U 3475 ]
+[e :U 3474 ]
+[e $ ! _SPI1RXIF 3475  ]
+[e :U 3476 ]
 "253
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 253:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6258,11 +6270,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "255
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 255:             while(!SPI1RXIF);
-[e $U 3471  ]
-[e :U 3472 ]
-[e :U 3471 ]
-[e $ ! _SPI1RXIF 3472  ]
-[e :U 3473 ]
+[e $U 3477  ]
+[e :U 3478 ]
+[e :U 3477 ]
+[e $ ! _SPI1RXIF 3478  ]
+[e :U 3479 ]
 "256
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 256:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6271,11 +6283,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "258
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 258:             while(!SPI1RXIF);
-[e $U 3474  ]
-[e :U 3475 ]
-[e :U 3474 ]
-[e $ ! _SPI1RXIF 3475  ]
-[e :U 3476 ]
+[e $U 3480  ]
+[e :U 3481 ]
+[e :U 3480 ]
+[e $ ! _SPI1RXIF 3481  ]
+[e :U 3482 ]
 "259
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 259:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6284,11 +6296,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SPI1TXB -> -> 255 `i `uc ]
 "261
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 261:             while(!SPI1RXIF);
-[e $U 3477  ]
-[e :U 3478 ]
-[e :U 3477 ]
-[e $ ! _SPI1RXIF 3478  ]
-[e :U 3479 ]
+[e $U 3483  ]
+[e :U 3484 ]
+[e :U 3483 ]
+[e $ ! _SPI1RXIF 3484  ]
+[e :U 3485 ]
 "262
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 262:             *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
@@ -6296,27 +6308,27 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 263:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 3455 ]
-[e $ < -> _i `i -> _repeat `i 3452  ]
-[e :U 3453 ]
+[e :U 3461 ]
+[e $ < -> _i `i -> _repeat `i 3458  ]
+[e :U 3459 ]
 }
 "264
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 264:         while(!SPI1RXIF);
-[e $U 3480  ]
-[e :U 3481 ]
-[e :U 3480 ]
-[e $ ! _SPI1RXIF 3481  ]
-[e :U 3482 ]
+[e $U 3486  ]
+[e :U 3487 ]
+[e :U 3486 ]
+[e $ ! _SPI1RXIF 3487  ]
+[e :U 3488 ]
 "265
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 265:         *p++ = SPI1RXB;
 [e = *U ++ _p * -> -> 1 `i `x -> -> # *U _p `i `x _SPI1RXB ]
 "266
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 266:     }
 }
-[e :U 3430 ]
+[e :U 3436 ]
 "267
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 267: }
-[e :UE 3417 ]
+[e :UE 3423 ]
 }
 "269
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 269: void SPI_SD_dummy_clocks(struct SPI *ctx_, unsigned int clocks)
@@ -6344,8 +6356,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 3487  ]
-[e :U 3484 ]
+[e $U 3493  ]
+[e :U 3490 ]
 {
 "274
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 274:         SPI_SD_send(ctx_, &dummy, 1);
@@ -6354,16 +6366,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 275:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 3487 ]
-[e $ < -> _i `ui _clocks 3484  ]
-[e :U 3485 ]
+[e :U 3493 ]
+[e $ < -> _i `ui _clocks 3490  ]
+[e :U 3491 ]
 }
 "276
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 276:     release_bus(ctx_);
 [e ( _release_bus (1 _ctx_ ]
 "277
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 277: }
-[e :UE 3483 ]
+[e :UE 3489 ]
 }
 "279
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 279: uint8_t SPI_SD_receive_byte(struct SPI *ctx_)
@@ -6388,10 +6400,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "283
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 283:     return dummy;
 [e ) _dummy ]
-[e $UE 3488  ]
+[e $UE 3494  ]
 "284
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 284: }
-[e :UE 3488 ]
+[e :UE 3494 ]
 }
 "286
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 286: void SPI_SD_select(struct SPI *ctx_, int select)
@@ -6412,7 +6424,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _LATA1 -> ? != _select -> 0 `i : -> 0 `i -> 1 `i `b ]
 "294
 [; ;../src/boards/../../drivers/pic18f47q43_spi.c: 294: }
-[e :UE 3489 ]
+[e :UE 3495 ]
 }
 "31 ../src/boards/../../drivers/SDCard.c
 [; ;../src/boards/../../drivers/SDCard.c: 31: static int debug_flags = 0;
@@ -6422,7 +6434,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 "44
 [; ;../src/boards/../../drivers/SDCard.c: 44: } ctx_ = { 0 };
-[v _ctx_ `S3490 ~T0 @X0 1 s ]
+[v _ctx_ `S3496 ~T0 @X0 1 s ]
 [i _ctx_
 :U ..
 :U ..
@@ -6450,7 +6462,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SPI_SD_dummy_clocks (2 , _spi -> -> 1 `i `ui ]
 "51
 [; ;../src/boards/../../drivers/SDCard.c: 51: }
-[e :UE 3491 ]
+[e :UE 3497 ]
 }
 "53
 [; ;../src/boards/../../drivers/SDCard.c: 53: int SDCard_init(int initial_clock_speed, int clock_speed, uint16_t timeout)
@@ -6488,13 +6500,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _buf `uc ~T0 @X0 -> 5 `i a ]
 "62
 [; ;../src/boards/../../drivers/SDCard.c: 62:     do { if (debug_flags) printf ("\n\rSD Card: initialize ...\n\r"); } while(0);
-[e :U 3495 ]
+[e :U 3501 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3496  ]
+[e $ ! != _debug_flags -> 0 `i 3502  ]
 [e ( _printf :s 11C ]
-[e :U 3496 ]
+[e :U 3502 ]
 }
-[e :U 3494 ]
+[e :U 3500 ]
 "64
 [; ;../src/boards/../../drivers/SDCard.c: 64:     SPI_SD_configure(spi, initial_clock_speed, 1, 0);
 [e ( _SPI_SD_configure (4 , , , _spi _initial_clock_speed -> -> 1 `i `uc -> -> 0 `i `uc ]
@@ -6512,75 +6524,75 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SDCard_command (4 , , , -> -> 0 `i `uc -> -> -> 0 `i `l `ul -> &U _buf `*v -> -> 1 `i `ui ]
 "71
 [; ;../src/boards/../../drivers/SDCard.c: 71:     do { if (debug_flags) printf ("SD Card: CMD0, R1=%02x\n\r", buf[0]); } while(0);
-[e :U 3499 ]
+[e :U 3505 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3500  ]
+[e $ ! != _debug_flags -> 0 `i 3506  ]
 [e ( _printf , (. :s 12C -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i ]
-[e :U 3500 ]
+[e :U 3506 ]
 }
-[e :U 3498 ]
+[e :U 3504 ]
 "72
 [; ;../src/boards/../../drivers/SDCard.c: 72:     if (buf[0] != 0x01) {
-[e $ ! != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 1 `i 3501  ]
+[e $ ! != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 1 `i 3507  ]
 {
 "73
 [; ;../src/boards/../../drivers/SDCard.c: 73:         do { if (debug_flags) printf ("SD Card: timeout\n\r"); } while(0);
-[e :U 3504 ]
+[e :U 3510 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3505  ]
+[e $ ! != _debug_flags -> 0 `i 3511  ]
 [e ( _printf :s 13C ]
-[e :U 3505 ]
+[e :U 3511 ]
 }
-[e :U 3503 ]
+[e :U 3509 ]
 "74
 [; ;../src/boards/../../drivers/SDCard.c: 74:         return 1;
 [e ) -> 1 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "75
 [; ;../src/boards/../../drivers/SDCard.c: 75:     }
 }
-[e :U 3501 ]
+[e :U 3507 ]
 "78
 [; ;../src/boards/../../drivers/SDCard.c: 78:     SDCard_command(8, 0x000001aa, buf, 5);
 [e ( _SDCard_command (4 , , , -> -> 8 `i `uc -> -> -> 426 `i `l `ul -> &U _buf `*v -> -> 5 `i `ui ]
 "79
 [; ;../src/boards/../../drivers/SDCard.c: 79:     do { if (debug_flags) printf ("SD Card: CMD8, R7=%02x %02x %02x %02x %02x\n\r", buf[0], buf[1], buf[2], buf[3], buf[4]); } while(0);
-[e :U 3508 ]
+[e :U 3514 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3509  ]
+[e $ ! != _debug_flags -> 0 `i 3515  ]
 [e ( _printf , , , , , (. :s 14C -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 2 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 3 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 4 `i `ui `ux -> -> # *U &U _buf `ui `ux `i ]
-[e :U 3509 ]
+[e :U 3515 ]
 }
-[e :U 3507 ]
+[e :U 3513 ]
 "81
 [; ;../src/boards/../../drivers/SDCard.c: 81:     if (buf[0] != 0x01 || (buf[3] & 0x01) != 0x01 || buf[4] != 0xaa) {
-[e $ ! || || != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 1 `i != & -> *U + &U _buf * -> -> -> 3 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 1 `i -> 1 `i != -> *U + &U _buf * -> -> -> 4 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 170 `i 3510  ]
+[e $ ! || || != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 1 `i != & -> *U + &U _buf * -> -> -> 3 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 1 `i -> 1 `i != -> *U + &U _buf * -> -> -> 4 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 170 `i 3516  ]
 {
 "82
 [; ;../src/boards/../../drivers/SDCard.c: 82:         do { if (debug_flags) printf ("SD Card: not supoprted\n\r"); } while(0);
-[e :U 3513 ]
+[e :U 3519 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3514  ]
+[e $ ! != _debug_flags -> 0 `i 3520  ]
 [e ( _printf :s 15C ]
-[e :U 3514 ]
+[e :U 3520 ]
 }
-[e :U 3512 ]
+[e :U 3518 ]
 "83
 [; ;../src/boards/../../drivers/SDCard.c: 83:         return 2;
 [e ) -> 2 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "84
 [; ;../src/boards/../../drivers/SDCard.c: 84:     }
 }
-[e :U 3510 ]
+[e :U 3516 ]
 "87
 [; ;../src/boards/../../drivers/SDCard.c: 87:     for (int i = 0; i < 3000; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 3000 `i 3515  ]
-[e $U 3516  ]
-[e :U 3515 ]
+[e $ < _i -> 3000 `i 3521  ]
+[e $U 3522  ]
+[e :U 3521 ]
 {
 "88
 [; ;../src/boards/../../drivers/SDCard.c: 88:         SDCard_command(55, 0, buf, 1);
@@ -6590,184 +6602,184 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SDCard_command (4 , , , -> -> 41 `i `uc << -> 1 `ul -> 30 `i -> &U _buf `*v -> -> 5 `i `ui ]
 "90
 [; ;../src/boards/../../drivers/SDCard.c: 90:         if (buf[0] == 0x00)
-[e $ ! == -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 0 `i 3518  ]
+[e $ ! == -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 0 `i 3524  ]
 "91
 [; ;../src/boards/../../drivers/SDCard.c: 91:             break;
-[e $U 3516  ]
-[e :U 3518 ]
+[e $U 3522  ]
+[e :U 3524 ]
 "92
 [; ;../src/boards/../../drivers/SDCard.c: 92:     }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 3000 `i 3515  ]
-[e :U 3516 ]
+[e $ < _i -> 3000 `i 3521  ]
+[e :U 3522 ]
 }
 "93
 [; ;../src/boards/../../drivers/SDCard.c: 93:     do { if (debug_flags) printf ("SD Card: ACMD41, R1=%02x\n\r", buf[0]); } while(0);
-[e :U 3521 ]
+[e :U 3527 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3522  ]
+[e $ ! != _debug_flags -> 0 `i 3528  ]
 [e ( _printf , (. :s 16C -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i ]
-[e :U 3522 ]
+[e :U 3528 ]
 }
-[e :U 3520 ]
+[e :U 3526 ]
 "94
 [; ;../src/boards/../../drivers/SDCard.c: 94:     if (buf[0] != 0x00) {
-[e $ ! != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 0 `i 3523  ]
+[e $ ! != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 0 `i 3529  ]
 {
 "95
 [; ;../src/boards/../../drivers/SDCard.c: 95:         do { if (debug_flags) printf ("SD Card: ACMD41 response is %02x\n\r", buf[0]); } while(0);
-[e :U 3526 ]
+[e :U 3532 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3527  ]
+[e $ ! != _debug_flags -> 0 `i 3533  ]
 [e ( _printf , (. :s 17C -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i ]
-[e :U 3527 ]
+[e :U 3533 ]
 }
-[e :U 3525 ]
+[e :U 3531 ]
 "96
 [; ;../src/boards/../../drivers/SDCard.c: 96:         return 1;
 [e ) -> 1 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "97
 [; ;../src/boards/../../drivers/SDCard.c: 97:     }
 }
-[e :U 3523 ]
+[e :U 3529 ]
 "100
 [; ;../src/boards/../../drivers/SDCard.c: 100:     SDCard_command(58, 0, buf, 5);
 [e ( _SDCard_command (4 , , , -> -> 58 `i `uc -> -> -> 0 `i `l `ul -> &U _buf `*v -> -> 5 `i `ui ]
 "101
 [; ;../src/boards/../../drivers/SDCard.c: 101:     do { if (debug_flags) printf ("SD Card: CMD58, R3=%02x %02x %02x %02x %02x\n\r", buf[0], buf[1], buf[2], buf[3], buf[4]); } while(0);
-[e :U 3530 ]
+[e :U 3536 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3531  ]
+[e $ ! != _debug_flags -> 0 `i 3537  ]
 [e ( _printf , , , , , (. :s 18C -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 2 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 3 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> *U + &U _buf * -> -> -> 4 `i `ui `ux -> -> # *U &U _buf `ui `ux `i ]
-[e :U 3531 ]
+[e :U 3537 ]
 }
-[e :U 3529 ]
+[e :U 3535 ]
 "103
 [; ;../src/boards/../../drivers/SDCard.c: 103:     if (buf[0] & 0xfe) {
-[e $ ! != & -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 254 `i -> 0 `i 3532  ]
+[e $ ! != & -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 254 `i -> 0 `i 3538  ]
 {
 "104
 [; ;../src/boards/../../drivers/SDCard.c: 104:         do { if (debug_flags) printf ("SD Card: unexpected response %02x\n\r", buf[0]); } while(0);
-[e :U 3535 ]
+[e :U 3541 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3536  ]
+[e $ ! != _debug_flags -> 0 `i 3542  ]
 [e ( _printf , (. :s 19C -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i ]
-[e :U 3536 ]
+[e :U 3542 ]
 }
-[e :U 3534 ]
+[e :U 3540 ]
 "105
 [; ;../src/boards/../../drivers/SDCard.c: 105:         return 3;
 [e ) -> 3 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "106
 [; ;../src/boards/../../drivers/SDCard.c: 106:     }
 }
-[e :U 3532 ]
+[e :U 3538 ]
 "107
 [; ;../src/boards/../../drivers/SDCard.c: 107:     if (!(buf[1] & 0x40)) {
-[e $ ! ! != & -> *U + &U _buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 64 `i -> 0 `i 3537  ]
+[e $ ! ! != & -> *U + &U _buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 64 `i -> 0 `i 3543  ]
 {
 "108
 [; ;../src/boards/../../drivers/SDCard.c: 108:         do { if (debug_flags) printf ("SD Card: CCS (Card Capacity Status) is 0\n\r"); } while(0);
-[e :U 3540 ]
+[e :U 3546 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3541  ]
+[e $ ! != _debug_flags -> 0 `i 3547  ]
 [e ( _printf :s 20C ]
-[e :U 3541 ]
+[e :U 3547 ]
 }
-[e :U 3539 ]
+[e :U 3545 ]
 "109
 [; ;../src/boards/../../drivers/SDCard.c: 109:         return 2;
 [e ) -> 2 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "110
 [; ;../src/boards/../../drivers/SDCard.c: 110:     }
 }
-[e :U 3537 ]
+[e :U 3543 ]
 "111
 [; ;../src/boards/../../drivers/SDCard.c: 111:     do { if (debug_flags) printf ("SD Card: SDHC or SDXC card detected\n\r"); } while(0);
-[e :U 3544 ]
+[e :U 3550 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3545  ]
+[e $ ! != _debug_flags -> 0 `i 3551  ]
 [e ( _printf :s 21C ]
-[e :U 3545 ]
+[e :U 3551 ]
 }
-[e :U 3543 ]
+[e :U 3549 ]
 "113
 [; ;../src/boards/../../drivers/SDCard.c: 113:     if (!(buf[1] & 0x80)) {
-[e $ ! ! != & -> *U + &U _buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 128 `i -> 0 `i 3546  ]
+[e $ ! ! != & -> *U + &U _buf * -> -> -> 1 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 128 `i -> 0 `i 3552  ]
 {
 "114
 [; ;../src/boards/../../drivers/SDCard.c: 114:         do { if (debug_flags) printf ("SD Card: Card power up status bis is 0\n\r"); } while(0);
-[e :U 3549 ]
+[e :U 3555 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3550  ]
+[e $ ! != _debug_flags -> 0 `i 3556  ]
 [e ( _printf :s 22C ]
-[e :U 3550 ]
+[e :U 3556 ]
 }
-[e :U 3548 ]
+[e :U 3554 ]
 "115
 [; ;../src/boards/../../drivers/SDCard.c: 115:         return 3;
 [e ) -> 3 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "116
 [; ;../src/boards/../../drivers/SDCard.c: 116:     }
 }
-[e :U 3546 ]
+[e :U 3552 ]
 "117
 [; ;../src/boards/../../drivers/SDCard.c: 117:     do { if (debug_flags) printf ("SD Card: ready.\n\r"); } while(0);
-[e :U 3553 ]
+[e :U 3559 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3554  ]
+[e $ ! != _debug_flags -> 0 `i 3560  ]
 [e ( _printf :s 23C ]
-[e :U 3554 ]
+[e :U 3560 ]
 }
-[e :U 3552 ]
+[e :U 3558 ]
 "120
 [; ;../src/boards/../../drivers/SDCard.c: 120:     SDCard_command(59, 1, buf, 1);
 [e ( _SDCard_command (4 , , , -> -> 59 `i `uc -> -> -> 1 `i `l `ul -> &U _buf `*v -> -> 1 `i `ui ]
 "121
 [; ;../src/boards/../../drivers/SDCard.c: 121:     if (buf[0] != 0x00) {
-[e $ ! != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 0 `i 3555  ]
+[e $ ! != -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i -> 0 `i 3561  ]
 {
 "122
 [; ;../src/boards/../../drivers/SDCard.c: 122:         do { if (debug_flags) printf ("SD Card: CMD59 response is %02x\n\r", buf[0]); } while(0);
-[e :U 3558 ]
+[e :U 3564 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3559  ]
+[e $ ! != _debug_flags -> 0 `i 3565  ]
 [e ( _printf , (. :s 24C -> *U + &U _buf * -> -> -> 0 `i `ui `ux -> -> # *U &U _buf `ui `ux `i ]
-[e :U 3559 ]
+[e :U 3565 ]
 }
-[e :U 3557 ]
+[e :U 3563 ]
 "123
 [; ;../src/boards/../../drivers/SDCard.c: 123:         return 3;
 [e ) -> 3 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "124
 [; ;../src/boards/../../drivers/SDCard.c: 124:     }
 }
-[e :U 3555 ]
+[e :U 3561 ]
 "126
 [; ;../src/boards/../../drivers/SDCard.c: 126:     SPI_SD_configure(spi, clock_speed, 1, 0);
 [e ( _SPI_SD_configure (4 , , , _spi _clock_speed -> -> 1 `i `uc -> -> 0 `i `uc ]
 "128
 [; ;../src/boards/../../drivers/SDCard.c: 128:     do { if (debug_flags) printf ("SD Card: initialize ... succeeded\n\r"); } while(0);
-[e :U 3562 ]
+[e :U 3568 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3563  ]
+[e $ ! != _debug_flags -> 0 `i 3569  ]
 [e ( _printf :s 25C ]
-[e :U 3563 ]
+[e :U 3569 ]
 }
-[e :U 3561 ]
+[e :U 3567 ]
 "130
 [; ;../src/boards/../../drivers/SDCard.c: 130:     return 0;
 [e ) -> 0 `i ]
-[e $UE 3492  ]
+[e $UE 3498  ]
 "131
 [; ;../src/boards/../../drivers/SDCard.c: 131: }
-[e :UE 3492 ]
+[e :UE 3498 ]
 }
 "133
 [; ;../src/boards/../../drivers/SDCard.c: 133: static uint8_t __SDCard_wait_response(uint8_t no_response, unsigned int attempts)
@@ -6792,7 +6804,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _response `uc ~T0 @X0 1 a ]
 "137
 [; ;../src/boards/../../drivers/SDCard.c: 137:     do {
-[e :U 3567 ]
+[e :U 3573 ]
 {
 "138
 [; ;../src/boards/../../drivers/SDCard.c: 138:         response = SPI_SD_receive_byte(spi);
@@ -6800,15 +6812,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "139
 [; ;../src/boards/../../drivers/SDCard.c: 139:     } while ((response == no_response) && 0 < --attempts);
 }
-[e $ && == -> _response `i -> _no_response `i < -> -> 0 `i `ui =- _attempts -> -> 1 `i `ui 3567  ]
-[e :U 3566 ]
+[e $ && == -> _response `i -> _no_response `i < -> -> 0 `i `ui =- _attempts -> -> 1 `i `ui 3573  ]
+[e :U 3572 ]
 "140
 [; ;../src/boards/../../drivers/SDCard.c: 140:     return response;
 [e ) _response ]
-[e $UE 3564  ]
+[e $UE 3570  ]
 "141
 [; ;../src/boards/../../drivers/SDCard.c: 141: }
-[e :UE 3564 ]
+[e :UE 3570 ]
 }
 "143
 [; ;../src/boards/../../drivers/SDCard.c: 143: static int __SDCard_command_r1(uint8_t command, uint32_t argument, uint8_t *r1)
@@ -6870,23 +6882,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U _r1 _response ]
 "162
 [; ;../src/boards/../../drivers/SDCard.c: 162:     if (response == 0xff) {
-[e $ ! == -> _response `i -> 255 `i 3569  ]
+[e $ ! == -> _response `i -> 255 `i 3575  ]
 {
 "163
 [; ;../src/boards/../../drivers/SDCard.c: 163:         return 1;
 [e ) -> 1 `i ]
-[e $UE 3568  ]
+[e $UE 3574  ]
 "164
 [; ;../src/boards/../../drivers/SDCard.c: 164:     }
 }
-[e :U 3569 ]
+[e :U 3575 ]
 "166
 [; ;../src/boards/../../drivers/SDCard.c: 166:     return 0;
 [e ) -> 0 `i ]
-[e $UE 3568  ]
+[e $UE 3574  ]
 "167
 [; ;../src/boards/../../drivers/SDCard.c: 167: }
-[e :UE 3568 ]
+[e :UE 3574 ]
 }
 "169
 [; ;../src/boards/../../drivers/SDCard.c: 169: int SDCard_read512(uint32_t addr, unsigned int offs, void *buf, unsigned int count)
@@ -6924,75 +6936,75 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _retry -> 5 `i ]
 "177
 [; ;../src/boards/../../drivers/SDCard.c: 177:     do { if (debug_flags & (1 << 1)) printf ("SD Card:  read512: addr=%8ld, offs=%d, count=%d\n\r", addr, offs, count); } while(0);
-[e :U 3573 ]
+[e :U 3579 ]
 {
-[e $ ! != & _debug_flags << -> 1 `i -> 1 `i -> 0 `i 3574  ]
+[e $ ! != & _debug_flags << -> 1 `i -> 1 `i -> 0 `i 3580  ]
 [e ( _printf , , , (. :s 26C _addr _offs _count ]
-[e :U 3574 ]
+[e :U 3580 ]
 }
-[e :U 3572 ]
+[e :U 3578 ]
 "179
 [; ;../src/boards/../../drivers/SDCard.c: 179:  retry:
-[e :U 3575 ]
+[e :U 3581 ]
 "180
 [; ;../src/boards/../../drivers/SDCard.c: 180:     result = __SDCard_command_r1(17, addr, &response);
 [e = _result ( ___SDCard_command_r1 (3 , , -> -> 17 `i `uc _addr &U _response ]
 "181
 [; ;../src/boards/../../drivers/SDCard.c: 181:     if (result != 0) {
-[e $ ! != _result -> 0 `i 3576  ]
+[e $ ! != _result -> 0 `i 3582  ]
 {
 "182
 [; ;../src/boards/../../drivers/SDCard.c: 182:         goto done;
-[e $U 3577  ]
+[e $U 3583  ]
 "183
 [; ;../src/boards/../../drivers/SDCard.c: 183:     }
 }
-[e :U 3576 ]
+[e :U 3582 ]
 "184
 [; ;../src/boards/../../drivers/SDCard.c: 184:     if (response != 0) {
-[e $ ! != -> _response `i -> 0 `i 3578  ]
+[e $ ! != -> _response `i -> 0 `i 3584  ]
 {
 "185
 [; ;../src/boards/../../drivers/SDCard.c: 185:         result = 3;
 [e = _result -> 3 `i ]
 "186
 [; ;../src/boards/../../drivers/SDCard.c: 186:         goto done;
-[e $U 3577  ]
+[e $U 3583  ]
 "187
 [; ;../src/boards/../../drivers/SDCard.c: 187:     }
 }
-[e :U 3578 ]
+[e :U 3584 ]
 "189
 [; ;../src/boards/../../drivers/SDCard.c: 189:     response = __SDCard_wait_response(0xff, 3000);
 [e = _response ( ___SDCard_wait_response (2 , -> -> 255 `i `uc -> -> 3000 `i `ui ]
 "190
 [; ;../src/boards/../../drivers/SDCard.c: 190:     if (response == 0xff) {
-[e $ ! == -> _response `i -> 255 `i 3579  ]
+[e $ ! == -> _response `i -> 255 `i 3585  ]
 {
 "191
 [; ;../src/boards/../../drivers/SDCard.c: 191:         result = 1;
 [e = _result -> 1 `i ]
 "192
 [; ;../src/boards/../../drivers/SDCard.c: 192:         goto done;
-[e $U 3577  ]
+[e $U 3583  ]
 "193
 [; ;../src/boards/../../drivers/SDCard.c: 193:     }
 }
-[e :U 3579 ]
+[e :U 3585 ]
 "194
 [; ;../src/boards/../../drivers/SDCard.c: 194:     if (response != 0xfe) {
-[e $ ! != -> _response `i -> 254 `i 3580  ]
+[e $ ! != -> _response `i -> 254 `i 3586  ]
 {
 "195
 [; ;../src/boards/../../drivers/SDCard.c: 195:         result = 3;
 [e = _result -> 3 `i ]
 "196
 [; ;../src/boards/../../drivers/SDCard.c: 196:         goto done;
-[e $U 3577  ]
+[e $U 3583  ]
 "197
 [; ;../src/boards/../../drivers/SDCard.c: 197:     }
 }
-[e :U 3580 ]
+[e :U 3586 ]
 "199
 [; ;../src/boards/../../drivers/SDCard.c: 199:     crc = 0;
 [e = _crc -> -> 0 `i `us ]
@@ -7001,66 +7013,66 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 3584  ]
-[e :U 3581 ]
+[e $U 3590  ]
+[e :U 3587 ]
 {
 "201
 [; ;../src/boards/../../drivers/SDCard.c: 201:         response = SPI_SD_receive_byte(spi);
 [e = _response ( _SPI_SD_receive_byte (1 _spi ]
 "202
 [; ;../src/boards/../../drivers/SDCard.c: 202:         if (ctx_.calc_read_crc)
-[e $ ! != -> . _ctx_ 2 `i -> 0 `i 3585  ]
+[e $ ! != -> . _ctx_ 2 `i -> 0 `i 3591  ]
 "203
 [; ;../src/boards/../../drivers/SDCard.c: 203:             crc = __SDCard_crc16(crc, &response, 1);
 [e = _crc ( ___SDCard_crc16 (3 , , _crc -> &U _response `*Cv -> -> 1 `i `ui ]
-[e :U 3585 ]
+[e :U 3591 ]
 "204
 [; ;../src/boards/../../drivers/SDCard.c: 204:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 3584 ]
-[e $ < -> _i `ui _offs 3581  ]
-[e :U 3582 ]
+[e :U 3590 ]
+[e $ < -> _i `ui _offs 3587  ]
+[e :U 3588 ]
 }
 "205
 [; ;../src/boards/../../drivers/SDCard.c: 205:     SPI_SD_receive(spi, buf, count);
 [e ( _SPI_SD_receive (3 , , _spi _buf _count ]
 "206
 [; ;../src/boards/../../drivers/SDCard.c: 206:     if (ctx_.calc_read_crc)
-[e $ ! != -> . _ctx_ 2 `i -> 0 `i 3586  ]
+[e $ ! != -> . _ctx_ 2 `i -> 0 `i 3592  ]
 "207
 [; ;../src/boards/../../drivers/SDCard.c: 207:         crc = __SDCard_crc16(crc, buf, count);
 [e = _crc ( ___SDCard_crc16 (3 , , _crc -> _buf `*Cv _count ]
-[e :U 3586 ]
+[e :U 3592 ]
 "208
 [; ;../src/boards/../../drivers/SDCard.c: 208:     for (unsigned int i = 0; i < 512 - offs - count; i++) {
 {
 [v _i `ui ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `ui ]
-[e $U 3590  ]
-[e :U 3587 ]
+[e $U 3596  ]
+[e :U 3593 ]
 {
 "209
 [; ;../src/boards/../../drivers/SDCard.c: 209:         response = SPI_SD_receive_byte(spi);
 [e = _response ( _SPI_SD_receive_byte (1 _spi ]
 "210
 [; ;../src/boards/../../drivers/SDCard.c: 210:         if (ctx_.calc_read_crc)
-[e $ ! != -> . _ctx_ 2 `i -> 0 `i 3591  ]
+[e $ ! != -> . _ctx_ 2 `i -> 0 `i 3597  ]
 "211
 [; ;../src/boards/../../drivers/SDCard.c: 211:             crc = __SDCard_crc16(crc, &response, 1);
 [e = _crc ( ___SDCard_crc16 (3 , , _crc -> &U _response `*Cv -> -> 1 `i `ui ]
-[e :U 3591 ]
+[e :U 3597 ]
 "212
 [; ;../src/boards/../../drivers/SDCard.c: 212:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
-[e :U 3590 ]
-[e $ < _i - - -> -> 512 `i `ui _offs _count 3587  ]
-[e :U 3588 ]
+[e :U 3596 ]
+[e $ < _i - - -> -> 512 `i `ui _offs _count 3593  ]
+[e :U 3594 ]
 }
 "213
 [; ;../src/boards/../../drivers/SDCard.c: 213:     if ((debug_flags & (1 << 1)) && (debug_flags & (1 << 3))) {
-[e $ ! && != & _debug_flags << -> 1 `i -> 1 `i -> 0 `i != & _debug_flags << -> 1 `i -> 3 `i -> 0 `i 3592  ]
+[e $ ! && != & _debug_flags << -> 1 `i -> 1 `i -> 0 `i != & _debug_flags << -> 1 `i -> 3 `i -> 0 `i 3598  ]
 {
 "214
 [; ;../src/boards/../../drivers/SDCard.c: 214:         util_addrdump("SD: ", (addr * 512) + offs, buf, count);
@@ -7068,7 +7080,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "215
 [; ;../src/boards/../../drivers/SDCard.c: 215:     }
 }
-[e :U 3592 ]
+[e :U 3598 ]
 "217
 [; ;../src/boards/../../drivers/SDCard.c: 217:     resp_crc = (uint16_t)SPI_SD_receive_byte(spi) << 8;
 [e = _resp_crc -> << -> -> ( _SPI_SD_receive_byte (1 _spi `us `ui -> 8 `i `us ]
@@ -7077,57 +7089,57 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =| _resp_crc -> ( _SPI_SD_receive_byte (1 _spi `us ]
 "219
 [; ;../src/boards/../../drivers/SDCard.c: 219:     if (ctx_.calc_read_crc && resp_crc != crc) {
-[e $ ! && != -> . _ctx_ 2 `i -> 0 `i != -> _resp_crc `ui -> _crc `ui 3593  ]
+[e $ ! && != -> . _ctx_ 2 `i -> 0 `i != -> _resp_crc `ui -> _crc `ui 3599  ]
 {
 "220
 [; ;../src/boards/../../drivers/SDCard.c: 220:         do { if (debug_flags) printf ("SD Card: read512: CRC error (%04x != %04x, retry=%d)\n\r", crc, resp_crc, retry); } while(0);
-[e :U 3596 ]
+[e :U 3602 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3597  ]
+[e $ ! != _debug_flags -> 0 `i 3603  ]
 [e ( _printf , , , (. :s 28C -> _crc `ui -> _resp_crc `ui _retry ]
-[e :U 3597 ]
+[e :U 3603 ]
 }
-[e :U 3595 ]
+[e :U 3601 ]
 "222
 [; ;../src/boards/../../drivers/SDCard.c: 222:         if (--retry < 1) {
-[e $ ! < =- _retry -> 1 `i -> 1 `i 3598  ]
+[e $ ! < =- _retry -> 1 `i -> 1 `i 3604  ]
 {
 "223
 [; ;../src/boards/../../drivers/SDCard.c: 223:             result = 4;
 [e = _result -> 4 `i ]
 "224
 [; ;../src/boards/../../drivers/SDCard.c: 224:             goto done;
-[e $U 3577  ]
+[e $U 3583  ]
 "225
 [; ;../src/boards/../../drivers/SDCard.c: 225:         }
 }
-[e :U 3598 ]
+[e :U 3604 ]
 "226
 [; ;../src/boards/../../drivers/SDCard.c: 226:         SDCard_end_transaction();
 [e ( _SDCard_end_transaction ..  ]
 "227
 [; ;../src/boards/../../drivers/SDCard.c: 227:         goto retry;
-[e $U 3575  ]
+[e $U 3581  ]
 "228
 [; ;../src/boards/../../drivers/SDCard.c: 228:     }
 }
-[e :U 3593 ]
+[e :U 3599 ]
 "230
 [; ;../src/boards/../../drivers/SDCard.c: 230:     result = 0;
 [e = _result -> 0 `i ]
 "232
 [; ;../src/boards/../../drivers/SDCard.c: 232:  done:
-[e :U 3577 ]
+[e :U 3583 ]
 "233
 [; ;../src/boards/../../drivers/SDCard.c: 233:     SDCard_end_transaction();
 [e ( _SDCard_end_transaction ..  ]
 "234
 [; ;../src/boards/../../drivers/SDCard.c: 234:     return result;
 [e ) _result ]
-[e $UE 3570  ]
+[e $UE 3576  ]
 "235
 [; ;../src/boards/../../drivers/SDCard.c: 235: }
-[e :UE 3570 ]
+[e :UE 3576 ]
 }
 "237
 [; ;../src/boards/../../drivers/SDCard.c: 237: int SDCard_write512(uint32_t addr, unsigned int offs, const void *buf, unsigned int count)
@@ -7164,16 +7176,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _retry -> 5 `i ]
 "245
 [; ;../src/boards/../../drivers/SDCard.c: 245:     do { if (debug_flags & (1 << 2)) printf ("SD Card: write512: addr=%8ld, offs=%d, count=%d\n\r", addr, offs, count); } while(0);
-[e :U 3602 ]
+[e :U 3608 ]
 {
-[e $ ! != & _debug_flags << -> 1 `i -> 2 `i -> 0 `i 3603  ]
+[e $ ! != & _debug_flags << -> 1 `i -> 2 `i -> 0 `i 3609  ]
 [e ( _printf , , , (. :s 29C _addr _offs _count ]
-[e :U 3603 ]
+[e :U 3609 ]
 }
-[e :U 3601 ]
+[e :U 3607 ]
 "246
 [; ;../src/boards/../../drivers/SDCard.c: 246:     if ((debug_flags & (1 << 2)) && (debug_flags & (1 << 3))) {
-[e $ ! && != & _debug_flags << -> 1 `i -> 2 `i -> 0 `i != & _debug_flags << -> 1 `i -> 3 `i -> 0 `i 3604  ]
+[e $ ! && != & _debug_flags << -> 1 `i -> 2 `i -> 0 `i != & _debug_flags << -> 1 `i -> 3 `i -> 0 `i 3610  ]
 {
 "247
 [; ;../src/boards/../../drivers/SDCard.c: 247:         util_addrdump("SD: ", (addr * 512) + offs, buf, count);
@@ -7181,7 +7193,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "248
 [; ;../src/boards/../../drivers/SDCard.c: 248:     }
 }
-[e :U 3604 ]
+[e :U 3610 ]
 "250
 [; ;../src/boards/../../drivers/SDCard.c: 250:     crc = 0;
 [e = _crc -> -> 0 `i `us ]
@@ -7193,8 +7205,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $U 3608  ]
-[e :U 3605 ]
+[e $U 3614  ]
+[e :U 3611 ]
 {
 "253
 [; ;../src/boards/../../drivers/SDCard.c: 253:         crc = __SDCard_crc16(crc, &response, 1);
@@ -7203,9 +7215,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/SDCard.c: 254:     }
 }
 [e ++ _i -> 1 `i ]
-[e :U 3608 ]
-[e $ < -> _i `ui _offs 3605  ]
-[e :U 3606 ]
+[e :U 3614 ]
+[e $ < -> _i `ui _offs 3611  ]
+[e :U 3612 ]
 }
 "255
 [; ;../src/boards/../../drivers/SDCard.c: 255:     crc = __SDCard_crc16(crc, buf, count);
@@ -7215,8 +7227,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `ui ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `ui ]
-[e $U 3612  ]
-[e :U 3609 ]
+[e $U 3618  ]
+[e :U 3615 ]
 {
 "257
 [; ;../src/boards/../../drivers/SDCard.c: 257:         crc = __SDCard_crc16(crc, &response, 1);
@@ -7225,41 +7237,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/SDCard.c: 258:     }
 }
 [e ++ _i -> -> 1 `i `ui ]
-[e :U 3612 ]
-[e $ < _i - - -> -> 512 `i `ui _offs _count 3609  ]
-[e :U 3610 ]
+[e :U 3618 ]
+[e $ < _i - - -> -> 512 `i `ui _offs _count 3615  ]
+[e :U 3616 ]
 }
 "260
 [; ;../src/boards/../../drivers/SDCard.c: 260:  retry:
-[e :U 3613 ]
+[e :U 3619 ]
 "261
 [; ;../src/boards/../../drivers/SDCard.c: 261:     result = __SDCard_command_r1(24, addr, &response);
 [e = _result ( ___SDCard_command_r1 (3 , , -> -> 24 `i `uc _addr &U _response ]
 "262
 [; ;../src/boards/../../drivers/SDCard.c: 262:     if (result != 0) {
-[e $ ! != _result -> 0 `i 3614  ]
+[e $ ! != _result -> 0 `i 3620  ]
 {
 "263
 [; ;../src/boards/../../drivers/SDCard.c: 263:         goto done;
-[e $U 3615  ]
+[e $U 3621  ]
 "264
 [; ;../src/boards/../../drivers/SDCard.c: 264:     }
 }
-[e :U 3614 ]
+[e :U 3620 ]
 "265
 [; ;../src/boards/../../drivers/SDCard.c: 265:     if (response != 0) {
-[e $ ! != -> _response `i -> 0 `i 3616  ]
+[e $ ! != -> _response `i -> 0 `i 3622  ]
 {
 "266
 [; ;../src/boards/../../drivers/SDCard.c: 266:         result = 3;
 [e = _result -> 3 `i ]
 "267
 [; ;../src/boards/../../drivers/SDCard.c: 267:         goto done;
-[e $U 3615  ]
+[e $U 3621  ]
 "268
 [; ;../src/boards/../../drivers/SDCard.c: 268:     }
 }
-[e :U 3616 ]
+[e :U 3622 ]
 "270
 [; ;../src/boards/../../drivers/SDCard.c: 270:     response = 0xfe;
 [e = _response -> -> 254 `i `uc ]
@@ -7292,67 +7304,67 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _response ( ___SDCard_wait_response (2 , -> -> 255 `i `uc -> -> 3000 `i `ui ]
 "281
 [; ;../src/boards/../../drivers/SDCard.c: 281:     if (response == 0xff) {
-[e $ ! == -> _response `i -> 255 `i 3617  ]
+[e $ ! == -> _response `i -> 255 `i 3623  ]
 {
 "282
 [; ;../src/boards/../../drivers/SDCard.c: 282:         do { if (debug_flags) printf ("SD Card: write512: failed to get token, timeout\n\r"); } while(0);
-[e :U 3620 ]
+[e :U 3626 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3621  ]
+[e $ ! != _debug_flags -> 0 `i 3627  ]
 [e ( _printf :s 31C ]
-[e :U 3621 ]
+[e :U 3627 ]
 }
-[e :U 3619 ]
+[e :U 3625 ]
 "283
 [; ;../src/boards/../../drivers/SDCard.c: 283:         result = 1;
 [e = _result -> 1 `i ]
 "284
 [; ;../src/boards/../../drivers/SDCard.c: 284:         goto done;
-[e $U 3615  ]
+[e $U 3621  ]
 "285
 [; ;../src/boards/../../drivers/SDCard.c: 285:     }
 }
-[e :U 3617 ]
+[e :U 3623 ]
 "286
 [; ;../src/boards/../../drivers/SDCard.c: 286:     if ((response & 0x1f) != 0x05) {
-[e $ ! != & -> _response `i -> 31 `i -> 5 `i 3622  ]
+[e $ ! != & -> _response `i -> 31 `i -> 5 `i 3628  ]
 {
 "287
 [; ;../src/boards/../../drivers/SDCard.c: 287:         do { if (debug_flags) printf ("SD Card: write512: token is %02x\n\r", response); } while(0);
-[e :U 3625 ]
+[e :U 3631 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3626  ]
+[e $ ! != _debug_flags -> 0 `i 3632  ]
 [e ( _printf , (. :s 32C -> _response `i ]
-[e :U 3626 ]
+[e :U 3632 ]
 }
-[e :U 3624 ]
+[e :U 3630 ]
 "288
 [; ;../src/boards/../../drivers/SDCard.c: 288:         if ((response & 0x1f) == 0x0b) {
-[e $ ! == & -> _response `i -> 31 `i -> 11 `i 3627  ]
+[e $ ! == & -> _response `i -> 31 `i -> 11 `i 3633  ]
 {
 "289
 [; ;../src/boards/../../drivers/SDCard.c: 289:             do { if (debug_flags) printf ("SD Card: write512: CRC error (retry=%d)\n\r", retry); } while(0);
-[e :U 3630 ]
+[e :U 3636 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3631  ]
+[e $ ! != _debug_flags -> 0 `i 3637  ]
 [e ( _printf , (. :s 33C _retry ]
-[e :U 3631 ]
+[e :U 3637 ]
 }
-[e :U 3629 ]
+[e :U 3635 ]
 "290
 [; ;../src/boards/../../drivers/SDCard.c: 290:             if (--retry < 1) {
-[e $ ! < =- _retry -> 1 `i -> 1 `i 3632  ]
+[e $ ! < =- _retry -> 1 `i -> 1 `i 3638  ]
 {
 "291
 [; ;../src/boards/../../drivers/SDCard.c: 291:                 result = 4;
 [e = _result -> 4 `i ]
 "292
 [; ;../src/boards/../../drivers/SDCard.c: 292:                 goto done;
-[e $U 3615  ]
+[e $U 3621  ]
 "293
 [; ;../src/boards/../../drivers/SDCard.c: 293:             }
 }
-[e :U 3632 ]
+[e :U 3638 ]
 "294
 [; ;../src/boards/../../drivers/SDCard.c: 294:             __SDCard_wait_response(0xff, 30000);
 [e ( ___SDCard_wait_response (2 , -> -> 255 `i `uc -> -> 30000 `i `ui ]
@@ -7361,63 +7373,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SDCard_end_transaction ..  ]
 "296
 [; ;../src/boards/../../drivers/SDCard.c: 296:             goto retry;
-[e $U 3613  ]
+[e $U 3619  ]
 "297
 [; ;../src/boards/../../drivers/SDCard.c: 297:         }
 }
-[e :U 3627 ]
+[e :U 3633 ]
 "298
 [; ;../src/boards/../../drivers/SDCard.c: 298:         result = 3;
 [e = _result -> 3 `i ]
 "299
 [; ;../src/boards/../../drivers/SDCard.c: 299:         goto done;
-[e $U 3615  ]
+[e $U 3621  ]
 "300
 [; ;../src/boards/../../drivers/SDCard.c: 300:     }
 }
-[e :U 3622 ]
+[e :U 3628 ]
 "302
 [; ;../src/boards/../../drivers/SDCard.c: 302:     response = __SDCard_wait_response(0x00, 30000);
 [e = _response ( ___SDCard_wait_response (2 , -> -> 0 `i `uc -> -> 30000 `i `ui ]
 "303
 [; ;../src/boards/../../drivers/SDCard.c: 303:     if (response == 0x00) {
-[e $ ! == -> _response `i -> 0 `i 3633  ]
+[e $ ! == -> _response `i -> 0 `i 3639  ]
 {
 "304
 [; ;../src/boards/../../drivers/SDCard.c: 304:         do { if (debug_flags) printf ("SD Card: write512: timeout, response is %02x\n\r", response); } while(0);
-[e :U 3636 ]
+[e :U 3642 ]
 {
-[e $ ! != _debug_flags -> 0 `i 3637  ]
+[e $ ! != _debug_flags -> 0 `i 3643  ]
 [e ( _printf , (. :s 34C -> _response `i ]
-[e :U 3637 ]
+[e :U 3643 ]
 }
-[e :U 3635 ]
+[e :U 3641 ]
 "305
 [; ;../src/boards/../../drivers/SDCard.c: 305:         result = 1;
 [e = _result -> 1 `i ]
 "306
 [; ;../src/boards/../../drivers/SDCard.c: 306:         goto done;
-[e $U 3615  ]
+[e $U 3621  ]
 "307
 [; ;../src/boards/../../drivers/SDCard.c: 307:     }
 }
-[e :U 3633 ]
+[e :U 3639 ]
 "309
 [; ;../src/boards/../../drivers/SDCard.c: 309:     result = 0;
 [e = _result -> 0 `i ]
 "311
 [; ;../src/boards/../../drivers/SDCard.c: 311:  done:
-[e :U 3615 ]
+[e :U 3621 ]
 "312
 [; ;../src/boards/../../drivers/SDCard.c: 312:     SDCard_end_transaction();
 [e ( _SDCard_end_transaction ..  ]
 "313
 [; ;../src/boards/../../drivers/SDCard.c: 313:     return result;
 [e ) _result ]
-[e $UE 3599  ]
+[e $UE 3605  ]
 "314
 [; ;../src/boards/../../drivers/SDCard.c: 314: }
-[e :UE 3599 ]
+[e :UE 3605 ]
 }
 "316
 [; ;../src/boards/../../drivers/SDCard.c: 316: int SDCard_command(uint8_t command, uint32_t argument, void *response_buffer, unsigned int length)
@@ -7451,7 +7463,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _result ( ___SDCard_command_r1 (3 , , _command _argument _responsep ]
 "323
 [; ;../src/boards/../../drivers/SDCard.c: 323:     if (result != 0) {
-[e $ ! != _result -> 0 `i 3639  ]
+[e $ ! != _result -> 0 `i 3645  ]
 {
 "324
 [; ;../src/boards/../../drivers/SDCard.c: 324:         SDCard_end_transaction();
@@ -7459,11 +7471,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "325
 [; ;../src/boards/../../drivers/SDCard.c: 325:         return result;
 [e ) _result ]
-[e $UE 3638  ]
+[e $UE 3644  ]
 "326
 [; ;../src/boards/../../drivers/SDCard.c: 326:     }
 }
-[e :U 3639 ]
+[e :U 3645 ]
 "328
 [; ;../src/boards/../../drivers/SDCard.c: 328:     SPI_SD_receive(spi, &responsep[1], length - 1);
 [e ( _SPI_SD_receive (3 , , _spi -> &U *U + _responsep * -> -> 1 `i `x -> -> # *U _responsep `i `x `*v - _length -> -> 1 `i `ui ]
@@ -7473,10 +7485,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "331
 [; ;../src/boards/../../drivers/SDCard.c: 331:     return 0;
 [e ) -> 0 `i ]
-[e $UE 3638  ]
+[e $UE 3644  ]
 "332
 [; ;../src/boards/../../drivers/SDCard.c: 332: }
-[e :UE 3638 ]
+[e :UE 3644 ]
 }
 "334
 [; ;../src/boards/../../drivers/SDCard.c: 334: uint8_t SDCard_crc(const void *buf, unsigned int count)
@@ -7506,8 +7518,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _endp + _p * -> _count `ux -> -> # *U _p `ui `ux ]
 "340
 [; ;../src/boards/../../drivers/SDCard.c: 340:     while (p < endp) {
-[e $U 3641  ]
-[e :U 3642 ]
+[e $U 3647  ]
+[e :U 3648 ]
 {
 "341
 [; ;../src/boards/../../drivers/SDCard.c: 341:         crc ^= *p++;
@@ -7517,17 +7529,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 3644  ]
-[e $U 3645  ]
-[e :U 3644 ]
+[e $ < _i -> 8 `i 3650  ]
+[e $U 3651  ]
+[e :U 3650 ]
 {
 "343
 [; ;../src/boards/../../drivers/SDCard.c: 343:             if (crc & 0x80)
-[e $ ! != & -> _crc `i -> 128 `i -> 0 `i 3647  ]
+[e $ ! != & -> _crc `i -> 128 `i -> 0 `i 3653  ]
 "344
 [; ;../src/boards/../../drivers/SDCard.c: 344:                 crc ^= 0x89;
 [e =^ _crc -> -> 137 `i `uc ]
-[e :U 3647 ]
+[e :U 3653 ]
 "345
 [; ;../src/boards/../../drivers/SDCard.c: 345:             crc <<= 1;
 [e =<< _crc -> -> 1 `i `uc ]
@@ -7535,24 +7547,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../src/boards/../../drivers/SDCard.c: 346:         }
 }
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 3644  ]
-[e :U 3645 ]
+[e $ < _i -> 8 `i 3650  ]
+[e :U 3651 ]
 }
 "347
 [; ;../src/boards/../../drivers/SDCard.c: 347:     }
 }
-[e :U 3641 ]
+[e :U 3647 ]
 "340
 [; ;../src/boards/../../drivers/SDCard.c: 340:     while (p < endp) {
-[e $ < _p _endp 3642  ]
-[e :U 3643 ]
+[e $ < _p _endp 3648  ]
+[e :U 3649 ]
 "349
 [; ;../src/boards/../../drivers/SDCard.c: 349:     return crc;
 [e ) _crc ]
-[e $UE 3640  ]
+[e $UE 3646  ]
 "350
 [; ;../src/boards/../../drivers/SDCard.c: 350: }
-[e :UE 3640 ]
+[e :UE 3646 ]
 }
 "352
 [; ;../src/boards/../../drivers/SDCard.c: 352: uint16_t __SDCard_crc16(uint16_t crc, const void *buf, unsigned int count)
@@ -7579,8 +7591,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _endp + _p * -> _count `ux -> -> # *U _p `ui `ux ]
 "357
 [; ;../src/boards/../../drivers/SDCard.c: 357:     while (p < endp) {
-[e $U 3649  ]
-[e :U 3650 ]
+[e $U 3655  ]
+[e :U 3656 ]
 {
 "358
 [; ;../src/boards/../../drivers/SDCard.c: 358:         crc = (crc >> 8)|(crc << 8);
@@ -7600,18 +7612,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "363
 [; ;../src/boards/../../drivers/SDCard.c: 363:     }
 }
-[e :U 3649 ]
+[e :U 3655 ]
 "357
 [; ;../src/boards/../../drivers/SDCard.c: 357:     while (p < endp) {
-[e $ < _p _endp 3650  ]
-[e :U 3651 ]
+[e $ < _p _endp 3656  ]
+[e :U 3657 ]
 "365
 [; ;../src/boards/../../drivers/SDCard.c: 365:     return crc;
 [e ) _crc ]
-[e $UE 3648  ]
+[e $UE 3654  ]
 "366
 [; ;../src/boards/../../drivers/SDCard.c: 366: }
-[e :UE 3648 ]
+[e :UE 3654 ]
 }
 "368
 [; ;../src/boards/../../drivers/SDCard.c: 368: uint16_t SDCard_crc16(const void *buf, unsigned int count)
@@ -7630,10 +7642,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "370
 [; ;../src/boards/../../drivers/SDCard.c: 370:     return __SDCard_crc16(0, buf, count);
 [e ) ( ___SDCard_crc16 (3 , , -> -> 0 `i `us _buf _count ]
-[e $UE 3652  ]
+[e $UE 3658  ]
 "371
 [; ;../src/boards/../../drivers/SDCard.c: 371: }
-[e :UE 3652 ]
+[e :UE 3658 ]
 }
 "373
 [; ;../src/boards/../../drivers/SDCard.c: 373: int SDCard_debug(int newval)
@@ -7658,10 +7670,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "379
 [; ;../src/boards/../../drivers/SDCard.c: 379:     return res;
 [e ) _res ]
-[e $UE 3653  ]
+[e $UE 3659  ]
 "380
 [; ;../src/boards/../../drivers/SDCard.c: 380: }
-[e :UE 3653 ]
+[e :UE 3659 ]
 }
 [p f _printf 12877972 ]
 [a 8C 83 80 73 95 83 68 95 99 111 110 102 105 103 117 114 101 0 ]
