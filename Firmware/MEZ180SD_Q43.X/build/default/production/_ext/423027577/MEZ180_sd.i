@@ -29195,7 +29195,7 @@ uint8_t SPI_SD_receive_byte(struct SPI *ctx_);
 void SPI_SD_select(struct SPI *ctx_, int select);
 extern struct SPI *SPI_SD_ctx;
 # 34 "../src/boards/MEZ180_sd.c" 2
-# 84 "../src/boards/MEZ180_sd.c"
+# 87 "../src/boards/MEZ180_sd.c"
 # 1 "../src/boards/emuz80_common.c" 1
 # 31 "../src/boards/emuz80_common.c"
 static void emuz80_common_sys_init()
@@ -29338,7 +29338,12 @@ static void emuz80_common_write_to_sram(uint16_t addr, uint8_t *buf, unsigned in
 
     ab.w = addr;
 
-    LATD = ab.h;
+    LATD = ab.h & 0x3f;
+ if (ab.h & 0x40) LATE2 = 1;
+ else LATE2 = 0;
+
+
+
 
     LATB = ab.l;
     for(i = 0; i < len; i++) {
@@ -29348,8 +29353,12 @@ static void emuz80_common_write_to_sram(uint16_t addr, uint8_t *buf, unsigned in
         LATB = ++ab.l;
         if (ab.l == 0) {
             ab.h++;
+      LATD = ab.h & 0x3f;
+   if (ab.h & 0x40) LATE2 = 1;
+   else LATE2 = 0;
 
-            LATD = ab.h;
+
+
 
         }
     }
@@ -29369,8 +29378,12 @@ static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned i
 
 
     ab.w = addr;
+    LATD = ab.h & 0x3f;
+ if (ab.h & 0x40) LATE2 = 1;
+ else LATE2 = 0;
 
-    LATD = ab.h;
+
+
 
     LATB = ab.l;
     for(i = 0; i < len; i++) {
@@ -29380,8 +29393,12 @@ static void emuz80_common_read_from_sram(uint16_t addr, uint8_t *buf, unsigned i
         LATB = ++ab.l;
         if (ab.l == 0) {
             ab.h++;
+      LATD = ab.h & 0x3f;
+   if (ab.h & 0x40) LATE2 = 1;
+   else LATE2 = 0;
 
-            LATD = ab.h;
+
+
 
         }
     }
@@ -29527,7 +29544,7 @@ static void emuz80_common_wait_for_programmer()
 
     printf("\n\r");
 }
-# 84 "../src/boards/MEZ180_sd.c" 2
+# 87 "../src/boards/MEZ180_sd.c" 2
 
 
 static char *emuz80_47q_name()
@@ -29540,14 +29557,16 @@ static void emuz80_47q_sys_init()
     emuz80_common_sys_init();
 
 
+
+
+
+
     LATD = 0x00;
     TRISD = 0x40;
 
+
     LATE2 = 0;
     TRISE2 = 0;
-# 109 "../src/boards/MEZ180_sd.c"
-    LATC7 = 1;
-    TRISC7 = 0;
 
 
 
@@ -29608,8 +29627,13 @@ static void emuz80_47q_bus_master(int enable)
 
 
         TRISB = 0x00;
+
+
+
         TRISD = 0x40;
+
         TRISE2 = 0;
+        TRISC = 0;
 
      TRISA5 = 0;
 
@@ -29633,12 +29657,12 @@ static void emuz80_47q_bus_master(int enable)
 
 static void emuz80_47q_start_z80(void)
 {
+
+    CLCIN0PPS = 0x01;
     emuz80_common_start_z80();
 
 
 
-
-    CLCIN0PPS = 0x01;
     CLCIN1PPS = 0x00;
 
     CLCIN2PPS = 0x1e;
@@ -29657,7 +29681,7 @@ static void emuz80_47q_start_z80(void)
 
 
     CLCSELECT = 0;
-# 235 "../src/boards/MEZ180_sd.c"
+# 238 "../src/boards/MEZ180_sd.c"
     CLCnSEL0 = 0;
 
     CLCnSEL1 = 2;
@@ -29728,6 +29752,9 @@ static void emuz80_47q_start_z80(void)
     CLC3IE = 0;
 
 
+    WPUE2 = 1;
+    TRISE2 = 1;
+# 318 "../src/boards/MEZ180_sd.c"
     LATE0 = 1;
     LATE1 = 1;
 }
@@ -29745,23 +29772,6 @@ static void emuz80_47q_set_wait_pin(uint8_t v)
 
 static void emuz80_47q_set_bank_pins(uint32_t addr)
 {
-uint32_t t_adr;
-
- t_adr = (uint32_t)0x00007fff & addr;
-# 358 "../src/boards/MEZ180_sd.c"
- if(t_adr >=0x4000) {
-  LATE2 = 1;
-
-
-
- }
- else {
-  LATE2 = 0;
-
-
-
- }
-
 }
 
 static void emuz80_47q_setup_addrbus(uint32_t addr)
@@ -30067,7 +30077,7 @@ void SPI_SD_select(struct SPI *ctx_, int select)
 
     LATA1 = select ? 0 : 1;
 }
-# 410 "../src/boards/MEZ180_sd.c" 2
+# 374 "../src/boards/MEZ180_sd.c" 2
 
 # 1 "../src/boards/../../drivers/SDCard.c" 1
 # 27 "../src/boards/../../drivers/SDCard.c"
@@ -30424,5 +30434,5 @@ int SDCard_debug(int newval)
 
     return res;
 }
-# 411 "../src/boards/MEZ180_sd.c" 2
+# 375 "../src/boards/MEZ180_sd.c" 2
 
