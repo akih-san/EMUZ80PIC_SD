@@ -48,6 +48,32 @@ https://janus.blog.ss-blog.jp/2016-06-17<br>
 フリーソフト１００からもダウンロードできます。<br>
 https://freesoft-100.com/pasokon/editor_binary.html<br>
 <br>
+# MEZZ180RAMボードをPICから64Kアクセス出来るように改造する
+MEZZ180RAMボードに改造を加えることで、PIC側から64K空間をアクセス出来るようになります。<br>
+![MEZZ180RAM改造 1](MEZZ180RAM64K改造写真.jpg)
+![MEZZ180RAM改造 2](MEZZ180RAM64K改造.jpg)
+<br>
+改造の施術を行ったら、cmp2ディレクトリにあるDRIVEA_64k.DSKをDRIVEAにリネームして、<br>
+CPMDISKSディレクトリにコピーしてください。<br>
+ブートイメージは、IOバイト転送、32K_DMA転送、64K_DMA転送のイメージファイルを用意してます。<br>
+bios.asmのソースコードで確認してください<br>
+<br>
+次に、ファームウェアの修正ですが、src\boardsディレクトリ内のMEZ180_sd.cを修正します。<br>
+////////////////////////////////<br>
+// for remodeling MEZZ180RAM <br>
+//#define PIC_64K<br>
+////////////////////////////////<br>
+<br>
+38行目の#define PIC_64Kのコメントを外して、ファームをリビルドします。<br>
+ビルドしたMEZ180SD_Q43.X\dist\default\production\MEZ180SD_Q43.X.production.hex<br>
+をPICに書き込んで完成です。<br>
+<br>
+起動するとPIC側で64K認識するようになります。
+<br>
+詳細は、MEZ180_sd.cソースコードで確認してください。
+<br>
+<br>
+<br>
 ＜参考＞<br>
 ・EMUZ80<br>
 EUMZ80はZ80CPUとPIC18F47Q43のDIP40ピンIC2つで構成されるシンプルなコンピュータです。<br>
