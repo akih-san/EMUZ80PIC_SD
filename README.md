@@ -72,6 +72,12 @@ bios.asmのソースコードで確認してください<br>
 <br>
 詳細は、MEZ180_sd.cソースコードで確認してください。
 <br>
+# MEZZ180RAMボードの/RESETをプルダウンする
+PICへの書き込みエラーの対策として、/RESETをプルダウンします。<br>
+MEZZ180RAMと、EMUZ80PIC_SDを両方EMUZ80ボードに取り付けたままで、PICへファームウェアを<br>
+書き込むと、かなりの高確率で書き込みエラーが発生します。PICを認識できないことも多いです。<br>
+原因対策として、＠hanyazouさんが行っている/RESETをプルダウンする方法が非常に有効です。<br>
+![reset_pulldown 1](reset_pulldown.png)
 <br>
 <br>
 ＜参考＞<br>
