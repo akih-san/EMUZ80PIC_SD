@@ -35,12 +35,32 @@ FDCST	EQU	4eh		;fdc-port: status
 DMAL	EQU	4fh		;dma-port: dma address low
 DMAH	EQU	50h		;dma-port: dma address high
 
+DMA_R_W	set	0	; DMA R/W operation switch
+PIC_64K	set	0
+PIC_32K	set	0
+
+; control priority: DMA_R_W > PIC_32K > PIC_64K
+
+	if	DMA_R_W=0
+PIC_64K	set	0
+PIC_32K	set	0
+	else
+	if	PIC_32K=1
+PIC_64K	set	0
+	else
+PIC_64K	set	1
+	endif	; PIC_32K=1
+	endif	; DMA_R_W=0
+
+PIC_LMTADR	equ	8000h	; PIC can directly access 0 - 7fffh
+
 D_DMA_READ	equ	0
 D_DMA_WRITE	equ	1
 D_READ		equ	2
 D_WRITE		equ	3
 D_SUCCESS	equ	0
 D_ERROR		equ	1
+
 ;
 	ORG	BIOS		;origin of this program
 ;
@@ -360,6 +380,8 @@ SETDMA: LD	A,C		;low order address
 	LD	HL,DSTH
 	LD	(HL),A
 	RET
+
+	if	DMA_R_W=0	;I/O byte RW operation
 ;
 ;	perform read operation
 ;
@@ -410,11 +432,125 @@ LWRITE:
 	POP	DE
 	IN	A,(FDCST)	;status of i/o operation -> A
 	RET
+
+	endif	; DMA_R_W=0
+
+	if	PIC_32K=1
+;
+;	perform read operation
+;
+READ:
+	PUSH	DE
+	PUSH	HL
+	ld	hl, (DSTL)	; get dma address
+	ld	de, 127		; get accsess end address
+	add	hl, de
+	jr	c, byte_read	; overlap ffff -> 0000
+	
+	ld	de, PIC_LMTADR
+	sbc	hl, de		; check address in DMA area
+	jr	c, dma_read	; jp, if end address is not DMA area
+
+byte_read:
+	LD	A,D_READ	;byte read command
+	OUT	(FDCOP),A	;start i/o operation
+	IN	A,(FDCST)	;status of i/o operation -> A
+	OR	A
+	jr	nz, ret_read	;return if an error occurred
+	; read 128 bytes from the I/O port
+	LD	E,128
+	LD	A,(DSTH)
+	LD	H,A
+	LD	A,(DSTL)
+	LD	L,A
+LREAD:
+	IN	A,(FDCDAT)
+	LD	(HL),A
+	INC	HL
+	DEC	E
+	JP	NZ,LREAD
+	LD	A,0
+ret_read:
+	POP	HL
+	POP	DE
+	RET
+
+dma_read:
+	LD	A,D_DMA_READ	;read command -> A
+	OUT	(FDCOP),A	;start i/o operation
+	IN	A,(FDCST)	;status of i/o operation -> A
+	OR	A
+	jr	ret_read
+
+;
+;	perform a write operation
+;
+WRITE:
+	PUSH	DE
+	PUSH	HL
+	ld	hl, (DSTL)	; get dma address
+	ld	de, 127		; get accsess end address
+	add	hl, de
+	jr	c, byte_write	; overlap ffff -> 0000
+	
+	ld	de, PIC_LMTADR
+	sbc	hl, de		; check address in DMA area
+	jr	c, dma_write	; jp, if end address is not DMA area
+
+byte_write:
+	LD	A,D_WRITE	;byte read command
+	OUT	(FDCOP),A	;start i/o operation
+	; write 128 bytes from the I/O port
+	LD	E,128
+	LD	A,(DSTH)
+	LD	H,A
+	LD	A,(DSTL)
+	LD	L,A
+LWRITE:
+	LD	A,(HL)
+	OUT	(FDCDAT),A
+	INC	HL
+	DEC	E
+	JP	NZ,LWRITE
+
+ret_write:
+	IN	A,(FDCST)	;status of i/o operation -> A
+	POP	HL
+	POP	DE
+	RET
+
+dma_write:
+	LD	A,D_DMA_WRITE	;write command -> A
+	OUT	(FDCOP),A	;start i/o operation
+	jr	ret_write
+
+	endif	; PIC_32K=1
+
+	if	PIC_64K=1	;DMA RW operation
+;
+;	perform read operation
+;
+READ:	LD	A,D_DMA_READ	;read command -> A
+	OUT	(FDCOP),A	;start i/o operation
+	IN	A,(FDCST)	;status of i/o operation -> A
+	OR	A
+	RET	
+
+;
+;	perform a write operation
+;
+WRITE:	LD	A,D_DMA_WRITE	;write command -> A
+	OUT	(FDCOP),A	;start i/o operation
+	IN	A,(FDCST)	;status of i/o operation -> A
+	OR	A
+	RET
+
+	endif	; PIC_64K=1
 ;
 ;	disk I/O destination address in non DMA mode
 ;
-DSTH:	DEFB	0		;disk I/O destination address high
 DSTL:	DEFB	0		;disk I/O destination address low
+DSTH:	DEFB	0		;disk I/O destination address high
 ;
 ;	the remainder of the CBIOS is reserved uninitialized
 ;	data area, and does not need to be a part of the
