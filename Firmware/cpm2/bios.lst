@@ -1,0 +1,680 @@
+ AS V1.42 Beta [Bld 227] - Source File bios.asm - Page 1 - 10/10/2023 11:49:55
+
+
+       1/       0 :                     	page 0
+       2/       0 :                     	cpu z80
+       3/       0 :                     
+       4/       0 :                     ;	Z80 CBIOS for Z80-Simulator
+       5/       0 :                     ;
+       6/       0 :                     ;	Copyright (C) 1988-2007 by Udo Munk
+       7/       0 :                     ;
+       8/       0 : =40H                 MSIZE	EQU	64		;cp/m version memory size in kilobytes
+       9/       0 :                     ;
+      10/       0 :                     ;	"bias" is address offset from 3400H for memory systems
+      11/       0 :                     ;	than 16K (referred to as "b" throughout the text).
+      12/       0 :                     ;
+      13/       0 : =0B000H              BIAS	EQU	(MSIZE-20)*1024
+      14/       0 : =0E400H              CCP	EQU	3400H+BIAS	;base of ccp
+      15/       0 : =0EC06H              BDOS	EQU	CCP+806H	;base of bdos
+      16/       0 : =0FA00H              BIOS	EQU	CCP+1600H	;base of bios
+      17/       0 : =2CH                 NSECTS	EQU	(BIOS-CCP)/128	;warm start sector count
+      18/       0 : =4H                  CDISK	EQU	0004H		;current disk number 0=A,...,15=P
+      19/       0 : =3H                  IOBYTE	EQU	0003H		;intel i/o byte
+      20/       0 :                     ;
+      21/       0 :                     ;	I/O ports
+      22/       0 :                     ;
+      23/       0 : =2H                  PRTSTA	EQU	2		;printer status port
+      24/       0 : =3H                  PRTDAT	EQU	3		;printer data port
+      25/       0 : =5H                  AUXDAT	EQU	5		;auxiliary data port
+      26/       0 :                     
+      27/       0 : =40H                 CONSTA	EQU	40h		;console status port
+      28/       0 : =41H                 CONDAT	EQU	41h		;console data port
+      29/       0 : =48H                 FDCDAT	EQU	48h		;fdc-port: data (non-DMA)
+      30/       0 : =4AH                 FDCD	EQU	4ah		;fdc-port: # of drive
+      31/       0 : =4BH                 FDCT	EQU	4bh		;fdc-port: # of track
+      32/       0 : =4CH                 FDCS	EQU	4ch		;fdc-port: # of sector
+      33/       0 : =4DH                 FDCOP	EQU	4dh		;fdc-port: command
+      34/       0 : =4EH                 FDCST	EQU	4eh		;fdc-port: status
+      35/       0 : =4FH                 DMAL	EQU	4fh		;dma-port: dma address low
+      36/       0 : =50H                 DMAH	EQU	50h		;dma-port: dma address high
+      37/       0 :                     
+      38/       0 : =0H                  DMA_R_W	set	0	; DMA R/W operation switch
+      39/       0 : =0H                  PIC_64K	set	0
+      40/       0 : =0H                  PIC_32K	set	0
+      41/       0 :                     
+      42/       0 :                     ; control priority: DMA_R_W > PIC_32K > PIC_64K
+      43/       0 :                     
+      44/       0 : =>TRUE               	if	DMA_R_W=0
+      45/       0 : =0H                  PIC_64K	set	0
+      46/       0 : =0H                  PIC_32K	set	0
+      47/       0 : =>FALSE              	else
+      48/       0 :                     	if	PIC_32K=1
+      49/       0 :                     PIC_64K	set	0
+      50/       0 :                     	else
+      51/       0 :                     PIC_64K	set	1
+      52/       0 : [48]                 	endif	; PIC_32K=1
+      53/       0 : [44]                 	endif	; DMA_R_W=0
+      54/       0 :                     
+      55/       0 : =8000H               PIC_LMTADR	equ	8000h	; PIC can directly access 0 - 7fffh
+      56/       0 :                     
+      57/       0 : =0H                  D_DMA_READ	equ	0
+      58/       0 : =1H                  D_DMA_WRITE	equ	1
+      59/       0 : =2H                  D_READ		equ	2
+      60/       0 : =3H                  D_WRITE		equ	3
+      61/       0 : =0H                  D_SUCCESS	equ	0
+      62/       0 : =1H                  D_ERROR		equ	1
+      63/       0 :                     
+      64/       0 :                     ;
+      65/    FA00 :                     	ORG	BIOS		;origin of this program
+      66/    FA00 :                     ;
+      67/    FA00 :                     ;	jump vector for individual subroutines
+      68/    FA00 :                     ;
+      69/    FA00 : C3 3E FB            	JP	BOOT		;cold start
+      70/    FA03 : C3 51 FB            WBOOTE: JP	WBOOT		;warm start
+      71/    FA06 : C3 BC FB            	JP	CONST		;console status
+      72/    FA09 : C3 BF FB            	JP	CONIN		;console character in
+      73/    FA0C : C3 C2 FB            	JP	CONOUT		;console character out
+      74/    FA0F : C3 C6 FB            	JP	LIST		;list character out
+      75/    FA12 : C3 CD FB            	JP	PUNCH		;punch character out
+      76/    FA15 : C3 D1 FB            	JP	READER		;reader character in
+      77/    FA18 : C3 D4 FB            	JP	HOME		;move head to home position
+      78/    FA1B : C3 D9 FB            	JP	SELDSK		;select disk
+      79/    FA1E : C3 05 FC            	JP	SETTRK		;set track number
+      80/    FA21 : C3 09 FC            	JP	SETSEC		;set sector number
+      81/    FA24 : C3 1E FC            	JP	SETDMA		;set dma address
+      82/    FA27 : C3 2D FC            	JP	READ		;read disk
+      83/    FA2A : C3 4E FC            	JP	WRITE		;write disk
+      84/    FA2D : C3 CA FB            	JP	LISTST		;return list status
+      85/    FA30 : C3 0D FC            	JP	SECTRAN		;sector translate
+      86/    FA33 :                     ;
+      87/    FA33 :                     ;	fixed data tables for four-drive standard
+      88/    FA33 :                     ;	IBM-compatible 8" SD disks
+      89/    FA33 :                     ;
+      90/    FA33 :                     ;	disk parameter header for disk 00
+      91/    FA33 : 73 FA 00 00         DPBASE:	DEFW	TRANS,0000H
+      92/    FA37 : 00 00 00 00         	DEFW	0000H,0000H
+      93/    FA3B : 6D FC 8D FA         	DEFW	DIRBF,DPBLK
+      94/    FA3F : 67 FF ED FC         	DEFW	CHK00,ALL00
+      95/    FA43 :                     ;	disk parameter header for disk 01
+      96/    FA43 : 73 FA 00 00         	DEFW	TRANS,0000H
+      97/    FA47 : 00 00 00 00         	DEFW	0000H,0000H
+      98/    FA4B : 6D FC 8D FA         	DEFW	DIRBF,DPBLK
+      99/    FA4F : 77 FF 0C FD         	DEFW	CHK01,ALL01
+     100/    FA53 :                     ;	disk parameter header for disk 02
+     101/    FA53 : 73 FA 00 00         	DEFW	TRANS,0000H
+     102/    FA57 : 00 00 00 00         	DEFW	0000H,0000H
+     103/    FA5B : 6D FC 8D FA         	DEFW	DIRBF,DPBLK
+     104/    FA5F : 87 FF 2B FD         	DEFW	CHK02,ALL02
+     105/    FA63 :                     ;	disk parameter header for disk 03
+     106/    FA63 : 73 FA 00 00         	DEFW	TRANS,0000H
+     107/    FA67 : 00 00 00 00         	DEFW	0000H,0000H
+     108/    FA6B : 6D FC 8D FA         	DEFW	DIRBF,DPBLK
+     109/    FA6F : 97 FF 4A FD         	DEFW	CHK03,ALL03
+     110/    FA73 :                     ;
+     111/    FA73 :                     ;	sector translate vector for the IBM 8" SD disks
+     112/    FA73 :                     ;
+     113/    FA73 : 01 07 0D 13         TRANS:	DEFB	1,7,13,19	;sectors 1,2,3,4
+     114/    FA77 : 19 05 0B 11         	DEFB	25,5,11,17	;sectors 5,6,7,8
+     115/    FA7B : 17 03 09 0F         	DEFB	23,3,9,15	;sectors 9,10,11,12
+     116/    FA7F : 15 02 08 0E         	DEFB	21,2,8,14	;sectors 13,14,15,16
+     117/    FA83 : 14 1A 06 0C         	DEFB	20,26,6,12	;sectors 17,18,19,20
+     118/    FA87 : 12 18 04 0A         	DEFB	18,24,4,10	;sectors 21,22,23,24
+     119/    FA8B : 10 16               	DEFB	16,22		;sectors 25,26
+     120/    FA8D :                     ;
+     121/    FA8D :                     ;	disk parameter block, common to all IBM 8" SD disks
+     122/    FA8D :                     ;
+     123/    FA8D : 1A 00               DPBLK:  DEFW	26		;sectors per track
+     124/    FA8F : 03                  	DEFB	3		;block shift factor
+     125/    FA90 : 07                  	DEFB	7		;block mask
+     126/    FA91 : 00                  	DEFB	0		;extent mask
+     127/    FA92 : F2 00               	DEFW	242		;disk size-1
+     128/    FA94 : 3F 00               	DEFW	63		;directory max
+     129/    FA96 : C0                  	DEFB	192		;alloc 0
+     130/    FA97 : 00                  	DEFB	0		;alloc 1
+     131/    FA98 : 10 00               	DEFW	16		;check size
+     132/    FA9A : 02 00               	DEFW	2		;track offset
+     133/    FA9C :                     ;
+     134/    FA9C :                     ;	fixed data tables for 4MB harddisks
+     135/    FA9C :                     ;
+     136/    FA9C :                     ;	disk parameter header
+     137/    FA9C : 00 00 00 00         HDB1:	DEFW	0000H,0000H
+     138/    FAA0 : 00 00 00 00         	DEFW	0000H,0000H
+     139/    FAA4 : 6D FC BC FA         	DEFW	DIRBF,HDBLK
+     140/    FAA8 : A7 FF 69 FD         	DEFW	CHKHD1,ALLHD1
+     141/    FAAC : 00 00 00 00         HDB2:	DEFW	0000H,0000H
+     142/    FAB0 : 00 00 00 00         	DEFW	0000H,0000H
+     143/    FAB4 : 6D FC BC FA         	DEFW	DIRBF,HDBLK
+     144/    FAB8 : A7 FF 68 FE         	DEFW	CHKHD2,ALLHD2
+     145/    FABC :                     ;
+     146/    FABC :                     ;       disk parameter block for harddisk
+     147/    FABC :                     ;
+     148/    FABC : 80 00               HDBLK:  DEFW    128		;sectors per track
+     149/    FABE : 04                  	DEFB    4		;block shift factor
+     150/    FABF : 0F                  	DEFB    15		;block mask
+     151/    FAC0 : 00                  	DEFB    0		;extent mask
+     152/    FAC1 : F7 07               	DEFW    2039		;disk size-1
+     153/    FAC3 : FF 03               	DEFW    1023		;directory max
+     154/    FAC5 : FF                  	DEFB    255		;alloc 0
+     155/    FAC6 : FF                  	DEFB    255		;alloc 1
+     156/    FAC7 : 00 00               	DEFW    0		;check size
+     157/    FAC9 : 00 00               	DEFW    0		;track offset
+     158/    FACB :                     ;
+     159/    FACB :                     ;	messages
+     160/    FACB :                     ;
+     161/    FACB : 36 34 4B 20 43 50   SIGNON: DB	'64K CP/M Vers. 2.2 (Z80 CBIOS V1.2 for Z80SIM, '
+             FAD1 : 2F 4D 20 56 65 72 
+             FAD7 : 73 2E 20 32 2E 32 
+             FADD : 20 28 5A 38 30 20 
+             FAE3 : 43 42 49 4F 53 20 
+             FAE9 : 56 31 2E 32 20 66 
+             FAEF : 6F 72 20 5A 38 30 
+             FAF5 : 53 49 4D 2C 20    
+     162/    FAFA : 43 6F 70 79 72 69   	DB	'Copyright 1988-2007 by Udo Munk)'
+             FB00 : 67 68 74 20 31 39 
+             FB06 : 38 38 2D 32 30 30 
+             FB0C : 37 20 62 79 20 55 
+             FB12 : 64 6F 20 4D 75 6E 
+             FB18 : 6B 29             
+     163/    FB1A : 0D 0A 00            	DB	13,10,0
+     164/    FB1D :                     ;
+     165/    FB1D : 42 49 4F 53 3A 20   LDERR:	DB	'BIOS: error booting'
+             FB23 : 65 72 72 6F 72 20 
+             FB29 : 62 6F 6F 74 69 6E 
+             FB2F : 67                
+     166/    FB30 : 0D 0A 00            	DB	13,10,0
+     167/    FB33 :                     
+     168/    FB33 :                     ;
+     169/    FB33 :                     ;	end of fixed tables
+     170/    FB33 :                     ;
+     171/    FB33 :                     ;	utility functions
+     172/    FB33 :                     ;
+     173/    FB33 :                     ;	print a 0 terminated string to console device
+     174/    FB33 :                     ;	pointer to string in HL
+     175/    FB33 :                     ;
+     176/    FB33 : 7E                  PRTMSG:	LD	A,(HL)
+     177/    FB34 : B7                  	OR	A
+     178/    FB35 : C8                  	RET	Z
+     179/    FB36 : 4F                  	LD	C,A
+     180/    FB37 : CD C2 FB            	CALL	CONOUT
+     181/    FB3A : 23                  	INC	HL
+     182/    FB3B : C3 33 FB            	JP	PRTMSG
+     183/    FB3E :                     ;
+     184/    FB3E :                     ;	individual subroutines to perform each function
+     185/    FB3E :                     ;	simplest case is to just perform parameter initialization
+     186/    FB3E :                     ;
+     187/    FB3E : 31 80 00            BOOT:   LD	SP,80H		;use space below buffer for stack
+     188/    FB41 : 21 CB FA            	LD	HL,SIGNON	;print message
+     189/    FB44 : CD 33 FB            	CALL	PRTMSG
+     190/    FB47 : AF                  	XOR	A		;zero in the accum
+     191/    FB48 : 32 03 00            	LD	(IOBYTE),A	;clear the iobyte
+     192/    FB4B : 32 04 00            	LD	(CDISK),A	;select disk zero
+     193/    FB4E : C3 9B FB            	JP	GOCPM		;initialize and go to cp/m
+     194/    FB51 :                     ;
+     195/    FB51 :                     ;	simplest case is to read the disk until all sectors loaded
+     196/    FB51 :                     ;
+     197/    FB51 : 31 80 00            WBOOT:  LD	SP,80H		;use space below buffer for stack
+     198/    FB54 : 0E 00               	LD	C,0		;select disk 0
+     199/    FB56 : CD D9 FB            	CALL	SELDSK
+     200/    FB59 : CD D4 FB            	CALL	HOME		;go to track 00
+     201/    FB5C :                     ;
+     202/    FB5C : 06 2C               	LD	B,NSECTS	;b counts # of sectors to load
+     203/    FB5E : 0E 00               	LD	C,0		;c has the current track number
+     204/    FB60 : 16 02               	LD	D,2		;d has the next sector to read
+     205/    FB62 :                     ;	note that we begin by reading track 0, sector 2 since sector 1
+     206/    FB62 :                     ;	contains the cold start loader, which is skipped in a warm start
+     207/    FB62 : 21 00 E4            	LD	HL,CCP		;base of cp/m (initial load point)
+     208/    FB65 :                     LOAD1:				;load one more sector
+     209/    FB65 : C5                  	PUSH	BC		;save sector count, current track
+     210/    FB66 : D5                  	PUSH	DE		;save next sector to read
+     211/    FB67 : E5                  	PUSH	HL		;save dma address
+     212/    FB68 : 4A                  	LD	C,D		;get sector address to register c
+     213/    FB69 : CD 09 FC            	CALL	SETSEC		;set sector address from register c
+     214/    FB6C : C1                  	POP	BC		;recall dma address to b,c
+     215/    FB6D : C5                  	PUSH	BC		;replace on stack for later recall
+     216/    FB6E : CD 1E FC            	CALL	SETDMA		;set dma address from b,c
+     217/    FB71 :                     ;	drive set to 0, track set, sector set, dma address set
+     218/    FB71 : CD 2D FC            	CALL	READ
+     219/    FB74 : B7                  	OR	A		;any errors?
+     220/    FB75 : CA 80 FB            	JP	Z,LOAD2		;no, continue
+     221/    FB78 : 21 1D FB            	LD	HL,LDERR	;error, print message
+     222/    FB7B : CD 33 FB            	CALL	PRTMSG
+     223/    FB7E : F3                  	DI			;and halt the machine
+     224/    FB7F : 76                  	HALT
+     225/    FB80 :                     ;	no error, move to next sector
+     226/    FB80 : E1                  LOAD2:	POP	HL		;recall dma address
+     227/    FB81 : 11 80 00            	LD	DE,128		;dma=dma+128
+     228/    FB84 : 19                  	ADD	HL,DE		;new dma address is in h,l
+     229/    FB85 : D1                  	POP	DE		;recall sector address
+     230/    FB86 : C1                  	POP	BC		;recall number of sectors remaining,
+     231/    FB87 :                     				;and current trk
+     232/    FB87 : 05                  	DEC	B		;sectors=sectors-1
+     233/    FB88 : CA 9B FB            	JP	Z,GOCPM		;transfer to cp/m if all have been loaded
+     234/    FB8B :                     ;	more sectors remain to load, check for track change
+     235/    FB8B : 14                  	INC	D
+     236/    FB8C : 7A                  	LD	A,D		;sector=27?, if so, change tracks
+     237/    FB8D : FE 1B               	CP	27
+     238/    FB8F : DA 65 FB            	JP	C,LOAD1		;carry generated if sector<27
+     239/    FB92 :                     ;	end of current track, go to next track
+     240/    FB92 : 16 01               	LD	D,1		;begin with first sector of next track
+     241/    FB94 : 0C                  	INC	C		;track=track+1
+     242/    FB95 :                     ;	save register state, and change tracks
+     243/    FB95 : CD 05 FC            	CALL	SETTRK		;track address set from register c
+     244/    FB98 : C3 65 FB            	JP	LOAD1		;for another sector
+     245/    FB9B :                     ;	end of load operation, set parameters and go to cp/m
+     246/    FB9B :                     GOCPM:
+     247/    FB9B : 3E C3               	LD	A,0C3H		;c3 is a jmp instruction
+     248/    FB9D : 32 00 00            	LD	(0),A		;for jmp to wboot
+     249/    FBA0 : 21 03 FA            	LD	HL,WBOOTE	;wboot entry point
+     250/    FBA3 : 22 01 00            	LD	(1),HL		;set address field for jmp at 0
+     251/    FBA6 :                     ;
+     252/    FBA6 : 32 05 00            	LD	(5),A		;for jmp to bdos
+     253/    FBA9 : 21 06 EC            	LD	HL,BDOS		;bdos entry point
+     254/    FBAC : 22 06 00            	LD	(6),HL		;address field of jump at 5 to bdos
+     255/    FBAF :                     ;
+     256/    FBAF : 01 80 00            	LD	BC,80H		;default dma address is 80h
+     257/    FBB2 : CD 1E FC            	CALL	SETDMA
+     258/    FBB5 :                     ;
+     259/    FBB5 : 3A 04 00            	LD	A,(CDISK)	;get current disk number
+     260/    FBB8 : 4F                  	LD	C,A		;send to the ccp
+     261/    FBB9 : C3 00 E4            	JP	CCP		;go to cp/m for further processing
+     262/    FBBC :                     ;
+     263/    FBBC :                     ;
+     264/    FBBC :                     ;	simple i/o handlers
+     265/    FBBC :                     ;
+     266/    FBBC :                     ;	console status, return 0ffh if character ready, 00h if not
+     267/    FBBC :                     ;
+     268/    FBBC : DB 40               CONST:	IN	A,(CONSTA)	;get console status
+     269/    FBBE : C9                  	RET
+     270/    FBBF :                     ;
+     271/    FBBF :                     ;	console character into register a
+     272/    FBBF :                     ;
+     273/    FBBF : DB 41               CONIN:	IN	A,(CONDAT)	;get character from console
+     274/    FBC1 : C9                  	RET
+     275/    FBC2 :                     ;
+     276/    FBC2 :                     ;	console character output from register c
+     277/    FBC2 :                     ;
+     278/    FBC2 : 79                  CONOUT: LD	A,C		;get to accumulator
+     279/    FBC3 : D3 41               	OUT	(CONDAT),A	;send character to console
+     280/    FBC5 : C9                  	RET
+     281/    FBC6 :                     ;
+     282/    FBC6 :                     ;	list character from register c
+     283/    FBC6 :                     ;
+     284/    FBC6 : 79                  LIST:	LD	A,C		;character to register a
+     285/    FBC7 : D3 03               	OUT	(PRTDAT),A
+     286/    FBC9 : C9                  	RET
+     287/    FBCA :                     ;
+     288/    FBCA :                     ;	return list status (00h if not ready, 0ffh if ready)
+     289/    FBCA :                     ;
+     290/    FBCA : DB 02               LISTST: IN	A,(PRTSTA)
+     291/    FBCC : C9                  	RET
+     292/    FBCD :                     ;
+     293/    FBCD :                     ;	punch character from register c
+     294/    FBCD :                     ;
+     295/    FBCD : 79                  PUNCH:	LD	A,C		;character to register a
+     296/    FBCE : D3 05               	OUT	(AUXDAT),A
+     297/    FBD0 : C9                  	RET
+     298/    FBD1 :                     ;
+     299/    FBD1 :                     ;	read character into register a from reader device
+     300/    FBD1 :                     ;
+     301/    FBD1 : DB 05               READER: IN	A,(AUXDAT)
+     302/    FBD3 : C9                  	RET
+     303/    FBD4 :                     ;
+     304/    FBD4 :                     ;
+     305/    FBD4 :                     ;	i/o drivers for the disk follow
+     306/    FBD4 :                     ;
+     307/    FBD4 :                     ;	move to the track 00 position of current drive
+     308/    FBD4 :                     ;	translate this call into a settrk call with parameter 00
+     309/    FBD4 :                     ;
+     310/    FBD4 : 0E 00               HOME:	LD	C,0		;select track 0
+     311/    FBD6 : C3 05 FC            	JP	SETTRK		;we will move to 00 on first read/write
+     312/    FBD9 :                     ;
+     313/    FBD9 :                     ;	select disk given by register C
+     314/    FBD9 :                     ;
+     315/    FBD9 : 21 00 00            SELDSK: LD	HL,0000H	;error return code
+     316/    FBDC : 79                  	LD	A,C
+     317/    FBDD : FE 04               	CP	4		;FD drive 0-3?
+     318/    FBDF : DA ED FB            	JP	C,SELFD		;go
+     319/    FBE2 : FE 08               	CP	8		;harddisk 1?
+     320/    FBE4 : CA F9 FB            	JP	Z,SELHD1	;go
+     321/    FBE7 : FE 09               	CP	9		;harddisk 2?
+     322/    FBE9 : CA FF FB            	JP	Z,SELHD2	;go
+     323/    FBEC : C9                  	RET			;no, error
+     324/    FBED :                     ;	disk number is in the proper range
+     325/    FBED :                     ;	compute proper disk parameter header address
+     326/    FBED : D3 4A               SELFD:	OUT	(FDCD),A	;selekt disk drive
+     327/    FBEF : 6F                  	LD	L,A		;L=disk number 0,1,2,3
+     328/    FBF0 : 29                  	ADD	HL,HL		;*2
+     329/    FBF1 : 29                  	ADD	HL,HL		;*4
+     330/    FBF2 : 29                  	ADD	HL,HL		;*8
+     331/    FBF3 : 29                  	ADD	HL,HL		;*16 (size of each header)
+     332/    FBF4 : 11 33 FA            	LD	DE,DPBASE
+     333/    FBF7 : 19                  	ADD	HL,DE		;HL=.dpbase(diskno*16)
+     334/    FBF8 : C9                  	RET
+     335/    FBF9 : 21 9C FA            SELHD1:	LD	HL,HDB1		;dph harddisk 1
+     336/    FBFC : C3 02 FC            	JP	SELHD
+     337/    FBFF : 21 AC FA            SELHD2:	LD	HL,HDB2		;dph harddisk 2
+     338/    FC02 : D3 4A               SELHD:	OUT	(FDCD),A	;select harddisk drive
+     339/    FC04 : C9                  	RET
+     340/    FC05 :                     ;
+     341/    FC05 :                     ;	set track given by register c
+     342/    FC05 :                     ;
+     343/    FC05 : 79                  SETTRK: LD	A,C
+     344/    FC06 : D3 4B               	OUT	(FDCT),A
+     345/    FC08 : C9                  	RET
+     346/    FC09 :                     ;
+     347/    FC09 :                     ;	set sector given by register c
+     348/    FC09 :                     ;
+     349/    FC09 : 79                  SETSEC: LD	A,C
+     350/    FC0A : D3 4C               	OUT	(FDCS),A
+     351/    FC0C : C9                  	RET
+     352/    FC0D :                     ;
+     353/    FC0D :                     ;	translate the sector given by BC using the
+     354/    FC0D :                     ;	translate table given by DE
+     355/    FC0D :                     ;
+     356/    FC0D :                     SECTRAN:
+     357/    FC0D : 7A                  	LD	A,D		;do we have a translation table?
+     358/    FC0E : B3                  	OR	E
+     359/    FC0F : C2 18 FC            	JP	NZ,SECT1	;yes, translate
+     360/    FC12 : 69                  	LD	L,C		;no, return untranslated
+     361/    FC13 : 60                  	LD	H,B		;in HL
+     362/    FC14 : 2C                  	INC	L		;sector no. start with 1
+     363/    FC15 : C0                  	RET	NZ
+     364/    FC16 : 24                  	INC	H
+     365/    FC17 : C9                  	RET
+     366/    FC18 : EB                  SECT1:	EX	DE,HL		;HL=.trans
+     367/    FC19 : 09                  	ADD	HL,BC		;HL=.trans(sector)
+     368/    FC1A : 6E                  	LD	L,(HL)		;L = trans(sector)
+     369/    FC1B : 26 00               	LD	H,0		;HL= trans(sector)
+     370/    FC1D : C9                  	RET			;with value in HL
+     371/    FC1E :                     ;
+     372/    FC1E :                     ;	set dma address given by registers b and c
+     373/    FC1E :                     ;
+     374/    FC1E : 79                  SETDMA: LD	A,C		;low order address
+     375/    FC1F : D3 4F               	OUT	(DMAL),A
+     376/    FC21 : 21 6B FC            	LD	HL,DSTL
+     377/    FC24 : 77                  	LD	(HL),A
+     378/    FC25 : 78                  	LD	A,B		;high order address
+     379/    FC26 : D3 50               	OUT	(DMAH),A	;in dma
+     380/    FC28 : 21 6C FC            	LD	HL,DSTH
+     381/    FC2B : 77                  	LD	(HL),A
+     382/    FC2C : C9                  	RET
+     383/    FC2D :                     
+     384/    FC2D : =>TRUE               	if	DMA_R_W=0	;I/O byte RW operation
+     385/    FC2D :                     ;
+     386/    FC2D :                     ;	perform read operation
+     387/    FC2D :                     ;
+     388/    FC2D : 3E 02               READ:	LD	A,D_READ	;read command -> A
+     389/    FC2F : D3 4D               	OUT	(FDCOP),A	;start i/o operation
+     390/    FC31 : DB 4E               	IN	A,(FDCST)	;status of i/o operation -> A
+     391/    FC33 : B7                  	OR	A
+     392/    FC34 : C0                  	RET	NZ		;return if an error occurred
+     393/    FC35 :                     	; read 128 bytes from the I/O port
+     394/    FC35 : D5                  	PUSH	DE
+     395/    FC36 : E5                  	PUSH	HL
+     396/    FC37 : 1E 80               	LD	E,128
+     397/    FC39 : 3A 6C FC            	LD	A,(DSTH)
+     398/    FC3C : 67                  	LD	H,A
+     399/    FC3D : 3A 6B FC            	LD	A,(DSTL)
+     400/    FC40 : 6F                  	LD	L,A
+     401/    FC41 :                     LREAD:
+     402/    FC41 : DB 48               	IN	A,(FDCDAT)
+     403/    FC43 : 77                  	LD	(HL),A
+     404/    FC44 : 23                  	INC	HL
+     405/    FC45 : 1D                  	DEC	E
+     406/    FC46 : C2 41 FC            	JP	NZ,LREAD
+     407/    FC49 : E1                  	POP	HL
+     408/    FC4A : D1                  	POP	DE
+     409/    FC4B : 3E 00               	LD	A,0
+     410/    FC4D : C9                  	RET
+     411/    FC4E :                     
+     412/    FC4E :                     ;
+     413/    FC4E :                     ;	perform a write operation
+     414/    FC4E :                     ;
+     415/    FC4E : 3E 03               WRITE:	LD	A,D_WRITE	;write command -> A
+     416/    FC50 : D3 4D               	OUT	(FDCOP),A	;start i/o operation
+     417/    FC52 :                     	; write 128 bytes from the I/O port
+     418/    FC52 : D5                  	PUSH	DE
+     419/    FC53 : E5                  	PUSH	HL
+     420/    FC54 : 1E 80               	LD	E,128
+     421/    FC56 : 3A 6C FC            	LD	A,(DSTH)
+     422/    FC59 : 67                  	LD	H,A
+     423/    FC5A : 3A 6B FC            	LD	A,(DSTL)
+     424/    FC5D : 6F                  	LD	L,A
+     425/    FC5E :                     LWRITE:
+     426/    FC5E : 7E                  	LD	A,(HL)
+     427/    FC5F : D3 48               	OUT	(FDCDAT),A
+     428/    FC61 : 23                  	INC	HL
+     429/    FC62 : 1D                  	DEC	E
+     430/    FC63 : C2 5E FC            	JP	NZ,LWRITE
+     431/    FC66 : E1                  	POP	HL
+     432/    FC67 : D1                  	POP	DE
+     433/    FC68 : DB 4E               	IN	A,(FDCST)	;status of i/o operation -> A
+     434/    FC6A : C9                  	RET
+     435/    FC6B :                     
+     436/    FC6B : [384]                	endif	; DMA_R_W=0
+     437/    FC6B :                     
+     438/    FC6B : =>FALSE              	if	PIC_32K=1
+     439/    FC6B :                     ;
+     440/    FC6B :                     ;	perform read operation
+     441/    FC6B :                     ;
+     442/    FC6B :                     READ:
+     443/    FC6B :                     	PUSH	DE
+     444/    FC6B :                     	PUSH	HL
+     445/    FC6B :                     	ld	hl, (DSTL)	; get dma address
+     446/    FC6B :                     	ld	de, 127		; get accsess end address
+     447/    FC6B :                     	add	hl, de
+     448/    FC6B :                     	jr	c, byte_read	; overlap ffff -> 0000
+     449/    FC6B :                     	
+     450/    FC6B :                     	ld	de, PIC_LMTADR
+     451/    FC6B :                     	sbc	hl, de		; check address in DMA area
+     452/    FC6B :                     	jr	c, dma_read	; jp, if end address is not DMA area
+     453/    FC6B :                     
+     454/    FC6B :                     byte_read:
+     455/    FC6B :                     	LD	A,D_READ	;byte read command
+     456/    FC6B :                     	OUT	(FDCOP),A	;start i/o operation
+     457/    FC6B :                     	IN	A,(FDCST)	;status of i/o operation -> A
+     458/    FC6B :                     	OR	A
+     459/    FC6B :                     	jr	nz, ret_read	;return if an error occurred
+     460/    FC6B :                     	; read 128 bytes from the I/O port
+     461/    FC6B :                     	LD	E,128
+     462/    FC6B :                     	LD	A,(DSTH)
+     463/    FC6B :                     	LD	H,A
+     464/    FC6B :                     	LD	A,(DSTL)
+     465/    FC6B :                     	LD	L,A
+     466/    FC6B :                     LREAD:
+     467/    FC6B :                     	IN	A,(FDCDAT)
+     468/    FC6B :                     	LD	(HL),A
+     469/    FC6B :                     	INC	HL
+     470/    FC6B :                     	DEC	E
+     471/    FC6B :                     	JP	NZ,LREAD
+     472/    FC6B :                     	LD	A,0
+     473/    FC6B :                     ret_read:
+     474/    FC6B :                     	POP	HL
+     475/    FC6B :                     	POP	DE
+     476/    FC6B :                     	RET
+     477/    FC6B :                     
+     478/    FC6B :                     dma_read:
+     479/    FC6B :                     	LD	A,D_DMA_READ	;read command -> A
+     480/    FC6B :                     	OUT	(FDCOP),A	;start i/o operation
+     481/    FC6B :                     	IN	A,(FDCST)	;status of i/o operation -> A
+     482/    FC6B :                     	OR	A
+     483/    FC6B :                     	jr	ret_read
+     484/    FC6B :                     
+     485/    FC6B :                     ;
+     486/    FC6B :                     ;	perform a write operation
+     487/    FC6B :                     ;
+     488/    FC6B :                     WRITE:
+     489/    FC6B :                     	PUSH	DE
+     490/    FC6B :                     	PUSH	HL
+     491/    FC6B :                     	ld	hl, (DSTL)	; get dma address
+     492/    FC6B :                     	ld	de, 127		; get accsess end address
+     493/    FC6B :                     	add	hl, de
+     494/    FC6B :                     	jr	c, byte_write	; overlap ffff -> 0000
+     495/    FC6B :                     	
+     496/    FC6B :                     	ld	de, PIC_LMTADR
+     497/    FC6B :                     	sbc	hl, de		; check address in DMA area
+     498/    FC6B :                     	jr	c, dma_write	; jp, if end address is not DMA area
+     499/    FC6B :                     
+     500/    FC6B :                     byte_write:
+     501/    FC6B :                     	LD	A,D_WRITE	;byte read command
+     502/    FC6B :                     	OUT	(FDCOP),A	;start i/o operation
+     503/    FC6B :                     	; write 128 bytes from the I/O port
+     504/    FC6B :                     	LD	E,128
+     505/    FC6B :                     	LD	A,(DSTH)
+     506/    FC6B :                     	LD	H,A
+     507/    FC6B :                     	LD	A,(DSTL)
+     508/    FC6B :                     	LD	L,A
+     509/    FC6B :                     LWRITE:
+     510/    FC6B :                     	LD	A,(HL)
+     511/    FC6B :                     	OUT	(FDCDAT),A
+     512/    FC6B :                     	INC	HL
+     513/    FC6B :                     	DEC	E
+     514/    FC6B :                     	JP	NZ,LWRITE
+     515/    FC6B :                     
+     516/    FC6B :                     ret_write:
+     517/    FC6B :                     	IN	A,(FDCST)	;status of i/o operation -> A
+     518/    FC6B :                     	POP	HL
+     519/    FC6B :                     	POP	DE
+     520/    FC6B :                     	RET
+     521/    FC6B :                     
+     522/    FC6B :                     dma_write:
+     523/    FC6B :                     	LD	A,D_DMA_WRITE	;write command -> A
+     524/    FC6B :                     	OUT	(FDCOP),A	;start i/o operation
+     525/    FC6B :                     	jr	ret_write
+     526/    FC6B :                     
+     527/    FC6B : [438]                	endif	; PIC_32K=1
+     528/    FC6B :                     
+     529/    FC6B : =>FALSE              	if	PIC_64K=1	;DMA RW operation
+     530/    FC6B :                     ;
+     531/    FC6B :                     ;	perform read operation
+     532/    FC6B :                     ;
+     533/    FC6B :                     READ:	LD	A,D_DMA_READ	;read command -> A
+     534/    FC6B :                     	OUT	(FDCOP),A	;start i/o operation
+     535/    FC6B :                     	IN	A,(FDCST)	;status of i/o operation -> A
+     536/    FC6B :                     	OR	A
+     537/    FC6B :                     	RET	
+     538/    FC6B :                     
+     539/    FC6B :                     ;
+     540/    FC6B :                     ;	perform a write operation
+     541/    FC6B :                     ;
+     542/    FC6B :                     WRITE:	LD	A,D_DMA_WRITE	;write command -> A
+     543/    FC6B :                     	OUT	(FDCOP),A	;start i/o operation
+     544/    FC6B :                     	IN	A,(FDCST)	;status of i/o operation -> A
+     545/    FC6B :                     	OR	A
+     546/    FC6B :                     	RET
+     547/    FC6B :                     
+     548/    FC6B : [529]                	endif	; PIC_64K=1
+     549/    FC6B :                     ;
+     550/    FC6B :                     ;	disk I/O destination address in non DMA mode
+     551/    FC6B :                     ;
+     552/    FC6B : 00                  DSTL:	DEFB	0		;disk I/O destination address low
+     553/    FC6C : 00                  DSTH:	DEFB	0		;disk I/O destination address high
+     554/    FC6D :                     ;
+     555/    FC6D :                     ;	the remainder of the CBIOS is reserved uninitialized
+     556/    FC6D :                     ;	data area, and does not need to be a part of the
+     557/    FC6D :                     ;	system memory image (the space must be available,
+     558/    FC6D :                     ;	however, between "begdat" and "enddat").
+     559/    FC6D :                     ;
+     560/    FC6D :                     ;	scratch ram area for BDOS use
+     561/    FC6D :                     ;
+     562/    FC6D : =0FC6DH              BEGDAT	EQU	$		;beginning of data area
+     563/    FC6D :                     DIRBF:	DS	128		;scratch directory area
+     564/    FCED :                     ALL00:	DS	31		;allocation vector 0
+     565/    FD0C :                     ALL01:	DS	31		;allocation vector 1
+     566/    FD2B :                     ALL02:	DS	31		;allocation vector 2
+     567/    FD4A :                     ALL03:	DS	31		;allocation vector 3
+     568/    FD69 :                     ALLHD1:	DS	255		;allocation vector harddisk 1
+     569/    FE68 :                     ALLHD2:	DS	255		;allocation vector harddisk 2
+     570/    FF67 :                     CHK00:	DS	16		;check vector 0
+     571/    FF77 :                     CHK01:	DS	16		;check vector 1
+     572/    FF87 :                     CHK02:	DS	16		;check vector 2
+     573/    FF97 :                     CHK03:	DS	16		;check vector 3
+     574/    FFA7 :                     CHKHD1:				;check vector harddisk 1
+     575/    FFA7 :                     CHKHD2:				;check vector harddisk 2
+     576/    FFA7 :                     ;CHKHD1:	DS	0		;check vector harddisk 1
+     577/    FFA7 :                     ;CHKHD2:	DS	0		;check vector harddisk 2
+     578/    FFA7 :                     ;
+     579/    FFA7 : =0FFA7H              ENDDAT	EQU	$		;end of data area
+     580/    FFA7 : =33AH                DATSIZ	EQU	$-BEGDAT	;size of data area
+     581/    FFA7 :                     ;
+     582/    FFA7 :                     	END			;of BIOS
+ AS V1.42 Beta [Bld 227] - Source File bios.asm - Page 2 - 10/10/2023 11:49:55
+
+
+  Symbol Table (* = unused):
+  --------------------------
+
+ ALL00 :                      0FCED C |  ALL01 :                      0FD0C C |
+ ALL02 :                      0FD2B C |  ALL03 :                      0FD4A C |
+ ALLHD1 :                     0FD69 C |  ALLHD2 :                     0FE68 C |
+*ARCHITECTURE :                                        "i386-unknown-win32" - |
+ AUXDAT :                         5 - |  BDOS :                       0EC06 - |
+ BEGDAT :                     0FC6D - |  BIAS :                       0B000 - |
+ BIOS :                       0FA00 - |  BOOT :                       0FB3E C |
+*CASESENSITIVE :                  0 - |  CCP :                        0E400 - |
+ CDISK :                          4 - |  CHK00 :                      0FF67 C |
+ CHK01 :                      0FF77 C |  CHK02 :                      0FF87 C |
+ CHK03 :                      0FF97 C |  CHKHD1 :                     0FFA7 C |
+ CHKHD2 :                     0FFA7 C | *COMPMODE :                       0 - |
+ CONDAT :                        41 - |  CONIN :                      0FBBF C |
+ CONOUT :                     0FBC2 C |  CONST :                      0FBBC C |
+ CONSTA :                        40 - | *CONSTPI :        3.141592653589793 - |
+*DATE :                "10/10/2023" - | *DATSIZ :                       33A - |
+ DIRBF :                      0FC6D C |  DMAH :                          50 - |
+ DMAL :                          4F - |  DMA_R_W :                        0 - |
+ DPBASE :                     0FA33 C |  DPBLK :                      0FA8D C |
+ DSTH :                       0FC6C C |  DSTL :                       0FC6B C |
+*D_DMA_READ :                     0 - | *D_DMA_WRITE :                    1 - |
+*D_ERROR :                        1 - |  D_READ :                         2 - |
+*D_SUCCESS :                      0 - |  D_WRITE :                        3 - |
+*ENDDAT :                     0FFA7 - | *FALSE :                          0 - |
+ FDCD :                          4A - |  FDCDAT :                        48 - |
+ FDCOP :                         4D - |  FDCS :                          4C - |
+ FDCST :                         4E - |  FDCT :                          4B - |
+*FULLPMMU :                       1 - |  GOCPM :                      0FB9B C |
+*HAS64 :                          0 - | *HASFPU :                         0 - |
+*HASPMMU :                        0 - |  HDB1 :                       0FA9C C |
+ HDB2 :                       0FAAC C |  HDBLK :                      0FABC C |
+ HOME :                       0FBD4 C | *INSUPMODE :                      0 - |
+ IOBYTE :                         3 - |  LDERR :                      0FB1D C |
+ LIST :                       0FBC6 C | *LISTON :                         1 - |
+ LISTST :                     0FBCA C |  LOAD1 :                      0FB65 C |
+ LOAD2 :                      0FB80 C |  LREAD :                      0FC41 C |
+ LWRITE :                     0FC5E C | *MACEXP :                         7 - |
+*MOMCPU :                        80 - | *MOMCPUNAME :                 "Z80" - |
+ MSIZE :                         40 - | *NESTMAX :                      100 - |
+ NSECTS :                        2C - | *PADDING :                        1 - |
+ PIC_32K :                        0 - |  PIC_64K :                        0 - |
+*PIC_LMTADR :                  8000 - |  PRTDAT :                         3 - |
+ PRTMSG :                     0FB33 C |  PRTSTA :                         2 - |
+ PUNCH :                      0FBCD C |  READ :                       0FC2D C |
+ READER :                     0FBD1 C | *RELAXED :                        0 - |
+ SECT1 :                      0FC18 C |  SECTRAN :                    0FC0D C |
+ SELDSK :                     0FBD9 C |  SELFD :                      0FBED C |
+ SELHD :                      0FC02 C |  SELHD1 :                     0FBF9 C |
+ SELHD2 :                     0FBFF C |  SETDMA :                     0FC1E C |
+ SETSEC :                     0FC09 C |  SETTRK :                     0FC05 C |
+ SIGNON :                     0FACB C | *TIME :                  "11:49:55" - |
+ TRANS :                      0FA73 C | *TRUE :                           1 - |
+*VERSION :                     142F - |  WBOOT :                      0FB51 C |
+ WBOOTE :                     0FA03 C |  WRITE :                      0FC4E C |
+
+    107 symbols
+     28 unused symbols
+
+ AS V1.42 Beta [Bld 227] - Source File bios.asm - Page 3 - 10/10/2023 11:49:55
+
+
+  Code Pages:
+  ----------
+
+STANDARD (0 changed characters)
+
+1 code page
+
+0.01 seconds assembly time
+
+    583 lines source file
+      2 passes
+      0 errors
+      0 warnings
